@@ -1,0 +1,269 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.moviedb.fr/ontology/cinema> a owl:Ontology ;
+    rdfs:comment "Ontology for the MovieDB project, covering Movies, TV Series, People, and Reviews."@en .
+
+# Classes
+
+:Item a owl:Class .
+
+:CreativeWork a owl:Class ;
+    rdfs:subClassOf :Item .
+
+:MotionPicture a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
+
+:Movie a owl:Class ;
+    rdfs:subClassOf :MotionPicture ;
+    owl:disjointWith :TVSeries .
+
+:TVSeries a owl:Class ;
+    rdfs:subClassOf :MotionPicture .
+
+:Episode a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
+
+:Person a owl:Class .
+
+:Agent a owl:Class ;
+    rdfs:subClassOf :Person .
+
+:Organization a owl:Class ;
+    rdfs:subClassOf :Agent .
+
+# Role Pattern (Qualified Relation)
+# Used to capture detailed credit info like "character name" or specific "job"
+:Role a owl:Class .
+:CastRole a owl:Class ; rdfs:subClassOf :Role .
+:CrewRole a owl:Class ; rdfs:subClassOf :Role .
+
+:Review a owl:Class ;
+    rdfs:subClassOf :Item .
+
+:User a owl:Class ;
+    rdfs:subClassOf :Agent .
+
+# Director Definition (Equivalent Class)
+:Director a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Person
+            [ a owl:Restriction ; owl:onProperty :directed ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+:Writer a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Person
+            [ a owl:Restriction ; owl:onProperty :wrote ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+:Producer a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Person
+            [ a owl:Restriction ; owl:onProperty :produced ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+# Object Properties
+
+:hasContributor a owl:ObjectProperty ;
+    owl:inverseOf :contributedTo ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Agent .
+
+:contributedTo a owl:ObjectProperty .
+
+:hasDirector a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person . 
+
+:directed a owl:ObjectProperty ; 
+    owl:inverseOf :hasDirector ;
+    rdfs:domain :Person ;
+    rdfs:range :MotionPicture .
+
+:hasActor a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :actedIn ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person .
+
+:actedIn a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :MotionPicture . 
+
+:hasProducer a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :produced ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person .
+
+:produced a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :MotionPicture .
+
+:hasWriter a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :wrote ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person .
+
+:wrote a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :MotionPicture .
+
+:hasRole a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Role .
+
+:isRoleOf a owl:ObjectProperty ;
+    rdfs:domain :Role ;
+    rdfs:range :Agent .
+
+# Other Relations
+:sequelOf a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :CreativeWork .
+
+:hasEpisode a owl:ObjectProperty ;
+    owl:inverseOf :episodeOf ;
+    rdfs:domain :TVSeries ;
+    rdfs:range :Episode .
+
+:episodeOf a owl:ObjectProperty .
+
+:workedWith a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:knownFor a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :CreativeWork .
+
+:isReviewOf a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :CreativeWork .
+
+:writtenBy a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :User .
+
+:hasGenre a owl:ObjectProperty ;
+    rdfs:range skos:Concept .
+
+# Data Properties
+
+# Title Details
+:originalTitle a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:string .
+
+:primaryTitle a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:string .
+
+:releaseYear a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:gYear .
+
+:endYear a owl:DatatypeProperty ;
+    rdfs:domain :TVSeries ;
+    rdfs:range xsd:gYear .
+
+:runtimeMinutes a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:integer .
+
+:isAdult a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:boolean .
+
+:imdbId a owl:DatatypeProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range xsd:string .
+
+# Person Details
+:birthYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear .
+
+:deathYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear .
+
+:characterName a owl:DatatypeProperty ;
+    rdfs:domain :CastRole ;
+    rdfs:range xsd:string .
+
+:jobDescription a owl:DatatypeProperty ;
+    rdfs:domain :CrewRole ;
+    rdfs:range xsd:string .
+
+:ordering a owl:DatatypeProperty ;
+    rdfs:domain :Role ;
+    rdfs:range xsd:integer .
+
+# Review Details
+:ratingValue a owl:DatatypeProperty ;
+    rdfs:domain :Review ; 
+    rdfs:range xsd:float .
+
+:reviewBody a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:string .
+
+:isSpoiler a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:boolean .
+
+:helpfulnessVote a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
+    rdfs:range xsd:integer .
+
+# SKOS Thesaurus
+
+:GenreThesaurus a skos:ConceptScheme ;
+    skos:prefLabel "Movie Genre Thesaurus"@en .
+
+:Genre_Fiction a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:topConceptOf :GenreThesaurus ;
+    skos:prefLabel "Fiction"@en .
+
+:Genre_Horror a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:broader :Genre_Fiction ;
+    skos:prefLabel "Horror"@en ;
+    skos:prefLabel "Horreur"@fr .
+
+:Genre_Slasher a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:broader :Genre_Horror ;
+    skos:prefLabel "Slasher"@en .
+
+:Genre_Comedy a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:broader :Genre_Fiction ;
+    skos:prefLabel "Comedy"@en ;
+    skos:prefLabel "Comédie"@fr .
+
+:Genre_RomanticComedy a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:broader :Genre_Comedy ;
+    skos:prefLabel "Romantic Comedy"@en .
+
+:Genre_Thriller a skos:Concept ;
+    skos:inScheme :GenreThesaurus ;
+    skos:broader :Genre_Fiction ;
+    skos:prefLabel "Thriller"@en .

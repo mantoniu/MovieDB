@@ -1,0 +1,211 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix cine: <http://www.moviedb.fr/cinema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+
+@base <http://www.moviedb.fr/mapping> .
+
+# Data Sources for tsv files
+
+<#MovieSource> a csvw:Table ;
+    csvw:url "datasets/reduced/title.basics.tsv" ;
+    csvw:dialect [
+        a csvw:Dialect ;
+        csvw:delimiter "\t" ;
+    ] .
+
+<#PersonSource> a csvw:Table ;
+    csvw:url "datasets/reduced/name.basics.tsv" ;
+    csvw:dialect [
+        a csvw:Dialect ;
+        csvw:delimiter "\t" ;
+    ] .
+
+<#RoleSource> a csvw:Table ;
+    csvw:url "datasets/reduced/title.principals.tsv" ;
+    csvw:dialect [
+        a csvw:Dialect ;
+        csvw:delimiter "\t" ;
+    ] .
+
+<#MovieMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#MovieSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/ontology/cinema#MotionPicture/{tconst}" ;
+        rr:class cine:MotionPicture
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:imdbId ;
+        rr:objectMap [ rml:reference "tconst" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:originalTitle ;
+        rr:objectMap [ rml:reference "originalTitle" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:primaryTitle ;
+        rr:objectMap [ rml:reference "primaryTitle" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:releaseYear ;
+        rr:objectMap [ rml:reference "startYear" ; rr:datatype xsd:gYear ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:endYear ;
+        rr:objectMap [ rml:reference "endYear" ; rr:datatype xsd:gYear ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:runtimeMinutes ;
+        rr:objectMap [ rml:reference "runtimeMinutes" ; rr:datatype xsd:integer ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:isAdult ;
+        rr:objectMap [ rml:reference "isAdult" ; rr:datatype xsd:boolean ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:hasGenre ;
+        rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#Genre/{genres}" ]
+    ] .
+
+<#PersonMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#PersonSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/ontology/cinema#Person/{nconst}" ;
+        rr:class cine:Person
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "primaryName" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:birthYear ;
+        rr:objectMap [ rml:reference "birthYear" ; rr:datatype xsd:gYear ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:deathYear ;
+        rr:objectMap [ rml:reference "deathYear" ; rr:datatype xsd:gYear ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:knownFor ;
+        rr:objectMap [
+            rr:termType rr:IRI ;
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:objectMap [ rr:constant grel:array_join ] ; 
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:objectMap [ rr:constant "http://www.moviedb.fr/ontology/cinema#MotionPicture/" ] ;
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_b ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:objectMap [ rr:constant grel:string_split ] ;
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [ rml:reference "knownForTitles" ] ;
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_sep ;
+                                rr:objectMap [ rr:constant "," ] ;
+                            ] ;
+                        ]
+                    ] ;
+                ] ;
+            ]
+        ]
+    ] .
+
+<#RoleMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/ontology/cinema#Role/{nconst}_{tconst}" ;
+        rr:class cine:Role
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:isRoleOf ;
+        rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#Person/{nconst}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:hasRole ;
+        rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#MotionPicture/{tconst}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:ordering ;
+        rr:objectMap [ rml:reference "ordering" ; rr:datatype xsd:integer ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:jobDescription ;
+        rr:objectMap [ rml:reference "job" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:characterName ;
+        rr:objectMap [ rml:reference "characters" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:playedMovie ;
+        rr:objectMap [
+            rr:parentTriplesMap <#MovieMap> ;
+            rr:joinCondition [
+                rr:child "tconst" ;
+                rr:parent "tconst" ;
+            ] ; 
+        ] ;
+    ] .
+
+<#ReviewMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "datasets/sample.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.[*]"
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/cinema#Review/{review_id}" ;
+        rr:class cine:Review
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:ratingValue ;
+        rr:objectMap [ rml:reference "rating" ; rr:datatype xsd:float ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:reviewBody ;
+        rr:objectMap [ rml:reference "review_detail" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:isSpoiler ;
+        rr:objectMap [ rml:reference "spoiler_tag" ; rr:datatype xsd:boolean ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:writtenBy ;
+        rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#User/{reviewer}" ]
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate cine:reviewedMovie ;
+        rr:objectMap [
+            rr:parentTriplesMap <#MovieMap> ;
+            rr:joinCondition [
+                rr:child "movie" ;
+                rr:parent "primaryTitle" ;
+            ] ;
+        ] ;
+    ] .

@@ -26,9 +26,6 @@
 :TVSeries a owl:Class ;
     rdfs:subClassOf :MotionPicture .
 
-:Episode a owl:Class ;
-    rdfs:subClassOf :CreativeWork .
-
 :Person a owl:Class .
 
 :Agent a owl:Class ;
@@ -81,7 +78,9 @@
     rdfs:domain :CreativeWork ;
     rdfs:range :Agent .
 
-:contributedTo a owl:ObjectProperty .
+:contributedTo a owl:ObjectProperty ;
+    rdfs:domain :Agent ;
+    rdfs:range :CreativeWork .
 
 :hasDirector a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContributor ;
@@ -124,24 +123,9 @@
     rdfs:range :MotionPicture .
 
 :hasRole a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
+    rdfs:domain :Agent ;
     rdfs:range :Role .
 
-:isRoleOf a owl:ObjectProperty ;
-    rdfs:domain :Role ;
-    rdfs:range :Agent .
-
-# Other Relations
-:sequelOf a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :CreativeWork .
-
-:hasEpisode a owl:ObjectProperty ;
-    owl:inverseOf :episodeOf ;
-    rdfs:domain :TVSeries ;
-    rdfs:range :Episode .
-
-:episodeOf a owl:ObjectProperty .
 
 :workedWith a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:domain :Person ;

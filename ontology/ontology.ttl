@@ -10,7 +10,6 @@
     rdfs:comment "Ontology for the MovieDB project, covering Movies, TV Series, People, and Reviews."@en .
 
 # Classes
-
 :Item a owl:Class .
 
 :CreativeWork a owl:Class ;
@@ -34,11 +33,7 @@
 :Organization a owl:Class ;
     rdfs:subClassOf :Agent .
 
-# Role Pattern (Qualified Relation)
-# Used to capture detailed credit info like "character name" or specific "job"
 :Role a owl:Class .
-:CastRole a owl:Class ; rdfs:subClassOf :Role .
-:CrewRole a owl:Class ; rdfs:subClassOf :Role .
 
 :Review a owl:Class ;
     rdfs:subClassOf :Item .
@@ -46,11 +41,10 @@
 :User a owl:Class ;
     rdfs:subClassOf :Agent .
 
-# Director Definition (Equivalent Class)
 :Director a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Person
+            :Agent
             [ a owl:Restriction ; owl:onProperty :directed ; owl:someValuesFrom :MotionPicture ]
         )
     ] .
@@ -58,7 +52,7 @@
 :Writer a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Person
+            :Agent
             [ a owl:Restriction ; owl:onProperty :wrote ; owl:someValuesFrom :MotionPicture ]
         )
     ] .
@@ -66,17 +60,44 @@
 :Producer a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Person
+            :Agent
             [ a owl:Restriction ; owl:onProperty :produced ; owl:someValuesFrom :MotionPicture ]
         )
     ] .
 
-# Object Properties
+:Actor a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Agent
+            [ a owl:Restriction ; owl:onProperty :actedIn ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
 
-:hasContributor a owl:ObjectProperty ;
-    owl:inverseOf :contributedTo ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :Agent .
+# Properties
+
+:widiDataURI a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf ( :Agent :CreativeWork )
+    ] ;
+    rdfs:range xsd:anyURI .
+
+# Person Properties
+:name a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:birthYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear .
+
+:deathYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear .
+
+# Agent Properties
+:hasJobTitle a owl:DatatypeProperty ;
+    rdfs:domain :Agent ;
+    rdfs:range xsd:string .
 
 :contributedTo a owl:ObjectProperty ;
     rdfs:domain :Agent ;
@@ -92,63 +113,48 @@
     rdfs:domain :Person ;
     rdfs:range :MotionPicture .
 
-:hasActor a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasContributor ;
-    owl:inverseOf :actedIn ;
-    rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
-
-:actedIn a owl:ObjectProperty ;
-    rdfs:domain :Person ;
-    rdfs:range :MotionPicture . 
-
 :hasProducer a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :produced ;
     rdfs:domain :MotionPicture ;
     rdfs:range :Person .
 
-:produced a owl:ObjectProperty ;
-    rdfs:domain :Person ;
+:actedIn a owl:ObjectProperty ;
+    owl:propertyChainAxiom ( :hasRole :inMotionPicture ) ;
+    rdfs:domain :Actor ;
     rdfs:range :MotionPicture .
 
-:hasWriter a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasContributor ;
-    owl:inverseOf :wrote ;
-    rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
+:produced a owl:ObjectProperty ;
+    rdfs:domain :Producer ;
+    rdfs:range :MotionPicture .
 
 :wrote a owl:ObjectProperty ;
-    rdfs:domain :Person ;
+    rdfs:domain :Writer ;
     rdfs:range :MotionPicture .
 
 :hasRole a owl:ObjectProperty ;
-    rdfs:domain :Agent ;
+    owl:inverseOf :playedBy ;
+    rdfs:domain :Actor ;
     rdfs:range :Role .
 
-
-:workedWith a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
-
 :knownFor a owl:ObjectProperty ;
-    rdfs:domain :Person ;
+    rdfs:domain :Agent ;
     rdfs:range :CreativeWork .
 
-:isReviewOf a owl:ObjectProperty ;
-    rdfs:domain :Review ;
-    rdfs:range :CreativeWork .
+# Role Properties
+:playedBy a owl:ObjectProperty ;
+    rdfs:domain :Role ;
+    rdfs:range :Actor .
 
-:writtenBy a owl:ObjectProperty ;
-    rdfs:domain :Review ;
-    rdfs:range :User .
+:inMotionPicture a owl:ObjectProperty ;
+    rdfs:domain :Role ;
+    rdfs:range :MotionPicture .
 
-:hasGenre a owl:ObjectProperty ;
-    rdfs:range skos:Concept .
+:characterName a owl:DatatypeProperty ;
+    rdfs:domain :Role ;
+    rdfs:range xsd:string .
 
-# Data Properties
-
-# Title Details
+# Movie Properties
 :originalTitle a owl:DatatypeProperty ;
     rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
@@ -177,28 +183,27 @@
     rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-# Person Details
-:birthYear a owl:DatatypeProperty ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:gYear .
+:hasGenre a owl:ObjectProperty ;
+    rdfs:range skos:Concept .
 
-:deathYear a owl:DatatypeProperty ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:gYear .
+:hasContributor a owl:ObjectProperty ;
+    owl:inverseOf :contributedTo ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Agent .
 
-:characterName a owl:DatatypeProperty ;
-    rdfs:domain :CastRole ;
-    rdfs:range xsd:string .
+:hasWriter a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :wrote ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Writer .
 
-:jobDescription a owl:DatatypeProperty ;
-    rdfs:domain :CrewRole ;
-    rdfs:range xsd:string .
+:hasActor a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :actedIn ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Actor .
 
-:ordering a owl:DatatypeProperty ;
-    rdfs:domain :Role ;
-    rdfs:range xsd:integer .
-
-# Review Details
+# Review Properties
 :ratingValue a owl:DatatypeProperty ;
     rdfs:domain :Review ; 
     rdfs:range xsd:float .
@@ -215,8 +220,15 @@
     rdfs:domain :Review ;
     rdfs:range xsd:integer .
 
-# SKOS Thesaurus
+:isReviewOf a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :CreativeWork .
 
+:writtenBy a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :User .
+
+# SKOS Thesaurus
 :GenreThesaurus a skos:ConceptScheme ;
     skos:prefLabel "Movie Genre Thesaurus"@en .
 

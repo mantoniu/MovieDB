@@ -86,7 +86,7 @@
         rr:class cine:Person
     ] ;
     rr:predicateObjectMap [
-        rr:predicate rdfs:label ;
+        rr:predicate cine:name ;
         rr:objectMap [ rml:reference "primaryName" ]
     ] ;
     rr:predicateObjectMap [

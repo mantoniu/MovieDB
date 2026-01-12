@@ -39,8 +39,18 @@ class Preprocessing:
         if not title:
             return ""
         # Remove (YYYY) at the end of the string
-        return re.sub(r'\s*\(\d{4}\).*$', '', title).strip()
+        return re.sub(r'\s*\(\d{4}.*?\)', '', title).strip()    
 
+    @staticmethod
+    def normalize_title_date(title):
+        """
+        Removes the year and extra whitespace from the movie title.
+        Example: 'The Matrix (1999)' -> 'The Matrix'
+        """
+        if not title:
+            return ""
+        return re.sub(r'^(\s*.*?\(\d{4}).*$', r'\1', title).strip()+")" 
+    
 class Reduction:
     """
     Handles dataset reduction logic:
@@ -68,18 +78,18 @@ class Reduction:
             raw_title = entry.get('movie')
             if not raw_title:
                 continue
-            
             # Normalize title to check for uniqueness and for later matching
             clean_title = Preprocessing.normalize_title(raw_title)
-            
             if clean_title in seen_movies:
                 # We already decided to keep this movie, so we keep this review too
+                entry["movie"] = Preprocessing.normalize_title_date(entry["movie"])
                 reduced_data.append(entry)
             else:
                 # New movie encountered
                 if len(seen_movies) < n_movies:
                     seen_movies.add(clean_title)
-                    target_titles.add(clean_title)
+                    target_titles.add(Preprocessing.normalize_title_date(entry["movie"]))
+                    entry["movie"] = Preprocessing.normalize_title_date(entry["movie"])
                     reduced_data.append(entry)
                 # If we reached the limit, we skip new movies
         
@@ -92,6 +102,43 @@ class Reduction:
         return target_titles
 
     @staticmethod
+    def filter_sample(input_path, movie_path):
+        title_lookup = set()
+        if os.path.exists(movie_path):
+            with open(movie_path, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f, delimiter='\t')
+                for row in reader:
+                    full_title = f"{row['primaryTitle']} ({row['startYear']})"
+                    title_lookup.add(full_title)
+
+
+        if not os.path.exists(input_path):
+            print(f"Erreur : Le fichier {input_path} n'existe pas.")
+            return
+
+        print(f"Chargement du fichier JSON...")
+        with open(input_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        initial_count = len(data)
+
+        filtered_data = []
+
+        for entry in data :
+            if entry.get('movie') in title_lookup:
+                entry["movie"] = Preprocessing.normalize_title(entry["movie"])
+                filtered_data.append(entry)
+
+
+        # Sauvegarde du résultat
+        os.makedirs(os.path.dirname(input_path), exist_ok=True)
+        with open(input_path, 'w', encoding='utf-8') as f:
+            json.dump(filtered_data, f, indent=4)
+
+        print(f"Commentaires supprimés : {initial_count - len(filtered_data)}")
+
+        
+    @staticmethod
     def filter_imdb_datasets(titles_to_keep):
         """
         Filters IMDB TSV files to only include data related to the given titles.
@@ -100,23 +147,26 @@ class Reduction:
         
         # 1. Filter title.basics.tsv -> Get tconsts
         valid_tconsts = set()
-        
+        different_names = set()
         if os.path.exists(TITLE_BASICS_FILE):
             print(f"Filtering {TITLE_BASICS_FILE}...")
             with open(TITLE_BASICS_FILE, 'r', encoding='utf-8') as fin, \
                  open(TITLE_BASICS_OUTPUT, 'w', encoding='utf-8', newline='') as fout:
-                
+                                
                 reader = csv.DictReader(fin, delimiter='\t')
                 writer = csv.DictWriter(fout, fieldnames=reader.fieldnames, delimiter='\t')
                 writer.writeheader()
                 
                 for row in reader:
+                    if (row["titleType"] != "movie" and row["titleType"] != "tvMovie" and row["titleType"] != "tvSeries" and row["titleType"] != "tvSpecial"):
+                        continue
                     # Match against primaryTitle or originalTitle
-                    if (row['primaryTitle'] in titles_to_keep or 
-                        row['originalTitle'] in titles_to_keep):
+                    if (f"{row['primaryTitle']} ({row['startYear']})" in titles_to_keep or 
+                        f"{row['originalTitle']} ({row['startYear']}" in titles_to_keep):
+                        different_names.add(row['primaryTitle'])
                         valid_tconsts.add(row['tconst'])
                         writer.writerow(row)
-            print(f"Kept {len(valid_tconsts)} titles from title.basics.tsv")
+            print(f"Kept {len(different_names)} titles from title.basics.tsv")
         else:
             print(f"Warning: {TITLE_BASICS_FILE} not found.")
 
@@ -163,9 +213,11 @@ def main():
     # Step 1: Reduce Sample
     # We get back the set of titles (normalized) that were kept
     titles = Reduction.reduce_sample(SAMPLE_FILE, SAMPLE_OUTPUT, N_MOVIES)
+    print(len(titles))
     
     # Step 2: Filter IMDB Datasets using those titles
     Reduction.filter_imdb_datasets(titles)
+    Reduction.filter_sample(SAMPLE_OUTPUT,TITLE_BASICS_OUTPUT)
     
     print("\nProcessing complete. Reduced datasets are in 'datasets/reduced/'")
 

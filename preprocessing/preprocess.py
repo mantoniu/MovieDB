@@ -38,6 +38,17 @@ class Preprocessing:
         if not title:
             return ""
         return re.sub(r'^(\s*.*?\(\d{4}).*$', r'\1', title).strip() + ")"
+    
+    @staticmethod
+    def clean_characters(raw_val):
+        if raw_val == r'\N' or not raw_val:
+            return ""
+        try:
+            json_string = raw_val.replace('""', '"')
+            char_list = json.loads(json_string)
+            return ",".join(c.strip() for c in char_list)
+        except:
+            return raw_val.replace('"', '')
 
 
 class Reduction:
@@ -168,6 +179,7 @@ class Reduction:
                 for row in reader:
                     if row['tconst'] in valid_tconsts:
                         valid_nconsts.add(row['nconst'])
+                        row["characters"] = Preprocessing.clean_characters(row["characters"])
                         writer.writerow(row)
             
             print(f"Kept principals associated with reduced titles.")

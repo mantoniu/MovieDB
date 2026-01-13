@@ -40,6 +40,39 @@
 :User a owl:Class ;
     rdfs:subClassOf :Agent .
 
+:Agent_actor a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Agent
+            [ a owl:Restriction ; owl:onProperty :directed ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+:Agent_actor a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Agent
+            [ a owl:Restriction ; owl:onProperty :wrote ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+:Agent_actor a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Agent
+            [ a owl:Restriction ; owl:onProperty :produced ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
+:Agent_actor a owl:Class ;
+    rdfs:subClassOf :Agent_actress ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            :Agent
+            [ a owl:Restriction ; owl:onProperty :actedIn ; owl:someValuesFrom :MotionPicture ]
+        )
+    ] .
+
 # Properties
 
 :wikiDataURI a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
@@ -217,21 +250,26 @@
 :JobThesaurus a skos:ConceptScheme ;
     skos:prefLabel "Job in film production Thesaurus"@en .
 
-:Director a skos:Concept ;
+:isRelatedWith a owl:SymmetricProperty ;
+    a owl:ObjectProperty ;
+    rdfs:label "relation symétrique classe-concept"@fr .
+
+:Job_director a skos:Concept ;
     skos:inScheme :JobThesaurus ;
     skos:prefLabel "Director"@en .
 
-:Producer a skos:Concept ;
+:Job_producer a skos:Concept ;
     skos:inScheme :JobThesaurus ;
     skos:prefLabel "Producer"@en .
 
-:Writer a skos:Concept ;
+:Job_writer a skos:Concept ;
     skos:inScheme :JobThesaurus ;
     skos:prefLabel "Writer"@en .
 
-:Actor a skos:Concept ;
-    skos:prefLabel "Actor"@en .
+:Job_actor a skos:Concept ;
+    skos:prefLabel "Actor"@en ;
+    skos:related :Job_actress .
 
-:Actress a skos:Concept ;
+:Job_actress a skos:Concept ;
     skos:prefLabel "Actress"@en ;
-    skos:broader :Actor . 
+    skos:related :Job_actor . 

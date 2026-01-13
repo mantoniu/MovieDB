@@ -8,7 +8,7 @@ def extract_rdf_subset(input_path, output_path, classes, limit=10):
         content = f.read()
 
     # 1. Extraction des préfixes (l'en-tête du fichier)
-    prefixes = re.findall(r'@prefix.*?\.', content)
+    prefixes = re.findall(r'@prefix.*', content)
     
     # 2. Extraction des blocs d'entités
     # Recherche les motifs : <URI> a Classe; ... .
@@ -43,4 +43,4 @@ def extract_rdf_subset(input_path, output_path, classes, limit=10):
 
 # Configuration
 target_classes = [':Review', ':MotionPicture', ':Agent', ':Role', ':Job']
-extract_rdf_subset('./output.ttl', 'subset_output.ttl', target_classes, limit=10)
+extract_rdf_subset('output.ttl', 'subset_output.ttl', target_classes, limit=10)

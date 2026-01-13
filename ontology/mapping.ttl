@@ -106,6 +106,23 @@
         ]
     ] .
 
+<#PersonCategoryMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/ontology/cinema#Person/{nconst}" ;
+        rr:class :Agent
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:objectMap [ 
+            # Utilisation de rr:template pour construire l'IRI
+            rr:template "http://www.moviedb.fr/cinema#Agent_{category}" ; 
+            rr:termType rr:IRI 
+        ]
+    ] .
 
 <#PersonMap> a rr:TriplesMap ;
     rml:logicalSource [
@@ -175,7 +192,7 @@
     ] ;
 
     rr:subjectMap [
-        rr:template "http://www.moviedb.fr/ontology/cinema#Job/{category}" ;
+        rr:template "http://www.moviedb.fr/ontology/cinema#Job_{category}" ;
         rr:class skos:Concept
     ] ;
 
@@ -188,6 +205,34 @@
         rr:predicate skos:inScheme ;
         rr:objectMap [ rr:constant :JobThesaurus ]
     ] .
+
+<#JobCategoryClassMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/cinema#Agent_{category}" ;
+        rr:class owl:Class
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:subClassOf ;
+        rr:object :Agent
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "category" ; rr:language "en" ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate :isRelatedWith ;
+        rr:objectMap [ rml:reference "http://www.moviedb.fr/ontology/cinema#Job/{category}" ]
+    ] .
+
+
 
 <#JobMap> a rr:TriplesMap ;
     rml:logicalSource [
@@ -209,7 +254,7 @@
         ]
     ] ;
     rr:predicateObjectMap [
-        rr:predicate :hasJob ;
+        rr:predicate :job ;
         rr:objectMap [
             rr:parentTriplesMap <#JobThesaurusMap> ;
             rr:joinCondition [
@@ -285,6 +330,29 @@
             ]
         ]
     ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate :knownFor ;
+        rr:objectMap [
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:object grel:string_split ;
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:valueParameter ;
+                    rr:objectMap [ rml:reference "characters" ] ;
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_string_sep ;
+                    rr:object "," ;
+                ]
+            ] ;
+            rr:termType rr:Literal ; 
+            rr:datatype xsd:string
+        ]
+    ] ;
+
     rr:predicateObjectMap [
         rr:predicate :characterName ;
         rr:objectMap [ rml:reference "characters" ]
@@ -343,58 +411,25 @@
         ] ;
     ] .
 
-### TODO à revoir
 <#GenreConceptMap> a rr:TriplesMap ;
     rml:logicalSource [
-        rml:source <#MovieSource> ;
+        rml:source "datasets/genres.csv" ;
         rml:referenceFormulation ql:CSV
-    ] ;    
+    ] ;
 
     rr:subjectMap [
-        fnml:functionValue [
-            rr:predicateObjectMap [
-                rr:predicate fno:executes ;
-                rr:object grel:string_split
-            ] ;
-            rr:predicateObjectMap [
-                rr:predicate grel:valueParameter ; 
-                rr:objectMap [
-                    fnml:functionValue [
-                        rr:predicateObjectMap [ rr:predicate fno:executes ; rr:object grel:string_replace ] ;
-                        # 1. On ajoute le préfixe au tout début de la colonne
-                        rr:predicateObjectMap [
-                            rr:predicate grel:valueParameter ;
-                            rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#Genre/{genres}" ]
-                        ] ;
-                        # 2. On injecte le préfixe après chaque virgule
-                        rr:predicateObjectMap [ rr:predicate grel:p_string_find ; rr:object "%2C" ] ;
-                        rr:predicateObjectMap [ 
-                            rr:predicate grel:p_string_replace ; 
-                            rr:object ",http://www.moviedb.fr/ontology/cinema#Genre/" 
-                        ]
-                    ]
-                ]
-            ] ;
-            rr:predicateObjectMap [ rr:predicate grel:p_string_sep ; rr:object "," ]
-        ] ;
-        rr:termType rr:IRI ; # FORCE le résultat à être traité comme des URIs
+        rr:template "http://www.moviedb.fr/ontology/cinema#Genre/{genre}" ;
         rr:class skos:Concept
     ] ;
 
-    # --- POUR LES LABELS (On splitte aussi pour n'avoir qu'UN label par URI) ---
     rr:predicateObjectMap [
         rr:predicate skos:prefLabel ;
-        rr:objectMap [
-            fnml:functionValue [
-                rr:predicateObjectMap [ rr:predicate fno:executes ; rr:object grel:string_split ] ;
-                rr:predicateObjectMap [
-                    rr:predicate grel:valueParameter ;
-                    rr:objectMap [ rml:reference "genres" ]
-                ] ;
-                rr:predicateObjectMap [ rr:predicate grel:p_string_sep ; rr:object "," ]
-            ] ;
-            rr:language "en"
-        ]
+        rr:objectMap [ rml:reference "genre" ; rr:language "en" ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate skos:definition ;
+        rr:objectMap [ rml:reference "description" ; rr:language "en" ]
     ] ;
 
     rr:predicateObjectMap [

@@ -62,12 +62,22 @@ class Reduction:
             
             if clean_title in seen_movies:
                 entry["movie"] = Preprocessing.normalize_title_date(entry["movie"])
+                entry["review_detail"] = entry["review_detail"].replace("^^", "^ ^")
+                if entry["helpful"][1] == "0":
+                    entry["helpful_ratio"] = 0
+                else:
+                    entry["helpful_ratio"] =  (int(entry["helpful"][0].replace(",", ""))/int(entry["helpful"][1].replace(",", ""))) *100
                 reduced_data.append(entry)
             else:
                 if len(seen_movies) < n_movies:
                     seen_movies.add(clean_title)
                     target_titles.add(Preprocessing.normalize_title_date(entry["movie"]))
                     entry["movie"] = Preprocessing.normalize_title_date(entry["movie"])
+                    entry["review_detail"] = entry["review_detail"].replace("^^", "^ ^")
+                    if entry["helpful"][1] == "0":
+                        entry["helpful_ratio"] = 0
+                    else:
+                        entry["helpful_ratio"] =  (int(entry["helpful"][0].replace(",", ""))/int(entry["helpful"][1].replace(",", ""))) *100
                     reduced_data.append(entry)
         
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -98,7 +108,7 @@ class Reduction:
         
         initial_count = len(data)
         filtered_data = [
-            {**entry, "movie": Preprocessing.normalize_title(entry["movie"])}
+            {**entry, "movie": Preprocessing.normalize_title(entry["movie"]), "review_detail": entry["review_detail"].replace("^^", "^ ^")}
             for entry in data
             if entry.get('movie') in title_lookup
         ]

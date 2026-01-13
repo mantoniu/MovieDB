@@ -32,43 +32,13 @@
 
 :Role a owl:Class .
 
+:Job a owl:Class .
+
 :Review a owl:Class ;
     rdfs:subClassOf :Item .
 
 :User a owl:Class ;
     rdfs:subClassOf :Agent .
-
-:Director a owl:Class ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            :Agent
-            [ a owl:Restriction ; owl:onProperty :directed ; owl:someValuesFrom :MotionPicture ]
-        )
-    ] .
-
-:Writer a owl:Class ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            :Agent
-            [ a owl:Restriction ; owl:onProperty :wrote ; owl:someValuesFrom :MotionPicture ]
-        )
-    ] .
-
-:Producer a owl:Class ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            :Agent
-            [ a owl:Restriction ; owl:onProperty :produced ; owl:someValuesFrom :MotionPicture ]
-        )
-    ] .
-
-:Actor a owl:Class ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            :Agent
-            [ a owl:Restriction ; owl:onProperty :actedIn ; owl:someValuesFrom :MotionPicture ]
-        )
-    ] .
 
 # Properties
 
@@ -92,56 +62,53 @@
     rdfs:range xsd:gYear .
 
 # Agent Properties
-:hasJobTitle a owl:DatatypeProperty ;
-    rdfs:domain :Agent ;
-    rdfs:range xsd:string .
-
+:contributedTo owl:propertyChainAxiom ( [ owl:inverseOf :executeBy ] :forMotionPicture ) .
 :contributedTo a owl:ObjectProperty ;
     rdfs:domain :Agent ;
     rdfs:range :CreativeWork .
-
-:hasDirector a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasContributor ;
-    rdfs:domain :MotionPicture ;
-    rdfs:range :Person . 
 
 :directed a owl:ObjectProperty ; 
     owl:inverseOf :hasDirector ;
     rdfs:domain :Person ;
     rdfs:range :MotionPicture .
 
-:hasProducer a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasContributor ;
-    owl:inverseOf :produced ;
-    rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
-
 :actedIn a owl:ObjectProperty ;
     owl:propertyChainAxiom ( :hasRole :inMotionPicture ) ;
-    rdfs:domain :Actor ;
+    rdfs:domain :Agent ;
     rdfs:range :MotionPicture .
 
 :produced a owl:ObjectProperty ;
-    rdfs:domain :Producer ;
+    owl:inverseOf :hasProducer ;
+    rdfs:domain :Agent ;
+    rdfs:range :MotionPicture .
+
+:hasWriter  a owl:ObjectProperty ;
+    rdfs:domain :Agent ;
     rdfs:range :MotionPicture .
 
 :wrote a owl:ObjectProperty ;
-    rdfs:domain :Writer ;
+    owl:inverseOf :hasWriter ;
+    rdfs:domain :Agent ;
     rdfs:range :MotionPicture .
 
 :hasRole a owl:ObjectProperty ;
     owl:inverseOf :playedBy ;
-    rdfs:domain :Actor ;
+    rdfs:domain :Agent ;
     rdfs:range :Role .
 
 :knownFor a owl:ObjectProperty ;
     rdfs:domain :Agent ;
     rdfs:range :CreativeWork .
 
+:hasJob a owl:ObjectProperty ;
+    owl:inverseOf :executeBy ;
+    rdfs:domain :Agent ;
+    rdfs:range :Job .
+
 # Role Properties
 :playedBy a owl:ObjectProperty ;
     rdfs:domain :Role ;
-    rdfs:range :Actor .
+    rdfs:range :Agent .
 
 :inMotionPicture a owl:ObjectProperty ;
     rdfs:domain :Role ;
@@ -188,17 +155,35 @@
     rdfs:domain :CreativeWork ;
     rdfs:range :Agent .
 
+:hasDirector a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person . 
+
+:hasProducer a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContributor ;
+    owl:inverseOf :produced ;
+    rdfs:domain :MotionPicture ;
+    rdfs:range :Person .
+
 :hasWriter a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :wrote ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Writer .
+    rdfs:range :Person .
 
 :hasActor a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :actedIn ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Actor .
+    rdfs:range :Person .
+
+:hasDirector owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasdirectorContribution ) .
+:hasProducer owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasproducerContribution ) .
+:hasWriter   owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :haswriterContribution ) .
+:hasActor   owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasactorContribution ) .
+
+:hasactressContribution rdfs:subPropertyOf :hasactorContribution .
 
 # Review Properties
 :ratingValue a owl:DatatypeProperty ;
@@ -229,34 +214,24 @@
 :GenreThesaurus a skos:ConceptScheme ;
     skos:prefLabel "Movie Genre Thesaurus"@en .
 
-:Genre_Fiction a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:topConceptOf :GenreThesaurus ;
-    skos:prefLabel "Fiction"@en .
+:JobThesaurus a skos:ConceptScheme ;
+    skos:prefLabel "Job in film production Thesaurus"@en .
 
-:Genre_Horror a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:broader :Genre_Fiction ;
-    skos:prefLabel "Horror"@en ;
-    skos:prefLabel "Horreur"@fr .
+:Director a skos:Concept ;
+    skos:inScheme :JobThesaurus ;
+    skos:prefLabel "Director"@en .
 
-:Genre_Slasher a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:broader :Genre_Horror ;
-    skos:prefLabel "Slasher"@en .
+:Producer a skos:Concept ;
+    skos:inScheme :JobThesaurus ;
+    skos:prefLabel "Producer"@en .
 
-:Genre_Comedy a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:broader :Genre_Fiction ;
-    skos:prefLabel "Comedy"@en ;
-    skos:prefLabel "Comédie"@fr .
+:Writer a skos:Concept ;
+    skos:inScheme :JobThesaurus ;
+    skos:prefLabel "Writer"@en .
 
-:Genre_RomanticComedy a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:broader :Genre_Comedy ;
-    skos:prefLabel "Romantic Comedy"@en .
+:Actor a skos:Concept ;
+    skos:prefLabel "Actor"@en .
 
-:Genre_Thriller a skos:Concept ;
-    skos:inScheme :GenreThesaurus ;
-    skos:broader :Genre_Fiction ;
-    skos:prefLabel "Thriller"@en .
+:Actress a skos:Concept ;
+    skos:prefLabel "Actress"@en ;
+    skos:broader :Actor . 

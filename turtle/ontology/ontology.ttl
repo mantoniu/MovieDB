@@ -38,7 +38,7 @@
 :User a owl:Class ;
     rdfs:subClassOf :Agent .
 
-:Agent_actor a owl:Class ;
+:Director a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             :Agent
@@ -46,7 +46,7 @@
         )
     ] .
 
-:Agent_actor a owl:Class ;
+:Writer a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             :Agent
@@ -54,7 +54,7 @@
         )
     ] .
 
-:Agent_actor a owl:Class ;
+:Producer a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             :Agent
@@ -62,8 +62,10 @@
         )
     ] .
 
-:Agent_actor a owl:Class ;
-    rdfs:subClassOf :Agent_actress ;
+:Actress a owl:Class ;
+    rdfs:equivalentClass :Actor .
+
+:Actor a owl:Class ;
     owl:equivalentClass [
         owl:intersectionOf (
             :Agent

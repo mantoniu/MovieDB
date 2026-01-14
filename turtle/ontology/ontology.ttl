@@ -108,7 +108,6 @@
         "Une personne qui joue dans des œuvres cinématographiques."@fr .
 
 # General Properties
-
 :wikiDataURI a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
     rdfs:label "WikiData URI"@en, "URI WikiData"@fr ;
     rdfs:domain [ a owl:Class ;

@@ -198,21 +198,19 @@
     rdfs:domain :MotionPicture ;
     rdfs:range :Person .
 
-:hasDirector owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasdirectorContribution ) .
-:hasProducer owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasproducerContribution ) .
-:hasWriter owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :haswriterContribution ) .
+:hasDirector owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasDirectorContribution ) .
+:hasProducer owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasProducerContribution ) .
+:hasWriter owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasWriterContribution ) .
 :hasActor owl:inverseOf :actedIn .
 
-:hasdirectorContribution a owl:ObjectProperty ;
+:hasDirectorContribution a owl:ObjectProperty ;
     owl:equivalentProperty :directed .
 
-:hasproducerContribution a owl:ObjectProperty ;
+:hasProducerContribution a owl:ObjectProperty ;
     owl:equivalentProperty :produced .
 
-:haswriterContribution a owl:ObjectProperty ;
+:hasWriterContribution a owl:ObjectProperty ;
     owl:equivalentProperty :wrote .
-
-:hasactressContribution rdfs:subPropertyOf :hasactorContribution .
 
 # Review Properties
 :ratingValue a owl:DatatypeProperty ;

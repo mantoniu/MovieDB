@@ -4,9 +4,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:Person a owl:Class .
-:Organization a owl:Class .
-:Place a owl:Class .
+:Person a owl:Class ;
+    rdfs:subClassOf :Agent ;
+    rdfs:comment "A human being."@en .
+
+:Organization a owl:Class ;
+    rdfs:comment "An organization such as a school, company, club, etc."@en .
+
+:Place a owl:Class ;
+    rdfs:comment "A geographical location."@en .
 
 :name a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;

@@ -13,222 +13,333 @@
 :Item a owl:Class .
 
 :CreativeWork a owl:Class ;
+    rdfs:label "Creative Work"@en, "Œuvre créative"@fr ;
     rdfs:subClassOf :Item .
 
 :MotionPicture a owl:Class ;
+    rdfs:label "Motion Picture"@en, "Œuvre cinématographique"@fr ;
     rdfs:subClassOf :CreativeWork .
 
 :Movie a owl:Class ;
+    rdfs:label "Movie"@en, "Film"@fr ;
     rdfs:subClassOf :MotionPicture ;
     owl:disjointWith :TVSeries .
 
 :TVSeries a owl:Class ;
-    rdfs:subClassOf :MotionPicture .
+    rdfs:label "TV Series"@en, "Série télévisée"@fr ;
+    rdfs:subClassOf :MotionPicture ;
+    owl:disjointWith :Movie .
 
 :Agent a owl:Class ;
-    rdfs:subClassOf :Person .
+    rdfs:label "Agent"@en, "Agent"@fr ;
+    rdfs:comment "An entity that can act, such as a person or organization."@en,
+        "Une entité capable d'agir, telle qu'une personne ou une organisation."@fr .
 
-:Role a owl:Class .
+:Role a owl:Class ;
+    rdfs:label "Role"@en, "Rôle"@fr ;
+    rdfs:comment "Links an actor to a motion picture and stores role-specific details."@en,
+        "Relie un acteur à une œuvre et stocke des détails propres au rôle."@fr .
 
 :Review a owl:Class ;
-    rdfs:subClassOf :Item .
+    rdfs:label "Review"@en, "Critique"@fr ;
+    rdfs:subClassOf :Item ;
+    rdfs:comment "A review of a creative work."@en,
+        "Une critique d'une œuvre créative."@fr .
 
 :User a owl:Class ;
-    rdfs:subClassOf :Agent .
-
+    rdfs:label "User"@en, "Utilisateur"@fr ;
+    rdfs:subClassOf :Agent ;
+    rdfs:comment "A IMDb user."@en,
+        "Un utilisateur d'IMDb."@fr .
+    
 :Director a owl:Class ;
+    rdfs:label "Director"@en, "Réalisateur"@fr ;
+    rdfs:subClassOf :Person ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Agent
+            :Person
             [ a owl:Restriction ; owl:onProperty :directed ; owl:someValuesFrom :MotionPicture ]
         )
-    ] .
+    ] ;
+    rdfs:comment "A person who directs motion pictures."@en,
+        "Une personne qui réalise des œuvres cinématographiques."@fr .
 
 :Writer a owl:Class ;
+    rdfs:label "Writer"@en, "Scénariste"@fr ;
+    rdfs:subClassOf :Person ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Agent
+            :Person
             [ a owl:Restriction ; owl:onProperty :wrote ; owl:someValuesFrom :MotionPicture ]
         )
-    ] .
+    ] ;
+    rdfs:comment "A person who writes motion pictures."@en,
+        "Une personne qui écrit des œuvres cinématographiques."@fr .
 
 :Producer a owl:Class ;
+    rdfs:label "Producer"@en, "Producteur"@fr ;
+    rdfs:subClassOf :Person ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Agent
+            :Person
             [ a owl:Restriction ; owl:onProperty :produced ; owl:someValuesFrom :MotionPicture ]
         )
-    ] .
+    ] ;
+    rdfs:comment "A person who produces motion pictures."@en,
+        "Une personne qui produit des œuvres cinématographiques."@fr .
 
 :Actress a owl:Class ;
-    rdfs:equivalentClass :Actor .
+    rdfs:label "Actress"@en, "Actrice"@fr ;
+    rdfs:subClassOf :Person ;
+    owl:equivalentClass :Actor ;
+    rdfs:comment "A female actor."@en,
+        "Une actrice."@fr .
 
 :Actor a owl:Class ;
+    rdfs:label "Actor"@en, "Acteur"@fr ;
+    rdfs:subClassOf :Person ;
     owl:equivalentClass [
         owl:intersectionOf (
-            :Agent
+            :Person
             [ a owl:Restriction ; owl:onProperty :actedIn ; owl:someValuesFrom :MotionPicture ]
         )
-    ] .
+    ] ;
+    rdfs:comment "A person who acts in motion pictures."@en,
+        "Une personne qui joue dans des œuvres cinématographiques."@fr .
 
-# Properties
+# General Properties
 
 :wikiDataURI a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
+    rdfs:label "WikiData URI"@en, "URI WikiData"@fr ;
     rdfs:domain [ a owl:Class ;
-        owl:unionOf ( :Agent :CreativeWork )
+        owl:unionOf ( :Person :CreativeWork )
     ] ;
-    rdfs:range xsd:anyURI .
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The WikiData URI associated with the entity."@en,
+        "L'URI WikiData associée à l'entité."@fr .
 
 # Agent Properties
-:contributedTo owl:propertyChainAxiom ( [ owl:inverseOf :executeBy ] :forMotionPicture ) .
 :contributedTo a owl:ObjectProperty ;
+    rdfs:label "contributed to"@en, "a contribué à"@fr ;
     rdfs:domain :Agent ;
-    rdfs:range :CreativeWork .
+    rdfs:range :CreativeWork ;
+    rdfs:comment "A creative work the agent has contributed to."@en,
+        "Une œuvre créative à laquelle l'agent a contribué."@fr .
 
+# Person Properties
 :directed a owl:ObjectProperty ; 
+    rdfs:label "directed"@en, "a réalisé"@fr ;
     owl:inverseOf :hasDirector ;
-    rdfs:domain :Person ;
-    rdfs:range :MotionPicture .
-
-:actedIn a owl:ObjectProperty ;
-    owl:propertyChainAxiom ( :hasRole :inMotionPicture ) ;
-    rdfs:domain :Agent ;
-    rdfs:range :MotionPicture .
+    owl:equivalentProperty :hasDirectorContribution ;
+    rdfs:domain :Director ;
+    rdfs:range :MotionPicture ;
+    rdfs:comment "A motion picture directed by the director."@en,
+        "Une œuvre cinématographique réalisée par le réalisateur."@fr .
 
 :produced a owl:ObjectProperty ;
+    rdfs:label "produced"@en, "a produit"@fr ;
     owl:inverseOf :hasProducer ;
-    rdfs:domain :Agent ;
-    rdfs:range :MotionPicture .
-
-:hasWriter  a owl:ObjectProperty ;
-    rdfs:domain :Agent ;
-    rdfs:range :MotionPicture .
+    owl:equivalentProperty :hasProducerContribution ;
+    rdfs:domain :Producer ;
+    rdfs:range :MotionPicture ;
+    rdfs:comment "A motion picture produced by the producer."@en,
+        "Une œuvre cinématographique produite par le producteur."@fr .
 
 :wrote a owl:ObjectProperty ;
+    rdfs:label "wrote"@en, "a écrit"@fr ;
     owl:inverseOf :hasWriter ;
-    rdfs:domain :Agent ;
-    rdfs:range :MotionPicture .
+    owl:equivalentProperty :hasWriterContribution ;
+    rdfs:domain :Writer ;
+    rdfs:range :MotionPicture ;
+    rdfs:comment "A motion picture written by the writer."@en,
+        "Une œuvre cinématographique écrite par le scénariste."@fr .
+
+:actedIn a owl:ObjectProperty ;
+    rdfs:label "acted in"@en, "a joué dans"@fr ;
+    owl:propertyChainAxiom ( :hasRole :inMotionPicture ) ;
+    rdfs:domain :Actor ;
+    rdfs:range :MotionPicture ;
+    rdfs:comment "A motion picture the actor has acted in."@en,
+        "Une œuvre cinématographique dans laquelle l'acteur a joué."@fr .
 
 :hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en, "a le rôle"@fr ;
     owl:inverseOf :playedBy ;
-    rdfs:domain :Agent ;
-    rdfs:range :Role .
+    rdfs:domain :Actor ;
+    rdfs:range :Role ;
+    rdfs:comment "The role played by the actor."@en,
+        "Le rôle joué par l'acteur."@fr .
 
 :knownFor a owl:ObjectProperty ;
-    rdfs:domain :Agent ;
-    rdfs:range :CreativeWork .
+    rdfs:label "known for"@en, "connu pour"@fr ;
+    rdfs:domain :Person ;
+    rdfs:range :CreativeWork ;
+    rdfs:comment "A creative work the person is known for."@en,
+        "Une œuvre créative pour laquelle la personne est connue."@fr .
 
 # Role Properties
 :playedBy a owl:ObjectProperty ;
+    rdfs:label "played by"@en, "joué par"@fr ;
+    owl:inverseOf :hasRole ;
     rdfs:domain :Role ;
-    rdfs:range :Agent .
+    rdfs:range :Actor ;
+    rdfs:comment "The actor who played the role."@en,
+        "L'acteur qui a joué le rôle."@fr .
 
 :inMotionPicture a owl:ObjectProperty ;
+    rdfs:label "in motion picture"@en, "dans l'œuvre cinématographique"@fr ;
     rdfs:domain :Role ;
-    rdfs:range :MotionPicture .
+    rdfs:range :MotionPicture ;
+    rdfs:comment "The motion picture in which the role appears."@en,
+        "L'œuvre cinématographique dans laquelle le rôle apparaît."@fr .
 
 :characterName a owl:DatatypeProperty ;
+    rdfs:label "character name"@en, "nom du personnage"@fr ;
     rdfs:domain :Role ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the character played in the role."@en,
+        "Le nom du personnage joué dans le rôle."@fr .
 
 # Movie Properties
 :originalTitle a owl:DatatypeProperty ;
+    rdfs:label "original title"@en, "titre original"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "The original title of the creative work."@en,
+        "Le titre original de l'œuvre créative."@fr .
 
 :primaryTitle a owl:DatatypeProperty ;
+    rdfs:label "primary title"@en, "titre principal"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "The primary title of the creative work."@en,
+        "Le titre principal de l'œuvre créative."@fr .
 
 :releaseYear a owl:DatatypeProperty ;
+    rdfs:label "release year"@en, "année de sortie"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:gYear .
+    rdfs:range xsd:gYear ;
+    rdfs:comment "The year the creative work was released."@en,
+        "L'année de sortie de l'œuvre créative."@fr .
 
 :endYear a owl:DatatypeProperty ;
+    rdfs:label "end year"@en, "année de fin"@fr ;
     rdfs:domain :TVSeries ;
-    rdfs:range xsd:gYear .
+    rdfs:range xsd:gYear ;
+    rdfs:comment "The year the TV series ended."@en,
+        "L'année de fin de la série télévisée."@fr .
 
 :runtimeMinutes a owl:DatatypeProperty ;
+    rdfs:label "runtime minutes"@en, "durée en minutes"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:integer ;
+    rdfs:comment "The runtime duration of the creative work in minutes."@en,
+        "La durée de l'œuvre créative en minutes."@fr .
 
 :isAdult a owl:DatatypeProperty ;
+    rdfs:label "is adult"@en, "est pour adultes"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:boolean .
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indicates if the creative work is intended for adult audiences."@en,
+        "Indique si l'œuvre créative est destinée à un public adulte."@fr .
 
 :imdbId a owl:DatatypeProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty ;
+    rdfs:label "IMDb ID"@en, "ID IMDb"@fr ;
     rdfs:domain :CreativeWork ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "The unique IMDb identifier for the creative work."@en,
+        "L'identifiant IMDb unique pour l'œuvre créative."@fr .
 
 :hasGenre a owl:ObjectProperty ;
+    rdfs:label "has genre"@en, "a pour genre"@fr ;
+    rdfs:domain :CreativeWork ;
     rdfs:range skos:Concept .
 
 :hasContributor a owl:ObjectProperty ;
+    rdfs:label "has contributor"@en, "a pour contributeur"@fr ;
     owl:inverseOf :contributedTo ;
     rdfs:domain :CreativeWork ;
-    rdfs:range :Agent .
+    rdfs:range :Agent ;
+    rdfs:comment "An agent who has contributed to the creative work."@en,
+        "Un agent qui a contribué à l'œuvre créative."@fr .
 
 :hasDirector a owl:ObjectProperty ;
+    rdfs:label "has director"@en, "a pour réalisateur"@fr ;
     rdfs:subPropertyOf :hasContributor ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Person . 
+    rdfs:range :Person ;
+    rdfs:comment "The director of the motion picture."@en,
+        "Le réalisateur de l'œuvre cinématographique."@fr .
 
 :hasProducer a owl:ObjectProperty ;
+    rdfs:label "has producer"@en, "a pour producteur"@fr ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :produced ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
+    rdfs:range :Person ;
+    rdfs:comment "The producer of the motion picture."@en,
+        "Le producteur de l'œuvre cinématographique."@fr .
 
 :hasWriter a owl:ObjectProperty ;
+    rdfs:label "has writer"@en, "a pour scénariste"@fr ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :wrote ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
+    rdfs:range :Person ;
+    rdfs:comment "The writer of the motion picture."@en,
+        "Le scénariste de l'œuvre cinématographique."@fr .
 
 :hasActor a owl:ObjectProperty ;
+    rdfs:label "has actor"@en, "a pour acteur"@fr ;
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :actedIn ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Person .
-
-:hasDirector owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasDirectorContribution ) .
-:hasProducer owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasProducerContribution ) .
-:hasWriter owl:propertyChainAxiom ( [ owl:inverseOf :forMotionPicture ] :hasWriterContribution ) .
-:hasActor owl:inverseOf :actedIn .
-
-:hasDirectorContribution a owl:ObjectProperty ;
-    owl:equivalentProperty :directed .
-
-:hasProducerContribution a owl:ObjectProperty ;
-    owl:equivalentProperty :produced .
-
-:hasWriterContribution a owl:ObjectProperty ;
-    owl:equivalentProperty :wrote .
+    rdfs:range :Person ;
+    rdfs:comment "An actor in the motion picture."@en,
+        "Un acteur dans l'œuvre cinématographique."@fr .
 
 # Review Properties
 :ratingValue a owl:DatatypeProperty ;
+    rdfs:label "rating value"@en, "valeur de la note"@fr ;
     rdfs:domain :Review ; 
-    rdfs:range xsd:float .
+    rdfs:range xsd:float ;
+    rdfs:comment "The rating value given in the review."@en,
+        "La valeur de la note donnée dans la critique."@fr .
 
 :reviewBody a owl:DatatypeProperty ;
+    rdfs:label "review body"@en, "corps de la critique"@fr ;
     rdfs:domain :Review ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "The textual content of the review."@en,
+        "Le contenu textuel de la critique."@fr .
 
 :isSpoiler a owl:DatatypeProperty ;
+    rdfs:label "is spoiler"@en, "est un spoiler"@fr ;
     rdfs:domain :Review ;
-    rdfs:range xsd:boolean .
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Indicates if the review contains spoilers."@en,
+        "Indique si la critique contient des spoilers."@fr .
 
 :helpfulnessVote a owl:DatatypeProperty ;
+    rdfs:label "helpfulness vote"@en, "vote d'utilité"@fr ;
     rdfs:domain :Review ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:integer ;
+    rdfs:comment "The number of helpfulness votes the review received."@en,
+        "Le nombre de votes d'utilité que la critique a reçus."@fr .
 
 :isReviewOf a owl:ObjectProperty ;
+    rdfs:label "is review of"@en, "est une critique de"@fr ;
     rdfs:domain :Review ;
-    rdfs:range :CreativeWork .
+    rdfs:range :CreativeWork ;
+    rdfs:comment "The creative work that is being reviewed."@en,
+        "L'œuvre créative qui est critiquée."@fr .
 
 :writtenBy a owl:ObjectProperty ;
+    rdfs:label "written by"@en, "écrit par"@fr ;
     rdfs:domain :Review ;
-    rdfs:range :User .
+    rdfs:range :User ;
+    rdfs:comment "The user who wrote the review."@en,
+        "L'utilisateur qui a écrit la critique."@fr .
 
 # SKOS Thesaurus
 :GenreThesaurus a skos:ConceptScheme ;

@@ -1,0 +1,113 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000129> a :Person ;
+    :name "Tom Cruise" ;
+    :birthYear "1962"^^xsd:gYear ;
+    :birthPlace :syracuse ;
+    :height 1.70 ;
+    :hasParent :mary_lee_pfeiffer ;
+    :hasParent :thomas_cruise_mapother_iii ;
+    :hasSibling :lee_anne ;
+    :hasSibling :marian ;
+    :hasSibling :cass ;
+    :hasSpouse :mimi_rogers ;
+    :hasSpouse :nicole_kidman ;
+    :hasSpouse :katie_holmes ;
+    :hasChild :isabella_cruise ;
+    :hasChild :connor_cruise ;
+    :hasChild :suri_cruise ;
+    :educatedAt :saint_ignatius_college ;
+    :educatedAt :glenridge_secondary_school ;
+    :educatedAt :robert_hopkins_public_school .
+
+:syracuse a :Place ;
+    :name "Syracuse" ;
+    :city "Syracuse" ;
+    :country "USA" .
+
+:mary_lee_pfeiffer a :Person ;
+    :name "Mary Lee Pfeiffer" ;
+    :birthYear "1936"^^xsd:gYear ;
+    :deathYear "2017"^^xsd:gYear .
+
+:thomas_cruise_mapother_iii a :Person ;
+    :name "Thomas Cruise Mapother III" ;
+    :birthYear "1934"^^xsd:gYear ;
+    :deathYear "1984"^^xsd:gYear ;
+    :birthPlace :louisville .
+
+:louisville a :Place ;
+    :name "Louisville" ;
+    :city "Louisville" ;
+    :country "USA" .
+
+:lee_anne a :Person ;
+    :name "Lee Anne" .
+
+:marian a :Person ;
+    :name "Marian" .
+
+:cass a :Person ;
+    :name "Cass" .
+
+:william_mapother a :Person ;
+    :name "William Mapother" .
+
+:saint_ignatius_college a :Organization ;
+    :name "Saint Ignatius College" ;
+    :location :cleveland .
+
+:cleveland a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "USA" .
+
+:beacon_hill_ottawa a :Place ;
+    :name "Beacon Hill, Ottawa" ;
+    :city "Ottawa" ;
+    :country "Canada" .
+
+:glenridge_secondary_school a :Organization ;
+    :name "Glenridge Secondary School" .
+
+:robert_hopkins_public_school a :Organization ;
+    :name "Robert Hopkins Public School" .
+
+:mimi_rogers a :Person ;
+    :name "Mimi Rogers" .
+
+:nicole_kidman a :Person ;
+    :name "Nicole Kidman" .
+
+:isabella_cruise a :Person ;
+    :name "Isabella Cruise" .
+
+:connor_cruise a :Person ;
+    :name "Connor Cruise" .
+
+:katie_holmes a :Person ;
+    :name "Katie Holmes" .
+
+:suri_cruise a :Person ;
+    :name "Suri Cruise" .
+
+:ana_de_armas a :Person ;
+    :name "Ana de Armas" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+:church_of_scientology_international a :Organization ;
+    :name "Église de scientologie internationale" ;
+    :location :los_angeles .
+
+:odescalchi_castle a :Place ;
+    :name "Château d'Odescalchi" ;
+    :city "Bracciano" ;
+    :country "Italy" .

@@ -1,0 +1,39 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000401> a :Person ;
+    :name "Laurence Fishburne" ;
+    :birthPlace <http://www.moviedb.fr/cinema#brooklyn> ;
+    :educatedAt <http://www.moviedb.fr/cinema#high_school_of_performing_arts> , <http://www.moviedb.fr/cinema#actors_studio> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#gina_torres> , <http://www.moviedb.fr/cinema#hajna_o_moss> ;
+    :hasChild <http://www.moviedb.fr/cinema#delilah_torres_fishburne> , <http://www.moviedb.fr/cinema#langton_fishburne> , <http://www.moviedb.fr/cinema#montana_fishburne> .
+
+<http://www.moviedb.fr/cinema#brooklyn> a :Place ;
+    :name "Brooklyn" .
+
+<http://www.moviedb.fr/cinema#high_school_of_performing_arts> a :Organization ;
+    :name "High School of Performing Arts" .
+
+<http://www.moviedb.fr/cinema#actors_studio> a :Organization ;
+    :name "Actors Studio" .
+
+<http://www.moviedb.fr/cinema#gina_torres> a :Person ;
+    :name "Gina Torres" .
+
+<http://www.moviedb.fr/cinema#hajna_o_moss> a :Person ;
+    :name "Hajna O. Moss" .
+
+<http://www.moviedb.fr/cinema#delilah_torres_fishburne> a :Person ;
+    :name "Delilah Torres Fishburne" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000401> , <http://www.moviedb.fr/cinema#gina_torres> .
+
+<http://www.moviedb.fr/cinema#langton_fishburne> a :Person ;
+    :name "Langton Fishburne" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000401> , <http://www.moviedb.fr/cinema#hajna_o_moss> .
+
+<http://www.moviedb.fr/cinema#montana_fishburne> a :Person ;
+    :name "Montana Fishburne" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000401> , <http://www.moviedb.fr/cinema#hajna_o_moss> .

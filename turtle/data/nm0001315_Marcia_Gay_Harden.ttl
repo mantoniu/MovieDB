@@ -1,0 +1,58 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001315> a :Person ;
+    :name "Marcia Gay Harden" ;
+    :birthPlace :californie ;
+    :educatedAt :surrattsville_high_school ;
+    :educatedAt :university_of_texas_at_austin ;
+    :educatedAt :tisch_school_of_the_arts ;
+    :hasSpouse :thaddaeus_scheel ;
+    :hasChild :eulala_grace_sheel ;
+    :hasChild :julitta_dee_scheel ;
+    :hasChild :hudson_scheel_harden .
+
+:californie a :Place ;
+    :name "Californie" .
+
+:surrattsville_high_school a :Organization ;
+    :name "Surrattsville High School" ;
+    :location :clinton_maryland .
+
+:clinton_maryland a :Place ;
+    :name "Clinton (Maryland)" ;
+    :city "Clinton" ;
+    :country "USA" .
+
+:university_of_texas_at_austin a :Organization ;
+    :name "University of Texas at Austin" ;
+    :location :austin .
+
+:austin a :Place ;
+    :name "Austin" ;
+    :city "Austin" ;
+    :country "USA" .
+
+:tisch_school_of_the_arts a :Organization ;
+    :name "Tisch School of the Arts" ;
+    :location :new_york .
+
+:new_york a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "USA" .
+
+:thaddaeus_scheel a :Person ;
+    :name "Thaddaeus Scheel" .
+
+:eulala_grace_sheel a :Person ;
+    :name "Eulala Grace Sheel" .
+
+:julitta_dee_scheel a :Person ;
+    :name "Julitta Dee Scheel" .
+
+:hudson_scheel_harden a :Person ;
+    :name "Hudson Scheel Harden" .

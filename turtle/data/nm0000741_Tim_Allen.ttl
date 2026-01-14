@@ -1,0 +1,24 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000741> a :Person ;
+    :name "Tim Allen" ;
+    :birthPlace :detroit ;
+    :educatedAt :western_michigan_university .
+
+:detroit a :Place ;
+    :name "Detroit" ;
+    :city "Detroit" ;
+    :country "USA" .
+
+:western_michigan_university a :Organization ;
+    :name "Western Michigan University" ;
+    :location :kalamazoo .
+
+:kalamazoo a :Place ;
+    :name "Kalamazoo" ;
+    :city "Kalamazoo" ;
+    :country "USA" .

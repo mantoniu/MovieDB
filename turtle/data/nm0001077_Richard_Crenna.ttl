@@ -1,0 +1,27 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001077> a :Person ;
+    :name "Richard Crenna" ;
+    :birthPlace :los_angeles ;
+    :hasChild :richard_anthony_crenna ;
+    :educatedAt :belmont_high_school, :university_of_southern_california .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+:belmont_high_school a :Organization ;
+    :name "Belmont High School" ;
+    :location :los_angeles .
+
+:university_of_southern_california a :Organization ;
+    :name "University of Southern California" ;
+    :location :los_angeles .
+
+:richard_anthony_crenna a :Person ;
+    :name "Richard Anthony Crenna" .

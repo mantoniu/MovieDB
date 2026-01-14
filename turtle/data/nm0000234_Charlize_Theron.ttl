@@ -1,0 +1,41 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000234> a :Person ;
+    :name "Charlize Theron" ;
+    :birthYear "1975"^^xsd:gYear ;
+    :birthPlace :benoni ;
+    :hasParent :charles_theron ;
+    :hasParent :gerda_theron ;
+    :educatedAt :national_school_of_the_arts ;
+    :hasChild :jackson ;
+    :hasChild :august .
+
+:benoni a :Place ;
+    :name "Benoni" ;
+    :city "Benoni" ;
+    :country "South Africa" .
+
+:charles_theron a :Person ;
+    :name "Charles Theron" .
+
+:gerda_theron a :Person ;
+    :name "Gerda Theron" .
+
+:national_school_of_the_arts a :Organization ;
+    :name "National School Of The Arts" ;
+    :location :johannesburg .
+
+:johannesburg a :Place ;
+    :name "Johannesburg" ;
+    :city "Johannesburg" ;
+    :country "South Africa" .
+
+:jackson a :Person ;
+    :name "Jackson" .
+
+:august a :Person ;
+    :name "August" .

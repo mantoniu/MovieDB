@@ -1,0 +1,130 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000005> a :Person ;
+    :name "Ernst Ingmar Bergman" ;
+    :birthYear "1918"^^xsd:gYear ;
+    :birthPlace :uppsala ;
+    :deathYear "2007"^^xsd:gYear ;
+    :deathPlace :faro ;
+    :hasSibling :dag_bergman ;
+    :hasSibling :margareta_bergman ;
+    :hasChild :lena_bergman ;
+    :hasChild :eva_bergman ;
+    :hasChild :jan_bergman ;
+    :hasChild :anna_bergman ;
+    :hasChild :mats_bergman ;
+    :hasChild :ingmar_bergman_jr ;
+    :hasChild :daniel_bergman ;
+    :hasChild :maria_von_rosen ;
+    :hasChild :linn_ullmann ;
+    :hasSpouse :else_fischer ;
+    :hasSpouse :ellen_hollender ;
+    :hasSpouse :gunvor_hagberg ;
+    :hasSpouse :kabi_laretei ;
+    :hasSpouse :ingrid_von_rosen ;
+    :educatedAt :university_of_stockholm .
+
+:uppsala a :Place ;
+    :name "Uppsala" ;
+    :country "Sweden" .
+
+:dag_bergman a :Person ;
+    :name "Dag Bergman" .
+
+:margareta_bergman a :Person ;
+    :name "Margareta Bergman" .
+
+:rasunda a :Place ;
+    :name "Råsunda" ;
+    :city "Stockholm" ;
+    :country "Sweden" .
+
+:weimar a :Place ;
+    :name "Weimar" ;
+    :country "Germany" .
+
+:university_of_stockholm a :Organization ;
+    :name "University of Stockholm" ;
+    :location :stockholm .
+
+:stockholm a :Place ;
+    :name "Stockholm" ;
+    :country "Sweden" .
+
+:lena_bergman a :Person ;
+    :name "Lena Bergman" .
+
+:else_fischer a :Person ;
+    :name "Else Fischer" .
+
+:ellen_hollender a :Person ;
+    :name "Ellen Hollender" .
+
+:eva_bergman a :Person ;
+    :name "Eva Bergman" .
+
+:jan_bergman a :Person ;
+    :name "Jan Bergman" .
+
+:anna_bergman a :Person ;
+    :name "Anna Bergman" .
+
+:mats_bergman a :Person ;
+    :name "Mats Bergman" .
+
+:goteborg a :Place ;
+    :name "Göteborg" ;
+    :country "Sweden" .
+
+:gunvor_hagberg a :Person ;
+    :name "Gunvor Hagberg" .
+
+:ingmar_bergman_jr a :Person ;
+    :name "Ingmar Bergman Jr" .
+
+:kabi_laretei a :Person ;
+    :name "Kabi Laretei" .
+
+:daniel_bergman a :Person ;
+    :name "Daniel Bergman" .
+
+:ingrid_von_rosen a :Person ;
+    :name "Ingrid von Rosen" .
+
+:maria_von_rosen a :Person ;
+    :name "Maria von Rosen" .
+
+:linn_ullmann a :Person ;
+    :name "Linn Ullmann" .
+
+:cagnes_sur_mer a :Place ;
+    :name "Cagnes-sur-Mer" ;
+    :country "France" .
+
+:paris a :Place ;
+    :name "Paris" ;
+    :country "France" .
+
+:malmo a :Place ;
+    :name "Malmö" ;
+    :country "Sweden" .
+
+:faro a :Place ;
+    :name "Fårö" ;
+    :country "Sweden" .
+
+:djursholm a :Place ;
+    :name "Djursholm" ;
+    :country "Sweden" .
+
+:munich a :Place ;
+    :name "Munich" ;
+    :country "Germany" .
+
+:oslo a :Place ;
+    :name "Oslo" ;
+    :country "Norway" .

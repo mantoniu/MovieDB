@@ -1,0 +1,33 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000138> a :Person ;
+    :name "Leonardo DiCaprio" ;
+    :birthYear "1974"^^xsd:gYear ;
+    :birthPlace :los_angeles ;
+    :hasParent :george_paul_dicaprio ;
+    :hasParent :irmelin_indenbirken ;
+    :hasSibling :adam_farrar ;
+    :hasSpouse :kate_winslet .
+
+:george_paul_dicaprio a :Person ;
+    :name "George Paul DiCaprio" ;
+    :birthYear "1943"^^xsd:gYear .
+
+:irmelin_indenbirken a :Person ;
+    :name "Irmelin Indenbirken" ;
+    :birthYear "1943"^^xsd:gYear .
+
+:adam_farrar a :Person ;
+    :name "Adam Farrar" ;
+    :birthYear "1971"^^xsd:gYear .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .
+
+:kate_winslet a :Person ;
+    :name "Kate Winslet" .

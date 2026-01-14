@@ -1,0 +1,39 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000247> a :Person ;
+    :name "John Woo" ;
+    :birthYear "1946"^^xsd:gYear ;
+    :birthPlace :canton ;
+    :educatedAt :matteo_ricci_college .
+
+:canton a :Place ;
+    :name "Canton" ;
+    :country "China" .
+
+:hong_kong a :Place ;
+    :name "Hong Kong" .
+
+:cathay_studios a :Organization ;
+    :name "Cathay Studios" ;
+    :location :hong_kong .
+
+:shaw_brothers a :Organization ;
+    :name "Shaw Brothers" ;
+    :location :hong_kong .
+
+:golden_harvest a :Organization ;
+    :name "Golden Harvest" .
+
+:cinema_city a :Organization ;
+    :name "Cinema City" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .
+
+:matteo_ricci_college a :Organization ;
+    :name "Matteo Ricci College" .

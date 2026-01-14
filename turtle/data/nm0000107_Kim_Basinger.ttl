@@ -1,0 +1,39 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000107> a :Person ;
+    :name "Kim Basinger" ;
+    :birthYear "1953"^^xsd:gYear ;
+    :birthPlace :athens ;
+    :hasParent :don_basinger ;
+    :hasParent :ann_basinger ;
+    :hasSibling :mick ;
+    :hasSibling :skip ;
+    :hasSibling :ashley ;
+    :hasSibling :barbara .
+
+:athens a :Place ;
+    :name "Athens" ;
+    :city "Athens" ;
+    :country "USA" .
+
+:don_basinger a :Person ;
+    :name "Don Basinger" .
+
+:ann_basinger a :Person ;
+    :name "Ann Basinger" .
+
+:mick a :Person ;
+    :name "Mick" .
+
+:skip a :Person ;
+    :name "Skip" .
+
+:ashley a :Person ;
+    :name "Ashley" .
+
+:barbara a :Person ;
+    :name "Barbara" .

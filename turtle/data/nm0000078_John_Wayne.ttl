@@ -1,0 +1,55 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000078> a :Person ;
+    :name "John Wayne" ;
+    :birthYear "1907"^^xsd:gYear ;
+    :birthPlace :winterset ;
+    :deathYear "1979"^^xsd:gYear ;
+    :deathPlace :corona_del_mar ;
+    :hasParent :clyde_leonard_morrison ;
+    :hasParent :mary_alberta_brown ;
+    :hasSibling :robert_morrison ;
+    :hasSpouse :josephine_saenz ;
+    :hasSpouse :esperanza_baur ;
+    :hasSpouse :pilar_pallete ;
+    :height 1.93 .
+
+:clyde_leonard_morrison a :Person ;
+    :name "Clyde Leonard Morrison" ;
+    :birthYear "1884"^^xsd:gYear ;
+    :deathYear "1937"^^xsd:gYear .
+
+:mary_alberta_brown a :Person ;
+    :name "Mary Alberta Brown" ;
+    :birthYear "1885"^^xsd:gYear ;
+    :deathYear "1970"^^xsd:gYear .
+
+:robert_morrison a :Person ;
+    :name "Robert Morrison" .
+
+:josephine_saenz a :Person ;
+    :name "Joséphine Saenz" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :deathYear "2003"^^xsd:gYear .
+
+:esperanza_baur a :Person ;
+    :name "Esperanza Baur" ;
+    :birthYear "1920"^^xsd:gYear ;
+    :deathYear "1961"^^xsd:gYear .
+
+:pilar_pallete a :Person ;
+    :name "Pilar Pallete" ;
+    :birthYear "1928"^^xsd:gYear .
+
+:winterset a :Place ;
+    :name "Winterset" ;
+    :country "USA" .
+
+:corona_del_mar a :Place ;
+    :name "Corona del Mar" ;
+    :city "Corona del Mar" ;
+    :country "USA" .

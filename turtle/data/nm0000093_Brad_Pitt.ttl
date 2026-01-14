@@ -1,0 +1,81 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000093> a :Person ;
+    :name "William Bradley Pitt" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :birthPlace :shawnee ;
+    :hasParent :william_alvin_pitt ;
+    :hasParent :jane_pitt ;
+    :hasSibling :doug_pitt ;
+    :hasSibling :julie_pitt ;
+    :educatedAt :kickapoo_high_school ;
+    :educatedAt :university_of_missouri_columbia ;
+    :hasSpouse :jennifer_aniston ;
+    :hasSpouse :angelina_jolie ;
+    :hasChild :maddox_chivan_pitt_jolie ;
+    :hasChild :pax_thien_pitt_jolie ;
+    :hasChild :zahara_marley_pitt_jolie ;
+    :hasChild :shiloh_nouvel_pitt_jolie ;
+    :hasChild :knox_leon_jolie_pitt ;
+    :hasChild :vivienne_marcheline_jolie_pitt .
+
+:shawnee a :Place ;
+    :name "Shawnee" ;
+    :country "États-Unis" ;
+    :city "Shawnee" .
+
+:william_alvin_pitt a :Person ;
+    :name "William Alvin Pitt" .
+
+:jane_pitt a :Person ;
+    :name "Jane Pitt" .
+
+:doug_pitt a :Person ;
+    :name "Doug Pitt" .
+
+:julie_pitt a :Person ;
+    :name "Julie Pitt" .
+
+:kickapoo_high_school a :Organization ;
+    :name "Kickapoo High School" ;
+    :location :springfield .
+
+:university_of_missouri_columbia a :Organization ;
+    :name "Université du Missouri à Columbia" ;
+    :location :columbia .
+
+:jennifer_aniston a :Person ;
+    :name "Jennifer Aniston" .
+
+:angelina_jolie a :Person ;
+    :name "Angelina Jolie" .
+
+:maddox_chivan_pitt_jolie a :Person ;
+    :name "Maddox Chivan Pitt-Jolie" .
+
+:pax_thien_pitt_jolie a :Person ;
+    :name "Pax Thien Pitt-Jolie" .
+
+:zahara_marley_pitt_jolie a :Person ;
+    :name "Zahara Marley Pitt-Jolie" .
+
+:shiloh_nouvel_pitt_jolie a :Person ;
+    :name "Shiloh Nouvel Pitt-Jolie" .
+
+:knox_leon_jolie_pitt a :Person ;
+    :name "Knox Léon Jolie-Pitt" .
+
+:vivienne_marcheline_jolie_pitt a :Person ;
+    :name "Vivienne Marcheline Jolie-Pitt" .
+
+:springfield a :Place ;
+    :name "Springfield" ;
+    :country "États-Unis" .
+
+:columbia a :Place ;
+    :name "Columbia" ;
+    :country "États-Unis" .

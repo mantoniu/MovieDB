@@ -1,0 +1,49 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000493> a :Person ;
+    :name "Jack Lemmon" ;
+    :hasParent <http://www.moviedb.fr/cinema#john_uhler_lemmon_jr> ;
+    :hasParent <http://www.moviedb.fr/cinema#mildred_burgess_larue> ;
+    :educatedAt <http://www.moviedb.fr/cinema#phillips_academy> ;
+    :educatedAt <http://www.moviedb.fr/cinema#harvard_university> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#cynthia_stone> ;
+    :hasChild <http://www.moviedb.fr/cinema#chris_lemmon> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#felicia_farr> ;
+    :hasChild <http://www.moviedb.fr/cinema#courtney_lemmon> ;
+    :deathYear "2001"^^xsd:gYear ;
+    :deathPlace <http://www.moviedb.fr/cinema#los_angeles> ;
+    :birthPlace <http://www.moviedb.fr/cinema#massachusetts> .
+
+<http://www.moviedb.fr/cinema#john_uhler_lemmon_jr> a :Person ;
+    :name "John Uhler Lemmon, Jr." .
+
+<http://www.moviedb.fr/cinema#mildred_burgess_larue> a :Person ;
+    :name "Mildred Burgess LaRue" .
+
+<http://www.moviedb.fr/cinema#phillips_academy> a :Organization ;
+    :name "Phillips Academy" .
+
+<http://www.moviedb.fr/cinema#harvard_university> a :Organization ;
+    :name "Harvard University" .
+
+<http://www.moviedb.fr/cinema#cynthia_stone> a :Person ;
+    :name "Cynthia Stone" .
+
+<http://www.moviedb.fr/cinema#chris_lemmon> a :Person ;
+    :name "Chris Lemmon" .
+
+<http://www.moviedb.fr/cinema#felicia_farr> a :Person ;
+    :name "Felicia Farr" .
+
+<http://www.moviedb.fr/cinema#courtney_lemmon> a :Person ;
+    :name "Courtney Lemmon" .
+
+<http://www.moviedb.fr/cinema#los_angeles> a :Place ;
+    :name "Los Angeles" .
+
+<http://www.moviedb.fr/cinema#massachusetts> a :Place ;
+    :name "Massachusetts" .

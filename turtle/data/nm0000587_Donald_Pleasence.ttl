@@ -1,0 +1,74 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000587> a :Person ;
+    :name "Donald Pleasence" ;
+    :birthYear "1919"^^xsd:gYear ;
+    :birthPlace :nottinghamshire ;
+    :deathYear "1995"^^xsd:gYear ;
+    :deathPlace :saint_paul_de_vence ;
+    :hasParent :thomas_stanley_pleasence ;
+    :hasParent :alice_armitage ;
+    :educatedAt :royal_academy_of_dramatic_art ;
+    :hasSpouse :miriam_raymond ;
+    :hasSpouse :josephine_crombie ;
+    :hasSpouse :meira_shore ;
+    :hasSpouse :linda_kentwood ;
+    :hasChild :angela ;
+    :hasChild :jean ;
+    :hasChild :lucy ;
+    :hasChild :polly ;
+    :hasChild :miranda .
+
+:nottinghamshire a :Place ;
+    :name "Nottinghamshire" ;
+    :country "Angleterre" .
+
+:thomas_stanley_pleasence a :Person ;
+    :name "Thomas Stanley Pleasence" .
+
+:alice_armitage a :Person ;
+    :name "Alice Armitage" .
+
+:royal_academy_of_dramatic_art a :Organization ;
+    :name "Royal Academy of Dramatic Art" .
+
+:swinton a :Place ;
+    :name "Swinton" ;
+    :city "Swinton" ;
+    :country "Yorkshire du Sud" .
+
+:saint_paul_de_vence a :Place ;
+    :name "Saint-Paul-de-Vence" ;
+    :city "Saint-Paul-de-Vence" ;
+    :country "France" .
+
+:miriam_raymond a :Person ;
+    :name "Miriam Raymond" .
+
+:josephine_crombie a :Person ;
+    :name "Joséphine Crombie" .
+
+:meira_shore a :Person ;
+    :name "Meira Shore" .
+
+:linda_kentwood a :Person ;
+    :name "Linda Kentwood" .
+
+:angela a :Person ;
+    :name "Angela" .
+
+:jean a :Person ;
+    :name "Jean" .
+
+:lucy a :Person ;
+    :name "Lucy" .
+
+:polly a :Person ;
+    :name "Polly" .
+
+:miranda a :Person ;
+    :name "Miranda" .

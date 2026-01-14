@@ -1,0 +1,58 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000307> a :Person ;
+    :name "Helena Bonham Carter" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :birthPlace :golders_green ;
+    :hasParent :elena_propper_de_callejon ;
+    :hasParent :raymond_bonham_carter ;
+    :hasChild :billy ;
+    :hasChild :nell ;
+    :hasSpouse :tim_burton ;
+    :hasSpouse :rye_dag_holmboe ;
+    :hasSibling :brother1, :brother2 ;
+    :educatedAt :ecole_philippe_gaulier, :westminster_school.
+
+:golders_green a :Place ;
+    :name "Golders Green" ;
+    :city "London" ;
+    :country "United Kingdom" .
+
+:elena_propper_de_callejon a :Person ;
+    :name "Elena Propper de Callejón" .
+
+:raymond_bonham_carter a :Person ;
+    :name "Raymond Bonham Carter" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :deathYear "2004"^^xsd:gYear .
+
+:billy a :Person ;
+    :name "Billy" .
+
+:nell a :Person ;
+    :name "Nell" .
+
+:tim_burton a :Person ;
+    :name "Tim Burton" .
+
+:rye_dag_holmboe a :Person ;
+    :name "Rye Dag Holmboe" .
+
+:brother1 a :Person .
+:brother2 a :Person .
+
+:ecole_philippe_gaulier a :Organization ;
+    :name "École Philippe Gaulier" .
+
+:westminster_school a :Organization ;
+    :name "Westminster School" ;
+    :location :london .
+
+:london a :Place ;
+    :name "London" ;
+    :country "United Kingdom" ;
+    :city "London" .

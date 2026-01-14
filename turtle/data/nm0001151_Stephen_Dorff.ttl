@@ -1,0 +1,20 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001151> a :Person ;
+    :name "Stephen Dorff" .
+
+<http://www.moviedb.fr/cinema#roseanne> a :Organization ;
+    :name "Roseanne" .
+
+<http://www.moviedb.fr/cinema#maries_deux_enfants> a :Organization ;
+    :name "Mariés, deux enfants" .
+
+<http://www.moviedb.fr/cinema#sofia_coppola> a :Person ;
+    :name "Sofia Coppola" .
+
+<http://www.moviedb.fr/cinema#roland_west> a :Person ;
+    :name "Roland West" .

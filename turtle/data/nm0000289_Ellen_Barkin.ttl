@@ -1,0 +1,35 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000289> a :Person ;
+    :name "Ellen Rona Barkin" ;
+    :birthYear "1954"^^xsd:gYear ;
+    :birthPlace :bronx ;
+    :hasSpouse :gabriel_byrne ;
+    :hasChild :jack_daniel ;
+    :hasChild :romy_marion ;
+    :hasSpouse :ronald_perelman .
+
+:gabriel_byrne a :Person ;
+    :name "Gabriel Byrne" .
+
+:jack_daniel a :Person ;
+    :name "Jack Daniel" ;
+    :birthYear "1989"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000289> .
+
+:romy_marion a :Person ;
+    :name "Romy Marion" ;
+    :birthYear "1992"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000289> .
+
+:ronald_perelman a :Person ;
+    :name "Ronald Perelman" .
+
+:bronx a :Place ;
+    :name "Bronx" ;
+    :city "New York" ;
+    :country "USA" .

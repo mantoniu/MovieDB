@@ -1,0 +1,77 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000127> a :Person ;
+    :name "Wesley Earl Craven" ;
+    :birthYear "1939"^^xsd:gYear ;
+    :birthPlace :cleveland ;
+    :hasParent :paul_eugene_craven ;
+    :hasParent :caroline_miller_craven ;
+    :hasSibling :carol_buhrow ;
+    :hasSibling :paul_eugene_craven_jr ;
+    :hasSpouse :bonnie_broecker ;
+    :hasChild :jonathan_christian ;
+    :hasChild :jessica ;
+    :hasSpouse :millicent_eleanor_meyer ;
+    :hasSpouse :iya_labunka ;
+    :deathYear "2015"^^xsd:gYear ;
+    :deathPlace :los_angeles ;
+    :educatedAt :wheaton_college ;
+    :educatedAt :johns_hopkins_university .
+
+:cleveland a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "USA" .
+
+:paul_eugene_craven a :Person ;
+    :name "Paul Eugene Craven" .
+
+:caroline_miller_craven a :Person ;
+    :name "Caroline Miller Craven" .
+
+:carol_buhrow a :Person ;
+    :name "Carol Buhrow" .
+
+:paul_eugene_craven_jr a :Person ;
+    :name "Paul Eugene Craven Jr." .
+
+:bonnie_broecker a :Person ;
+    :name "Bonnie Broecker" .
+
+:jonathan_christian a :Person ;
+    :name "Jonathan Christian" .
+
+:jessica a :Person ;
+    :name "Jessica" .
+
+:millicent_eleanor_meyer a :Person ;
+    :name "Millicent Eleanor Meyer" .
+
+:iya_labunka a :Person ;
+    :name "Iya Labunka" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+:wheaton_college a :Organization ;
+    :name "Wheaton College" ;
+    :location :illinois .
+
+:johns_hopkins_university a :Organization ;
+    :name "Johns Hopkins University" ;
+    :location :baltimore .
+
+:illinois a :Place ;
+    :name "Illinois" ;
+    :country "USA" .
+
+:baltimore a :Place ;
+    :name "Baltimore" ;
+    :city "Baltimore" ;
+    :country "USA" .

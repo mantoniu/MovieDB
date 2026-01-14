@@ -1,0 +1,66 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001523> a :Person ;
+    :name "Natascha McElhone" ;
+    :birthPlace :walton_on_thames ;
+    :hasParent :noreen_taylor ;
+    :hasParent :mike_taylor ;
+    :hasSibling :nicholas_taylor ;
+    :hasSibling :alexander_taylor ;
+    :hasSibling :damon_taylor ;
+    :educatedAt :st_marys_hall ;
+    :educatedAt :london_academy_of_music_and_dramatic_art ;
+    :hasSpouse :martin_hirigoyen_kelly ;
+    :hasChild :theodore_kelly ;
+    :hasChild :otis_kelly ;
+    :hasChild :rex_kelly .
+
+:walton_on_thames a :Place ;
+    :name "Walton-on-Thames" .
+
+:brighton a :Place ;
+    :name "Brighton" .
+
+:noreen_taylor a :Person ;
+    :name "Noreen Taylor" .
+
+:mike_taylor a :Person ;
+    :name "Mike Taylor" .
+
+:nicholas_taylor a :Person ;
+    :name "Nicholas Taylor" .
+
+:alexander_taylor a :Person ;
+    :name "Alexander Taylor" .
+
+:damon_taylor a :Person ;
+    :name "Damon Taylor" .
+
+:st_marys_hall a :Organization ;
+    :name "St. Mary's Hall" .
+
+:london_academy_of_music_and_dramatic_art a :Organization ;
+    :name "London Academy of Music and Dramatic Art" .
+
+:chelsea a :Place ;
+    :name "Chelsea" .
+
+:london a :Place ;
+    :name "London" .
+
+:martin_hirigoyen_kelly a :Person ;
+    :name "Martin Hirigoyen Kelly" ;
+    :deathYear "2008"^^xsd:gYear .
+
+:theodore_kelly a :Person ;
+    :name "Theodore Kelly" .
+
+:otis_kelly a :Person ;
+    :name "Otis Kelly" .
+
+:rex_kelly a :Person ;
+    :name "Rex Kelly" .

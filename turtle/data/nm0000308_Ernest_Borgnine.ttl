@@ -1,0 +1,42 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000308> a :Person ;
+    :name "Ernest Borgnine" ;
+    :birthPlace <http://www.moviedb.fr/cinema#unknown_birthplace> ;
+    :deathPlace <http://www.moviedb.fr/cinema#los_angeles> ;
+    :deathYear "2012"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nancee_borgnine>, <http://www.moviedb.fr/cinema#cristopher_borgnine>, <http://www.moviedb.fr/cinema#sharon_borgnine>, <http://www.moviedb.fr/cinema#diana_borgnine> ;
+    :educatedAt <http://www.moviedb.fr/cinema#randall_school_of_drama> .
+
+<http://www.moviedb.fr/cinema#los_angeles> a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#randall_school_of_drama> a :Organization ;
+    :name "Randall School of Drama" ;
+    :location <http://www.moviedb.fr/cinema#hartford> .
+
+<http://www.moviedb.fr/cinema#hartford> a :Place ;
+    :name "Hartford" ;
+    :city "Hartford" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#nancee_borgnine> a :Person ;
+    :name "Nancee Borgnine" .
+
+<http://www.moviedb.fr/cinema#cristopher_borgnine> a :Person ;
+    :name "Cristopher Borgnine" .
+
+<http://www.moviedb.fr/cinema#sharon_borgnine> a :Person ;
+    :name "Sharon Borgnine" .
+
+<http://www.moviedb.fr/cinema#diana_borgnine> a :Person ;
+    :name "Diana Borgnine" .
+
+<http://www.moviedb.fr/cinema#unknown_birthplace> a :Place ;
+    :name "Unknown Birthplace" .

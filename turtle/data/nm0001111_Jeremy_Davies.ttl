@@ -1,0 +1,44 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001111> a :Person ;
+    :name "Jeremy Davies" ;
+    :birthYear "1969"^^xsd:gYear ;
+    :birthPlace :traverse_city ;
+    :hasSibling :joshua_davies ;
+    :hasSibling :zachary_davies ;
+    :hasSibling :katrina_davies ;
+    :hasParent :mel_boring ;
+    :educatedAt :american_academy_of_dramatic_arts .
+
+:traverse_city a :Place ;
+    :name "Traverse City" ;
+    :city "Traverse City" ;
+    :country "USA" .
+
+:joshua_davies a :Person ;
+    :name "Joshua Davies" ;
+    :hasParent :mel_boring .
+
+:zachary_davies a :Person ;
+    :name "Zachary Davies" ;
+    :hasParent :mel_boring .
+
+:katrina_davies a :Person ;
+    :name "Katrina Davies" ;
+    :hasParent :mel_boring .
+
+:mel_boring a :Person ;
+    :name "Mel Boring" .
+
+:american_academy_of_dramatic_arts a :Organization ;
+    :name "American Academy of Dramatic Arts" ;
+    :location :pasadena .
+
+:pasadena a :Place ;
+    :name "Pasadena" ;
+    :city "Pasadena" ;
+    :country "USA" .

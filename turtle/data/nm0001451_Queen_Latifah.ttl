@@ -1,0 +1,37 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001451> a :Person ;
+    :name "Queen Latifah" ;
+    :birthYear "1970"^^xsd:gYear ;
+    :birthPlace :newark ;
+    :height 1.78 ;
+    :hasParent :rita_bray ;
+    :hasParent :lancelot_owens_sr ;
+    :educatedAt :irvington_high_school .
+
+:newark a :Place ;
+    :name "Newark" ;
+    :country "USA" ;
+    :city "Newark" .
+
+:east_orange a :Place ;
+    :name "East Orange" ;
+    :country "USA" .
+
+:rita_bray a :Person ;
+    :name "Rita Bray" .
+
+:lancelot_owens_sr a :Person ;
+    :name "Lancelot Owens, Sr" .
+
+:irvington_high_school a :Organization ;
+    :name "Irvington High School" ;
+    :location :irvington .
+
+:irvington a :Place ;
+    :name "Irvington" ;
+    :country "USA" .

@@ -1,0 +1,52 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000318> a :Person ;
+    :name "Tim Burton" ;
+    :birthYear "1958"^^xsd:gYear ;
+    :birthPlace :burbank ;
+    :hasParent :jean_burton ;
+    :hasParent :bill_burton ;
+    :educatedAt :california_institute_of_arts ;
+    :hasSpouse :lena_gieseke ;
+    :hasSpouse :helena_bonham_carter ;
+    :hasSpouse :monica_bellucci ;
+    :hasChild :william_raymond ;
+    :hasChild :nell .
+
+:jean_burton a :Person ;
+    :name "Jean Burton" .
+
+:bill_burton a :Person ;
+    :name "Bill Burton" .
+
+:burbank a :Place ;
+    :name "Burbank" ;
+    :country "USA" ;
+    :city "Burbank" .
+
+:california_institute_of_arts a :Organization ;
+    :name "California Institute of Arts" ;
+    :location :california .
+
+:california a :Place ;
+    :name "California" ;
+    :country "USA" .
+
+:lena_gieseke a :Person ;
+    :name "Lena Gieseke" .
+
+:helena_bonham_carter a :Person ;
+    :name "Helena Bonham Carter" .
+
+:monica_bellucci a :Person ;
+    :name "Monica Bellucci" .
+
+:william_raymond a :Person ;
+    :name "William Raymond" .
+
+:nell a :Person ;
+    :name "Nell" .

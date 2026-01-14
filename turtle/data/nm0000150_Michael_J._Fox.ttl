@@ -1,0 +1,48 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000150> a :Person ;
+    :name "Michael J. Fox" ;
+    :birthPlace :edmonton ;
+    :birthYear "1961"^^xsd:gYear ;
+    :height 1.63 .
+
+:phyllis_fox a :Person ;
+    :name "Phyllis Fox" .
+
+:tracy_pollan a :Person ;
+    :name "Tracy Pollan" ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000150> .
+
+<http://www.moviedb.fr/cinema#nm0000150> :hasSpouse :tracy_pollan .
+
+:sam_michael a :Person ;
+    :name "Sam Michael" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000150> .
+
+<http://www.moviedb.fr/cinema#nm0000150> :hasChild :sam_michael .
+
+:aquinnah_kathleen a :Person ;
+    :name "Aquinnah Kathleen" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000150> .
+
+<http://www.moviedb.fr/cinema#nm0000150> :hasChild :aquinnah_kathleen .
+
+:schuyler_frances a :Person ;
+    :name "Schuyler Frances" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000150> .
+
+<http://www.moviedb.fr/cinema#nm0000150> :hasChild :schuyler_frances .
+
+:esme_annabelle a :Person ;
+    :name "Esmé Annabelle" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000150> .
+
+<http://www.moviedb.fr/cinema#nm0000150> :hasChild :esme_annabelle .
+
+:edmonton a :Place ;
+    :name "Edmonton" ;
+    :country "Canada" .

@@ -1,0 +1,39 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000118> a :Person ;
+    :name "John Howard Carpenter" ;
+    :birthYear "1948"^^xsd:gYear ;
+    :birthPlace :carthage ;
+    :hasParent :milton_jean ;
+    :hasParent :howard_ralph_carpenter ;
+    :educatedAt :western_kentucky_university ;
+    :educatedAt :university_of_southern_california .
+
+:carthage a :Place ;
+    :name "Carthage" .
+
+:milton_jean a :Person ;
+    :name "Milton Jean" .
+
+:howard_ralph_carpenter a :Person ;
+    :name "Howard Ralph Carpenter" .
+
+:bowling_green a :Place ;
+    :name "Bowling Green" ;
+    :country "USA" .
+
+:western_kentucky_university a :Organization ;
+    :name "Western Kentucky University" ;
+    :location :bowling_green .
+
+:university_of_southern_california a :Organization ;
+    :name "University of Southern California" ;
+    :location :los_angeles .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .

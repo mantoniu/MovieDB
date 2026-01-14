@@ -1,0 +1,28 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001367> a :Person ;
+    :name "C. Thomas Howell" ;
+    :hasSpouse :rae_dawn_chong ;
+    :hasSpouse :sylvie_anderson ;
+    :hasChild :isabelle_howell ;
+    :hasChild :dashiell_howell ;
+    :hasChild :liam_howell .
+
+:rae_dawn_chong a :Person ;
+    :name "Rae Dawn Chong" .
+
+:sylvie_anderson a :Person ;
+    :name "Sylvie Anderson" .
+
+:isabelle_howell a :Person ;
+    :name "Isabelle Howell" .
+
+:dashiell_howell a :Person ;
+    :name "Dashiell Howell" .
+
+:liam_howell a :Person ;
+    :name "Liam Howell" .

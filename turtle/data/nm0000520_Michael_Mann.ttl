@@ -1,0 +1,35 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000520> a :Person ;
+    :name "Michael Mann" ;
+    :birthPlace :humboldt_park ;
+    :educatedAt :university_of_wisconsin_madison, :london_film_school ;
+    :hasChild :ami_canaan_mann .
+
+:humboldt_park a :Place ;
+    :name "Humboldt Park" ;
+    :city "Chicago" ;
+    :country "USA" .
+
+:university_of_wisconsin_madison a :Organization ;
+    :name "University of Wisconsin-Madison" ;
+    :location :madison .
+
+:london_film_school a :Organization ;
+    :name "London Film School" ;
+    :location :london .
+
+:ami_canaan_mann a :Person ;
+    :name "Ami Canaan Mann" .
+
+:madison a :Place ;
+    :name "Madison" ;
+    :country "USA" .
+
+:london a :Place ;
+    :name "London" ;
+    :country "UK" .

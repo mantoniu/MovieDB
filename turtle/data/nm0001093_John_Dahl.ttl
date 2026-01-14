@@ -1,0 +1,40 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001093> a :Person ;
+    :name "John Dahl" ;
+    :birthPlace :billings ;
+    :hasSibling :rick_dahl ;
+    :educatedAt :montana_state_university ;
+    :educatedAt :afi_conservatory ;
+    :hasSpouse :beth_friedberg .
+
+:billings a :Place ;
+    :name "Billings" ;
+    :country "USA" ;
+    :city "Billings" .
+
+:montana_state_university a :Organization ;
+    :name "Montana State University" ;
+    :location :bozeman .
+
+:afi_conservatory a :Organization ;
+    :name "AFI Conservatory" ;
+    :location :los_angeles .
+
+:bozeman a :Place ;
+    :name "Bozeman" ;
+    :country "USA" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .
+
+:rick_dahl a :Person ;
+    :name "Rick Dahl" .
+
+:beth_friedberg a :Person ;
+    :name "Beth Friedberg" .

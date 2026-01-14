@@ -1,0 +1,28 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000787> a :Person ;
+    :name "Bess Armstrong" ;
+    :birthPlace :baltimore ;
+    :hasParent :louise_allen ;
+    :hasParent :alexandre_armstronger ;
+    :educatedAt :bryn_mawr_school_for_girls ;
+    :educatedAt :brown_university .
+
+:baltimore a :Place ;
+    :name "Baltimore" .
+
+:louise_allen a :Person ;
+    :name "Louise Allen" .
+
+:alexandre_armstronger a :Person ;
+    :name "Alexandre Armstronger" .
+
+:bryn_mawr_school_for_girls a :Organization ;
+    :name "Bryn Mawr School for Girls" .
+
+:brown_university a :Organization ;
+    :name "Brown University" .

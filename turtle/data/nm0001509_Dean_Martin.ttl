@@ -1,0 +1,61 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001509> a :Person ;
+    :name "Dean Martin" ;
+    :birthPlace :united_states ;
+    :hasChild :dean_paul_martin ;
+    :deathYear "1995"^^xsd:gYear ;
+    :deathPlace :las_vegas ;
+    :hasSibling :unknown_sibling .
+
+:dean_paul_martin a :Person ;
+    :name "Dean Paul Martin" ;
+    :deathYear "1987"^^xsd:gYear .
+
+:jerry_lewis a :Person ;
+    :name "Jerry Lewis" .
+
+:frank_sinatra a :Person ;
+    :name "Frank Sinatra" .
+
+:sammy_davis_jr a :Person ;
+    :name "Sammy Davis Jr." .
+
+:shirley_maclaine a :Person ;
+    :name "Shirley MacLaine" .
+
+:montgomery_clift a :Person ;
+    :name "Montgomery Clift" .
+
+:marlon_brando a :Person ;
+    :name "Marlon Brando" .
+
+:john_wayne a :Person ;
+    :name "John Wayne" .
+
+:the_beatles a :Organization ;
+    :name "The Beatles" .
+
+:ken_lane a :Person ;
+    :name "Ken Lane" .
+
+:nbc a :Organization ;
+    :name "NBC" .
+
+:sam_giancana a :Person ;
+    :name "Sam Giancana" .
+
+:united_states a :Place ;
+    :name "United States" .
+
+:new_york a :Place ;
+    :name "New York" .
+
+:las_vegas a :Place ;
+    :name "Las Vegas" .
+
+:unknown_sibling a :Person .

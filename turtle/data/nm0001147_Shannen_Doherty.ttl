@@ -1,0 +1,35 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001147> a :Person ;
+    :name "Shannen Maria Doherty" ;
+    :birthYear "1971"^^xsd:gYear ;
+    :birthPlace :memphis ;
+    :hasSibling :sean ;
+    :hasParent :rosa ;
+    :hasParent :tom ;
+    :deathYear "2024"^^xsd:gYear ;
+    :deathPlace :malibu .
+
+:memphis a :Place ;
+    :name "Memphis" ;
+    :country "États-Unis" ;
+    :city "Memphis" .
+
+:sean a :Person ;
+    :name "Sean" .
+
+:rosa a :Person ;
+    :name "Rosa" .
+
+:tom a :Person ;
+    :name "Tom" ;
+    :deathYear "2010"^^xsd:gYear .
+
+:malibu a :Place ;
+    :name "Malibu" ;
+    :country "États-Unis" ;
+    :city "Malibu" .

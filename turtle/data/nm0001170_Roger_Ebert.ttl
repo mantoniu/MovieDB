@@ -1,0 +1,29 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001170> a :Person ;
+    :name "Roger Ebert" ;
+    :birthPlace :illinois ;
+    :educatedAt :university_of_illinois_at_urbana_champaign, :university_of_cape_town, :university_of_chicago ;
+    :deathYear "2013"^^xsd:gYear ;
+    :deathPlace :chicago .
+
+:illinois a :Place ;
+    :name "Illinois" .
+
+:university_of_illinois_at_urbana_champaign a :Organization ;
+    :name "University of Illinois at Urbana-Champaign" .
+
+:university_of_cape_town a :Organization ;
+    :name "University of Cape Town" .
+
+:university_of_chicago a :Organization ;
+    :name "University of Chicago" ;
+    :location :chicago .
+
+:chicago a :Place ;
+    :name "Chicago" ;
+    :country "USA" .

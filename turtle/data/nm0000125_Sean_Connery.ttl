@@ -1,0 +1,65 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000125> a :Person ;
+    :name "Sean Connery" ;
+    :birthYear "1930"^^xsd:gYear ;
+    :birthPlace :fountainbridge ;
+    :deathYear "2020"^^xsd:gYear ;
+    :deathPlace :lyford_cay ;
+    :hasParent :joseph_connery ;
+    :hasParent :euphemia_mcbain_mclean ;
+    :hasSibling :neil_connery ;
+    :hasChild :jason_connery ;
+    :hasSpouse :diane_cilento ;
+    :hasSpouse :micheline_roquebrune ;
+    :educatedAt :bristol_old_vic_theatre_school ;
+    :height 1.88 .
+
+:fountainbridge a :Place ;
+    :name "Fountainbridge" ;
+    :city "Édimbourg" ;
+    :country "Écosse" .
+
+:joseph_connery a :Person ;
+    :name "Joseph Connery" ;
+    :birthYear "1902"^^xsd:gYear ;
+    :deathYear "1972"^^xsd:gYear .
+
+:euphemia_mcbain_mclean a :Person ;
+    :name "Euphemia McBain McLean" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :deathYear "1985"^^xsd:gYear .
+
+:neil_connery a :Person ;
+    :name "Neil Connery" ;
+    :birthYear "1938"^^xsd:gYear .
+
+:diane_cilento a :Person ;
+    :name "Diane Cilento" .
+
+:jason_connery a :Person ;
+    :name "Jason Connery" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :birthPlace :london .
+
+:micheline_roquebrune a :Person ;
+    :name "Micheline Roquebrune" .
+
+:london a :Place ;
+    :name "London" .
+
+:lyford_cay a :Place ;
+    :name "Lyford Cay" ;
+    :city "Nassau" ;
+    :country "Bahamas" .
+
+:bristol_old_vic_theatre_school a :Organization ;
+    :name "Bristol Old Vic Theatre School" ;
+    :location :bristol .
+
+:bristol a :Place ;
+    :name "Bristol" .

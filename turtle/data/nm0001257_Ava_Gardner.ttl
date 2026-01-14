@@ -1,0 +1,47 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001257> a :Person ;
+    :name "Ava Lavinia Gardner" ;
+    :birthYear "1922"^^xsd:gYear ;
+    :birthPlace :grabtown ;
+    :deathYear "1990"^^xsd:gYear ;
+    :deathPlace :london ;
+    :educatedAt :atlantic_city_christian_college ;
+    :hasSibling :beatrice_gardner ;
+    :hasSpouse :mickey_rooney ;
+    :hasSpouse :artie_shaw ;
+    :hasSpouse :frank_sinatra .
+
+:grabtown a :Place ;
+    :name "Grabtown" ;
+    :country "USA" .
+
+:atlantic_city_christian_college a :Organization ;
+    :name "Atlantic City Christian College" ;
+    :location :wilson .
+
+:wilson a :Place ;
+    :name "Wilson" ;
+    :country "USA" ;
+    :city "Wilson" .
+
+:beatrice_gardner a :Person ;
+    :name "Beatrice Gardner" .
+
+:mickey_rooney a :Person ;
+    :name "Mickey Rooney" .
+
+:artie_shaw a :Person ;
+    :name "Artie Shaw" .
+
+:frank_sinatra a :Person ;
+    :name "Frank Sinatra" .
+
+:london a :Place ;
+    :name "London" ;
+    :country "England" ;
+    :city "London" .

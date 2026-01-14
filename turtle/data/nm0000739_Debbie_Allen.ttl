@@ -1,0 +1,48 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000739> a :Person ;
+    :name "Debbie Allen" ;
+    :hasParent <http://www.moviedb.fr/cinema#andrew_arthur_allen_jr> ;
+    :hasParent <http://www.moviedb.fr/cinema#vivian_allen> ;
+    :hasSibling <http://www.moviedb.fr/cinema#phylicia_rashad> ;
+    :hasSibling <http://www.moviedb.fr/cinema#tex_allen> ;
+    :birthPlace <http://www.moviedb.fr/cinema#houston> ;
+    :educatedAt <http://www.moviedb.fr/cinema#howard_university> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#winnfred_wilford> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#norm_nixon> ;
+    :hasChild <http://www.moviedb.fr/cinema#vivian_nichole> ;
+    :hasChild <http://www.moviedb.fr/cinema#norman_jr> .
+
+<http://www.moviedb.fr/cinema#andrew_arthur_allen_jr> a :Person ;
+    :name "Andrew Arthur Allen Jr." .
+
+<http://www.moviedb.fr/cinema#vivian_allen> a :Person ;
+    :name "Vivian Allen" .
+
+<http://www.moviedb.fr/cinema#phylicia_rashad> a :Person ;
+    :name "Phylicia Rashad" .
+
+<http://www.moviedb.fr/cinema#tex_allen> a :Person ;
+    :name "Tex Allen" .
+
+<http://www.moviedb.fr/cinema#houston> a :Place ;
+    :name "Houston" .
+
+<http://www.moviedb.fr/cinema#howard_university> a :Organization ;
+    :name "Université Howard" .
+
+<http://www.moviedb.fr/cinema#winnfred_wilford> a :Person ;
+    :name "Winnfred Wilford" .
+
+<http://www.moviedb.fr/cinema#norm_nixon> a :Person ;
+    :name "Norm Nixon" .
+
+<http://www.moviedb.fr/cinema#vivian_nichole> a :Person ;
+    :name "Vivian Nichole" .
+
+<http://www.moviedb.fr/cinema#norman_jr> a :Person ;
+    :name "Norman, Jr." .

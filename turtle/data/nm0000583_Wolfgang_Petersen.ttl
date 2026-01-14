@@ -1,0 +1,47 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000583> a :Person ;
+    :name "Wolfgang Petersen" ;
+    :birthYear "1941"^^xsd:gYear ;
+    :birthPlace :emden ;
+    :educatedAt :saint_john_school, :film_and_television_academy_of_berlin ;
+    :deathYear "2022"^^xsd:gYear ;
+    :deathPlace :los_angeles ;
+    :hasSpouse :ursula_sieg, :maria_borgel_petersen .
+
+:emden a :Place ;
+    :name "Emden" ;
+    :country "Allemagne" .
+
+:saint_john_school a :Organization ;
+    :name "Saint-Jean Schule" ;
+    :location :hamburg .
+
+:hamburg a :Place ;
+    :name "Hamburg" ;
+    :city "Hamburg" ;
+    :country "Allemagne" .
+
+:film_and_television_academy_of_berlin a :Organization ;
+    :name "Deutsche Film- und Fernsehakademie Berlin" ;
+    :location :berlin .
+
+:berlin a :Place ;
+    :name "Berlin" ;
+    :city "Berlin" ;
+    :country "Allemagne" .
+
+:ursula_sieg a :Person ;
+    :name "Ursula Sieg" .
+
+:maria_borgel_petersen a :Person ;
+    :name "Maria Borgel Petersen" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .

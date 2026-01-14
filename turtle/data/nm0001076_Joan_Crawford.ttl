@@ -1,0 +1,65 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001076> a :Person ;
+    :name "Joan Crawford" ;
+    :birthPlace :lawton ;
+    :deathPlace :new_york ;
+    :deathYear "1977"^^xsd:gYear ;
+    :hasChild :christina_crawford, :kathy_crawford, :cindy_crawford, :christopher_crawford_1942 ;
+    :hasSpouse :james_welton, :douglas_fairbanks_jr, :franchot_tone, :phillip_terry, :alfred_steele ;
+    :educatedAt :ernie_young_chicago .
+
+:lawton a :Place ;
+    :name "Lawton" ;
+    :country "USA" .
+
+:new_york a :Place ;
+    :name "New York" ;
+    :city "Manhattan" ;
+    :country "USA" .
+
+:christina_crawford a :Person ;
+    :name "Christina Crawford" ;
+    :birthYear "1939"^^xsd:gYear .
+
+:kathy_crawford a :Person ;
+    :name "Kathy Crawford" ;
+    :deathYear "2020"^^xsd:gYear ;
+    :birthYear "1947"^^xsd:gYear .
+
+:cindy_crawford a :Person ;
+    :name "Cindy Crawford" ;
+    :deathYear "2007"^^xsd:gYear ;
+    :birthYear "1947"^^xsd:gYear .
+
+:christopher_crawford_1942 a :Person ;
+    :name "Christopher Crawford" ;
+    :deathYear "2006"^^xsd:gYear ;
+    :birthYear "1942"^^xsd:gYear .
+
+:james_welton a :Person ;
+    :name "James Welton" .
+
+:douglas_fairbanks_jr a :Person ;
+    :name "Douglas Fairbanks Jr." .
+
+:franchot_tone a :Person ;
+    :name "Franchot Tone" .
+
+:phillip_terry a :Person ;
+    :name "Phillip Terry" .
+
+:alfred_steele a :Person ;
+    :name "Alfred Steele" .
+
+:ernie_young_chicago a :Organization ;
+    :name "Ernie Young Chicago" ;
+    :location :chicago .
+
+:chicago a :Place ;
+    :name "Chicago" ;
+    :country "USA" .

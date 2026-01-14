@@ -1,0 +1,51 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000035> a :Person ;
+    :name "James Horner" ;
+    :hasParent <http://www.moviedb.fr/cinema#joan_fraenkel> ;
+    :hasParent <http://www.moviedb.fr/cinema#harry_horner> ;
+    :birthPlace <http://www.moviedb.fr/cinema#london> ;
+    :educatedAt <http://www.moviedb.fr/cinema#royal_college_of_music> ;
+    :educatedAt <http://www.moviedb.fr/cinema#verde_valley_high_school> ;
+    :educatedAt <http://www.moviedb.fr/cinema#university_of_southern_california> ;
+    :educatedAt <http://www.moviedb.fr/cinema#university_of_california_los_angeles> ;
+    :deathYear "2015"^^xsd:gYear ;
+    :deathPlace <http://www.moviedb.fr/cinema#los_angeles> .
+
+<http://www.moviedb.fr/cinema#joan_fraenkel> a :Person ;
+    :name "Joan (née Fraenkel)" .
+
+<http://www.moviedb.fr/cinema#harry_horner> a :Person ;
+    :name "Harry Horner" .
+
+<http://www.moviedb.fr/cinema#london> a :Place ;
+    :name "London" ;
+    :country "England" .
+
+<http://www.moviedb.fr/cinema#royal_college_of_music> a :Organization ;
+    :name "Royal College of Music" ;
+    :location <http://www.moviedb.fr/cinema#london> .
+
+<http://www.moviedb.fr/cinema#verde_valley_high_school> a :Organization ;
+    :name "Verde Valley High School" ;
+    :location <http://www.moviedb.fr/cinema#sedona> .
+
+<http://www.moviedb.fr/cinema#university_of_southern_california> a :Organization ;
+    :name "University of Southern California" ;
+    :location <http://www.moviedb.fr/cinema#los_angeles> .
+
+<http://www.moviedb.fr/cinema#university_of_california_los_angeles> a :Organization ;
+    :name "University of California, Los Angeles" ;
+    :location <http://www.moviedb.fr/cinema#los_angeles> .
+
+<http://www.moviedb.fr/cinema#sedona> a :Place ;
+    :name "Sedona" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#los_angeles> a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .

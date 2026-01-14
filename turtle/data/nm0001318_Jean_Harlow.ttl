@@ -1,0 +1,94 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001318> a :Person ;
+    :name "Jean Harlow" ;
+    :birthYear "1911"^^xsd:gYear ;
+    :birthPlace :kansas_city ;
+    :deathYear "1937"^^xsd:gYear ;
+    :deathPlace :los_angeles ;
+    :hasParent :montclair_carpenter ;
+    :hasParent :jean_poe_harlow ;
+    :hasSpouse :charles_f_mac_grew ;
+    :hasSpouse :paul_bern ;
+    :hasSpouse :harold_rosson ;
+    :educatedAt :miss_barstows_school ;
+    :educatedAt :lake_forest .
+
+:kansas_city a :Place ;
+    :name "Kansas City" ;
+    :city "Kansas City" ;
+    :country "USA" .
+
+:montclair_carpenter a :Person ;
+    :name "Montclair Carpenter" .
+
+:jean_poe_harlow a :Person ;
+    :name "Jean Poe Harlow" .
+
+:charles_f_mac_grew a :Person ;
+    :name "Charles F. Mac Grew" .
+
+:paul_bern a :Person ;
+    :name "Paul Bern" .
+
+:harold_rosson a :Person ;
+    :name "Harold Rosson" .
+
+:miss_barstows_school a :Organization ;
+    :name "Miss Barstow's School" ;
+    :location :kansas_city .
+
+:chicago a :Place ;
+    :name "Chicago" ;
+    :city "Chicago" ;
+    :country "USA" .
+
+:marino_bello a :Person ;
+    :name "Marino Bello" .
+
+:lake_forest a :Organization ;
+    :name "Lake Forest" ;
+    :location :illinois .
+
+:illinois a :Place ;
+    :name "Illinois" ;
+    :country "USA" .
+
+:arthur_landau a :Person ;
+    :name "Arthur Landau" .
+
+:howard_hughes a :Person ;
+    :name "Howard Hughes" .
+
+:greta_nissen a :Person ;
+    :name "Greta Nissen" .
+
+:wallace_beery a :Person ;
+    :name "Wallace Beery" .
+
+:clark_gable a :Person ;
+    :name "Clark Gable" .
+
+:lew_ayres a :Person ;
+    :name "Lew Ayres" .
+
+:william_powell a :Person ;
+    :name "William Powell" .
+
+:cary_grant a :Person ;
+    :name "Cary Grant" .
+
+:myrna_loy a :Person ;
+    :name "Myrna Loy" .
+
+:spencer_tracy a :Person ;
+    :name "Spencer Tracy" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .

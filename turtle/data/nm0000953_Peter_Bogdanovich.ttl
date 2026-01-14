@@ -1,0 +1,46 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000953> a :Person ;
+    :birthYear "1939"^^xsd:gYear ;
+    :birthPlace :united_states ;
+    :educatedAt :american_academy_of_dramatic_arts ;
+    :educatedAt :stella_adler ;
+    :hasSpouse :polly_platt ;
+    :hasSpouse :cybill_shepherd ;
+    :hasSpouse :dorothy_stratten ;
+    :hasSpouse :louise_stratten ;
+    :hasChild :tatum_o_neal ;
+    :name "Peter Bogdanovich" .
+
+:united_states a :Place ;
+    :name "United States" .
+
+:american_academy_of_dramatic_arts a :Organization ;
+    :name "American Academy of Dramatic Arts" ;
+    :location :traverse_city .
+
+:traverse_city a :Place ;
+    :city "Traverse City" ;
+    :country "USA" .
+
+:stella_adler a :Organization ;
+    :name "Stella Adler" .
+
+:polly_platt a :Person ;
+    :name "Polly Platt" .
+
+:cybill_shepherd a :Person ;
+    :name "Cybill Shepherd" .
+
+:dorothy_stratten a :Person ;
+    :name "Dorothy Stratten" .
+
+:louise_stratten a :Person ;
+    :name "Louise Stratten" .
+
+:tatum_o_neal a :Person ;
+    :name "Tatum O'Neal" .

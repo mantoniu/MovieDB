@@ -204,12 +204,13 @@ class Reduction:
         else:
             print(f"Warning: {NAME_BASICS_FILE} not found.")
 
-print("=== Starting Dataset Reduction and Preprocessing ===")
+if __name__ == "__main__":            
+    print("=== Starting Dataset Reduction and Preprocessing ===")
 
-titles = Reduction.reduce_sample(SAMPLE_FILE, SAMPLE_OUTPUT, N_MOVIES)
-print(f"Total titles: {len(titles)}")
+    titles = Reduction.reduce_sample(SAMPLE_FILE, SAMPLE_OUTPUT, N_MOVIES)
+    print(f"Total titles: {len(titles)}")
 
-Reduction.filter_imdb_datasets(titles)
-Reduction.filter_sample(SAMPLE_OUTPUT, TITLE_BASICS_OUTPUT)
+    Reduction.filter_imdb_datasets(titles)
+    Reduction.filter_sample(SAMPLE_OUTPUT, TITLE_BASICS_OUTPUT)
 
-print("\nProcessing complete. Reduced datasets are in 'datasets/reduced/'")
+    print("\nProcessing complete. Reduced datasets are in 'datasets/reduced/'")

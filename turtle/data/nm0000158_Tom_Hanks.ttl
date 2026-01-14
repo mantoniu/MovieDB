@@ -1,0 +1,75 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000158> a :Person ;
+    :name "Thomas Jeffrey Hanks" ;
+    :birthYear "1956"^^xsd:gYear ;
+    :birthPlace :concord ;
+    :hasParent :janet_marilyn_frager ;
+    :hasParent :amos_mefford_hanks ;
+    :hasSibling :larry_hanks ;
+    :hasSibling :sandra_hanks ;
+    :hasSibling :jim_hanks ;
+    :educatedAt :skyline_high_school ;
+    :hasSpouse :samantha_lewes ;
+    :hasSpouse :rita_wilson ;
+    :hasChild :colin_hanks ;
+    :hasChild :elizabeth_ann ;
+    :hasChild :chester_marlon ;
+    :hasChild :truman_theodore .
+
+:concord a :Place ;
+    :name "Concord" ;
+    :country "États-Unis" .
+
+:janet_marilyn_frager a :Person ;
+    :name "Janet Marilyn Frager" ;
+    :birthYear "1932"^^xsd:gYear ;
+    :deathYear "2016"^^xsd:gYear .
+
+:amos_mefford_hanks a :Person ;
+    :name "Amos Mefford Hanks" ;
+    :birthYear "1924"^^xsd:gYear ;
+    :deathYear "1991"^^xsd:gYear .
+
+:larry_hanks a :Person ;
+    :name "Larry Hanks" .
+
+:sandra_hanks a :Person ;
+    :name "Sandra Hanks" .
+
+:jim_hanks a :Person ;
+    :name "Jim Hanks" .
+
+:skyline_high_school a :Organization ;
+    :name "Skyline High School" ;
+    :location :oakland .
+
+:oakland a :Place ;
+    :name "Oakland" .
+
+:samantha_lewes a :Person ;
+    :name "Samantha Lewes" ;
+    :deathYear "2002"^^xsd:gYear .
+
+:colin_hanks a :Person ;
+    :name "Colin Hanks" ;
+    :birthYear "1977"^^xsd:gYear .
+
+:elizabeth_ann a :Person ;
+    :name "Elizabeth Ann" ;
+    :birthYear "1982"^^xsd:gYear .
+
+:rita_wilson a :Person ;
+    :name "Rita Wilson" .
+
+:chester_marlon a :Person ;
+    :name "Chester Marlon" ;
+    :birthYear "1990"^^xsd:gYear .
+
+:truman_theodore a :Person ;
+    :name "Truman Theodore" ;
+    :birthYear "1995"^^xsd:gYear .

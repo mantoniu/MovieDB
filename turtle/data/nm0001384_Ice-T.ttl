@@ -1,0 +1,33 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001384> a :Person ;
+    :name "Tracy Lauren Marrow" ;
+    :birthYear "1958"^^xsd:gYear ;
+    :birthPlace :newark ;
+    :hasParent :solomon_marrow ;
+    :hasParent :alice_marrow ;
+    :educatedAt :crenshaw_high_school .
+
+:solomon_marrow a :Person ;
+    :name "Solomon Marrow" .
+
+:alice_marrow a :Person ;
+    :name "Alice Marrow" .
+
+:newark a :Place ;
+    :name "Newark" ;
+    :city "Newark" ;
+    :country "USA" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+:crenshaw_high_school a :Organization ;
+    :name "Crenshaw High School" ;
+    :location :los_angeles .

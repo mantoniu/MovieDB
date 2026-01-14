@@ -1,0 +1,64 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001084> a :Person ;
+    :name "O'Shea Jackson Sr." ;
+    :birthYear "1969"^^xsd:gYear ;
+    :birthPlace :los_angeles ;
+    :hasParent :doris ;
+    :hasParent :hosea_jackson ;
+    :hasSibling :teren_delvon_jones ;
+    :hasSpouse :kimberly_woodruff ;
+    :hasChild :o_shea_jr ;
+    :hasChild :darrel ;
+    :hasChild :karima ;
+    :hasChild :shareef ;
+    :hasChild :franck_derussy_jackson ;
+    :educatedAt :george_washington_preparatory_high_school ;
+    :educatedAt :phoenix_institute_of_technology .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .
+
+:doris a :Person ;
+    :name "Doris" .
+
+:hosea_jackson a :Person ;
+    :name "Hosea Jackson" .
+
+:teren_delvon_jones a :Person ;
+    :name "Teren Delvon Jones" .
+
+:kimberly_woodruff a :Person ;
+    :name "Kimberly Woodruff" .
+
+:o_shea_jr a :Person ;
+    :name "O'Shea Jr" .
+
+:darrel a :Person ;
+    :name "Darrel" .
+
+:karima a :Person ;
+    :name "Karima" .
+
+:shareef a :Person ;
+    :name "Shareef" .
+
+:franck_derussy_jackson a :Person ;
+    :name "Franck Derussy Jackson" .
+
+:george_washington_preparatory_high_school a :Organization ;
+    :name "George Washington Preparatory High School" ;
+    :location :los_angeles .
+
+:phoenix_institute_of_technology a :Organization ;
+    :name "Phoenix Institute of Technology" ;
+    :location :phoenix .
+
+:phoenix a :Place ;
+    :name "Phoenix" ;
+    :country "USA" .

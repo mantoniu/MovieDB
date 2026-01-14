@@ -1,0 +1,42 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000114> a :Person ;
+    :name "Steve Buscemi" ;
+    :hasParent <http://www.moviedb.fr/cinema#dorothy_wilson> ;
+    :hasParent <http://www.moviedb.fr/cinema#john_buscemi> ;
+    :hasSibling <http://www.moviedb.fr/cinema#jon_buscemi> ;
+    :hasSibling <http://www.moviedb.fr/cinema#ken_buscemi> ;
+    :hasSibling <http://www.moviedb.fr/cinema#michael_buscemi> ;
+    :educatedAt <http://www.moviedb.fr/cinema#lee_strasberg_theatre_institute> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#jo_andres> ;
+    :hasChild <http://www.moviedb.fr/cinema#lucian_buscemi> ;
+    :birthYear "1957"^^xsd:gYear .
+
+<http://www.moviedb.fr/cinema#dorothy_wilson> a :Person ;
+    :name "Dorothy Wilson" .
+
+<http://www.moviedb.fr/cinema#john_buscemi> a :Person ;
+    :name "John Buscemi" .
+
+<http://www.moviedb.fr/cinema#jon_buscemi> a :Person ;
+    :name "Jon Buscemi" .
+
+<http://www.moviedb.fr/cinema#ken_buscemi> a :Person ;
+    :name "Ken Buscemi" .
+
+<http://www.moviedb.fr/cinema#michael_buscemi> a :Person ;
+    :name "Michael Buscemi" .
+
+<http://www.moviedb.fr/cinema#lee_strasberg_theatre_institute> a :Organization ;
+    :name "Lee Strasberg Theatre Institute" .
+
+<http://www.moviedb.fr/cinema#jo_andres> a :Person ;
+    :name "Jo Andres" ;
+    :deathYear "2019"^^xsd:gYear .
+
+<http://www.moviedb.fr/cinema#lucian_buscemi> a :Person ;
+    :name "Lucian Buscemi" .

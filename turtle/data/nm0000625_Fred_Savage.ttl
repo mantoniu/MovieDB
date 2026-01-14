@@ -1,0 +1,46 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000625> a :Person ;
+    :name "Fred Savage" ;
+    :birthPlace :chicago ;
+    :birthYear "1976"^^xsd:gYear ;
+    :hasSibling :ben_savage ;
+    :hasSibling :kala_savage ;
+    :educatedAt :brentwood_school ;
+    :educatedAt :stanford_university ;
+    :hasParent :joanne_savage ;
+    :hasParent :lewis_savage .
+
+:chicago a :Place ;
+    :name "Chicago" ;
+    :city "Chicago" ;
+    :country "USA" .
+
+:glencoe a :Place ;
+    :name "Glencoe" .
+
+:ben_savage a :Person ;
+    :name "Ben Savage" .
+
+:kala_savage a :Person ;
+    :name "Kala Savage" .
+
+:brentwood_school a :Organization ;
+    :name "Brentwood School" ;
+    :location :los_angeles_county .
+
+:stanford_university a :Organization ;
+    :name "Stanford University" .
+
+:los_angeles_county a :Place ;
+    :name "Los Angeles County" .
+
+:joanne_savage a :Person ;
+    :name "Joanne Savage" .
+
+:lewis_savage a :Person ;
+    :name "Lewis Savage" .

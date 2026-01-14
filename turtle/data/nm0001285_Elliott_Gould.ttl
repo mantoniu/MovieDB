@@ -1,0 +1,46 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001285> a :Person ;
+    :name "Elliott Gould" ;
+    :birthPlace :bensonhurst ;
+    :hasParent :bernard_goldstein ;
+    :hasParent :lucille_raver ;
+    :educatedAt :professional_children_s_school ;
+    :hasSpouse :jennifer_bogart ;
+    :hasChild :samuel ;
+    :hasChild :molly ;
+    :hasSpouse :barbra_streisand ;
+    :hasChild :jason .
+
+:bensonhurst a :Place ;
+    :name "Bensonhurst" ;
+    :city "New York" ;
+    :country "USA" .
+
+:bernard_goldstein a :Person ;
+    :name "Bernard Goldstein" .
+
+:lucille_raver a :Person ;
+    :name "Lucille Raver" .
+
+:professional_children_s_school a :Organization ;
+    :name "Professional Children's School" .
+
+:jennifer_bogart a :Person ;
+    :name "Jennifer Bogart" .
+
+:samuel a :Person ;
+    :name "Samuel" .
+
+:molly a :Person ;
+    :name "Molly" .
+
+:barbra_streisand a :Person ;
+    :name "Barbra Streisand" .
+
+:jason a :Person ;
+    :name "Jason" .

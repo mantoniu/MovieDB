@@ -1,0 +1,37 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000559> a :Person ;
+    :name "Leonard Nimoy" ;
+    :birthYear "1931"^^xsd:gYear ;
+    :birthPlace :iziaslav ;
+    :deathYear "2015"^^xsd:gYear ;
+    :deathPlace :los_angeles ;
+    :hasParent :max_nimoy ;
+    :hasParent :dora_spinner ;
+    :educatedAt :university_of_boston .
+
+:iziaslav a :Place ;
+    :name "Iziaslav" ;
+    :country "Ukraine" .
+
+:max_nimoy a :Person ;
+    :name "Max Nimoy" .
+
+:dora_spinner a :Person ;
+    :name "Dora Spinner" .
+
+:university_of_boston a :Organization ;
+    :name "University of Boston" ;
+    :location :boston .
+
+:boston a :Place ;
+    :name "Boston" ;
+    :country "USA" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .

@@ -1,0 +1,43 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000188> a :Person ;
+    :name "Stephen Glenn Martin" ;
+    :birthYear "1945"^^xsd:gYear ;
+    :birthPlace <http://www.moviedb.fr/cinema#waco> ;
+    :hasParent <http://www.moviedb.fr/cinema#mary_lee> ;
+    :hasParent <http://www.moviedb.fr/cinema#glenn_vernon_martin> ;
+    :educatedAt <http://www.moviedb.fr/cinema#universite_de_californie_a_los_angeles> .
+
+<http://www.moviedb.fr/cinema#waco> a :Place ;
+    :name "Waco" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#mary_lee> a :Person ;
+    :name "Mary Lee" .
+
+<http://www.moviedb.fr/cinema#glenn_vernon_martin> a :Person ;
+    :name "Glenn Vernon Martin" .
+
+<http://www.moviedb.fr/cinema#inglewood> a :Place ;
+    :name "Inglewood" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#garden_grove> a :Place ;
+    :name "Garden Grove" ;
+    :country "USA" .
+
+<http://www.moviedb.fr/cinema#disneyland> a :Organization ;
+    :name "Disneyland" ;
+    :location <http://www.moviedb.fr/cinema#garden_grove> .
+
+<http://www.moviedb.fr/cinema#universite_de_californie_a_los_angeles> a :Organization ;
+    :name "Université de Californie à Los Angeles" ;
+    :location <http://www.moviedb.fr/cinema#los_angeles> .
+
+<http://www.moviedb.fr/cinema#los_angeles> a :Place ;
+    :name "Los Angeles" ;
+    :country "USA" .

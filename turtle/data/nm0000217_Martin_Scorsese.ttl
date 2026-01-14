@@ -1,0 +1,75 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000217> a :Person ;
+    :name "Martin Scorsese" ;
+    :birthYear "1942"^^xsd:gYear ;
+    :birthPlace :flushing ;
+    :hasParent :catherine_scorsese ;
+    :hasParent :charles_scorsese ;
+    :educatedAt :cardinal_hays_school ;
+    :educatedAt :new_york_university ;
+    :hasSpouse :laraine_marie_brennan ;
+    :hasChild :catherine_scorsese_daughter ;
+    :hasSpouse :julia_cameron ;
+    :hasChild :domenica_cameron_scorsese ;
+    :hasSpouse :isabella_rossellini ;
+    :hasSpouse :barbara_de_fina ;
+    :hasSpouse :helen_schermerhorn_morris ;
+    :hasChild :francesca_scorsese .
+
+:flushing a :Place ;
+    :name "Flushing" ;
+    :city "New York" ;
+    :country "USA" .
+
+:catherine_scorsese a :Person ;
+    :name "Catherine Scorsese" .
+
+:charles_scorsese a :Person ;
+    :name "Charles Scorsese" .
+
+:cardinal_hays_school a :Organization ;
+    :name "Cardinal Hays School" ;
+    :location :bronx .
+
+:bronx a :Place ;
+    :name "Bronx" ;
+    :city "New York" ;
+    :country "USA" .
+
+:new_york_university a :Organization ;
+    :name "New York University" ;
+    :location :new_york .
+
+:new_york a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "USA" .
+
+:laraine_marie_brennan a :Person ;
+    :name "Laraine Marie Brennan" .
+
+:catherine_scorsese_daughter a :Person ;
+    :name "Catherine Scorsese" .
+
+:julia_cameron a :Person ;
+    :name "Julia Cameron" .
+
+:domenica_cameron_scorsese a :Person ;
+    :name "Domenica Cameron-Scorsese" .
+
+:isabella_rossellini a :Person ;
+    :name "Isabella Rossellini" .
+
+:barbara_de_fina a :Person ;
+    :name "Barbara De Fina" .
+
+:helen_schermerhorn_morris a :Person ;
+    :name "Helen Schermerhorn Morris" .
+
+:francesca_scorsese a :Person ;
+    :name "Francesca Scorsese" .

@@ -1,0 +1,33 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000317> a :Person ;
+    :name "Clarence J. Brown III" ;
+    :birthPlace :urbana ;
+    :hasParent :bud_brown ;
+    :hasSpouse :jeanne_johnson ;
+    :birthYear "1959"^^xsd:gYear ;
+    :educatedAt :actor_s_theatre .
+
+:urbana a :Place ;
+    :name "Urbana" ;
+    :city "Urbana" ;
+    :country "USA" .
+
+:bud_brown a :Person ;
+    :name "Bud Brown" .
+
+:jeanne_johnson a :Person ;
+    :name "Jeanne Johnson" .
+
+:actor_s_theatre a :Organization ;
+    :name "Actor's Theatre" ;
+    :location :louisville .
+
+:louisville a :Place ;
+    :name "Louisville" ;
+    :city "Louisville" ;
+    :country "USA" .

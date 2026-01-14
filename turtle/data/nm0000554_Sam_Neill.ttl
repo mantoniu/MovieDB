@@ -1,0 +1,47 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000554> a :Person ;
+    :name "Sam Neill" ;
+    :birthYear "1947"^^xsd:gYear ;
+    :birthPlace :omagh ;
+    :hasParent :dermot_neill ;
+    :hasParent :priscilla_beatrice_ingham ;
+    :educatedAt :christ_s_college ;
+    :educatedAt :university_of_canterbury ;
+    :educatedAt :victoria_university_of_wellington ;
+    :hasSpouse :lisa_harrow ;
+    :hasSpouse :noriko_watanabe .
+
+:omagh a :Place ;
+    :name "Omagh" ;
+    :country "United Kingdom" .
+
+:dermot_neill a :Person ;
+    :name "Dermot Neill" .
+
+:priscilla_beatrice_ingham a :Person ;
+    :name "Priscilla Beatrice (née Ingham)" .
+
+:christ_s_college a :Organization ;
+    :name "Christ's College" ;
+    :location :christchurch .
+
+:university_of_canterbury a :Organization ;
+    :name "University of Canterbury" .
+
+:victoria_university_of_wellington a :Organization ;
+    :name "Victoria University of Wellington" .
+
+:lisa_harrow a :Person ;
+    :name "Lisa Harrow" .
+
+:noriko_watanabe a :Person ;
+    :name "Noriko Watanabe" .
+
+:christchurch a :Place ;
+    :name "Christchurch" ;
+    :country "New Zealand" .

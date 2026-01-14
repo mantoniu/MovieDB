@@ -1,0 +1,28 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000233> a :Person ;
+    :name "Quentin Jerome Tarantino" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :birthPlace :knoxville ;
+    :hasParent :connie_mchugh ;
+    :hasParent :tony_tarantino ;
+    :hasSpouse :daniella_pick .
+
+:connie_mchugh a :Person ;
+    :name "Connie McHugh" ;
+    :birthYear "1946"^^xsd:gYear .
+
+:tony_tarantino a :Person ;
+    :name "Tony Tarantino" .
+
+:daniella_pick a :Person ;
+    :name "Daniella Pick" .
+
+:knoxville a :Place ;
+    :name "Knoxville" ;
+    :country "États-Unis" ;
+    :city "Knoxville" .

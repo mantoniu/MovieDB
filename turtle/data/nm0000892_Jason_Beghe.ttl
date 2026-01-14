@@ -1,0 +1,40 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000892> a :Person ;
+    :name "Jason Beghe" ;
+    :hasParent <http://www.moviedb.fr/cinema#bina_house> ;
+    :hasParent <http://www.moviedb.fr/cinema#renato_william_beghe> ;
+    :hasSibling <http://www.moviedb.fr/cinema#eliza_ashley_beghe> ;
+    :hasSibling <http://www.moviedb.fr/cinema#francesca_beghe_green> ;
+    :hasSibling <http://www.moviedb.fr/cinema#adam_beghe> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#angie_janu> ;
+    :hasChild <http://www.moviedb.fr/cinema#bix_beghe> ;
+    :hasChild <http://www.moviedb.fr/cinema#bear_beghe> .
+
+<http://www.moviedb.fr/cinema#bina_house> a :Person ;
+    :name "Bina House" .
+
+<http://www.moviedb.fr/cinema#renato_william_beghe> a :Person ;
+    :name "Renato William Beghe" .
+
+<http://www.moviedb.fr/cinema#eliza_ashley_beghe> a :Person ;
+    :name "Eliza Ashley Beghe" .
+
+<http://www.moviedb.fr/cinema#francesca_beghe_green> a :Person ;
+    :name "Francesca Beghe-Green" .
+
+<http://www.moviedb.fr/cinema#adam_beghe> a :Person ;
+    :name "Adam Beghe" .
+
+<http://www.moviedb.fr/cinema#angie_janu> a :Person ;
+    :name "Angie Janu" .
+
+<http://www.moviedb.fr/cinema#bix_beghe> a :Person ;
+    :name "Bix Beghe" .
+
+<http://www.moviedb.fr/cinema#bear_beghe> a :Person ;
+    :name "Bear Beghe" .

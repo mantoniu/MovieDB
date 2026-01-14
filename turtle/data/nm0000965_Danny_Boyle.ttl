@@ -1,0 +1,25 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000965> a :Person ;
+    :name "Danny Boyle" ;
+    :birthYear "1956"^^xsd:gYear ;
+    :birthPlace :radcliffe ;
+    :educatedAt :thornleigh_salesian_college .
+
+:radcliffe a :Place ;
+    :name "Radcliffe" ;
+    :city "Radcliffe" ;
+    :country "England" .
+
+:thornleigh_salesian_college a :Organization ;
+    :name "Thornleigh Salesian College" ;
+    :location :bolton .
+
+:bolton a :Place ;
+    :name "Bolton" ;
+    :city "Bolton" ;
+    :country "England" .

@@ -1,0 +1,119 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000134> a :Person ;
+    :name "Robert De Niro" ;
+    :birthYear "1943"^^xsd:gYear ;
+    :birthPlace :manhattan ;
+    :hasParent :robert_de_niro_senior ;
+    :hasParent :virginia_holton_admiral ;
+    :educatedAt :ps_41 ;
+    :educatedAt :elisabeth_irwin_high_school ;
+    :educatedAt :high_school_of_music_and_art ;
+    :educatedAt :mcburney_school ;
+    :educatedAt :rhodes_preparatory_school ;
+    :educatedAt :stella_adler_conservatory ;
+    :educatedAt :actors_studio ;
+    :hasSpouse :diahnne_abbott ;
+    :hasSpouse :grace_hightower ;
+    :hasChild :raphael_de_niro ;
+    :hasChild :drena ;
+    :hasChild :julian ;
+    :hasChild :aaron ;
+    :hasChild :elliot ;
+    :hasChild :helen ;
+    :hasChild :gia .
+
+:manhattan a :Place ;
+    :name "Manhattan" ;
+    :city "New York" ;
+    :country "USA" .
+
+:greenwich_village a :Place ;
+    :name "Greenwich Village" ;
+    :city "New York" ;
+    :country "USA" .
+
+:robert_de_niro_senior a :Person ;
+    :name "Robert De Niro Senior" ;
+    :birthPlace :syracuse .
+
+:virginia_holton_admiral a :Person ;
+    :name "Virginia Holton Admiral" .
+
+:syracuse a :Place ;
+    :name "Syracuse" ;
+    :city "New York" ;
+    :country "USA" .
+
+:provincetown a :Place ;
+    :name "Provincetown" ;
+    :city "Massachusetts" ;
+    :country "USA" .
+
+:little_italy a :Place ;
+    :name "Little Italy" ;
+    :city "Manhattan" ;
+    :country "USA" .
+
+:ps_41 a :Organization ;
+    :name "PS 41" ;
+    :location :manhattan .
+
+:elisabeth_irwin_high_school a :Organization ;
+    :name "Elisabeth Irwin High School" ;
+    :location :manhattan .
+
+:high_school_of_music_and_art a :Organization ;
+    :name "High School of Music and Art" ;
+    :location :manhattan .
+
+:mcburney_school a :Organization ;
+    :name "McBurney School" ;
+    :location :manhattan .
+
+:rhodes_preparatory_school a :Organization ;
+    :name "Rhodes Preparatory School" ;
+    :location :manhattan .
+
+:stella_adler_conservatory a :Organization ;
+    :name "Stella Adler Conservatory" .
+
+:actors_studio a :Organization ;
+    :name "Actors Studio" .
+
+:diahnne_abbott a :Person ;
+    :name "Diahnne Abbott" .
+
+:raphael_de_niro a :Person ;
+    :name "Raphael De Niro" .
+
+:drena a :Person ;
+    :name "Drena" .
+
+:toukie_smith a :Person ;
+    :name "Toukie Smith" .
+
+:julian a :Person ;
+    :name "Julian" .
+
+:aaron a :Person ;
+    :name "Aaron" .
+
+:grace_hightower a :Person ;
+    :name "Grace Hightower" .
+
+:elliot a :Person ;
+    :name "Elliot" .
+
+:helen a :Person ;
+    :name "Helen" .
+
+:tiffany_chen a :Person ;
+    :name "Tiffany Chen" .
+
+:gia a :Person ;
+    :name "Gia" .

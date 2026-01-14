@@ -1,0 +1,42 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000327> a :Person ;
+    :name "Lacey Nicole Chabert" ;
+    :birthYear "1982"^^xsd:gYear ;
+    :birthPlace :purvis ;
+    :hasParent :tony_chabert ;
+    :hasParent :julie_chabert ;
+    :hasSibling :tony_joseph ;
+    :hasSibling :wendy ;
+    :hasSibling :crissy ;
+    :hasSpouse :david_nehdar ;
+    :hasChild :julia_mimi_bella_nehdar .
+
+:purvis a :Place ;
+    :name "Purvis" ;
+    :country "États-Unis" .
+
+:tony_chabert a :Person ;
+    :name "Tony Chabert" .
+
+:julie_chabert a :Person ;
+    :name "Julie Chabert" .
+
+:tony_joseph a :Person ;
+    :name "Tony Joseph" .
+
+:wendy a :Person ;
+    :name "Wendy" .
+
+:crissy a :Person ;
+    :name "Crissy" .
+
+:david_nehdar a :Person ;
+    :name "David Nehdar" .
+
+:julia_mimi_bella_nehdar a :Person ;
+    :name "Julia Mimi Bella Nehdar" .

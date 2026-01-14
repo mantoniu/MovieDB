@@ -25,8 +25,6 @@
 :TVSeries a owl:Class ;
     rdfs:subClassOf :MotionPicture .
 
-:Person a owl:Class .
-
 :Agent a owl:Class ;
     rdfs:subClassOf :Person .
 
@@ -80,19 +78,6 @@
         owl:unionOf ( :Agent :CreativeWork )
     ] ;
     rdfs:range xsd:anyURI .
-
-# Person Properties
-:name a owl:DatatypeProperty ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:string .
-
-:birthYear a owl:DatatypeProperty ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:gYear .
-
-:deathYear a owl:DatatypeProperty ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:gYear .
 
 # Agent Properties
 :contributedTo owl:propertyChainAxiom ( [ owl:inverseOf :executeBy ] :forMotionPicture ) .

@@ -1,0 +1,73 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000033> a :Person ;
+    :name "Alfred Joseph Hitchcock" ;
+    :birthYear "1899"^^xsd:gYear ;
+    :birthPlace :leytonstone ;
+    :hasParent :william_hitchcock ;
+    :hasParent :emma_jane_hitchcock ;
+    :hasSibling :william_hitchcock_jr ;
+    :hasSibling :eileen_hitchcock ;
+    :educatedAt :saint_ignatius_college ;
+    :educatedAt :london_county_council_school_of_engineering_and_navigation ;
+    :hasSpouse :alma_reville ;
+    :hasChild :patricia_hitchcock ;
+    :deathYear "1980"^^xsd:gYear ;
+    :deathPlace :bel_air .
+
+:leytonstone a :Place ;
+    :name "Leytonstone" ;
+    :city "Leytonstone" ;
+    :country "England" .
+
+:william_hitchcock a :Person ;
+    :name "William Hitchcock" ;
+    :birthYear "1862"^^xsd:gYear ;
+    :deathYear "1914"^^xsd:gYear .
+
+:emma_jane_hitchcock a :Person ;
+    :name "Emma Jane Hitchcock" ;
+    :birthYear "1863"^^xsd:gYear ;
+    :deathYear "1942"^^xsd:gYear .
+
+:william_hitchcock_jr a :Person ;
+    :name "William Hitchcock" ;
+    :birthYear "1890"^^xsd:gYear .
+
+:eileen_hitchcock a :Person ;
+    :name "Eileen Hitchcock" ;
+    :birthYear "1892"^^xsd:gYear .
+
+:saint_ignatius_college a :Organization ;
+    :name "Saint Ignatius College" ;
+    :location :stamford_hill .
+
+:stamford_hill a :Place ;
+    :name "Stamford Hill" ;
+    :city "Stamford Hill" ;
+    :country "England" .
+
+:london_county_council_school_of_engineering_and_navigation a :Organization ;
+    :name "London County Council School of Engineering and Navigation" ;
+    :location :poplar .
+
+:poplar a :Place ;
+    :name "Poplar" ;
+    :city "Poplar" ;
+    :country "England" .
+
+:alma_reville a :Person ;
+    :name "Alma Reville" .
+
+:patricia_hitchcock a :Person ;
+    :name "Patricia Hitchcock" ;
+    :birthYear "1928"^^xsd:gYear .
+
+:bel_air a :Place ;
+    :name "Bel Air" ;
+    :city "Los Angeles" ;
+    :country "USA" .

@@ -1,0 +1,54 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000130> a :Person ;
+    :name "Jamie Lee Curtis" ;
+    :birthYear "1958"^^xsd:gYear ;
+    :birthPlace :los_angeles ;
+    :hasParent :tony_curtis ;
+    :hasParent :janet_leigh ;
+    :hasSibling :kelly_curtis ;
+    :educatedAt :university_of_the_pacific .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "USA" .
+
+:californie a :Place ;
+    :name "Californie" ;
+    :country "USA" .
+
+:tony_curtis a :Person ;
+    :name "Tony Curtis" .
+
+:janet_leigh a :Person ;
+    :name "Janet Leigh" .
+
+:kelly_curtis a :Person ;
+    :name "Kelly Curtis" .
+
+:robert_brandt a :Person ;
+    :name "Robert Brandt" .
+
+:alexandra_curtis a :Person ;
+    :name "Alexandra Curtis" .
+
+:allegra_curtis a :Person ;
+    :name "Allegra Curtis" .
+
+:nicholas_curtis a :Person ;
+    :name "Nicholas Curtis" ;
+    :deathYear "1994"^^xsd:gYear .
+
+:university_of_the_pacific a :Organization ;
+    :name "University of the Pacific" ;
+    :location :stockton .
+
+:stockton a :Place ;
+    :name "Stockton" ;
+    :city "Stockton" ;
+    :country "USA" .

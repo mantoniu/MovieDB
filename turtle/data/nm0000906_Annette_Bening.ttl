@@ -1,0 +1,28 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000906> a :Person ;
+    :name "Annette Bening" ;
+    :educatedAt <http://www.moviedb.fr/cinema#american_conservatory_theatre> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#james_steven_white> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#warren_beatty> ;
+    :hasChild <http://www.moviedb.fr/cinema#stephen_ira_beatty> .
+
+<http://www.moviedb.fr/cinema#american_conservatory_theatre> a :Organization ;
+    :name "American Conservatory Theatre" ;
+    :location <http://www.moviedb.fr/cinema#san_francisco> .
+
+<http://www.moviedb.fr/cinema#san_francisco> a :Place ;
+    :name "San Francisco" .
+
+<http://www.moviedb.fr/cinema#james_steven_white> a :Person ;
+    :name "James Steven White" .
+
+<http://www.moviedb.fr/cinema#warren_beatty> a :Person ;
+    :name "Warren Beatty" .
+
+<http://www.moviedb.fr/cinema#stephen_ira_beatty> a :Person ;
+    :name "Stephen Ira Beatty" .

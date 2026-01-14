@@ -1,0 +1,83 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Person a owl:Class .
+:Organization a owl:Class .
+:Place a owl:Class .
+
+:name a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the entity."@en . 
+
+# Organization properties
+:location a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :Place ;
+    rdfs:comment "The geographical location of the organization."@en .
+
+# Place properties
+:country a owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The country code where the place is located."@en .
+
+:city a owl:DatatypeProperty ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the city/town/village."@en .
+
+# Person properties
+:height a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:float ;
+    rdfs:comment "The physical height of the person, measured in meters."@en .
+
+:birthYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear ;
+    rdfs:comment "The year the person was born."@en .
+
+:birthPlace a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Place ;
+    rdfs:comment "The geographical location where the person was born."@en .
+
+:hasSpouse a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    rdfs:comment "The husband or wife of the person."@en .
+
+:hasChild a owl:ObjectProperty ;
+    owl:inverseOf :hasParent ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    rdfs:comment "A biological or adopted child of the person."@en .
+
+:hasParent a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    rdfs:comment "A biological or adoptive parent of the person."@en .
+
+:hasSibling a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    rdfs:comment "A brother or sister of the person."@en .
+
+:educatedAt a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Organization ;
+    rdfs:comment "The educational institution (university, school) attended by the person."@en .
+
+:deathYear a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:gYear ;
+    rdfs:comment "Year of death of the person."@en .
+
+:deathPlace a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Place ;
+    rdfs:comment "The geographical location where the person died."@en .

@@ -1,0 +1,54 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000057> a :Person ;
+    :name "James David Graham Niven" ;
+    :birthYear "1910"^^xsd:gYear ;
+    :birthPlace :london ;
+    :deathYear "1983"^^xsd:gYear ;
+    :deathPlace :chateau_d_oex ;
+    :hasParent :william_edward_graham_niven ;
+    :hasParent :henriette_julia_degacher ;
+    :hasSibling :margeret_joyce_niven ;
+    :hasSibling :grizel_rosemary_niven ;
+    :hasSibling :henry_degacher_niven ;
+    :educatedAt :royal_military_college_de_sandhurst .
+
+:london a :Place ;
+    :name "Londres" ;
+    :country "Angleterre" .
+
+:william_edward_graham_niven a :Person ;
+    :name "William Edward Graham Niven" ;
+    :birthYear "1878"^^xsd:gYear ;
+    :deathYear "1915"^^xsd:gYear .
+
+:henriette_julia_degacher a :Person ;
+    :name "Henriette Julia Degacher" ;
+    :birthYear "1878"^^xsd:gYear ;
+    :deathYear "1932"^^xsd:gYear .
+
+:margeret_joyce_niven a :Person ;
+    :name "Margeret Joyce Niven" ;
+    :birthYear "1900"^^xsd:gYear ;
+    :deathYear "1981"^^xsd:gYear .
+
+:grizel_rosemary_niven a :Person ;
+    :name "Grizel Rosemary Niven" ;
+    :birthYear "1906"^^xsd:gYear ;
+    :deathYear "2007"^^xsd:gYear .
+
+:henry_degacher_niven a :Person ;
+    :name "Henry Degacher Niven" ;
+    :birthYear "1902"^^xsd:gYear ;
+    :deathYear "1953"^^xsd:gYear .
+
+:royal_military_college_de_sandhurst a :Organization ;
+    :name "Royal Military College de Sandhurst" .
+
+:chateau_d_oex a :Place ;
+    :name "Château-d'Œx" ;
+    :country "Suisse" .

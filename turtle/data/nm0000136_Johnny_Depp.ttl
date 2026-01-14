@@ -1,0 +1,44 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000136> a :Person ;
+    :name "Johnny Depp" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :birthPlace :owensboro ;
+    :hasSibling :elisa_christie_depp_dembrowski ;
+    :hasSibling :daniel_depp ;
+    :hasSibling :debbie_depp ;
+    :hasSpouse :lori_anne_allison ;
+    :educatedAt :miramar_high_school.
+
+:owensboro a :Place ;
+    :name "Owensboro" ;
+    :city "Owensboro" ;
+    :country "USA" .
+
+:elisa_christie_depp_dembrowski a :Person ;
+    :name "Elisa Christie Depp-Dembrowski" ;
+    :birthYear "1960"^^xsd:gYear .
+
+:daniel_depp a :Person ;
+    :name "Daniel Depp" ;
+    :birthYear "1953"^^xsd:gYear .
+
+:debbie_depp a :Person ;
+    :name "Debbie Depp" ;
+    :birthYear "1956"^^xsd:gYear .
+
+:miramar a :Place ;
+    :name "Miramar" ;
+    :city "Miramar" ;
+    :country "USA" .
+
+:lori_anne_allison a :Person ;
+    :name "Lori Anne Allison" .
+
+:miramar_high_school a :Organization ;
+    :name "Miramar High School" ;
+    :location :miramar .

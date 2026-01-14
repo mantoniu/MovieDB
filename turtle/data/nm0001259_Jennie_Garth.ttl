@@ -1,0 +1,65 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0001259> a :Person ;
+    :name "Jennifer Eve « Jennie » Garth" ;
+    :birthYear "1972"^^xsd:gYear ;
+    :birthPlace :urbana ;
+    :hasParent :john_garth ;
+    :hasParent :carolyn_garth ;
+    :hasSpouse :daniel_clark ;
+    :hasSpouse :peter_facinelli ;
+    :hasSpouse :david_abrams ;
+    :hasChild :luca_bella ;
+    :hasChild :lola_ray ;
+    :hasChild :fiona_eve ;
+    :educatedAt :greenway_high_school ;
+    :educatedAt :apollo_high_school .
+
+:urbana a :Place ;
+    :name "Urbana" .
+
+:john_garth a :Person ;
+    :name "John Garth" .
+
+:carolyn_garth a :Person ;
+    :name "Carolyn Garth" .
+
+:daniel_clark a :Person ;
+    :name "Daniel Clark" .
+
+:peter_facinelli a :Person ;
+    :name "Peter Facinelli" .
+
+:david_abrams a :Person ;
+    :name "David Abrams" .
+
+:luca_bella a :Person ;
+    :name "Luca Bella" .
+
+:lola_ray a :Person ;
+    :name "Lola Ray" .
+
+:fiona_eve a :Person ;
+    :name "Fiona Eve" .
+
+:greenway_high_school a :Organization ;
+    :name "Greenway High School" ;
+    :location :phoenix .
+
+:apollo_high_school a :Organization ;
+    :name "Apollo High School" ;
+    :location :glendale_arizona .
+
+:phoenix a :Place ;
+    :name "Phoenix" ;
+    :city "Phoenix" ;
+    :country "USA" .
+
+:glendale_arizona a :Place ;
+    :name "Glendale" ;
+    :city "Glendale" ;
+    :country "USA" .

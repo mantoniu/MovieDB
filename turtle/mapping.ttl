@@ -106,21 +106,137 @@
         ]
     ] .
 
-<#PersonCategoryMap> a rr:TriplesMap ;
+<#PersonJobClassMap> a rr:TriplesMap ;
     rml:logicalSource [
         rml:source <#RoleSource> ;
         rml:referenceFormulation ql:CSV
     ] ;
+
     rr:subjectMap [
         rr:template "http://www.moviedb.fr/ontology/cinema#Person/{nconst}" ;
         rr:class :Agent
     ] ;
+
     rr:predicateObjectMap [
         rr:predicate rdf:type ;
-        rr:objectMap [ 
-            # Utilisation de rr:template pour construire l'IRI
-            rr:template "http://www.moviedb.fr/cinema#Agent_{category}" ; 
-            rr:termType rr:IRI 
+        rr:objectMap [
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:object grel:array_join 
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:object "http://www.moviedb.fr/cinema#"
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object grel:string_replace # 2. On enlève les espaces
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object grel:string_toTitlecase 
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:valueParameter ;
+                                            rr:objectMap [ rml:reference "category" ]
+                                        ]
+                                    ]
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_find ;
+                                rr:object " "
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_replace ;
+                                rr:object ""
+                            ]
+                        ]
+                    ]
+                ]
+            ] ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+<#ContributionMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/ontology/cinema#Person/{nconst}" ;
+        rr:class :Agent
+    ] ;
+
+    rr:predicateObjectMap [
+        # --- Le prédicat est maintenant dynamique ---
+        rr:predicateMap [
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:object grel:array_join 
+                ] ;
+                # 1. Préfixe de la propriété
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:object "http://www.moviedb.fr/cinema#has"
+                ] ;
+                # 2. Catégorie (Majuscule + Suppression espaces)
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object grel:string_replace
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object grel:string_toTitlecase 
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:valueParameter ;
+                                            rr:objectMap [ rml:reference "category" ]
+                                        ]
+                                    ]
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_find ; rr:object " "
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_replace ; rr:object ""
+                            ]
+                        ]
+                    ]
+                ] ;
+                # 3. Suffixe
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:object "Contribution"
+                ]
+            ]
+        ] ;
+
+        # --- L'objet est maintenant le film ---
+        rr:objectMap [
+            rr:template "http://www.moviedb.fr/ontology/cinema#MotionPicture/{tconst}" ;
+            rr:termType rr:IRI
         ]
     ] .
 
@@ -185,35 +301,58 @@
         ]
     ] .
 
-<#JobThesaurusMap> a rr:TriplesMap ;
+<#JobMap> a rr:TriplesMap ;
     rml:logicalSource [
         rml:source <#RoleSource> ;
         rml:referenceFormulation ql:CSV
     ] ;
 
     rr:subjectMap [
-        rr:template "http://www.moviedb.fr/ontology/cinema#Job_{category}" ;
-        rr:class skos:Concept
-    ] ;
-
-    rr:predicateObjectMap [
-        rr:predicate skos:prefLabel ;
-        rr:objectMap [ rml:reference "category" ; rr:language "en" ]
-    ] ;
-
-    rr:predicateObjectMap [
-        rr:predicate skos:inScheme ;
-        rr:objectMap [ rr:constant :JobThesaurus ]
-    ] .
-
-<#JobCategoryClassMap> a rr:TriplesMap ;
-    rml:logicalSource [
-        rml:source <#RoleSource> ;
-        rml:referenceFormulation ql:CSV
-    ] ;
-
-    rr:subjectMap [
-        rr:template "http://www.moviedb.fr/cinema#Agent_{category}" ;
+        fnml:functionValue [
+            rr:predicateObjectMap [
+                rr:predicate fno:executes ;
+                rr:object grel:array_join 
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:object "http://www.moviedb.fr/cinema#"
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:objectMap [
+                    fnml:functionValue [
+                        rr:predicateObjectMap [
+                            rr:predicate fno:executes ;
+                            rr:object grel:string_replace 
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:valueParameter ;
+                            rr:objectMap [
+                                fnml:functionValue [
+                                    rr:predicateObjectMap [
+                                        rr:predicate fno:executes ;
+                                        rr:object grel:string_toTitlecase 
+                                    ] ;
+                                    rr:predicateObjectMap [
+                                        rr:predicate grel:valueParameter ;
+                                        rr:objectMap [ rml:reference "category" ]
+                                    ]
+                                ]
+                            ]
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:p_string_find ;
+                            rr:object " "
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:p_string_replace ;
+                            rr:object ""
+                        ]
+                    ]
+                ]
+            ]
+        ] ;
+        rr:termType rr:IRI ;
         rr:class owl:Class
     ] ;
 
@@ -225,60 +364,6 @@
     rr:predicateObjectMap [
         rr:predicate rdfs:label ;
         rr:objectMap [ rml:reference "category" ; rr:language "en" ]
-    ] ;
-
-    rr:predicateObjectMap [
-        rr:predicate :isRelatedWith ;
-        rr:objectMap [ rml:reference "http://www.moviedb.fr/ontology/cinema#Job/{category}" ]
-    ] .
-
-
-
-<#JobMap> a rr:TriplesMap ;
-    rml:logicalSource [
-        rml:source <#RoleSource> ;
-        rml:referenceFormulation ql:CSV
-    ] ;
-    rr:subjectMap [
-        rr:template "http://www.moviedb.fr/ontology/cinema#Job/{nconst}_{tconst}_{category}" ;
-        rr:class :Job
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate :executeBy ;
-        rr:objectMap [
-            rr:parentTriplesMap <#PersonMap> ;
-            rr:joinCondition [
-                rr:child "nconst" ;
-                rr:parent "nconst"
-            ]
-        ]
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate :job ;
-        rr:objectMap [
-            rr:parentTriplesMap <#JobThesaurusMap> ;
-            rr:joinCondition [
-                rr:child "category" ;
-                rr:parent "category"
-            ]
-        ]
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicateMap [ rr:template "http://www.moviedb.fr/cinema#has{category}Contribution" ] ;
-        rr:objectMap [
-            rr:parentTriplesMap <#PersonMap> ;
-            rr:joinCondition [ rr:child "nconst" ; rr:parent "nconst" ]
-        ]
-    ] ;
-    rr:predicateObjectMap [
-        rr:predicate :forMotionPicture ;
-        rr:objectMap [
-            rr:parentTriplesMap <#MovieMap> ;
-            rr:joinCondition [
-                rr:child "tconst" ;
-                rr:parent "tconst"
-            ]
-        ]
     ] .
 
 <#RoleMap> a rr:TriplesMap ;

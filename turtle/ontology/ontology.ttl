@@ -30,8 +30,6 @@
 
 :Role a owl:Class .
 
-:Job a owl:Class .
-
 :Review a owl:Class ;
     rdfs:subClassOf :Item .
 
@@ -119,11 +117,6 @@
 :knownFor a owl:ObjectProperty ;
     rdfs:domain :Agent ;
     rdfs:range :CreativeWork .
-
-:hasJob a owl:ObjectProperty ;
-    owl:inverseOf :executeBy ;
-    rdfs:domain :Agent ;
-    rdfs:range :Job .
 
 # Role Properties
 :playedBy a owl:ObjectProperty ;
@@ -240,30 +233,3 @@
 # SKOS Thesaurus
 :GenreThesaurus a skos:ConceptScheme ;
     skos:prefLabel "Movie Genre Thesaurus"@en .
-
-:JobThesaurus a skos:ConceptScheme ;
-    skos:prefLabel "Job in film production Thesaurus"@en .
-
-:isRelatedWith a owl:SymmetricProperty ;
-    a owl:ObjectProperty ;
-    rdfs:label "relation symétrique classe-concept"@fr .
-
-:Job_director a skos:Concept ;
-    skos:inScheme :JobThesaurus ;
-    skos:prefLabel "Director"@en .
-
-:Job_producer a skos:Concept ;
-    skos:inScheme :JobThesaurus ;
-    skos:prefLabel "Producer"@en .
-
-:Job_writer a skos:Concept ;
-    skos:inScheme :JobThesaurus ;
-    skos:prefLabel "Writer"@en .
-
-:Job_actor a skos:Concept ;
-    skos:prefLabel "Actor"@en ;
-    skos:related :Job_actress .
-
-:Job_actress a skos:Concept ;
-    skos:prefLabel "Actress"@en ;
-    skos:related :Job_actor . 

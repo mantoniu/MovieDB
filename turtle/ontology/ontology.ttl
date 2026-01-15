@@ -22,13 +22,22 @@
 
 :Movie a owl:Class ;
     rdfs:label "Movie"@en, "Film"@fr ;
-    rdfs:subClassOf :MotionPicture ;
-    owl:disjointWith :TVSeries .
+    rdfs:subClassOf :MotionPicture .
 
-:TVSeries a owl:Class ;
+:TvSeries a owl:Class ;
     rdfs:label "TV Series"@en, "Série télévisée"@fr ;
-    rdfs:subClassOf :MotionPicture ;
-    owl:disjointWith :Movie .
+    rdfs:subClassOf :MotionPicture .
+
+:TvMovie a owl:Class ;
+    rdfs:label "TV Movie"@en, "Téléfilm"@fr ;
+    rdfs:subClassOf :MotionPicture .
+
+:TvSpecial a owl:Class ;
+    rdfs:label "TV Special"@en, "Spécial télévisé"@fr ;
+    rdfs:subClassOf :MotionPicture .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Movie :TvSeries :TvMovie :TvSpecial ) .
 
 :Agent a owl:Class ;
     rdfs:label "Agent"@en, "Agent"@fr ;

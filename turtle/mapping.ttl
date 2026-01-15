@@ -631,12 +631,29 @@
     rr:predicateObjectMap [
         rr:predicate :inMotionPicture ;
         rr:objectMap [
-            rr:parentTriplesMap <#MovieMap> ;
+            rr:parentTriplesMap <#MotionPictureMap> ;
             rr:joinCondition [
                 rr:child "tconst" ;
                 rr:parent "tconst"
             ]
         ]
+    ] .
+
+<#UserReviewMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source "datasets/reduced/sample.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.[*]"
+    ] ;
+    rr:subjectMap [
+        rr:template "http://www.moviedb.fr/cinema#User/{reviewer}" ;
+        rr:class :User
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate :name ;
+        rr:objectMap [ rml:reference "reviewer" ] ;
+        rr:termType rr:Literal ;
+        rr:datatype xsd:string
     ] .
 
 <#ReviewMap> a rr:TriplesMap ;
@@ -669,12 +686,15 @@
     ] ;
     rr:predicateObjectMap [
         rr:predicate :writtenBy ;
-        rr:objectMap [ rr:template "http://www.moviedb.fr/ontology/cinema#User/{reviewer}" ]
+        rr:objectMap [ 
+            rr:template "http://www.moviedb.fr/cinema#User/{reviewer}" ;
+            rr:termType rr:IRI 
+        ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate :isReviewOf ;
         rr:objectMap [
-            rr:parentTriplesMap <#MovieMap> ;
+            rr:parentTriplesMap <#MotionPictureMap> ;
             rr:joinCondition [
                 rr:child "movie" ;
                 rr:parent "primaryTitle" ;

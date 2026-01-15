@@ -97,15 +97,8 @@
     rdfs:comment "A person who produces motion pictures."@en,
         "Une personne qui produit des œuvres cinématographiques."@fr .
 
-:Actress a owl:Class ;
-    rdfs:label "Actress"@en, "Actrice"@fr ;
-    rdfs:subClassOf :Person ;
-    owl:equivalentClass :Actor ;
-    rdfs:comment "A female actor."@en,
-        "Une actrice."@fr .
-
-:Actor a owl:Class ;
-    rdfs:label "Actor"@en, "Acteur"@fr ;
+:Performer a owl:Class ;
+    rdfs:label "Performer"@en, "Interprète"@fr ;
     rdfs:subClassOf :Person ;
     owl:equivalentClass [
         owl:intersectionOf (
@@ -113,11 +106,23 @@
             [ a owl:Restriction ; owl:onProperty :actedIn ; owl:someValuesFrom :MotionPicture ]
         )
     ] ;
-    rdfs:comment "A person who acts in motion pictures."@en,
-        "Une personne qui joue dans des œuvres cinématographiques."@fr .
+    rdfs:comment "A person who performs roles in motion pictures."@en ,
+        "Une personne qui interprète des rôles dans des œuvres cinématographiques."@fr .
+
+:Actress a owl:Class ;
+    rdfs:label "Actress"@en, "Actrice"@fr ;
+    rdfs:subClassOf :Performer, :Woman ;
+    rdfs:comment "A female performer acting in motion pictures."@en,
+        "Une interprète féminine jouant dans des œuvres cinématographiques."@fr .
+
+:Actor a owl:Class ;
+    rdfs:label "Actor"@en, "Acteur"@fr ;
+    rdfs:subClassOf :Performer, :Man ;
+    rdfs:comment "A male performer acting in motion pictures."@en,
+        "Un interprète masculin jouant dans des œuvres cinématographiques."@fr .
 
 # General Properties
-:wikiDataURI a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
+:wikiDataURI a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:label "WikiData URI"@en, "URI WikiData"@fr ;
     rdfs:domain [ a owl:Class ;
         owl:unionOf ( :Person :CreativeWork )
@@ -165,18 +170,18 @@
 :actedIn a owl:ObjectProperty ;
     rdfs:label "acted in"@en, "a joué dans"@fr ;
     owl:propertyChainAxiom ( :hasRole :inMotionPicture ) ;
-    rdfs:domain :Actor ;
+    rdfs:domain :Performer ;
     rdfs:range :MotionPicture ;
-    rdfs:comment "A motion picture the actor has acted in."@en,
-        "Une œuvre cinématographique dans laquelle l'acteur a joué."@fr .
+    rdfs:comment "A motion picture the performer has acted in."@en,
+        "Une œuvre cinématographique dans laquelle l'interprète a joué."@fr .
 
 :hasRole a owl:ObjectProperty ;
     rdfs:label "has role"@en, "a le rôle"@fr ;
     owl:inverseOf :playedBy ;
-    rdfs:domain :Actor ;
+    rdfs:domain :Performer ;
     rdfs:range :Role ;
-    rdfs:comment "The role played by the actor."@en,
-        "Le rôle joué par l'acteur."@fr .
+    rdfs:comment "The role played by the performer."@en,
+        "Le rôle joué par l'interprète."@fr .
 
 :knownFor a owl:ObjectProperty ;
     rdfs:label "known for"@en, "connu pour"@fr ;
@@ -190,9 +195,9 @@
     rdfs:label "played by"@en, "joué par"@fr ;
     owl:inverseOf :hasRole ;
     rdfs:domain :Role ;
-    rdfs:range :Actor ;
-    rdfs:comment "The actor who played the role."@en,
-        "L'acteur qui a joué le rôle."@fr .
+    rdfs:range :Performer ;
+    rdfs:comment "The performer who played the role."@en,
+        "L'interprète qui a joué le rôle."@fr .
 
 :inMotionPicture a owl:ObjectProperty ;
     rdfs:label "in motion picture"@en, "dans l'œuvre cinématographique"@fr ;
@@ -232,7 +237,7 @@
 
 :endYear a owl:DatatypeProperty ;
     rdfs:label "end year"@en, "année de fin"@fr ;
-    rdfs:domain :TVSeries ;
+    rdfs:domain :TvSeries ;
     rdfs:range xsd:gYear ;
     rdfs:comment "The year the TV series ended."@en,
         "L'année de fin de la série télévisée."@fr .
@@ -251,7 +256,7 @@
     rdfs:comment "Indicates if the creative work is intended for adult audiences."@en,
         "Indique si l'œuvre créative est destinée à un public adulte."@fr .
 
-:imdbId a owl:DatatypeProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty ;
+:imdbId a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:label "IMDb ID"@en, "ID IMDb"@fr ;
     rdfs:domain :CreativeWork ;
     rdfs:range xsd:string ;
@@ -302,7 +307,7 @@
     rdfs:subPropertyOf :hasContributor ;
     owl:inverseOf :actedIn ;
     rdfs:domain :MotionPicture ;
-    rdfs:range :Person ;
+    rdfs:range :Performer ;
     rdfs:comment "An actor in the motion picture."@en,
         "Un acteur dans l'œuvre cinématographique."@fr .
 

@@ -8,82 +8,142 @@
     rdfs:subClassOf :Agent ;
     rdfs:comment "A human being."@en .
 
+:Woman a owl:Class ;
+    rdfs:label "Woman"@en, "Femme"@fr ;
+    rdfs:subClassOf :Person ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty :gender ;
+        owl:hasValue "female"
+    ] .
+
+:Man a owl:Class ;
+    rdfs:label "Man"@en, "Homme"@fr ;
+    rdfs:subClassOf :Person ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty :gender ;
+        owl:hasValue "male"
+    ] .
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( :Man :Woman ) .
+
 :Organization a owl:Class ;
+    rdfs:label "Organization"@en, "Organisation"@fr ;
+    rdfs:subClassOf :Agent ;
     rdfs:comment "An organization such as a school, company, club, etc."@en .
 
 :Place a owl:Class ;
+    rdfs:label "Place"@en, "Lieu"@fr ;
     rdfs:comment "A geographical location."@en .
 
 :name a owl:DatatypeProperty ;
+    rdfs:label "name"@en, "nom"@fr ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of the entity."@en . 
 
 # Organization properties
 :location a owl:ObjectProperty ;
+    rdfs:label "location"@en, "emplacement"@fr ;
     rdfs:domain :Organization ;
     rdfs:range :Place ;
     rdfs:comment "The geographical location of the organization."@en .
 
 # Place properties
 :country a owl:DatatypeProperty ;
+    rdfs:label "country"@en, "pays"@fr ;
     rdfs:domain :Place ;
     rdfs:range xsd:string ;
     rdfs:comment "The country code where the place is located."@en .
 
 :city a owl:DatatypeProperty ;
+    rdfs:label "city"@en, "ville"@fr ;
     rdfs:domain :Place ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of the city/town/village."@en .
 
 # Person properties
 :height a owl:DatatypeProperty ;
+    rdfs:label "height"@en, "taille"@fr ;
     rdfs:domain :Person ;
     rdfs:range xsd:float ;
     rdfs:comment "The physical height of the person, measured in meters."@en .
 
-:birthYear a owl:DatatypeProperty ;
+:birthYear a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:label "birth year"@en, "année de naissance"@fr ;
     rdfs:domain :Person ;
     rdfs:range xsd:gYear ;
     rdfs:comment "The year the person was born."@en .
 
-:birthPlace a owl:ObjectProperty ;
+:birthPlace a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "birth place"@en, "lieu de naissance"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Place ;
     rdfs:comment "The geographical location where the person was born."@en .
 
-:hasSpouse a owl:ObjectProperty, owl:SymmetricProperty ;
+:hasSpouse a owl:ObjectProperty,
+              owl:SymmetricProperty,
+              owl:IrreflexiveProperty ;
+    rdfs:label "has spouse"@en, "a pour conjoint"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Person ;
     rdfs:comment "The husband or wife of the person."@en .
 
-:hasChild a owl:ObjectProperty ;
+:hasChild a owl:ObjectProperty, owl:IrreflexiveProperty ;
+    rdfs:label "has child"@en, "a un enfant"@fr ;
+    rdfs:subPropertyOf :hasDescendant ;
     owl:inverseOf :hasParent ;
     rdfs:domain :Person ;
     rdfs:range :Person ;
     rdfs:comment "A biological or adopted child of the person."@en .
 
-:hasParent a owl:ObjectProperty ;
+:hasDescendant a owl:ObjectProperty ,
+                 owl:TransitiveProperty ,
+                 owl:IrreflexiveProperty ;
+    rdfs:label "has descendant"@en, "a un descendant"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Person ;
+    rdfs:comment "A biological or adopted descendant of the person."@en .
+
+:hasParent a owl:ObjectProperty, owl:IrreflexiveProperty ;
+    rdfs:label "has parent"@en, "a un parent"@fr ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    owl:inverseOf :hasChild ;
     rdfs:comment "A biological or adoptive parent of the person."@en .
 
-:hasSibling a owl:ObjectProperty, owl:SymmetricProperty ;
+:hasSibling a owl:ObjectProperty,
+              owl:SymmetricProperty,
+              owl:IrreflexiveProperty ;
+    rdfs:label "has sibling"@en, "a un frère ou une sœur"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Person ;
     rdfs:comment "A brother or sister of the person."@en .
 
 :educatedAt a owl:ObjectProperty ;
+    rdfs:label "educated at"@en, "formé à"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Organization ;
     rdfs:comment "The educational institution (university, school) attended by the person."@en .
 
-:deathYear a owl:DatatypeProperty ;
+:deathYear a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:label "death year"@en, "année de décès"@fr ;
     rdfs:domain :Person ;
     rdfs:range xsd:gYear ;
     rdfs:comment "Year of death of the person."@en .
 
-:deathPlace a owl:ObjectProperty ;
+:deathPlace a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "death place"@en, "lieu de décès"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Place ;
     rdfs:comment "The geographical location where the person died."@en .
+
+:gender a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Person ;
+    rdfs:range [
+        a rdfs:Datatype ;
+        owl:oneOf ( "male" "female" "other" )
+    ] ;
+    rdfs:label "gender"@en, "genre"@fr .

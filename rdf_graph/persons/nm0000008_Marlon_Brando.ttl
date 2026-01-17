@@ -1,0 +1,372 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Marlon Brando
+:nm0000008 a :Man ;
+    :name "Marlon Brando" ;
+    :gender "male" ;
+    :birthYear "1923"^^xsd:gYear ;
+    :birthPlace :omaha_nebraska ;
+    :deathYear "2004"^^xsd:gYear ;
+    :deathPlace :los_angeles_california ;
+    :educatedAt :shattuck_military_academy ;
+    :educatedAt :actors_studio ;
+    :hadSpouse :anna_kashfi ;
+    :hadSpouse :movita_castaneda ;
+    :hadSpouse :tarita_teriipaia ;
+    :hasChild :christian_devi_brando ;
+    :hasChild :miko_castaneda_brando ;
+    :hasChild :rebecca_brando ;
+    :hasChild :simon_teihotu_brando ;
+    :hasChild :tarita_cheyenne_brando ;
+    :hasChild :petra_brando_corval ;
+    :hasChild :maimiti_brando ;
+    :hasChild :raiatua_brando ;
+    :hasChild :stefano_brando ;
+    :hasChild :dylan_brando ;
+    :hasChild :angelica_brando ;
+    :hasChild :ninna_priscilla_brando ;
+    :hasChild :myles_jonathan_brando ;
+    :hasChild :timothy_gahan_brando ;
+    :hasParent :marlon_ernest_brando ;
+    :hasParent :dorothy_julia_pennebaker ;
+    :hasSibling :jocelyn_brando ;
+    :hasSibling :frances_brando .
+
+# Family Members
+
+# Father: Marlon Ernest Brando
+:marlon_ernest_brando a :Man ;
+    :name "Marlon Ernest Brando" ;
+    :gender "male" ;
+    :birthYear "1895"^^xsd:gYear ;
+    :deathYear "1965"^^xsd:gYear ;
+    :hasSpouse :dorothy_julia_pennebaker ;
+    :hasChild :nm0000008 ;
+    :hasChild :jocelyn_brando ;
+    :hasChild :frances_brando .
+
+# Mother: Dorothy Julia Pennebaker
+:dorothy_julia_pennebaker a :Woman ;
+    :name "Dorothy Julia Pennebaker" ;
+    :gender "female" ;
+    :birthYear "1897"^^xsd:gYear ;
+    :deathYear "1954"^^xsd:gYear ;
+    :hasSpouse :marlon_ernest_brando ;
+    :hasChild :nm0000008 ;
+    :hasChild :jocelyn_brando ;
+    :hasChild :frances_brando .
+
+# Sister: Jocelyn Brando
+:jocelyn_brando a :Woman ;
+    :name "Jocelyn Brando" ;
+    :gender "female" ;
+    :birthYear "1919"^^xsd:gYear ;
+    :deathYear "2005"^^xsd:gYear ;
+    :hasParent :marlon_ernest_brando ;
+    :hasParent :dorothy_julia_pennebaker ;
+    :hasSibling :nm0000008 ;
+    :hasSibling :frances_brando .
+
+# Sister: Frances Brando
+:frances_brando a :Woman ;
+    :name "Frances Brando" ;
+    :gender "female" ;
+    :birthYear "1922"^^xsd:gYear ;
+    :deathYear "1994"^^xsd:gYear ;
+    :hasParent :marlon_ernest_brando ;
+    :hasParent :dorothy_julia_pennebaker ;
+    :hasSibling :nm0000008 ;
+    :hasSibling :jocelyn_brando .
+
+# Spouse: Anna Kashfi
+:anna_kashfi a :Woman ;
+    :name "Anna Kashfi" ;
+    :gender "female" ;
+    :hadSpouse :nm0000008 ;
+    :hasChild :christian_devi_brando .
+
+# Spouse: Movita Castaneda
+:movita_castaneda a :Woman ;
+    :name "Movita Castaneda" ;
+    :gender "female" ;
+    :hadSpouse :nm0000008 ;
+    :hasChild :miko_castaneda_brando ;
+    :hasChild :rebecca_brando .
+
+# Spouse: Tarita Teriipaia
+:tarita_teriipaia a :Woman ;
+    :name "Tarita Teriipaia" ;
+    :gender "female" ;
+    :hadSpouse :nm0000008 ;
+    :hasChild :simon_teihotu_brando ;
+    :hasChild :tarita_cheyenne_brando ;
+    :hasChild :maimiti_brando .
+
+# Child: Christian Devi Brando
+:christian_devi_brando a :Man ;
+    :name "Christian Devi Brando" ;
+    :gender "male" ;
+    :birthYear "1958"^^xsd:gYear ;
+    :deathYear "2008"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :anna_kashfi .
+
+# Child: Miko Castaneda Brando
+:miko_castaneda_brando a :Man ;
+    :name "Miko Castaneda Brando" ;
+    :gender "male" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :movita_castaneda .
+
+# Child: Rebecca Brando
+:rebecca_brando a :Woman ;
+    :name "Rebecca Brando" ;
+    :gender "female" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :movita_castaneda .
+
+# Child: Simon Teihotu Brando
+:simon_teihotu_brando a :Man ;
+    :name "Simon Teihotu Brando" ;
+    :gender "male" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :tarita_teriipaia .
+
+# Child: Tarita Cheyenne Brando
+:tarita_cheyenne_brando a :Woman ;
+    :name "Tarita Cheyenne Brando" ;
+    :gender "female" ;
+    :birthYear "1970"^^xsd:gYear ;
+    :deathYear "1995"^^xsd:gYear ;
+    :deathPlace :punaauia_tahiti ;
+    :hasParent :nm0000008 ;
+    :hasParent :tarita_teriipaia .
+
+# Adopted Child: Petra Brando-Corval
+:petra_brando_corval a :Woman ;
+    :name "Petra Brando-Corval" ;
+    :gender "female" ;
+    :birthYear "1972"^^xsd:gYear ;
+    :hasParent :nm0000008 ; # Adoptive parent
+    :hasParent :caroline_barrett_brando ; # Biological mother
+    :hasParent :james_clavell . # Biological father
+
+# Adopted Child: Maimiti Brando
+:maimiti_brando a :Woman ;
+    :name "Maimiti Brando" ;
+    :gender "female" ;
+    :birthYear "1977"^^xsd:gYear ;
+    :hasParent :nm0000008 ; # Adoptive parent
+    :hasParent :tarita_teriipaia . # Biological mother
+
+# Adopted Child: Raiatua Brando
+:raiatua_brando a :Man ;
+    :name "Raiatua Brando" ;
+    :gender "male" ;
+    :birthYear "1982"^^xsd:gYear ;
+    :hasParent :nm0000008 . # Adoptive parent
+
+# Child: Stefano Brando
+:stefano_brando a :Man ;
+    :name "Stefano Brando" ;
+    :gender "male" ;
+    :birthYear "1967"^^xsd:gYear ;
+    :hasParent :nm0000008 .
+
+# Child: Dylan Brando
+:dylan_brando a :Man ;
+    :name "Dylan Brando" ;
+    :gender "male" ;
+    :birthYear "1968"^^xsd:gYear ;
+    :deathYear "1988"^^xsd:gYear ;
+    :hasParent :nm0000008 .
+
+# Child: Angelica Brando
+:angelica_brando a :Woman ;
+    :name "Angelica Brando" ;
+    :gender "female" ;
+    :hasParent :nm0000008 .
+
+# Child: Ninna Priscilla Brando
+:ninna_priscilla_brando a :Woman ;
+    :name "Ninna Priscilla Brando" ;
+    :gender "female" ;
+    :birthYear "1989"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :maria_christina_ruiz .
+
+# Child: Myles Jonathan Brando
+:myles_jonathan_brando a :Man ;
+    :name "Myles Jonathan Brando" ;
+    :gender "male" ;
+    :birthYear "1992"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :maria_christina_ruiz .
+
+# Child: Timothy Gahan Brando
+:timothy_gahan_brando a :Man ;
+    :name "Timothy Gahan Brando" ;
+    :gender "male" ;
+    :birthYear "1994"^^xsd:gYear ;
+    :hasParent :nm0000008 ;
+    :hasParent :maria_christina_ruiz .
+
+# Other related people
+:maria_christina_ruiz a :Woman ;
+    :name "Maria Christina Ruiz" ;
+    :gender "female" ;
+    :hasChild :ninna_priscilla_brando ;
+    :hasChild :myles_jonathan_brando ;
+    :hasChild :timothy_gahan_brando .
+
+:dag_drollet a :Man ;
+    :name "Dag Drollet" ;
+    :gender "male" ;
+    :birthYear "1963"^^xsd:gYear ; # 27 years old in 1990
+    :deathYear "1990"^^xsd:gYear .
+
+:james_clavell a :Man ;
+    :name "James Clavell" ;
+    :gender "male" ;
+    :hasChild :petra_brando_corval .
+
+:caroline_barrett_brando a :Woman ;
+    :name "Caroline Barrett Brando" ;
+    :gender "female" ;
+    :hasChild :petra_brando_corval .
+
+# Inverse and Symmetric Properties (for SHACL compliance)
+
+# hasSpouse (Symmetric)
+:dorothy_julia_pennebaker :hasSpouse :marlon_ernest_brando .
+
+# hadSpouse (Symmetric)
+:anna_kashfi :hadSpouse :nm0000008 .
+:movita_castaneda :hadSpouse :nm0000008 .
+:tarita_teriipaia :hadSpouse :nm0000008 .
+
+# hasChild / hasParent (Inverse)
+:marlon_ernest_brando :hasChild :jocelyn_brando .
+:jocelyn_brando :hasParent :marlon_ernest_brando .
+
+:marlon_ernest_brando :hasChild :frances_brando .
+:frances_brando :hasParent :marlon_ernest_brando .
+
+:dorothy_julia_pennebaker :hasChild :nm0000008 .
+:dorothy_julia_pennebaker :hasChild :jocelyn_brando .
+:jocelyn_brando :hasParent :dorothy_julia_pennebaker .
+
+:dorothy_julia_pennebaker :hasChild :frances_brando .
+:frances_brando :hasParent :dorothy_julia_pennebaker .
+
+:anna_kashfi :hasChild :christian_devi_brando .
+:christian_devi_brando :hasParent :anna_kashfi .
+
+:movita_castaneda :hasChild :miko_castaneda_brando .
+:miko_castaneda_brando :hasParent :movita_castaneda .
+
+:movita_castaneda :hasChild :rebecca_brando .
+:rebecca_brando :hasParent :movita_castaneda .
+
+:tarita_teriipaia :hasChild :simon_teihotu_brando .
+:simon_teihotu_brando :hasParent :tarita_teriipaia .
+
+:tarita_teriipaia :hasChild :tarita_cheyenne_brando .
+:tarita_cheyenne_brando :hasParent :tarita_teriipaia .
+
+:tarita_teriipaia :hasChild :maimiti_brando .
+:maimiti_brando :hasParent :tarita_teriipaia .
+
+:caroline_barrett_brando :hasChild :petra_brando_corval .
+:petra_brando_corval :hasParent :caroline_barrett_brando .
+
+:james_clavell :hasChild :petra_brando_corval .
+:petra_brando_corval :hasParent :james_clavell .
+
+:maria_christina_ruiz :hasChild :ninna_priscilla_brando .
+:ninna_priscilla_brando :hasParent :maria_christina_ruiz .
+
+:maria_christina_ruiz :hasChild :myles_jonathan_brando .
+:myles_jonathan_brando :hasParent :maria_christina_ruiz .
+
+:maria_christina_ruiz :hasChild :timothy_gahan_brando .
+:timothy_gahan_brando :hasParent :maria_christina_ruiz .
+
+# hasSibling (Symmetric)
+:jocelyn_brando :hasSibling :nm0000008 .
+:frances_brando :hasSibling :nm0000008 .
+:jocelyn_brando :hasSibling :frances_brando .
+:frances_brando :hasSibling :jocelyn_brando .
+
+# Places
+:omaha_nebraska a :Place ;
+    :name "Omaha" ;
+    :city "Omaha" ;
+    :country "US" .
+
+:los_angeles_california a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:tahiti_french_polynesia a :Place ;
+    :name "Tahiti" ;
+    :city "Tahiti" ;
+    :country "PF" .
+
+:death_valley_usa a :Place ;
+    :name "Death Valley" ;
+    :city "Death Valley" ;
+    :country "US" .
+
+:new_york_city_usa a :Place ;
+    :name "New York City" ;
+    :city "New York" ;
+    :country "US" .
+
+:tetiaroa_french_polynesia a :Place ;
+    :name "Tetiaroa" ;
+    :city "Tetiaroa" ;
+    :country "PF" .
+
+:port_madison_indian_reservation_usa a :Place ;
+    :name "Port Madison Indian Reservation" ;
+    :city "Port Madison Indian Reservation" ;
+    :country "US" .
+
+:punaauia_tahiti a :Place ;
+    :name "Punaauia" ;
+    :city "Punaauia" ;
+    :country "PF" .
+
+:beverly_hills_california a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+# Organizations
+:shattuck_military_academy a :Organization ;
+    :name "Shattuck Military Academy" .
+
+:actors_studio a :Organization ;
+    :name "Actors Studio" ;
+    :location :new_york_city_usa .
+
+:ronald_reagan_ucla_medical_center_org a :Organization ;
+    :name "Ronald Reagan UCLA Medical Center" ;
+    :location :los_angeles_california .
+
+:air_tetiaroa a :Organization ;
+    :name "Air Tetiaroa" ;
+    :location :tetiaroa_french_polynesia .
+
+:the_brando_hotel a :Organization ;
+    :name "The Brando" ;
+    :location :tetiaroa_french_polynesia .

@@ -1,0 +1,105 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000039> a :Woman ;
+    :name "Deborah Kerr" ;
+    :gender "female" ;
+    :birthYear "1921"^^xsd:gYear ;
+    :birthPlace :hillhead_glasgow_place ;
+    :hasParent :kathleen_rose_smale ;
+    :hasParent :arthur_charles_kerr_trimmer ;
+    :hasSibling :edmund_charles ;
+    :educatedAt :northumberland_house_school ;
+    :educatedAt :rossholme_school ;
+    :educatedAt :sadlers_wells_ballet_school ;
+    :educatedAt :oxford_playhouse .
+
+:kathleen_rose_smale a :Woman ;
+    :name "Kathleen Rose Smale" ;
+    :gender "female" ;
+    :birthYear "1891"^^xsd:gYear ;
+    :birthPlace :lydney_gloucestershire_place ;
+    :hadSpouse :arthur_charles_kerr_trimmer .
+
+:arthur_charles_kerr_trimmer a :Man ;
+    :name "Arthur Charles Kerr Trimmer" ;
+    :gender "male" ;
+    :birthYear "1891"^^xsd:gYear ;
+    :hadSpouse :kathleen_rose_smale .
+
+:edmund_charles a :Man ;
+    :name "Edmund Charles" ;
+    :gender "male" ;
+    :birthYear "1926"^^xsd:gYear ;
+    :deathYear "2004"^^xsd:gYear ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000039> .
+
+:phyllis_smale a :Woman ;
+    :name "Phyllis Smale" ;
+    :gender "female" .
+
+:northumberland_house_school a :Organization ;
+    :name "Northumberland House" ;
+    :location :henleaze_bristol_place .
+
+:rossholme_school a :Organization ;
+    :name "Rossholme School" ;
+    :location :weston_super_mare_place .
+
+:sadlers_wells_ballet_school a :Organization ;
+    :name "Sadler's Wells ballet school" ;
+    :location :london_city_place .
+
+:oxford_playhouse a :Organization ;
+    :name "Oxford Playhouse" ;
+    :location :oxford_city_place .
+
+:entertainments_national_service_association a :Organization ;
+    :name "Entertainments National Service Association" .
+
+:metro_goldwyn_mayer a :Organization ;
+    :name "Metro-Goldwyn-Mayer" ;
+    :location :hollywood_district_place .
+
+:hillhead_glasgow_place a :Place ;
+    :name "Hillhead, Glasgow" ;
+    :city "Glasgow" ;
+    :country "GB" .
+
+:helensburgh_place a :Place ;
+    :name "Helensburgh" ;
+    :city "Helensburgh" ;
+    :country "GB" .
+
+:lydney_gloucestershire_place a :Place ;
+    :name "Lydney, Gloucestershire" ;
+    :city "Lydney" ;
+    :country "GB" .
+
+:henleaze_bristol_place a :Place ;
+    :name "Henleaze, Bristol" ;
+    :city "Bristol" ;
+    :country "GB" .
+
+:weston_super_mare_place a :Place ;
+    :name "Weston-super-Mare" ;
+    :city "Weston-super-Mare" ;
+    :country "GB" .
+
+:london_city_place a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "GB" .
+
+:oxford_city_place a :Place ;
+    :name "Oxford" ;
+    :city "Oxford" ;
+    :country "GB" .
+
+:hollywood_district_place a :Place ;
+    :name "Hollywood" ;
+    :city "Hollywood" ;
+    :country "US" .

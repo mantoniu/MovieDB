@@ -1,0 +1,150 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000078 a :Man ;
+    :name "John Wayne" ;
+    :gender "male" ;
+    :height "1.93"^^xsd:float ;
+    :deathYear "1979"^^xsd:gYear ;
+    :deathPlace :pacific_view_memorial_park ;
+    :hasParent :clyde_leonard_morrison ;
+    :hasParent :mary_alberta_brown ;
+    :hasSibling :robert_morrison ;
+    :hadSpouse :josephine_saenz ;
+    :hadSpouse :esperanza_baur ;
+    :hadSpouse :pilar_pallete ;
+    :hasChild :michael_wayne ;
+    :hasChild :mary_antonia_wayne_lacava ;
+    :hasChild :patrick_wayne ;
+    :hasChild :melinda_wayne_munoz ;
+    :hasChild :linda_assia_wayne ;
+    :hasChild :ethan_wayne ;
+    :hasChild :marisa_wayne ;
+    :hasDescendant :jennifer_wayne ;
+    :educatedAt :university_of_southern_california .
+
+:clyde_leonard_morrison a :Man ;
+    :name "Clyde Leonard Morrison" ;
+    :gender "male" ;
+    :birthYear "1884"^^xsd:gYear ;
+    :deathYear "1937"^^xsd:gYear ;
+    :hasChild :nm0000078 ;
+    :hasChild :robert_morrison .
+
+:mary_alberta_brown a :Woman ;
+    :name "Mary Alberta Brown" ;
+    :gender "female" ;
+    :birthYear "1885"^^xsd:gYear ;
+    :deathYear "1970"^^xsd:gYear ;
+    :hasChild :nm0000078 ;
+    :hasChild :robert_morrison .
+
+:robert_morrison a :Man ;
+    :name "Robert Morrison" ;
+    :gender "male" ;
+    :birthYear "1911"^^xsd:gYear ;
+    :hasSibling :nm0000078 ;
+    :hasParent :clyde_leonard_morrison ;
+    :hasParent :mary_alberta_brown .
+
+:josephine_saenz a :Woman ;
+    :name "Josephine Saenz" ;
+    :gender "female" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :deathYear "2003"^^xsd:gYear ;
+    :hadSpouse :nm0000078 ;
+    :hasChild :michael_wayne ;
+    :hasChild :mary_antonia_wayne_lacava ;
+    :hasChild :patrick_wayne ;
+    :hasChild :melinda_wayne_munoz .
+
+:esperanza_baur a :Woman ;
+    :name "Esperanza Baur" ;
+    :gender "female" ;
+    :birthYear "1920"^^xsd:gYear ;
+    :deathYear "1961"^^xsd:gYear ;
+    :hadSpouse :nm0000078 .
+
+:pilar_pallete a :Woman ;
+    :name "Pilar Pallete" ;
+    :gender "female" ;
+    :birthYear "1928"^^xsd:gYear ;
+    :hadSpouse :nm0000078 ;
+    :hasChild :linda_assia_wayne ;
+    :hasChild :ethan_wayne ;
+    :hasChild :marisa_wayne .
+
+:michael_wayne a :Man ;
+    :name "Michael Wayne" ;
+    :gender "male" ;
+    :birthYear "1934"^^xsd:gYear ;
+    :deathYear "2003"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :josephine_saenz .
+
+:mary_antonia_wayne_lacava a :Woman ;
+    :name "Mary Antonia Wayne LaCava" ;
+    :gender "female" ;
+    :birthYear "1936"^^xsd:gYear ;
+    :deathYear "2000"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :josephine_saenz ;
+    :hasChild :jennifer_wayne .
+
+:patrick_wayne a :Man ;
+    :name "Patrick Wayne" ;
+    :gender "male" ;
+    :birthYear "1939"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :josephine_saenz .
+
+:melinda_wayne_munoz a :Woman ;
+    :name "Melinda Wayne Munoz" ;
+    :gender "female" ;
+    :birthYear "1940"^^xsd:gYear ;
+    :deathYear "2022"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :josephine_saenz .
+
+:linda_assia_wayne a :Woman ;
+    :name "Linda Assia-Wayne" ;
+    :gender "female" ;
+    :birthYear "1956"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :pilar_pallete .
+
+:ethan_wayne a :Man ;
+    :name "Ethan Wayne" ;
+    :gender "male" ;
+    :birthYear "1962"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :pilar_pallete .
+
+:marisa_wayne a :Woman ;
+    :name "Marisa Wayne" ;
+    :gender "female" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :hasParent :nm0000078 ;
+    :hasParent :pilar_pallete .
+
+:jennifer_wayne a :Woman ;
+    :name "Jennifer Wayne" ;
+    :gender "female" ;
+    :hasParent :mary_antonia_wayne_lacava .
+
+:university_of_southern_california a :Organization ;
+    :name "University of Southern California" ;
+    :location :los_angeles_california .
+
+:pacific_view_memorial_park a :Place ;
+    :name "Pacific View Memorial Park" ;
+    :city "Corona del Mar" ;
+    :country "US" .
+
+:los_angeles_california a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .

@@ -1,0 +1,132 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Olivia de Havilland
+:nm0000014 a :Woman ;
+    :name "Olivia Mary de Havilland" ;
+    :gender "female" ;
+    :birthYear "1916"^^xsd:gYear ;
+    :birthPlace :place_tokyo ;
+    :deathYear "2020"^^xsd:gYear ;
+    :deathPlace :place_paris_france ;
+    :hasParent :nm_walter_de_havilland, :nm_lillian_fontaine ;
+    :hasSibling :nm_joan_fontaine ;
+    :hadSpouse :nm_marcus_goodrich, :nm_pierre_galante ;
+    :hasChild :nm_benjamin_goodrich, :nm_gisele_galante ;
+    :educatedAt :org_lycee_de_los_gatos, :org_couvent_notre_dame_belmont .
+
+# Other Persons
+:nm_walter_de_havilland a :Man ;
+    :name "Walter de Havilland" ;
+    :gender "male" ;
+    :birthYear "1872"^^xsd:gYear ;
+    :deathYear "1968"^^xsd:gYear ;
+    :hadSpouse :nm_lillian_fontaine ;
+    :hasChild :nm0000014, :nm_joan_fontaine .
+
+:nm_lillian_fontaine a :Woman ;
+    :name "Lillian Fontaine" ;
+    :gender "female" ;
+    :birthYear "1886"^^xsd:gYear ;
+    :deathYear "1975"^^xsd:gYear ;
+    :hadSpouse :nm_walter_de_havilland ;
+    :hasSpouse :nm_george_fontaine ;
+    :hasChild :nm0000014, :nm_joan_fontaine .
+
+:nm_joan_fontaine a :Woman ;
+    :name "Joan Fontaine" ;
+    :gender "female" ;
+    :birthYear "1917"^^xsd:gYear ;
+    :deathYear "2013"^^xsd:gYear ;
+    :hasParent :nm_walter_de_havilland, :nm_lillian_fontaine ;
+    :hasSibling :nm0000014 .
+
+:nm_george_fontaine a :Man ;
+    :name "George Fontaine" ;
+    :gender "male" ;
+    :hasSpouse :nm_lillian_fontaine .
+
+:nm_marcus_goodrich a :Man ;
+    :name "Marcus Goodrich" ;
+    :gender "male" ;
+    :hadSpouse :nm0000014 ;
+    :hasChild :nm_benjamin_goodrich .
+
+:nm_benjamin_goodrich a :Man ;
+    :name "Benjamin Goodrich" ;
+    :gender "male" ;
+    :birthYear "1949"^^xsd:gYear ;
+    :deathYear "1991"^^xsd:gYear ;
+    :hasParent :nm0000014, :nm_marcus_goodrich .
+
+:nm_pierre_galante a :Man ;
+    :name "Pierre Galante" ;
+    :gender "male" ;
+    :hadSpouse :nm0000014 ;
+    :hasChild :nm_gisele_galante .
+
+:nm_gisele_galante a :Woman ;
+    :name "Gisèle Galante" ;
+    :gender "female" ;
+    :birthYear "1956"^^xsd:gYear ;
+    :hasParent :nm0000014, :nm_pierre_galante .
+
+:nm_renee_simonot a :Woman ;
+    :name "Renée Simonot" ;
+    :gender "female" ;
+    :birthYear "1911"^^xsd:gYear ;
+    :deathYear "2021"^^xsd:gYear ;
+    :hasChild :nm_catherine_deneuve .
+
+:nm_catherine_deneuve a :Woman ;
+    :name "Catherine Deneuve" ;
+    :gender "female" ;
+    :hasParent :nm_renee_simonot .
+
+# Places
+:place_tokyo a :Place ;
+    :name "Tokyo" ;
+    :city "Tokyo" ;
+    :country "JP" .
+
+:place_saratoga_california a :Place ;
+    :name "Saratoga, California" ;
+    :city "Saratoga" ;
+    :country "US" .
+
+:place_paris_france a :Place ;
+    :name "Paris, France" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:place_yvoy_le_marron_sologne a :Place ;
+    :name "Yvoy-le-Marron, Sologne" ;
+    :city "Yvoy-le-Marron" ;
+    :country "FR" .
+
+:place_guernsey a :Place ;
+    :name "Guernsey" ;
+    :city "Guernsey" ;
+    :country "GG" .
+
+:place_los_gatos_california a :Place ;
+    :name "Los Gatos, California" ;
+    :city "Los Gatos" ;
+    :country "US" .
+
+:place_belmont_california a :Place ;
+    :name "Belmont, California" ;
+    :city "Belmont" ;
+    :country "US" .
+
+# Organizations
+:org_lycee_de_los_gatos a :Organization ;
+    :name "Lycée de Los Gatos" ;
+    :location :place_los_gatos_california .
+
+:org_couvent_notre_dame_belmont a :Organization ;
+    :name "Couvent Notre-Dame" ;
+    :location :place_belmont_california .

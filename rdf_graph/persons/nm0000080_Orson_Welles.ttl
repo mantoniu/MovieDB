@@ -1,0 +1,202 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000080 a :Man ;
+    :name "Orson Welles" ;
+    :gender "male" ;
+    :deathYear "1985"^^xsd:gYear ;
+    :deathPlace :los_angeles_us ;
+    :hadSpouse :virginia_nicolson ;
+    :hadSpouse :rita_hayworth ;
+    :hasSpouse :paola_mori ;
+    :hasParent :richard_heard_welles ;
+    :hasParent :beatrice_welles_nee_ives ;
+    :hasChild :chris_welles ;
+    :hasChild :rebecca_welles ;
+    :hasChild :beatrice_welles ;
+    :educatedAt :todd_school_for_boys .
+
+:richard_heard_welles a :Man ;
+    :name "Richard Heard Welles" ;
+    :gender "male" ;
+    :hadChild :nm0000080 ;
+    :hadSpouse :beatrice_welles_nee_ives .
+
+:beatrice_welles_nee_ives a :Woman ;
+    :name "Béatrice Welles née Ives" ;
+    :gender "female" ;
+    :hadChild :nm0000080 ;
+    :hadSpouse :richard_heard_welles .
+
+:virginia_nicolson a :Woman ;
+    :name "Virginia Nicolson" ;
+    :gender "female" ;
+    :hadSpouse :nm0000080 ;
+    :hasChild :chris_welles .
+
+:chris_welles a :Woman ;
+    :name "Chris Welles" ;
+    :gender "female" ;
+    :birthYear "1938"^^xsd:gYear ;
+    :hasParent :nm0000080 ;
+    :hasParent :virginia_nicolson .
+
+:rita_hayworth a :Woman ;
+    :name "Rita Hayworth" ;
+    :gender "female" ;
+    :hadSpouse :nm0000080 ;
+    :hasChild :rebecca_welles .
+
+:rebecca_welles a :Woman ;
+    :name "Rebecca Welles" ;
+    :gender "female" ;
+    :birthYear "1944"^^xsd:gYear ;
+    :hasParent :nm0000080 ;
+    :hasParent :rita_hayworth .
+
+:paola_mori a :Woman ;
+    :name "Paola Mori" ;
+    :gender "female" ;
+    :hasSpouse :nm0000080 ;
+    :hasChild :beatrice_welles .
+
+:beatrice_welles a :Woman ;
+    :name "Beatrice Welles" ;
+    :gender "female" ;
+    :birthYear "1955"^^xsd:gYear ;
+    :hasParent :nm0000080 ;
+    :hasParent :paola_mori .
+
+# Places
+:los_angeles_us a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:chicago_us a :Place ;
+    :name "Chicago" ;
+    :city "Chicago" ;
+    :country "US" .
+
+:madison_us a :Place ;
+    :name "Madison" ;
+    :city "Madison" ;
+    :country "US" .
+
+:woodstock_us a :Place ;
+    :name "Woodstock" ;
+    :city "Woodstock" ;
+    :country "US" .
+
+:dublin_ie a :Place ;
+    :name "Dublin" ;
+    :city "Dublin" ;
+    :country "IE" .
+
+:paris_fr a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:seville_es a :Place ;
+    :name "Seville" ;
+    :city "Seville" ;
+    :country "ES" .
+
+:new_york_us a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:palm_springs_us a :Place ;
+    :name "Palm Springs" ;
+    :city "Palm Springs" ;
+    :country "US" .
+
+:rio_de_janeiro_br a :Place ;
+    :name "Rio de Janeiro" ;
+    :city "Rio de Janeiro" ;
+    :country "BR" .
+
+:mexico_city_mx a :Place ;
+    :name "Mexico City" ;
+    :city "Mexico City" ;
+    :country "MX" .
+
+:rome_it a :Place ;
+    :name "Rome" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:vienna_at a :Place ;
+    :name "Vienna" ;
+    :city "Vienna" ;
+    :country "AT" .
+
+:marseille_fr a :Place ;
+    :name "Marseille" ;
+    :city "Marseille" ;
+    :country "FR" .
+
+:lurs_fr a :Place ;
+    :name "Lurs" ;
+    :city "Lurs" ;
+    :country "FR" .
+
+:madrid_es a :Place ;
+    :name "Madrid" ;
+    :city "Madrid" ;
+    :country "ES" .
+
+:segovia_es a :Place ;
+    :name "Segovia" ;
+    :city "Segovia" ;
+    :country "ES" .
+
+:valladolid_es a :Place ;
+    :name "Valladolid" ;
+    :city "Valladolid" ;
+    :country "ES" .
+
+:munich_de a :Place ;
+    :name "Munich" ;
+    :city "Munich" ;
+    :country "DE" .
+
+:zagreb_hr a :Place ;
+    :name "Zagreb" ;
+    :city "Zagreb" ;
+    :country "HR" .
+
+:barcelona_es a :Place ;
+    :name "Barcelona" ;
+    :city "Barcelona" ;
+    :country "ES" .
+
+:essaouira_ma a :Place ;
+    :name "Essaouira" ;
+    :city "Essaouira" ;
+    :country "MA" .
+
+:perugia_it a :Place ;
+    :name "Perugia" ;
+    :city "Perugia" ;
+    :country "IT" .
+
+:viterbo_it a :Place ;
+    :name "Viterbo" ;
+    :city "Viterbo" ;
+    :country "IT" .
+
+:ronda_es a :Place ;
+    :name "Ronda" ;
+    :city "Ronda" ;
+    :country "ES" .
+
+# Organizations
+:todd_school_for_boys a :Organization ;
+    :name "Todd School for Boys" ;
+    :location :woodstock_us .

@@ -1,0 +1,160 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000047> a :Woman ;
+    :name "Sophia Loren" ;
+    :gender "female" ;
+    :birthYear "1935"^^xsd:gYear ;
+    :birthPlace :pozzuoli ;
+    :hasParent :riccardo_scicolone_murillo,
+        :romilda_villani ;
+    :hasSibling :anna_maria_scicolone,
+        :giuliano_scicolone,
+        :giuseppe_scicolone ;
+    :hasSpouse :carlo_ponti ;
+    :hasChild :carlo_ponti_jr,
+        :edoardo_ponti ;
+    :educatedAt :centro_sperimentale_di_cinematografia .
+
+:anna_maria_scicolone a :Woman ;
+    :name "Anna Maria Scicolone" ;
+    :gender "female" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000047> ;
+    :hasParent :riccardo_scicolone_murillo,
+        :romilda_villani .
+
+:beverly_hills a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+:carlo_ponti a :Man ;
+    :name "Carlo Ponti" ;
+    :gender "male" ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000047> ;
+    :hasChild :carlo_ponti_jr,
+        :edoardo_ponti .
+
+:carlo_ponti_jr a :Man ;
+    :name "Carlo Ponti Jr." ;
+    :gender "male" ;
+    :birthYear "1968"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000047>,
+        :carlo_ponti .
+
+:caserta a :Place ;
+    :name "Caserta" ;
+    :city "Caserta" ;
+    :country "IT" .
+
+:centro_sperimentale_di_cinematografia a :Organization ;
+    :name "Centro Sperimentale di Cinematografia" .
+
+:cinecitta a :Organization ;
+    :name "Cinecittà" .
+
+:copenhagen a :Place ;
+    :name "Copenhagen" ;
+    :city "Copenhagen" ;
+    :country "DK" .
+
+:coty a :Organization ;
+    :name "Coty" .
+
+:dolce_gabbana a :Organization ;
+    :name "Dolce & Gabbana" .
+
+:edoardo_ponti a :Man ;
+    :name "Edoardo Ponti" ;
+    :gender "male" ;
+    :birthYear "1973"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000047>,
+        :carlo_ponti .
+
+:film_at_lincoln_center a :Organization ;
+    :name "Film at Lincoln Center" ;
+    :location :new_york .
+
+:giuliano_scicolone a :Man ;
+    :name "Giuliano Scicolone" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000047> ;
+    :hasParent :riccardo_scicolone_murillo .
+
+:giuseppe_scicolone a :Man ;
+    :name "Giuseppe Scicolone" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000047> ;
+    :hasParent :riccardo_scicolone_murillo .
+
+:haut_commissariat_des_nations_unies a :Organization ;
+    :name "Haut-Commissariat des Nations unies" .
+
+:hong_kong a :Place ;
+    :name "Hong Kong" ;
+    :city "Hong Kong" ;
+    :country "HK" .
+
+:kenya a :Place ;
+    :name "Kenya" ;
+    :country "KE" .
+
+:msc_croisieres a :Organization ;
+    :name "MSC Croisières" .
+
+:naples a :Place ;
+    :name "Naples" ;
+    :city "Naples" ;
+    :country "IT" .
+
+:new_york a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:paramount_pictures a :Organization ;
+    :name "Paramount Pictures" .
+
+:pozzuoli a :Place ;
+    :name "Pozzuoli" ;
+    :city "Pozzuoli" ;
+    :country "IT" .
+
+:riccardo_scicolone_murillo a :Man ;
+    :name "Riccardo Scicolone Murillo" ;
+    :gender "male" ;
+    :birthYear "1907"^^xsd:gYear ;
+    :deathYear "1976"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000047>,
+        :anna_maria_scicolone,
+        :giuliano_scicolone,
+        :giuseppe_scicolone .
+
+:romilda_villani a :Woman ;
+    :name "Romilda Villani" ;
+    :gender "female" ;
+    :birthYear "1910"^^xsd:gYear ;
+    :deathYear "1991"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000047>,
+        :anna_maria_scicolone .
+
+:rome a :Place ;
+    :name "Rome" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:somalia a :Place ;
+    :name "Somalia" ;
+    :country "SO" .
+
+:sophia_loren_house a :Organization ;
+    :name "Sophia Loren House" ;
+    :location :hong_kong .
+
+:turin a :Place ;
+    :name "Turin" ;
+    :city "Turin" ;
+    :country "IT" .

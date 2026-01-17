@@ -1,0 +1,107 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Katharine Hepburn
+<http://www.moviedb.fr/cinema#nm0000031> a :Woman, :Person ;
+    :name "Katharine Hepburn" ;
+    :gender "female" ;
+    :birthYear "1907"^^xsd:gYear ; # Calculated from death year (2003) and age (96)
+    :deathYear "2003"^^xsd:gYear ;
+    :deathPlace :old_saybrook_connecticut ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling :richard_houghton_hepburn,
+                :dr_robert_houghton_hepburn,
+                :margaret_houghton_perry,
+                :marion_hepburn_grant,
+                :thomas_houghton_hepburn ;
+    :hadSpouse :ludlow_ogden_smith ;
+    :educatedAt :oxford_school, :bryn_mawr_college .
+
+# Parents of Katharine Hepburn
+:thomas_norval_hepburn a :Man, :Person ;
+    :name "Thomas Norval Hepburn" ;
+    :gender "male" ;
+    :birthYear "1879"^^xsd:gYear ;
+    :deathYear "1962"^^xsd:gYear ;
+    :hasSpouse :katharine_martha_houghton ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000031>,
+              :richard_houghton_hepburn,
+              :dr_robert_houghton_hepburn,
+              :margaret_houghton_perry,
+              :marion_hepburn_grant,
+              :thomas_houghton_hepburn .
+
+:katharine_martha_houghton a :Woman, :Person ;
+    :name "Katharine Martha Houghton" ;
+    :gender "female" ;
+    :birthYear "1878"^^xsd:gYear ;
+    :deathYear "1951"^^xsd:gYear ;
+    :hasSpouse :thomas_norval_hepburn ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000031>,
+              :richard_houghton_hepburn,
+              :dr_robert_houghton_hepburn,
+              :margaret_houghton_perry,
+              :marion_hepburn_grant,
+              :thomas_houghton_hepburn .
+
+# Siblings of Katharine Hepburn (and their parent/sibling relations for consistency)
+:richard_houghton_hepburn a :Person ;
+    :name "Richard Houghton Hepburn" ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000031> .
+
+:dr_robert_houghton_hepburn a :Person ;
+    :name "Dr. Robert Houghton Hepburn" ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000031> .
+
+:margaret_houghton_perry a :Person ;
+    :name "Margaret Houghton Perry" ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000031> .
+
+:marion_hepburn_grant a :Person ;
+    :name "Marion Hepburn Grant" ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000031> .
+
+:thomas_houghton_hepburn a :Person ;
+    :name "Thomas Houghton Hepburn" ;
+    :hasParent :thomas_norval_hepburn, :katharine_martha_houghton ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000031> .
+
+# Former Spouse of Katharine Hepburn (and inverse relation for consistency)
+:ludlow_ogden_smith a :Man, :Person ;
+    :name "Ludlow Ogden Smith" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000031> .
+
+# Other Persons mentioned in the text
+:spencer_tracy a :Man, :Person ;
+    :name "Spencer Tracy" ;
+    :gender "male" ;
+    :deathYear "1967"^^xsd:gYear .
+
+:howard_hughes a :Man, :Person ;
+    :name "Howard Hughes" ;
+    :gender "male" .
+
+:barbara a :Woman, :Person ;
+    :name "Barbara" ;
+    :gender "female" .
+
+# Educational Organizations
+:oxford_school a :Organization ;
+    :name "Oxford School" .
+
+:bryn_mawr_college a :Organization ;
+    :name "Bryn Mawr College" .
+
+# Places
+:old_saybrook_connecticut a :Place ;
+    :name "Old Saybrook, Connecticut" ;
+    :city "Old Saybrook" ;
+    :country "US" . # Inferred from "Connecticut" being in the United States

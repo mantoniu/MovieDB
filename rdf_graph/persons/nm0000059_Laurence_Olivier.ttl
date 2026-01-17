@@ -1,0 +1,122 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Laurence Olivier
+<http://www.moviedb.fr/cinema#nm0000059> a :Man ;
+    :name "Laurence Kerr Olivier" ;
+    :gender "male" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :birthPlace :Surrey_England ;
+    :deathYear "1989"^^xsd:gYear ;
+    :deathPlace :Ashurst_West_Sussex_England ;
+    :hasParent :Gerard_Kerr_Olivier,
+               :Agnes_Louise_Crookenden ;
+    :hadSpouse :Jill_Esmond,
+               :Vivien_Leigh ;
+    :hasSpouse :Joan_Plowright ;
+    :hasChild :Tarquin_Olivier,
+              :Richard_Kerr_Olivier,
+              :Tamsin_Agnes_Margaret_Olivier,
+              :Julie_Kate_Olivier ;
+    :educatedAt :All_Saints_Choir_School,
+                :Saint_Edwards_School_Oxford,
+                :Central_School_of_Dramatic_Art .
+
+# Related Persons
+:Gerard_Kerr_Olivier a :Man ;
+    :name "Gerard Kerr Olivier" ;
+    :gender "male" ;
+    :birthYear "1869"^^xsd:gYear ;
+    :deathYear "1939"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000059> .
+
+:Agnes_Louise_Crookenden a :Woman ;
+    :name "Agnes Louise Crookenden" ;
+    :gender "female" ;
+    :birthYear "1871"^^xsd:gYear ;
+    :deathYear "1920"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000059> .
+
+:Jill_Esmond a :Woman ;
+    :name "Jill Esmond" ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000059> ;
+    :hasChild :Tarquin_Olivier .
+
+:Vivien_Leigh a :Woman ;
+    :name "Vivien Leigh" ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000059> .
+
+:Joan_Plowright a :Woman ;
+    :name "Joan Plowright" ;
+    :gender "female" ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000059> ;
+    :hasChild :Richard_Kerr_Olivier,
+              :Tamsin_Agnes_Margaret_Olivier,
+              :Julie_Kate_Olivier .
+
+:Tarquin_Olivier a :Man ;
+    :name "Tarquin Olivier" ;
+    :gender "male" ;
+    :birthYear "1936"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000059>,
+               :Jill_Esmond .
+
+:Richard_Kerr_Olivier a :Man ;
+    :name "Richard Kerr Olivier" ;
+    :gender "male" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000059>,
+               :Joan_Plowright .
+
+:Tamsin_Agnes_Margaret_Olivier a :Woman ;
+    :name "Tamsin Agnes Margaret Olivier" ;
+    :gender "female" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000059>,
+               :Joan_Plowright .
+
+:Julie_Kate_Olivier a :Woman ;
+    :name "Julie-Kate Olivier" ;
+    :gender "female" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000059>,
+               :Joan_Plowright .
+
+# Places
+:Surrey_England a :Place ;
+    :name "Surrey, England" ;
+    :city "Surrey" ;
+    :country "GB" .
+
+:Ashurst_West_Sussex_England a :Place ;
+    :name "Ashurst, West Sussex, England" ;
+    :city "Ashurst" ;
+    :country "GB" .
+
+:London_England a :Place ;
+    :name "London, England" ;
+    :city "London" ;
+    :country "GB" .
+
+:Oxford_England a :Place ;
+    :name "Oxford, England" ;
+    :city "Oxford" ;
+    :country "GB" .
+
+# Organizations
+:All_Saints_Choir_School a :Organization ;
+    :name "All Saints' Choir School" ;
+    :location :London_England .
+
+:Saint_Edwards_School_Oxford a :Organization ;
+    :name "Saint Edward's School" ;
+    :location :Oxford_England .
+
+:Central_School_of_Dramatic_Art a :Organization ;
+    :name "Central School of Dramatic Art" ;
+    :location :London_England .

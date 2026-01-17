@@ -5,6 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 :Person a owl:Class ;
+    rdfs:label "Person"@en, "Personne"@fr ;
     rdfs:subClassOf :Agent ;
     rdfs:comment "A human being."@en .
 
@@ -89,7 +90,15 @@
     rdfs:label "has spouse"@en, "a pour conjoint"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Person ;
-    rdfs:comment "The husband or wife of the person."@en .
+    rdfs:comment "The current husband or wife of the person."@en .
+
+:hadSpouse a owl:ObjectProperty,
+              owl:SymmetricProperty,
+              owl:IrreflexiveProperty ;
+    rdfs:label "had spouse"@en, "a eu pour conjoint"@fr ;
+    rdfs:domain :Person ;
+    rdfs:range :Person ;
+    rdfs:comment "A former husband or wife of the person."@en .
 
 :hasChild a owl:ObjectProperty, owl:IrreflexiveProperty ;
     rdfs:label "has child"@en, "a un enfant"@fr ;
@@ -100,8 +109,7 @@
     rdfs:comment "A biological or adopted child of the person."@en .
 
 :hasDescendant a owl:ObjectProperty ,
-                 owl:TransitiveProperty ,
-                 owl:IrreflexiveProperty ;
+                 owl:TransitiveProperty ;
     rdfs:label "has descendant"@en, "a un descendant"@fr ;
     rdfs:domain :Person ;
     rdfs:range :Person ;

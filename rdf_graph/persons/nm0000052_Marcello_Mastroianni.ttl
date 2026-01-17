@@ -1,0 +1,368 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Marcello Mastroianni
+:nm0000052 a :Man ;
+    :name "Marcello Mastroianni"@en, "Marcello Vincenzo Domenico Mastroianni"@fr ;
+    :gender "male" ;
+    :birthYear "1924"^^xsd:gYear ;
+    :birthPlace :fontana_liri ;
+    :deathYear "1996"^^xsd:gYear ;
+    :deathPlace :paris ;
+    :hasParent :ottorino_mastrojanni, :ida_irolle ;
+    :hasSibling :ruggero_mastroianni ;
+    :hadSpouse :silvana_mangano, :faye_dunaway, :catherine_deneuve ;
+    :hasSpouse :flora_carabella ;
+    :hasChild :chiara_mastroianni ;
+    :educatedAt :istituto_galileo_galilei, :centro_universitario_teatrale .
+
+# Definitions for Places
+:fontana_liri a :Place ;
+    :name "Fontana Liri" ;
+    :city "Fontana Liri" ;
+    :country "IT" .
+
+:arpino a :Place ;
+    :name "Arpino" ;
+    :city "Arpino" ;
+    :country "IT" .
+
+:turin a :Place ;
+    :name "Turin" ;
+    :city "Turin" ;
+    :country "IT" .
+
+:rome a :Place ;
+    :name "Rome" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:florence a :Place ;
+    :name "Florence" ;
+    :city "Florence" ;
+    :country "IT" .
+
+:dobbiaco a :Place ;
+    :name "Dobbiaco" ;
+    :city "Dobbiaco" ;
+    :country "IT" .
+
+:paris a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:catane a :Place ;
+    :name "Catane" ;
+    :city "Catane" ;
+    :country "IT" .
+
+:naples a :Place ;
+    :name "Naples" ;
+    :city "Naples" ;
+    :country "IT" .
+
+:san_giovanni_rome a :Place ;
+    :name "San Giovanni" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:trevi_fountain a :Place ;
+    :name "Trevi Fountain" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:campo_verano_cemetery a :Place ;
+    :name "Campo Verano Cemetery" ;
+    :city "Rome" ;
+    :country "IT" .
+
+# Definitions for Organizations
+:istituto_galileo_galilei a :Organization ;
+    :name "Istituto Tecnico Industriale Pubblico Galileo Galilei" ;
+    :location :rome .
+
+:municipality_of_rome a :Organization ;
+    :name "Municipality of Rome" ;
+    :location :rome .
+
+:municipality_of_florence a :Organization ;
+    :name "Municipality of Florence" ;
+    :location :florence .
+
+:istituto_geografico_militare a :Organization ;
+    :name "Istituto Geografico Militare" ;
+    :location :florence .
+
+:organisation_todt a :Organization ;
+    :name "Organisation Todt" .
+
+:centro_universitario_teatrale a :Organization ;
+    :name "Centro Universitario Teatrale" ;
+    :location :rome .
+
+:teatro_eliseo a :Organization ;
+    :name "Teatro Eliseo" ;
+    :location :rome .
+
+# Definitions for Other People
+:ottorino_mastrojanni a :Man ;
+    :name "Ottorino Mastrojanni" ;
+    :gender "male" ;
+    :birthPlace :arpino ;
+    :hasChild :nm0000052, :ruggero_mastroianni .
+
+:ida_irolle a :Woman ;
+    :name "Ida Irolle" ;
+    :gender "female" ;
+    :birthPlace :arpino ;
+    :hasChild :nm0000052, :ruggero_mastroianni .
+
+:umberto_mastroianni a :Man ;
+    :name "Umberto Mastroianni" ;
+    :gender "male" .
+
+:ruggero_mastroianni a :Man ;
+    :name "Ruggero Mastroianni" ;
+    :gender "male" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :birthPlace :turin ;
+    :hasParent :ottorino_mastrojanni, :ida_irolle ;
+    :hasSibling :nm0000052 .
+
+:silvana_mangano a :Woman ;
+    :name "Silvana Mangano" ;
+    :gender "female" ;
+    :hadSpouse :nm0000052 .
+
+:remo_brindisi a :Man ;
+    :name "Remo Brindisi" ;
+    :gender "male" .
+
+:luchino_visconti a :Man ;
+    :name "Luchino Visconti" ;
+    :gender "male" .
+
+:vittorio_gassman a :Man ;
+    :name "Vittorio Gassman" ;
+    :gender "male" .
+
+:giulietta_masina a :Woman ;
+    :name "Giulietta Masina" ;
+    :gender "female" .
+
+:federico_fellini a :Man ;
+    :name "Federico Fellini" ;
+    :gender "male" .
+
+:riccardo_freda a :Man ;
+    :name "Riccardo Freda" ;
+    :gender "male" .
+
+:luciano_emmer a :Man ;
+    :name "Luciano Emmer" ;
+    :gender "male" .
+
+:fernando_cerchio a :Man ;
+    :name "Fernando Cerchio" ;
+    :gender "male" .
+
+:claudio_gora a :Man ;
+    :name "Claudio Gora" ;
+    :gender "male" .
+
+:carlo_lizzani a :Man ;
+    :name "Carlo Lizzani" ;
+    :gender "male" .
+
+:giuseppe_de_santis a :Man ;
+    :name "Giuseppe De Santis" ;
+    :gender "male" .
+
+:leopoldo_savona a :Man ;
+    :name "Leopoldo Savona" ;
+    :gender "male" .
+
+:alessandro_blasetti a :Man ;
+    :name "Alessandro Blasetti" ;
+    :gender "male" .
+
+:sophia_loren a :Woman ;
+    :name "Sophia Loren" ;
+    :gender "female" .
+
+:mario_monicelli a :Man ;
+    :name "Mario Monicelli" ;
+    :gender "male" .
+
+:claudia_cardinale a :Woman ;
+    :name "Claudia Cardinale" ;
+    :gender "female" .
+
+:antonio_pietrangeli a :Man ;
+    :name "Antonio Pietrangeli" ;
+    :gender "male" .
+
+:simone_signoret a :Woman ;
+    :name "Simone Signoret" ;
+    :gender "female" .
+
+:michelangelo_antonioni a :Man ;
+    :name "Michelangelo Antonioni" ;
+    :gender "male" .
+
+:albert_camus a :Man ;
+    :name "Albert Camus" ;
+    :gender "male" .
+
+:stefania_sandrelli a :Woman ;
+    :name "Stefania Sandrelli" ;
+    :gender "female" .
+
+:terence_young a :Man ;
+    :name "Terence Young" ;
+    :gender "male" .
+
+:faye_dunaway a :Woman ;
+    :name "Faye Dunaway" ;
+    :gender "female" ;
+    :hadSpouse :nm0000052 .
+
+:marco_ferreri a :Man ;
+    :name "Marco Ferreri" ;
+    :gender "male" .
+
+:catherine_deneuve a :Woman ;
+    :name "Catherine Deneuve" ;
+    :gender "female" ;
+    :hadSpouse :nm0000052 ;
+    :hasChild :chiara_mastroianni .
+
+:chiara_mastroianni a :Woman ;
+    :name "Chiara Mastroianni" ;
+    :gender "female" ;
+    :hasParent :nm0000052, :catherine_deneuve .
+
+:nadine_trintignant a :Woman ;
+    :name "Nadine Trintignant" ;
+    :gender "female" .
+
+:jacques_demy a :Man ;
+    :name "Jacques Demy" ;
+    :gender "male" .
+
+:francoise_fabian a :Woman ;
+    :name "Françoise Fabian" ;
+    :gender "female" .
+
+:yves_robert a :Man ;
+    :name "Yves Robert" ;
+    :gender "male" .
+
+:philippe_noiret a :Man ;
+    :name "Philippe Noiret" ;
+    :gender "male" .
+
+:michel_piccoli a :Man ;
+    :name "Michel Piccoli" ;
+    :gender "male" .
+
+:flavio_mogherini a :Man ;
+    :name "Flavio Mogherini" ;
+    :gender "male" .
+
+:giorgio_capitani a :Man ;
+    :name "Giorgio Capitani" ;
+    :gender "male" .
+
+:francesco_rosi a :Man ;
+    :name "Francesco Rosi" ;
+    :gender "male" .
+
+:ciccio_ingrassia a :Man ;
+    :name "Ciccio Ingrassia" ;
+    :gender "male" .
+
+:gian_maria_volonte a :Man ;
+    :name "Gian Maria Volonté" ;
+    :gender "male" .
+
+:ettore_scola a :Man ;
+    :name "Ettore Scola" ;
+    :gender "male" .
+
+:gerard_depardieu a :Man ;
+    :name "Gérard Depardieu" ;
+    :gender "male" .
+
+:lina_wertmuller a :Woman ;
+    :name "Lina Wertmüller" ;
+    :gender "female" .
+
+:elio_petri a :Man ;
+    :name "Elio Petri" ;
+    :gender "male" .
+
+:jean_paul_sartre a :Man ;
+    :name "Jean-Paul Sartre" ;
+    :gender "male" .
+
+:mina a :Woman ;
+    :name "Mina" ;
+    :gender "female" .
+
+:sandra_milo a :Woman ;
+    :name "Sandra Milo" ;
+    :gender "female" .
+
+:enrico_berlinguer a :Man ;
+    :name "Enrico Berlinguer" ;
+    :gender "male" .
+
+:monica_vitti a :Woman ;
+    :name "Monica Vitti" ;
+    :gender "female" .
+
+:massimo_troisi a :Man ;
+    :name "Massimo Troisi" ;
+    :gender "male" .
+
+:theo_angelopoulos a :Man ;
+    :name "Theo Angelopoulos" ;
+    :gender "male" .
+
+:nikita_mikhalkov a :Man ;
+    :name "Nikita Mikhalkov" ;
+    :gender "male" .
+
+:bertrand_blier a :Man ;
+    :name "Bertrand Blier" ;
+    :gender "male" .
+
+:agnes_varda a :Woman ;
+    :name "Agnès Varda" ;
+    :gender "female" .
+
+:robert_altman a :Man ;
+    :name "Robert Altman" ;
+    :gender "male" .
+
+:raoul_ruiz a :Man ;
+    :name "Raoul Ruiz" ;
+    :gender "male" .
+
+:manoel_de_oliveira a :Man ;
+    :name "Manoel de Oliveira" ;
+    :gender "male" .
+
+:anna_maria_tato a :Woman ;
+    :name "Anna Maria Tatò" ;
+    :gender "female" .
+
+:flora_carabella a :Woman ;
+    :name "Flora Carabella" ;
+    :gender "female" ;
+    :hasSpouse :nm0000052 .

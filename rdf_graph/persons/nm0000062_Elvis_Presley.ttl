@@ -1,0 +1,245 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Elvis Presley
+<http://www.moviedb.fr/cinema#nm0000062> a :Man ;
+    :name "Elvis Aaron Presley" ;
+    :gender "male" ;
+    :birthYear "1935"^^xsd:gYear ;
+    :birthPlace :_tupelo_ms ;
+    :deathYear "1977"^^xsd:gYear ;
+    :deathPlace :_memphis_tn ;
+    :hasParent :_vernon_elvis_presley,
+               :_gladys_love_smith ;
+    :hasSibling :_jesse_garon_presley ;
+    :hadSpouse :_priscilla_beaulieu ;
+    :hasChild :_lisa_marie_presley ;
+    :educatedAt :_east_tupelo_consolidated_school,
+                :_milam_school,
+                :_l_c_humes_high_school .
+
+# Family Members
+:_vernon_elvis_presley a :Man ;
+    :name "Vernon Elvis Presley" ;
+    :gender "male" ;
+    :birthYear "1916"^^xsd:gYear ;
+    :deathYear "1979"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000062>,
+              :_jesse_garon_presley .
+
+:_gladys_love_smith a :Woman ;
+    :name "Gladys Love Smith" ;
+    :gender "female" ;
+    :birthYear "1912"^^xsd:gYear ;
+    :deathYear "1958"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000062>,
+              :_jesse_garon_presley .
+
+:_jesse_garon_presley a :Man ;
+    :name "Jesse Garon Presley" ;
+    :gender "male" ;
+    :birthYear "1935"^^xsd:gYear ;
+    :deathYear "1935"^^xsd:gYear ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000062> ;
+    :hasParent :_vernon_elvis_presley,
+               :_gladys_love_smith .
+
+:_priscilla_beaulieu a :Woman ;
+    :name "Priscilla Beaulieu" ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000062> ;
+    :hasChild :_lisa_marie_presley .
+
+:_lisa_marie_presley a :Woman ;
+    :name "Lisa Marie Presley" ;
+    :gender "female" ;
+    :birthYear "1968"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000062>,
+               :_priscilla_beaulieu .
+
+# Other Persons
+:_scotty_moore a :Man ;
+    :name "Scotty Moore" ;
+    :gender "male" .
+
+:_bill_black a :Man ;
+    :name "Bill Black" ;
+    :gender "male" ;
+    :deathYear "1965"^^xsd:gYear .
+
+:_d_j_fontana a :Man ;
+    :name "D. J. Fontana" ;
+    :gender "male" .
+
+:_dixie_locke a :Woman ;
+    :name "Dixie Locke" ;
+    :gender "female" .
+
+:_linda_thompson a :Woman ;
+    :name "Linda Thompson" ;
+    :gender "female" .
+
+:_ginger_alden a :Woman ;
+    :name "Ginger Alden" ;
+    :gender "female" .
+
+# Places
+:_tupelo_ms a :Place ;
+    :name "Tupelo, Mississippi" ;
+    :city "Tupelo" ;
+    :country "US" .
+
+:_memphis_tn a :Place ;
+    :name "Memphis, Tennessee" ;
+    :city "Memphis" ;
+    :country "US" .
+
+:_priceville_cemetery a :Place ;
+    :name "Priceville Cemetery" ;
+    :city "Tupelo" ;
+    :country "US" .
+
+:_nashville_tn a :Place ;
+    :name "Nashville, Tennessee" ;
+    :city "Nashville" ;
+    :country "US" .
+
+:_new_york_city_ny a :Place ;
+    :name "New York City, New York" ;
+    :city "New York City" ;
+    :country "US" .
+
+:_las_vegas_nv a :Place ;
+    :name "Las Vegas, Nevada" ;
+    :city "Las Vegas" ;
+    :country "US" .
+
+:_graceland a :Place ;
+    :name "Graceland" ;
+    :city "Memphis" ;
+    :country "US" .
+
+:_fort_chaffee_ar a :Place ;
+    :name "Fort Chaffee, Arkansas" ;
+    :city "Fort Chaffee" ;
+    :country "US" .
+
+:_fort_hood_tx a :Place ;
+    :name "Fort Hood, Texas" ;
+    :city "Fort Hood" ;
+    :country "US" .
+
+:_friedberg_west_germany a :Place ;
+    :name "Friedberg, West Germany" ;
+    :city "Friedberg" ;
+    :country "DE" .
+
+:_bel_air_los_angeles a :Place ;
+    :name "Bel Air, Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:_washington_dc_us a :Place ;
+    :name "Washington D.C., United States" ;
+    :city "Washington D.C." ;
+    :country "US" .
+
+:_forest_hill_cemetery a :Place ;
+    :name "Forest Hill Cemetery" ;
+    :city "Memphis" ;
+    :country "US" .
+
+# Organizations
+:_east_tupelo_consolidated_school a :Organization ;
+    :name "East Tupelo Consolidated School" ;
+    :location :_tupelo_ms .
+
+:_milam_school a :Organization ;
+    :name "Milam School" ;
+    :location :_tupelo_ms .
+
+:_l_c_humes_high_school a :Organization ;
+    :name "L. C. Humes High School" ;
+    :location :_memphis_tn .
+
+:_sun_studio a :Organization ;
+    :name "Sun Studio" ;
+    :location :_memphis_tn .
+
+:_sun_records a :Organization ;
+    :name "Sun Records" ;
+    :location :_memphis_tn .
+
+:_crown_electric_company a :Organization ;
+    :name "Crown Electric Company" ;
+    :location :_memphis_tn .
+
+:_bon_air_club a :Organization ;
+    :name "Bon Air club" ;
+    :location :_memphis_tn .
+
+:_overton_park_shell a :Organization ;
+    :name "Overton Park Shell" ;
+    :location :_memphis_tn .
+
+:_eagle_nest a :Organization ;
+    :name "Eagle Nest" ;
+    :location :_memphis_tn .
+
+:_grand_ole_opry a :Organization ;
+    :name "Grand Ole Opry" ;
+    :location :_nashville_tn .
+
+:_louisiana_hayride a :Organization ;
+    :name "Louisiana Hayride" .
+
+:_ksla_tv a :Organization ;
+    :name "KSLA" .
+
+:_cbs_network a :Organization ;
+    :name "CBS" .
+
+:_rca_victor a :Organization ;
+    :name "RCA Victor" .
+
+:_elvis_presley_music a :Organization ;
+    :name "Elvis Presley Music" .
+
+:_gladys_music a :Organization ;
+    :name "Gladys Music" .
+
+:_hill_and_range a :Organization ;
+    :name "Hill & Range" .
+
+:_rca_studios_nashville a :Organization ;
+    :name "RCA Studios Nashville" ;
+    :location :_nashville_tn .
+
+:_rca_studios_new_york a :Organization ;
+    :name "RCA Studios New York" ;
+    :location :_new_york_city_ny .
+
+:_paramount_pictures a :Organization ;
+    :name "Paramount Pictures" .
+
+:_20th_century_fox a :Organization ;
+    :name "20th Century Fox" .
+
+:_aladdin_hotel_las_vegas a :Organization ;
+    :name "Aladdin Hotel" ;
+    :location :_las_vegas_nv .
+
+:_american_sound_studio a :Organization ;
+    :name "American Sound Studio" ;
+    :location :_memphis_tn .
+
+:_international_hotel_las_vegas a :Organization ;
+    :name "International Hotel" ;
+    :location :_las_vegas_nv .
+
+:_baptist_memorial_hospital a :Organization ;
+    :name "Baptist Memorial Hospital" ;
+    :location :_memphis_tn .

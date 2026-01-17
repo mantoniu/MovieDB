@@ -1,0 +1,108 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Henry Fonda
+:nm0000020 a :Man, :Person ;
+    :name "Henry Fonda" ;
+    :gender "male" ;
+    :birthPlace :grand_island_nebraska ;
+    :deathYear "1982"^^xsd:gYear ;
+    :deathPlace :los_angeles_california ;
+    :hasParent :william_brace_fonda ;
+    :hasParent :herberta_krueger_jaynes ;
+    :hadSpouse :margaret_sullavan,
+               :frances_ford_seymour,
+               :susan_blanchard,
+               :afdera_franchetti ;
+    :hasSpouse :shirlee_adams ;
+    :hasChild :jane_fonda,
+              :peter_fonda ;
+    :educatedAt :university_players .
+
+# Places
+:grand_island_nebraska a :Place ;
+    :name "Grand Island, Nebraska" ;
+    :city "Grand Island" ;
+    :country "US" .
+
+:los_angeles_california a :Place ;
+    :name "Los Angeles, California" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:fonda_new_york a :Place ;
+    :name "Fonda, New York" ;
+    :city "Fonda" ;
+    :country "US" .
+
+:new_york_city_new_york a :Place ;
+    :name "New York City, New York" ;
+    :city "New York City" ;
+    :country "US" .
+
+# People
+:william_brace_fonda a :Man, :Person ;
+    :name "William Brace Fonda" ;
+    :gender "male" ;
+    :hasChild :nm0000020 .
+
+:herberta_krueger_jaynes a :Woman, :Person ;
+    :name "Herberta Krueger Jaynes" ;
+    :gender "female" ;
+    :hasChild :nm0000020 .
+
+:dorothy_pennebaker a :Woman, :Person ;
+    :name "Dorothy Pennebaker" ;
+    :gender "female" .
+
+:margaret_sullavan a :Woman, :Person ;
+    :name "Margaret Sullavan" ;
+    :gender "female" ;
+    :hadSpouse :nm0000020 .
+
+:frances_ford_seymour a :Woman, :Person ;
+    :name "Frances Ford Seymour" ;
+    :gender "female" ;
+    :deathYear "1950"^^xsd:gYear ;
+    :hadSpouse :nm0000020 ;
+    :hasChild :jane_fonda,
+              :peter_fonda .
+
+:jane_fonda a :Woman, :Person ;
+    :name "Jane Fonda" ;
+    :gender "female" ;
+    :birthYear "1937"^^xsd:gYear ;
+    :hasParent :nm0000020,
+               :frances_ford_seymour .
+
+:peter_fonda a :Man, :Person ;
+    :name "Peter Fonda" ;
+    :gender "male" ;
+    :birthYear "1940"^^xsd:gYear ;
+    :deathYear "2019"^^xsd:gYear ;
+    :hasParent :nm0000020,
+               :frances_ford_seymour .
+
+:susan_blanchard a :Woman, :Person ;
+    :name "Susan Blanchard" ;
+    :gender "female" ;
+    :birthYear "1928"^^xsd:gYear ;
+    :hadSpouse :nm0000020 .
+
+:afdera_franchetti a :Woman, :Person ;
+    :name "Afdera Franchetti" ;
+    :gender "female" ;
+    :hadSpouse :nm0000020 .
+
+:shirlee_adams a :Woman, :Person ;
+    :name "Shirlee Adams" ;
+    :gender "female" ;
+    :hasSpouse :nm0000020 .
+
+# Organizations
+:university_players a :Organization ;
+    :name "University Players" ;
+    :location :new_york_city_new_york .

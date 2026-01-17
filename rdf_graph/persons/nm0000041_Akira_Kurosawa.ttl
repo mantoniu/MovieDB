@@ -1,0 +1,402 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000041> a :Man ;
+    :name "Akira Kurosawa" ;
+    :gender "male" ;
+    :birthYear "1910"^^xsd:gYear ;
+    :birthPlace :place_Higashioi_Tokyo_JP ;
+    :deathYear "1998"^^xsd:gYear ;
+    :deathPlace :place_Setagaya_Tokyo_JP ;
+    :hadSpouse :nm_Yoko_Yaguchi ;
+    :hasParent :nm_Isamu_Kurosawa, :nm_Kurosawa_Mother ;
+    :hasSibling :nm_Heigo_Kurosawa ;
+    :hasChild :nm_Hisao_Kurosawa, :nm_Kazuko_Kurosawa ;
+    :hasDescendant :nm_Hisao_Kurosawa, :nm_Kazuko_Kurosawa, :nm_Takayuki_Kato .
+
+:nm_Isamu_Kurosawa a :Man ;
+    :name "Isamu Kurosawa" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000041>, :nm_Heigo_Kurosawa ;
+    :hasSpouse :nm_Kurosawa_Mother .
+
+:nm_Kurosawa_Mother a :Woman ;
+    :name "Kurosawa's mother" ;
+    :gender "female" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000041>, :nm_Heigo_Kurosawa ;
+    :hasSpouse :nm_Isamu_Kurosawa .
+
+:nm_Heigo_Kurosawa a :Man ;
+    :name "Heigo Kurosawa" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000041> ;
+    :hasParent :nm_Isamu_Kurosawa, :nm_Kurosawa_Mother .
+
+:nm_Yoko_Yaguchi a :Woman ;
+    :name "Yōko Yaguchi" ;
+    :gender "female" ;
+    :deathYear "1985"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000041> ;
+    :hasChild :nm_Hisao_Kurosawa, :nm_Kazuko_Kurosawa .
+
+:nm_Hisao_Kurosawa a :Man ;
+    :name "Hisao Kurosawa" ;
+    :gender "male" ;
+    :birthYear "1945"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000041>, :nm_Yoko_Yaguchi ;
+    :hasSibling :nm_Kazuko_Kurosawa ;
+    :hasSpouse :nm_Hiroko_Hayashi .
+
+:nm_Kazuko_Kurosawa a :Woman ;
+    :name "Kazuko Kurosawa" ;
+    :gender "female" ;
+    :birthYear "1954"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000041>, :nm_Yoko_Yaguchi ;
+    :hasSibling :nm_Hisao_Kurosawa ;
+    :hasSpouse :nm_Harayuki_Kato ;
+    :hasChild :nm_Takayuki_Kato .
+
+:nm_Hiroko_Hayashi a :Woman ;
+    :name "Hiroko Hayashi" ;
+    :gender "female" ;
+    :hasSpouse :nm_Hisao_Kurosawa .
+
+:nm_Harayuki_Kato a :Man ;
+    :name "Harayuki Katō" ;
+    :gender "male" ;
+    :hasSpouse :nm_Kazuko_Kurosawa ;
+    :hasChild :nm_Takayuki_Kato .
+
+:nm_Takayuki_Kato a :Man ;
+    :name "Takayuki Katō" ;
+    :gender "male" ;
+    :hasParent :nm_Kazuko_Kurosawa, :nm_Harayuki_Kato .
+
+:nm_Kajiro_Yamamoto a :Man ;
+    :name "Kajirō Yamamoto" ;
+    :gender "male" .
+
+:nm_Tsuneo_Tomita a :Man ;
+    :name "Tsuneo Tomita" ;
+    :gender "male" .
+
+:nm_Yasujiro_Ozu a :Man ;
+    :name "Yasujirō Ozu" ;
+    :gender "male" .
+
+:nm_Kenichi_Enomoto a :Man ;
+    :name "Ken'ichi Enomoto" ;
+    :gender "male" .
+
+:nm_Satsuo_Yamamoto a :Man ;
+    :name "Satsuo Yamamoto" ;
+    :gender "male" .
+
+:nm_Setsuko_Hara a :Woman ;
+    :name "Setsuko Hara" ;
+    :gender "female" .
+
+:nm_Toshiro_Mifune a :Man ;
+    :name "Toshirō Mifune" ;
+    :gender "male" .
+
+:nm_Takashi_Shimura a :Man ;
+    :name "Takashi Shimura" ;
+    :gender "male" .
+
+:nm_Sojiro_Motoki a :Man ;
+    :name "Sōjirō Motoki" ;
+    :gender "male" .
+
+:nm_Mikio_Naruse a :Man ;
+    :name "Mikio Naruse" ;
+    :gender "male" .
+
+:nm_Senkichi_Taniguchi a :Man ;
+    :name "Senkichi Taniguchi" ;
+    :gender "male" .
+
+:nm_Kazuo_Kikuta a :Man ;
+    :name "Kazuo Kikuta" ;
+    :gender "male" .
+
+:nm_Ryuzo_Kikushima a :Man ;
+    :name "Ryūzō Kikushima" ;
+    :gender "male" .
+
+:nm_Ishiro_Honda a :Man ;
+    :name "Ishirō Honda" ;
+    :gender "male" .
+
+:nm_Shinobu_Hashimoto a :Man ;
+    :name "Shinobu Hashimoto" ;
+    :gender "male" .
+
+:nm_Ryunosuke_Akutagawa a :Man ;
+    :name "Ryūnosuke Akutagawa" ;
+    :gender "male" .
+
+:nm_Matsutaro_Kawaguchi a :Man ;
+    :name "Matsutarō Kawaguchi" ;
+    :gender "male" .
+
+:nm_Fyodor_Dostoyevsky a :Man ;
+    :name "Fiodor Dostoïevski" ;
+    :gender "male" .
+
+:nm_Giuliana_Stramigioli a :Woman ;
+    :name "Giuliana Stramigioli" ;
+    :gender "female" .
+
+:nm_Ed_Sullivan a :Man ;
+    :name "Ed Sullivan" ;
+    :gender "male" .
+
+:nm_Kenji_Mizoguchi a :Man ;
+    :name "Kenji Mizoguchi" ;
+    :gender "male" .
+
+:nm_Hideo_Oguni a :Man ;
+    :name "Hideo Oguni" ;
+    :gender "male" .
+
+:nm_Fumio_Hayasaka a :Man ;
+    :name "Fumio Hayasaka" ;
+    :gender "male" .
+
+:nm_Masaru_Sato a :Man ;
+    :name "Masaru Satō" ;
+    :gender "male" .
+
+:nm_Isuzu_Yamada a :Woman ;
+    :name "Isuzu Yamada" ;
+    :gender "female" .
+
+:nm_Yuzo_Kayama a :Man ;
+    :name "Yūzō Kayama" ;
+    :gender "male" .
+
+:nm_Donald_Richie a :Man ;
+    :name "Donald Richie" ;
+    :gender "male" .
+
+:nm_Yu_Fujiki a :Man ;
+    :name "Yū Fujiki" ;
+    :gender "male" .
+
+:nm_Andrei_Konchalovsky a :Man ;
+    :name "Andreï Kontchalovski" ;
+    :gender "male" .
+
+:nm_David_Lean a :Man ;
+    :name "David Lean" ;
+    :gender "male" .
+
+:nm_Richard_Fleischer a :Man ;
+    :name "Richard Fleischer" ;
+    :gender "male" .
+
+:nm_Kinji_Fukasaku a :Man ;
+    :name "Kinji Fukasaku" ;
+    :gender "male" .
+
+:nm_Toshio_Masuda a :Man ;
+    :name "Toshio Masuda" ;
+    :gender "male" .
+
+:nm_Keisuke_Kinoshita a :Man ;
+    :name "Keisuke Kinoshita" ;
+    :gender "male" .
+
+:nm_Masaki_Kobayashi a :Man ;
+    :name "Masaki Kobayashi" ;
+    :gender "male" .
+
+:nm_Kon_Ichikawa a :Man ;
+    :name "Kon Ichikawa" ;
+    :gender "male" .
+
+:nm_Shintaro_Katsu a :Man ;
+    :name "Shintarō Katsu" ;
+    :gender "male" .
+
+:nm_Tatsuya_Nakadai a :Man ;
+    :name "Tatsuya Nakadai" ;
+    :gender "male" .
+
+:nm_George_Lucas a :Man ;
+    :name "George Lucas" ;
+    :gender "male" .
+
+:nm_Francis_Ford_Coppola a :Man ;
+    :name "Francis Ford Coppola" ;
+    :gender "male" .
+
+:nm_Serge_Silberman a :Man ;
+    :name "Serge Silberman" ;
+    :gender "male" .
+
+:nm_Sidney_Lumet a :Man ;
+    :name "Sidney Lumet" ;
+    :gender "male" .
+
+:nm_Sydney_Pollack a :Man ;
+    :name "Sydney Pollack" ;
+    :gender "male" .
+
+:nm_Emi_Wada a :Woman ;
+    :name "Emi Wada" ;
+    :gender "female" .
+
+:nm_Steven_Spielberg a :Man ;
+    :name "Steven Spielberg" ;
+    :gender "male" .
+
+:nm_Richard_Gere a :Man ;
+    :name "Richard Gere" ;
+    :gender "male" .
+
+:nm_Takashi_Koizumi a :Man ;
+    :name "Takashi Koizumi" ;
+    :gender "male" .
+
+:nm_Kei_Kumai a :Man ;
+    :name "Kei Kumai" ;
+    :gender "male" .
+
+:nm_Hyakken_Uchida a :Man ;
+    :name "Hyakken Uchida" ;
+    :gender "male" .
+
+:nm_Kiyoko_Murata a :Woman ;
+    :name "Kiyoko Murata" ;
+    :gender "female" .
+
+:nm_Vladimir_Arseniev a :Man ;
+    :name "Vladimir Arseniev" ;
+    :gender "male" .
+
+:nm_Mike_Inoue a :Man ;
+    :name "Mike Inoue" ;
+    :gender "male" .
+
+:nm_Shugoro_Yamamoto a :Man ;
+    :name "Shūgorō Yamamoto" ;
+    :gender "male" .
+
+:place_Higashioi_Tokyo_JP a :Place ;
+    :name "Higashiōi" ;
+    :city "Tokyo" ;
+    :country "JP" .
+
+:place_Setagaya_Tokyo_JP a :Place ;
+    :name "Setagaya" ;
+    :city "Tokyo" ;
+    :country "JP" .
+
+:place_Akita_Prefecture_JP a :Place ;
+    :name "Akita Prefecture" ;
+    :country "JP" .
+
+:place_Osaka_JP a :Place ;
+    :name "Osaka" ;
+    :city "Osaka" ;
+    :country "JP" .
+
+:place_Kanto_JP a :Place ;
+    :name "Kantō" ;
+    :country "JP" .
+
+:place_Yokohama_JP a :Place ;
+    :name "Yokohama" ;
+    :city "Yokohama" ;
+    :country "JP" .
+
+:place_Nara_JP a :Place ;
+    :name "Nara" ;
+    :city "Nara" ;
+    :country "JP" .
+
+:place_Kyoto_JP a :Place ;
+    :name "Kyoto" ;
+    :city "Kyoto" ;
+    :country "JP" .
+
+:place_Hokkaido_JP a :Place ;
+    :name "Hokkaidō" ;
+    :country "JP" .
+
+:place_Los_Angeles_US a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:place_New_York_US a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:place_Brazil_BR a :Place ;
+    :name "Brazil" ;
+    :country "BR" .
+
+:place_Russia_RU a :Place ;
+    :name "Russia" ;
+    :country "RU" .
+
+:place_Siberia_RU a :Place ;
+    :name "Siberia" ;
+    :country "RU" .
+
+:place_Nagasaki_JP a :Place ;
+    :name "Nagasaki" ;
+    :city "Nagasaki" ;
+    :country "JP" .
+
+:org_Army_Physical_Education_Institute a :Organization ;
+    :name "Institut d'éducation physique de l'armée" .
+
+:org_Proletarian_Artists_League a :Organization ;
+    :name "Ligue des artistes prolétariens" .
+
+:org_Toho_Studio a :Organization ;
+    :name "Tōhō" .
+
+:org_Daiei_Studio a :Organization ;
+    :name "Daiei" .
+
+:org_Eiga_Geijutsu_Kyokai a :Organization ;
+    :name "Association artistique cinématographique" .
+
+:org_Shintoho a :Organization ;
+    :name "Shintōhō" .
+
+:org_Shochiku a :Organization ;
+    :name "Shōchiku" .
+
+:org_RKO a :Organization ;
+    :name "RKO" .
+
+:org_Kurosawa_Production_Company a :Organization ;
+    :name "Kurosawa Production Company" .
+
+:org_Embassy_Pictures a :Organization ;
+    :name "Embassy Pictures" .
+
+:org_20th_Century_Fox a :Organization ;
+    :name "20th Century Fox" .
+
+:org_Club_des_Quatre_Chevaliers a :Organization ;
+    :name "Club des Quatre Chevaliers" .
+
+:org_Mosfilm a :Organization ;
+    :name "Mosfilm" .
+
+:org_Suntory a :Organization ;
+    :name "Suntory" .
+
+:org_Warner_Bros a :Organization ;
+    :name "Warner Bros." .

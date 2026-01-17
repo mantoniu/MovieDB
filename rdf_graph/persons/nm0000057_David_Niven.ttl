@@ -1,0 +1,86 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000057 a :Man ;
+    :name "James David Graham Niven" ;
+    :gender "male" ;
+    :birthYear "1910"^^xsd:gYear ;
+    :birthPlace :london_england ;
+    :deathYear "1983"^^xsd:gYear ;
+    :deathPlace :chateau_doex_switzerland ;
+    :hasParent :william_edward_graham_niven ;
+    :hasParent :henriette_julia_degacher ;
+    :hasParent :thomas_comyn_platt ;
+    :hasSibling :margeret_joyce_niven ;
+    :hasSibling :grizel_rosemary_niven ;
+    :hasSibling :henry_degacher_niven ;
+    :educatedAt :royal_military_college_sandhurst ;
+    :hadSpouse :primula_rollo ;
+    :hasSpouse :hjordis_genberg .
+
+:london_england a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "GB" .
+
+:chateau_doex_switzerland a :Place ;
+    :name "Château-d'Œx" ;
+    :city "Château-d'Œx" ;
+    :country "CH" .
+
+:royal_military_college_sandhurst a :Organization ;
+    :name "Royal Military College, Sandhurst" .
+
+:william_edward_graham_niven a :Man ;
+    :name "William Edward Graham Niven" ;
+    :gender "male" ;
+    :birthYear "1878"^^xsd:gYear ;
+    :deathYear "1915"^^xsd:gYear ;
+    :hasChild :nm0000057 .
+
+:henriette_julia_degacher a :Woman ;
+    :name "Henriette Julia Degacher" ;
+    :gender "female" ;
+    :birthYear "1878"^^xsd:gYear ;
+    :deathYear "1932"^^xsd:gYear ;
+    :hasChild :nm0000057 .
+
+:thomas_comyn_platt a :Man ;
+    :name "Sir Thomas Comyn-Platt" ;
+    :gender "male" ;
+    :hasChild :nm0000057 .
+
+:margeret_joyce_niven a :Woman ;
+    :name "Margeret Joyce Niven" ;
+    :gender "female" ;
+    :birthYear "1900"^^xsd:gYear ;
+    :deathYear "1981"^^xsd:gYear ;
+    :hasSibling :nm0000057 .
+
+:grizel_rosemary_niven a :Woman ;
+    :name "Grizel Rosemary Niven" ;
+    :gender "female" ;
+    :birthYear "1906"^^xsd:gYear ;
+    :deathYear "2007"^^xsd:gYear ;
+    :hasSibling :nm0000057 .
+
+:henry_degacher_niven a :Man ;
+    :name "Henry Degacher Niven" ;
+    :gender "male" ;
+    :birthYear "1902"^^xsd:gYear ;
+    :deathYear "1953"^^xsd:gYear ;
+    :hasSibling :nm0000057 .
+
+:primula_rollo a :Woman ;
+    :name "Primula Rollo" ;
+    :gender "female" ;
+    :deathYear "1946"^^xsd:gYear ;
+    :hadSpouse :nm0000057 .
+
+:hjordis_genberg a :Woman ;
+    :name "Hjördis Genberg" ;
+    :gender "female" ;
+    :hasSpouse :nm0000057 .

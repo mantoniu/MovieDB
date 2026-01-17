@@ -1,0 +1,33 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000051> a :Person, :Man ;
+    :name "James Mason" ;
+    :gender "male" ;
+    :birthYear "1909"^^xsd:gYear ;
+    :deathYear "1984"^^xsd:gYear ;
+    :deathPlace :lausanne ;
+    :educatedAt :university_of_cambridge ;
+    :hadSpouse :clarissa .
+
+:lausanne a :Place ;
+    :name "Lausanne" ;
+    :city "Lausanne" ;
+    :country "CH" .
+
+:university_of_cambridge a :Organization ;
+    :name "University of Cambridge" ;
+    :location :cambridge_uk .
+
+:cambridge_uk a :Place ;
+    :name "Cambridge" ;
+    :city "Cambridge" ;
+    :country "UK" .
+
+:clarissa a :Person, :Woman ;
+    :name "Clarissa" ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000051> .

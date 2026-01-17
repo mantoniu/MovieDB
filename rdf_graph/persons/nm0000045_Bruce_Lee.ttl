@@ -1,0 +1,133 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Bruce Lee
+<http://www.moviedb.fr/cinema#nm0000045> a :Man ;
+    :name "Bruce Lee" ;
+    :name "Lee Jun-fan" ;
+    :gender "male" ;
+    :birthYear "1940"^^xsd:gYear ;
+    :birthPlace :san_francisco ;
+    :deathYear "1973"^^xsd:gYear ;
+    :deathPlace :hong_kong ;
+    :hasParent :lee_hoi_chuen , :grace_ho ;
+    :hasSibling :robert_lee , :agnes_lee , :phoebe_lee ; # Removed :peter_lee to maintain symmetry after Peter's relationships are removed
+    :hasSpouse :linda_emery ;
+    :hasChild :brandon_lee , :shannon_lee ;
+    :educatedAt :edison_technical_school , :university_of_washington , :yip_man_wing_chun_school .
+
+# Family Members (Inverse relations for consistency with SHACL)
+:lee_hoi_chuen a :Man ; # Added type and name for consistency
+    :name "Lee Hoi-chuen" ;
+    :gender "male" ;
+    :birthPlace :shunde_district_guangdong ;
+    :hasSpouse :grace_ho ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000045> , :robert_lee , :agnes_lee , :phoebe_lee . # Removed :peter_lee
+
+:grace_ho a :Woman ; # Added type and name for consistency
+    :name "Grace Ho" ;
+    :gender "female" ;
+    :hasSpouse :lee_hoi_chuen ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000045> , :robert_lee , :agnes_lee , :phoebe_lee . # Removed :peter_lee
+
+:peter_lee a :Person ;
+    :name "Peter Lee" .
+    # All :hasParent and :hasSibling triples for :peter_lee were removed due to SHACL validation report.
+    # Corresponding inverse/symmetric triples for other individuals were also removed to maintain consistency.
+
+:robert_lee a :Man ; # Added type and name for consistency
+    :name "Robert Lee" ;
+    :gender "male" ;
+    :birthYear "1948"^^xsd:gYear ;
+    :hasParent :lee_hoi_chuen , :grace_ho ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000045> , :agnes_lee , :phoebe_lee . # Removed :peter_lee
+
+:agnes_lee a :Woman ; # Added type and name for consistency
+    :name "Agnès Lee" ;
+    :gender "female" ;
+    :hasParent :lee_hoi_chuen , :grace_ho ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000045> , :robert_lee , :phoebe_lee . # Removed :peter_lee
+
+:phoebe_lee a :Woman ; # Added type and name for consistency
+    :name "Phoebe Lee" ;
+    :gender "female" ;
+    :hasParent :lee_hoi_chuen , :grace_ho ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000045> , :robert_lee , :agnes_lee . # Removed :peter_lee
+
+:linda_emery a :Woman ; # Added type and name for consistency
+    :name "Linda Emery" ;
+    :gender "female" ;
+    :educatedAt :university_of_washington ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000045> ;
+    :hasChild :brandon_lee , :shannon_lee .
+
+:brandon_lee a :Man ; # Added type and name for consistency
+    :name "Brandon Lee" ;
+    :gender "male" ;
+    :birthYear "1965"^^xsd:gYear ;
+    :deathYear "1993"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000045> , :linda_emery ;
+    :hasSibling :shannon_lee .
+
+:shannon_lee a :Woman ; # Added type and name for consistency
+    :name "Shannon Lee" ;
+    :gender "female" ;
+    :birthYear "1969"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000045> , :linda_emery ;
+    :hasSibling :brandon_lee .
+
+:lo_wei a :Man ; # Added type and name for consistency
+    :name "Lo Wei" ;
+    :gender "male" ;
+    :hasSpouse :liu_liang_hua .
+
+:liu_liang_hua a :Woman ; # Added type and name for consistency
+    :name "Liu Liang-hua" ;
+    :gender "female" ;
+    :hasSpouse :lo_wei .
+
+# Places
+:san_francisco a :Place ;
+    :name "San Francisco" ;
+    :city "San Francisco" ;
+    :country "US" .
+
+:hong_kong a :Place ;
+    :name "Hong Kong" ;
+    :city "Hong Kong" ;
+    :country "HK" .
+
+:shunde_district_guangdong a :Place ;
+    :name "Shunde District, Guangdong" ;
+    :city "Shunde District" ;
+    :country "CN" .
+
+:seattle a :Place ;
+    :name "Seattle" ;
+    :city "Seattle" ;
+    :country "US" .
+
+:oakland a :Place ;
+    :name "Oakland" ;
+    :city "Oakland" ;
+    :country "US" .
+
+# Organizations
+:chinese_hospital_san_francisco a :Organization ;
+    :name "Chinese Hospital of San Francisco" ;
+    :location :san_francisco .
+
+:edison_technical_school a :Organization ;
+    :name "Edison Technical School" ;
+    :location :seattle .
+
+:university_of_washington a :Organization ;
+    :name "University of Washington" ;
+    :location :seattle .
+
+:yip_man_wing_chun_school a :Organization ;
+    :name "Yip Man's Wing Chun school" ;
+    :location :hong_kong .

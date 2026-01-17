@@ -1,0 +1,91 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Gene Kelly
+:nm0000037 a :Man ;
+    :name "Gene Kelly" ;
+    :gender "male" ;
+    :deathYear "1996"^^xsd:gYear ;
+    :hasParent :james_patrick_kelly, :harriet_curran_kelly ;
+    :hasSibling :fred_kelly, :unnamed_brother_kelly_1, :unnamed_brother_kelly_2, :unnamed_sister_kelly_1 ;
+    :hadSpouse :betsy_blair, :jeannie_coyne ;
+    :hasSpouse :patricia_ward ;
+    :hasChild :kerry_kelly, :timothy_kelly, :bridget_kelly ;
+    :educatedAt :the_gene_kelly_studio_of_the_dance .
+
+# Family Members
+:james_patrick_kelly a :Man ;
+    :name "James Patrick Kelly" ;
+    :gender "male" ;
+    :hasSpouse :harriet_curran_kelly ;
+    :hasChild :nm0000037, :fred_kelly, :unnamed_brother_kelly_1, :unnamed_brother_kelly_2, :unnamed_sister_kelly_1 .
+
+:harriet_curran_kelly a :Woman ;
+    :name "Harriet Curran Kelly" ;
+    :gender "female" ;
+    :hasSpouse :james_patrick_kelly ;
+    :hasChild :nm0000037, :fred_kelly, :unnamed_brother_kelly_1, :unnamed_brother_kelly_2, :unnamed_sister_kelly_1 .
+
+:fred_kelly a :Man ;
+    :name "Fred Kelly" ;
+    :gender "male" ;
+    :hasParent :james_patrick_kelly, :harriet_curran_kelly ;
+    :hasSibling :nm0000037, :unnamed_brother_kelly_1, :unnamed_brother_kelly_2, :unnamed_sister_kelly_1 .
+
+:unnamed_brother_kelly_1 a :Man ;
+    :name "Unnamed Brother Kelly 1" ;
+    :gender "male" ;
+    :hasParent :james_patrick_kelly, :harriet_curran_kelly ;
+    :hasSibling :nm0000037, :fred_kelly, :unnamed_brother_kelly_2, :unnamed_sister_kelly_1 .
+
+:unnamed_brother_kelly_2 a :Man ;
+    :name "Unnamed Brother Kelly 2" ;
+    :gender "male" ;
+    :hasParent :james_patrick_kelly, :harriet_curran_kelly ;
+    :hasSibling :nm0000037, :fred_kelly, :unnamed_brother_kelly_1, :unnamed_sister_kelly_1 .
+
+:unnamed_sister_kelly_1 a :Woman ;
+    :name "Unnamed Sister Kelly 1" ;
+    :gender "female" ;
+    :hasParent :james_patrick_kelly, :harriet_curran_kelly ;
+    :hasSibling :nm0000037, :fred_kelly, :unnamed_brother_kelly_1, :unnamed_brother_kelly_2 .
+
+:betsy_blair a :Woman ;
+    :name "Betsy Blair" ;
+    :gender "female" ;
+    :hadSpouse :nm0000037 ;
+    :hasChild :kerry_kelly .
+
+:jeannie_coyne a :Woman ;
+    :name "Jeannie Coyne" ;
+    :gender "female" ;
+    :deathYear "1973"^^xsd:gYear ;
+    :hadSpouse :nm0000037 ;
+    :hasChild :timothy_kelly, :bridget_kelly .
+
+:patricia_ward a :Woman ;
+    :name "Patricia Ward" ;
+    :gender "female" ;
+    :hasSpouse :nm0000037 .
+
+:kerry_kelly a :Woman ;
+    :name "Kerry Kelly" ;
+    :gender "female" ;
+    :hasParent :nm0000037, :betsy_blair .
+
+:timothy_kelly a :Man ;
+    :name "Timothy Kelly" ;
+    :gender "male" ;
+    :hasParent :nm0000037, :jeannie_coyne .
+
+:bridget_kelly a :Woman ;
+    :name "Bridget Kelly" ;
+    :gender "female" ;
+    :hasParent :nm0000037, :jeannie_coyne .
+
+# Organizations
+:the_gene_kelly_studio_of_the_dance a :Organization ;
+    :name "The Gene Kelly Studio of the Dance" .

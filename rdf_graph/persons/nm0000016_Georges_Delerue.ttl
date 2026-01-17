@@ -1,0 +1,85 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Georges Delerue
+<http://www.moviedb.fr/cinema#nm0000016> a :Man ;
+    :name "Georges Delerue" ;
+    :gender "male" ;
+    :birthYear "1925"^^xsd:gYear ;
+    :deathYear "1992"^^xsd:gYear ;
+    :birthPlace :roubaix ;
+    :deathPlace :providence_saint_joseph_medical_center ;
+    :hasParent :georges_delerue_father ;
+    :hasParent :marie_lhoest ;
+    :educatedAt :ecole_professionnelle_turgot ;
+    :educatedAt :conservatoire_de_roubaix ;
+    :educatedAt :conservatoire_de_paris .
+
+# Family Members
+:georges_delerue_father a :Man ;
+    :name "Georges Delerue" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000016> .
+
+:marie_lhoest a :Woman ;
+    :name "Marie Lhoest" ;
+    :gender "female" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000016> .
+
+# Places
+:roubaix a :Place ;
+    :name "Roubaix" ;
+    :city "Roubaix" ;
+    :country "FR" .
+
+:burbank a :Place ;
+    :name "Burbank" ;
+    :city "Burbank" ;
+    :country "US" .
+
+:glendale a :Place ;
+    :name "Glendale" ;
+    :city "Glendale" ;
+    :country "US" .
+
+:paris a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:nancy a :Place ;
+    :name "Nancy" ;
+    :city "Nancy" ;
+    :country "FR" .
+
+# Organizations
+:ecole_professionnelle_turgot a :Organization ;
+    :name "École professionnelle Turgot" ;
+    :location :roubaix .
+
+:conservatoire_de_roubaix a :Organization ;
+    :name "Conservatoire de Roubaix" ;
+    :location :roubaix .
+
+:conservatoire_de_paris a :Organization ;
+    :name "Conservatoire de Paris" ;
+    :location :paris .
+
+:radiodiffusion_francaise a :Organization ;
+    :name "Radiodiffusion française" ;
+    :location :paris .
+
+:opera_de_nancy a :Organization ;
+    :name "Opéra de Nancy" ;
+    :location :nancy .
+
+:providence_saint_joseph_medical_center a :Organization ;
+    :name "Providence Saint Joseph Medical Center" ;
+    :location :burbank .
+
+:forest_lawn_memorial_park a :Organization ;
+    :name "Forest Lawn Memorial Park" ;
+    :location :glendale .

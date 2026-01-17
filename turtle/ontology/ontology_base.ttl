@@ -10,7 +10,10 @@
     rdfs:comment "Ontology for the MovieDB project, covering Movies, TV Series, People, and Reviews."@en .
 
 # Classes
-:Item a owl:Class .
+:Item a owl:Class ;
+    rdfs:label "Item"@en, "Élément"@fr ;
+    rdfs:comment "A general item."@en,
+        "Un élément général."@fr .
 
 :CreativeWork a owl:Class ;
     rdfs:label "Creative Work"@en, "Œuvre créative"@fr ;

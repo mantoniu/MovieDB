@@ -1,0 +1,56 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: John Belushi
+<http://www.moviedb.fr/cinema#nm0000004> a :Man ;
+    :name "John Belushi" ;
+    :gender "male" ;
+    :deathYear "1982"^^xsd:gYear ;
+    :deathPlace :place_los_angeles ;
+    :hasSibling :person_james_belushi ;
+    :hasParent :person_adam_belushi ;
+    :educatedAt :org_university_of_wisconsin,
+                :org_college_of_dupage .
+
+# Other People
+:person_james_belushi a :Man ;
+    :name "James Belushi" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000004> .
+
+:person_adam_belushi a :Man ;
+    :name "Adam Belushi" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000004> .
+
+:person_cathy_evelyn_smith a :Woman ;
+    :name "Cathy Evelyn Smith" ;
+    :gender "female" .
+
+# Places
+:place_los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+# Organizations
+:org_university_of_wisconsin a :Organization ;
+    :name "University of Wisconsin" .
+
+:org_college_of_dupage a :Organization ;
+    :name "Collège de DuPage" .
+
+:org_the_west_compass_players a :Organization ;
+    :name "The West Compass Players" .
+
+:org_the_second_city a :Organization ;
+    :name "The Second City" .
+
+:org_national_lampoon a :Organization ;
+    :name "National Lampoon" .
+
+:org_saturday_night_live a :Organization ;
+    :name "Saturday Night Live" .

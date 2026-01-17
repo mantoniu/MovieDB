@@ -1,0 +1,416 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Alfred Hitchcock
+:nm0000033 a :Man ;
+    :name "Alfred Joseph Hitchcock" ;
+    :gender "male" ;
+    :birthYear "1899"^^xsd:gYear ;
+    :birthPlace :leytonstone_uk ;
+    :deathYear "1980"^^xsd:gYear ;
+    :deathPlace :bel_air_los_angeles_us ;
+    :hasParent :william_hitchcock_sr, :emma_jane_hitchcock ;
+    :hasSibling :william_hitchcock_jr, :eileen_hitchcock ;
+    :hasSpouse :alma_revillle ;
+    :hasChild :patricia_hitchcock ;
+    :hasDescendant :mary_alma, :teresa, :kathleen ;
+    :educatedAt :saint_ignatius_college, :london_county_council_school_of_engineering_and_navigation .
+
+# Family Members
+:william_hitchcock_sr a :Man ;
+    :name "William Hitchcock" ;
+    :gender "male" ;
+    :birthYear "1862"^^xsd:gYear ;
+    :deathYear "1914"^^xsd:gYear ;
+    :hasSpouse :emma_jane_hitchcock ;
+    :hasChild :nm0000033, :william_hitchcock_jr, :eileen_hitchcock .
+
+:emma_jane_hitchcock a :Woman ;
+    :name "Emma Jane Hitchcock" ;
+    :gender "female" ;
+    :birthYear "1863"^^xsd:gYear ;
+    :deathYear "1942"^^xsd:gYear ;
+    :hasSpouse :william_hitchcock_sr ;
+    :hasChild :nm0000033, :william_hitchcock_jr, :eileen_hitchcock .
+
+:william_hitchcock_jr a :Man ;
+    :name "William Hitchcock" ;
+    :gender "male" ;
+    :birthYear "1890"^^xsd:gYear ;
+    :hasParent :william_hitchcock_sr, :emma_jane_hitchcock ;
+    :hasSibling :nm0000033, :eileen_hitchcock .
+
+:eileen_hitchcock a :Woman ;
+    :name "Eileen Hitchcock" ;
+    :gender "female" ;
+    :birthYear "1892"^^xsd:gYear ;
+    :hasParent :william_hitchcock_sr, :emma_jane_hitchcock ;
+    :hasSibling :nm0000033, :william_hitchcock_jr .
+
+:alma_revillle a :Woman ;
+    :name "Alma Reville" ;
+    :gender "female" ;
+    :hasSpouse :nm0000033 ;
+    :hasChild :patricia_hitchcock ;
+    :hasDescendant :mary_alma, :teresa, :kathleen .
+
+:patricia_hitchcock a :Woman ;
+    :name "Patricia Hitchcock" ;
+    :gender "female" ;
+    :birthYear "1928"^^xsd:gYear ;
+    :hasParent :nm0000033, :alma_revillle ;
+    :hasChild :mary_alma, :teresa, :kathleen .
+
+:mary_alma a :Woman ;
+    :name "Mary Alma" ;
+    :gender "female" ;
+    :hasParent :patricia_hitchcock .
+
+:teresa a :Woman ;
+    :name "Teresa" ;
+    :gender "female" ;
+    :hasParent :patricia_hitchcock .
+
+:kathleen a :Woman ;
+    :name "Kathleen" ;
+    :gender "female" ;
+    :hasParent :patricia_hitchcock .
+
+# Places
+:leytonstone_uk a :Place ;
+    :name "Leytonstone" ;
+    :city "Leytonstone" ;
+    :country "UK" .
+
+:stamford_hill_uk a :Place ;
+    :name "Stamford Hill" ;
+    :city "Stamford Hill" ;
+    :country "UK" .
+
+:poplar_uk a :Place ;
+    :name "Poplar" ;
+    :city "Poplar" ;
+    :country "UK" .
+
+:london_uk a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "UK" .
+
+:potsdam_de a :Place ;
+    :name "Potsdam" ;
+    :city "Potsdam" ;
+    :country "DE" .
+
+:berlin_de a :Place ;
+    :name "Berlin" ;
+    :city "Berlin" ;
+    :country "DE" .
+
+:brompton_oratory_london_uk a :Place ;
+    :name "Brompton Oratory" ;
+    :city "London" ;
+    :country "UK" .
+
+:cromwell_road_london_uk a :Place ;
+    :name "153 Cromwell Road" ;
+    :city "London" ;
+    :country "UK" .
+
+:new_york_us a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:los_angeles_us a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:scotts_valley_us a :Place ;
+    :name "Scotts Valley" ;
+    :city "Scotts Valley" ;
+    :country "US" .
+
+:bel_air_los_angeles_us a :Place ;
+    :name "Bel Air" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:santa_cruz_us a :Place ;
+    :name "Santa Cruz" ;
+    :city "Santa Cruz" ;
+    :country "US" .
+
+:santa_rosa_us a :Place ;
+    :name "Santa Rosa" ;
+    :city "Santa Rosa" ;
+    :country "US" .
+
+:hollywood_us a :Place ;
+    :name "Hollywood" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:marrakech_ma a :Place ;
+    :name "Marrakech" ;
+    :city "Marrakech" ;
+    :country "MA" .
+
+:royal_albert_hall_london_uk a :Place ;
+    :name "Royal Albert Hall" ;
+    :city "London" ;
+    :country "UK" .
+
+:quebec_ca a :Place ;
+    :name "Quebec" ;
+    :city "Quebec" ;
+    :country "CA" .
+
+:nice_fr a :Place ;
+    :name "Nice" ;
+    :city "Nice" ;
+    :country "FR" .
+
+:bodega_bay_us a :Place ;
+    :name "Bodega Bay" ;
+    :city "Bodega Bay" ;
+    :country "US" .
+
+:beverly_hills_us a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+# Organizations
+:saint_ignatius_college a :Organization ;
+    :name "Saint Ignatius College" ;
+    :location :stamford_hill_uk .
+
+:london_county_council_school_of_engineering_and_navigation a :Organization ;
+    :name "London County Council School of Engineering and Navigation" ;
+    :location :poplar_uk .
+
+:henley_telegraphic a :Organization ;
+    :name "W.T. Henley Telegraphic" .
+
+:islington_studios a :Organization ;
+    :name "Islington Studios" ;
+    :location :london_uk .
+
+:famous_players_lasky a :Organization ;
+    :name "Famous Players-Lasky" ;
+    :location :london_uk .
+
+:paramount a :Organization ;
+    :name "Paramount" .
+
+:gainsborough_pictures a :Organization ;
+    :name "Gainsborough Pictures" ;
+    :location :london_uk .
+
+:ufa a :Organization ;
+    :name "UFA" ;
+    :location :potsdam_de .
+
+:hitchcock_baker_ltd a :Organization ;
+    :name "Hitchcock-Baker Ltd." .
+
+:british_international_pictures a :Organization ;
+    :name "British International Pictures" .
+
+:gaumont_british_picture_corporation a :Organization ;
+    :name "Gaumont British Picture Corporation" .
+
+:london_film_society a :Organization ;
+    :name "London film society" ;
+    :location :london_uk .
+
+:rko a :Organization ;
+    :name "RKO" .
+
+:universal_pictures a :Organization ;
+    :name "Universal Pictures" .
+
+:twentieth_century_fox a :Organization ;
+    :name "20th Century Fox" .
+
+:warner_bros a :Organization ;
+    :name "Warner Bros." .
+
+:mca a :Organization ;
+    :name "MCA" .
+
+:shamley_productions a :Organization ;
+    :name "Shamley Productions" .
+
+:cbs a :Organization ;
+    :name "CBS" .
+
+:british_museum a :Organization ;
+    :name "British Museum" ;
+    :location :london_uk .
+
+:ministry_of_information_uk a :Organization ;
+    :name "Ministry of Information" ;
+    :location :london_uk .
+
+:allied_expeditionary_force_headquarters a :Organization ;
+    :name "Haut quartier général des forces expéditionnaires alliées" .
+
+:imperial_war_museum a :Organization ;
+    :name "Imperial War Museum" ;
+    :location :london_uk .
+
+:transatlantic_pictures a :Organization ;
+    :name "Transatlantic Pictures" .
+
+:stork_club a :Organization ;
+    :name "Stork Club" ;
+    :location :new_york_us .
+
+:american_film_institute a :Organization ;
+    :name "American Film Institute" .
+
+:church_of_the_good_shepherd a :Organization ;
+    :name "Church of the Good Shepherd" ;
+    :location :beverly_hills_us .
+
+# Other People
+:sidney_bernstein a :Man ; :name "Sidney Bernstein" ; :gender "male" .
+:clare_greet a :Woman ; :name "Clare Greet" ; :gender "female" .
+:michael_balcon a :Man ; :name "Michael Balcon" ; :gender "male" .
+:victor_saville a :Man ; :name "Victor Saville" ; :gender "male" .
+:john_freedman a :Man ; :name "John Freedman" ; :gender "male" .
+:hugh_ford a :Man ; :name "Hugh Ford" ; :gender "male" .
+:donald_crisp a :Man ; :name "Donald Crisp" ; :gender "male" .
+:george_fitzmaurice a :Man ; :name "George Fitzmaurice" ; :gender "male" .
+:hugh_croise a :Man ; :name "Hugh Croise" ; :gender "male" .
+:seymour_hicks a :Man ; :name "Seymour Hicks" ; :gender "male" .
+:graham_cutts a :Man ; :name "Graham Cutts" ; :gender "male" .
+:friedrich_wilhelm_murnau a :Man ; :name "Friedrich Wilhelm Murnau" ; :gender "male" .
+:fritz_lang a :Man ; :name "Fritz Lang" ; :gender "male" .
+:marie_belloc_lowndes a :Woman ; :name "Marie Belloc Lowndes" ; :gender "female" .
+:ivor_novello a :Man ; :name "Ivor Novello" ; :gender "male" .
+:c_m_woolf a :Man ; :name "C.M. Woolf" ; :gender "male" .
+:ivor_montagu a :Man ; :name "Ivor Montagu" ; :gender "male" .
+:roy_ward_baker a :Man ; :name "Roy Ward Baker" ; :gender "male" .
+:noel_coward a :Man ; :name "Noël Coward" ; :gender "male" .
+:jack_cox a :Man ; :name "Jack Cox" ; :gender "male" .
+:charles_bennett a :Man ; :name "Charles Bennett" ; :gender "male" .
+:baker_press_attache a :Man ; :name "Baker" ; :gender "male" .
+:sean_ocasey a :Man ; :name "Seán O'Casey" ; :gender "male" .
+:robert_donat a :Man ; :name "Robert Donat" ; :gender "male" .
+:joseph_conrad a :Man ; :name "Joseph Conrad" ; :gender "male" .
+:oskar_homolka a :Man ; :name "Oskar Homolka" ; :gender "male" .
+:sylvia_sidney a :Woman ; :name "Sylvia Sidney" ; :gender "female" .
+:david_o_selznick a :Man ; :name "David O. Selznick" ; :gender "male" .
+:joan_harrison a :Woman ; :name "Joan Harrison" ; :gender "female" .
+:may_whitty a :Woman ; :name "May Whitty" ; :gender "female" .
+:clark_gable a :Man ; :name "Clark Gable" ; :gender "male" .
+:carole_lombard a :Woman ; :name "Carole Lombard" ; :gender "female" .
+:robert_montgomery a :Man ; :name "Robert Montgomery" ; :gender "male" .
+:orson_welles a :Man ; :name "Orson Welles" ; :gender "male" .
+:bernard_herrmann a :Man ; :name "Bernard Herrmann" ; :gender "male" .
+:francis_iles a :Man ; :name "Francis Iles" ; :gender "male" .
+:samson_raphaelson a :Man ; :name "Samson Raphaelson" ; :gender "male" .
+:joan_fontaine a :Woman ; :name "Joan Fontaine" ; :gender "female" .
+:cary_grant a :Man ; :name "Cary Grant" ; :gender "male" .
+:francois_truffaut a :Man ; :name "François Truffaut" ; :gender "male" .
+:peter_viertel a :Man ; :name "Peter Viertel" ; :gender "male" .
+:dorothy_parker a :Woman ; :name "Dorothy Parker" ; :gender "female" .
+:robert_cummings a :Man ; :name "Robert Cummings" ; :gender "male" .
+:priscilla_lane a :Woman ; :name "Priscilla Lane" ; :gender "female" .
+:robert_boyle a :Man ; :name "Robert Boyle" ; :gender "male" .
+:margaret_mcdonell a :Woman ; :name "Margaret McDonell" ; :gender "female" .
+:gordon_mcdonell a :Man ; :name "Gordon McDonell" ; :gender "male" .
+:thornton_wilder a :Man ; :name "Thornton Wilder" ; :gender "male" .
+:sally_benson a :Woman ; :name "Sally Benson" ; :gender "female" .
+:joseph_cotten a :Man ; :name "Joseph Cotten" ; :gender "male" .
+:teresa_wright a :Woman ; :name "Teresa Wright" ; :gender "female" .
+:john_steinbeck a :Man ; :name "John Steinbeck" ; :gender "male" .
+:william_bendix a :Man ; :name "William Bendix" ; :gender "male" .
+:glen_macwilliams a :Man ; :name "Glen MacWilliams" ; :gender "male" .
+:tallulah_bankhead a :Woman ; :name "Tallulah Bankhead" ; :gender "female" .
+:a_j_cronin a :Man ; :name "A. J. Cronin" ; :gender "male" .
+:john_m_stahl a :Man ; :name "John M. Stahl" ; :gender "male" .
+:joseph_l_mankiewicz a :Man ; :name "Joseph L. Mankiewicz" ; :gender "male" .
+:gregory_peck a :Man ; :name "Gregory Peck" ; :gender "male" .
+:mike_lewis a :Man ; :name "Mike Lewis" ; :gender "male" .
+:william_lawrie a :Man ; :name "William Lawrie" ; :gender "male" .
+:arthur_mainzer a :Man ; :name "Arthur Mainzer" ; :gender "male" .
+:alexandre_vorontsoff a :Man ; :name "Alexandre Vorontsoff" ; :gender "male" .
+:ingrid_bergman a :Woman ; :name "Ingrid Bergman" ; :gender "female" .
+:miklos_rozsa a :Man ; :name "Miklós Rózsa" ; :gender "male" .
+:king_vidor a :Man ; :name "King Vidor" ; :gender "male" .
+:ben_hecht a :Man ; :name "Ben Hecht" ; :gender "male" .
+:robert_millikan a :Man ; :name "Robert Millikan" ; :gender "male" .
+:alida_valli a :Woman ; :name "Alida Valli" ; :gender "female" .
+:john_dall a :Man ; :name "John Dall" ; :gender "male" .
+:farley_granger a :Man ; :name "Farley Granger" ; :gender "male" .
+:james_stewart a :Man ; :name "James Stewart" ; :gender "male" .
+:patrick_hamilton a :Man ; :name "Patrick Hamilton" ; :gender "male" .
+:cornell_woolrich a :Man ; :name "Cornell Woolrich" ; :gender "male" .
+:john_michael_hayes a :Man ; :name "John Michael Hayes" ; :gender "male" .
+:thelma_ritter a :Woman ; :name "Thelma Ritter" ; :gender "female" .
+:raymond_burr a :Man ; :name "Raymond Burr" ; :gender "male" .
+:wendell_corey a :Man ; :name "Wendell Corey" ; :gender "male" .
+:david_dodge a :Man ; :name "David Dodge" ; :gender "male" .
+:brigitte_auber a :Woman ; :name "Brigitte Auber" ; :gender "female" .
+:charles_vanel a :Man ; :name "Charles Vanel" ; :gender "male" .
+:jack_trevor_story a :Man ; :name "Jack Trevor Story" ; :gender "male" .
+:herbert_coleman a :Man ; :name "Herbert Coleman" ; :gender "male" .
+:shirley_maclaine a :Woman ; :name "Shirley MacLaine" ; :gender "female" .
+:john_forsythe a :Man ; :name "John Forsythe" ; :gender "male" .
+:jay_livingston a :Man ; :name "Jay Livingston" ; :gender "male" .
+:ray_evans a :Man ; :name "Ray Evans" ; :gender "male" .
+:doris_day a :Woman ; :name "Doris Day" ; :gender "female" .
+:pierre_boileau a :Man ; :name "Pierre Boileau" ; :gender "male" .
+:thomas_narcejac a :Man ; :name "Thomas Narcejac" ; :gender "male" .
+:henri_georges_clouzot a :Man ; :name "Henri-Georges Clouzot" ; :gender "male" .
+:samuel_taylor a :Man ; :name "Samuel Taylor" ; :gender "male" .
+:kim_novak a :Woman ; :name "Kim Novak" ; :gender "female" .
+:paul_anthelme a :Man ; :name "Paul Anthelme" ; :gender "male" .
+:william_archibald a :Man ; :name "William Archibald" ; :gender "male" .
+:george_tabori a :Man ; :name "George Tabori" ; :gender "male" .
+:montgomery_clift a :Man ; :name "Montgomery Clift" ; :gender "male" .
+:anne_baxter a :Woman ; :name "Anne Baxter" ; :gender "female" .
+:grace_kelly a :Woman ; :name "Grace Kelly" ; :gender "female" .
+:frederick_knott a :Man ; :name "Frederick Knott" ; :gender "male" .
+:ray_milland a :Man ; :name "Ray Milland" ; :gender "male" .
+:lew_wasserman a :Man ; :name "Lew Wasserman" ; :gender "male" .
+:janet_leigh a :Woman ; :name "Janet Leigh" ; :gender "female" .
+:anthony_perkins a :Man ; :name "Anthony Perkins" ; :gender "male" .
+:robert_bloch a :Man ; :name "Robert Bloch" ; :gender "male" .
+:joseph_stefano a :Man ; :name "Joseph Stefano" ; :gender "male" .
+:martin_balsam a :Man ; :name "Martin Balsam" ; :gender "male" .
+:daphne_du_maurier a :Woman ; :name "Daphne du Maurier" ; :gender "female" .
+:evan_hunter a :Man ; :name "Evan Hunter" ; :gender "male" .
+:tippi_hedren a :Woman ; :name "Tippi Hedren" ; :gender "female" .
+:rod_taylor a :Man ; :name "Rod Taylor" ; :gender "male" .
+:suzanne_pleshette a :Woman ; :name "Suzanne Pleshette" ; :gender "female" .
+:jessica_tandy a :Woman ; :name "Jessica Tandy" ; :gender "female" .
+:paul_newman a :Man ; :name "Paul Newman" ; :gender "male" .
+:julie_andrews a :Woman ; :name "Julie Andrews" ; :gender "female" .
+:john_addison a :Man ; :name "John Addison" ; :gender "male" .
+:leon_uris a :Man ; :name "Leon Uris" ; :gender "male" .
+:frederick_stafford a :Man ; :name "Frederick Stafford" ; :gender "male" .
+:dany_robin a :Woman ; :name "Dany Robin" ; :gender "female" .
+:claude_jade a :Woman ; :name "Claude Jade" ; :gender "female" .
+:michel_subor a :Man ; :name "Michel Subor" ; :gender "male" .
+:philippe_noiret a :Man ; :name "Philippe Noiret" ; :gender "male" .
+:michel_piccoli a :Man ; :name "Michel Piccoli" ; :gender "male" .
+:jon_finch a :Man ; :name "Jon Finch" ; :gender "male" .
+:barry_foster a :Man ; :name "Barry Foster" ; :gender "male" .
+:anthony_shaffer a :Man ; :name "Anthony Shaffer" ; :gender "male" .
+:barbara_harris a :Woman ; :name "Barbara Harris" ; :gender "female" .
+:bruce_dern a :Man ; :name "Bruce Dern" ; :gender "male" .
+:william_devane a :Man ; :name "William Devane" ; :gender "male" .
+:karen_black a :Woman ; :name "Karen Black" ; :gender "female" .
+:cathleen_nesbitt a :Woman ; :name "Cathleen Nesbitt" ; :gender "female" .
+:james_costigan a :Man ; :name "James Costigan" ; :gender "male" .
+:norman_lloyd a :Man ; :name "Norman Lloyd" ; :gender "male" .
+:david_freeman a :Man ; :name "David Freeman" ; :gender "male" .

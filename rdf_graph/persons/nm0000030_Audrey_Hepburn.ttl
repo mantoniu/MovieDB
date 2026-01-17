@@ -1,0 +1,362 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Audrey Hepburn
+:nm0000030 a :Woman ;
+    :name "Audrey Hepburn" ;
+    :gender "female" ;
+    :height "1.70"^^xsd:float ;
+    :birthYear "1929"^^xsd:gYear ;
+    :birthPlace :place_ixelles_belgium ;
+    :deathYear "1993"^^xsd:gYear ;
+    :deathPlace :place_tolochenaz_switzerland ;
+    :hasParent :nm_joseph_ruston, :nm_ella_van_heemstra ;
+    :hadSpouse :nm_mel_ferrer, :nm_andrea_dotti ;
+    :hasChild :nm_sean_hepburn_ferrer, :nm_luca_dotti ;
+    :hasSibling :nm_alexander_quarles_van_ufford, :nm_ian_quarles_van_ufford ;
+    :educatedAt :org_pensionnat_elham, :org_conservatoire_arnhem, :org_sonia_gaskell_dance_school, :org_marie_rambert_ballet_school .
+
+# Family Members
+:nm_joseph_ruston a :Man ;
+    :name "Joseph Victor Anthony Ruston" ;
+    :gender "male" ;
+    :birthYear "1889"^^xsd:gYear ;
+    :deathYear "1980"^^xsd:gYear ;
+    :birthPlace :place_auschitz_bohemia ;
+    :hadSpouse :nm_ella_van_heemstra ;
+    :hasChild :nm0000030 .
+
+:nm_ella_van_heemstra a :Woman ;
+    :name "Ella van Heemstra" ;
+    :gender "female" ;
+    :birthYear "1900"^^xsd:gYear ;
+    :deathYear "1984"^^xsd:gYear ;
+    :hasParent :nm_aarnoud_van_heemstra ;
+    :hadSpouse :nm_hendric_quarles_van_ufford, :nm_joseph_ruston ;
+    :hasChild :nm_alexander_quarles_van_ufford, :nm_ian_quarles_van_ufford, :nm0000030 .
+
+:nm_aarnoud_van_heemstra a :Man ;
+    :name "Aarnoud van Heemstra" ;
+    :gender "male" ;
+    :hasChild :nm_ella_van_heemstra .
+
+:nm_hendric_quarles_van_ufford a :Man ;
+    :name "Hendric Quarles van Ufford" ;
+    :gender "male" ;
+    :hadSpouse :nm_ella_van_heemstra ;
+    :hasChild :nm_alexander_quarles_van_ufford, :nm_ian_quarles_van_ufford .
+
+:nm_alexander_quarles_van_ufford a :Man ;
+    :name "Alexander Quarles van Ufford" ;
+    :gender "male" ;
+    :hasParent :nm_ella_van_heemstra, :nm_hendric_quarles_van_ufford ;
+    :hasSibling :nm0000030, :nm_ian_quarles_van_ufford .
+
+:nm_ian_quarles_van_ufford a :Man ;
+    :name "Ian Quarles van Ufford" ;
+    :gender "male" ;
+    :hasParent :nm_ella_van_heemstra, :nm_hendric_quarles_van_ufford ;
+    :hasSibling :nm0000030, :nm_alexander_quarles_van_ufford .
+
+:nm_mel_ferrer a :Man ;
+    :name "Mel Ferrer" ;
+    :gender "male" ;
+    :hadSpouse :nm0000030 ;
+    :hasChild :nm_sean_hepburn_ferrer .
+
+:nm_andrea_dotti a :Man ;
+    :name "Andrea Dotti" ;
+    :gender "male" ;
+    :hadSpouse :nm0000030 ;
+    :hasChild :nm_luca_dotti .
+
+:nm_sean_hepburn_ferrer a :Man ;
+    :name "Sean Hepburn Ferrer" ;
+    :gender "male" ;
+    :birthYear "1960"^^xsd:gYear ;
+    :birthPlace :place_lucerne_switzerland ;
+    :hasParent :nm0000030, :nm_mel_ferrer .
+
+:nm_luca_dotti a :Man ;
+    :name "Luca Dotti" ;
+    :gender "male" ;
+    :birthYear "1970"^^xsd:gYear ;
+    :hasParent :nm0000030, :nm_andrea_dotti .
+
+# Other People Mentioned (for completeness, even if no direct relations to Audrey Hepburn are in the ontology)
+:nm_a_j_cronin a :Man ;
+    :name "A. J. Cronin" ;
+    :gender "male" .
+
+:nm_albert_finney a :Man ;
+    :name "Albert Finney" ;
+    :gender "male" .
+
+:nm_anouk_aimee a :Woman ;
+    :name "Anouk Aimée" ;
+    :gender "female" .
+
+:nm_billy_wilder a :Man ;
+    :name "Billy Wilder" ;
+    :gender "male" .
+
+:nm_cary_grant a :Man ;
+    :name "Cary Grant" ;
+    :gender "male" .
+
+:nm_colette a :Woman ;
+    :name "Colette" ;
+    :gender "female" .
+
+:nm_daniela a :Woman ;
+    :name "Daniela" ;
+    :gender "female" .
+
+:nm_duke_of_cadiz a :Man ;
+    :name "Duke of Cadiz" ;
+    :gender "male" .
+
+:nm_edith_head a :Woman ;
+    :name "Edith Head" ;
+    :gender "female" .
+
+:nm_elizabeth_taylor a :Woman ;
+    :name "Elizabeth Taylor" ;
+    :gender "female" .
+
+:nm_fred_astaire a :Man ;
+    :name "Fred Astaire" ;
+    :gender "male" .
+
+:nm_fred_zinnemann a :Man ;
+    :name "Fred Zinnemann" ;
+    :gender "male" .
+
+:nm_gary_cooper a :Man ;
+    :name "Gary Cooper" ;
+    :gender "male" .
+
+:nm_george_peppard a :Man ;
+    :name "George Peppard" ;
+    :gender "male" .
+
+:nm_gregory_peck a :Man ;
+    :name "Gregory Peck" ;
+    :gender "male" .
+
+:nm_hendrik_visser_t_hooft a :Man ;
+    :name "Hendrik Visser 't Hooft" ;
+    :gender "male" .
+
+:nm_hubert_de_givenchy a :Man ;
+    :name "Hubert de Givenchy" ;
+    :gender "male" .
+
+:nm_humphrey_bogart a :Man ;
+    :name "Humphrey Bogart" ;
+    :gender "male" .
+
+:nm_jean_giraudoux a :Man ;
+    :name "Jean Giraudoux" ;
+    :gender "male" .
+
+:nm_john_fitzgerald_kennedy a :Man ;
+    :name "John Fitzgerald Kennedy" ;
+    :gender "male" .
+
+:nm_john_huston a :Man ;
+    :name "John Huston" ;
+    :gender "male" .
+
+:nm_juan_carlos a :Man ;
+    :name "Juan Carlos" ;
+    :gender "male" .
+
+:nm_julie_andrews a :Woman ;
+    :name "Julie Andrews" ;
+    :gender "female" .
+
+:nm_marie_rambert a :Woman ;
+    :name "Marie Rambert" ;
+    :gender "female" .
+
+:nm_marni_nixon a :Woman ;
+    :name "Marni Nixon" ;
+    :gender "female" .
+
+:nm_marilyn_monroe a :Woman ;
+    :name "Marilyn Monroe" ;
+    :gender "female" .
+
+:nm_maurice_chevalier a :Man ;
+    :name "Maurice Chevalier" ;
+    :gender "male" .
+
+:nm_otto_van_limburg_stirum a :Man ;
+    :name "Otto van Limburg Stirum" ;
+    :gender "male" .
+
+:nm_peter_o_toole a :Man ;
+    :name "Peter O'Toole" ;
+    :gender "male" .
+
+:nm_raymond_rouleau a :Man ;
+    :name "Raymond Rouleau" ;
+    :gender "male" .
+
+:nm_richard_burton a :Man ;
+    :name "Richard Burton" ;
+    :gender "male" .
+
+:nm_robert_wolders a :Man ;
+    :name "Robert Wolders" ;
+    :gender "male" .
+
+:nm_roger_moore a :Man ;
+    :name "Roger Moore" ;
+    :gender "male" .
+
+:nm_sadruddin_aga_khan a :Man ;
+    :name "Sadruddin Aga Khan" ;
+    :gender "male" .
+
+:nm_sean_connery a :Man ;
+    :name "Sean Connery" ;
+    :gender "male" .
+
+:nm_simone_signoret a :Woman ;
+    :name "Simone Signoret" ;
+    :gender "female" .
+
+:nm_sonia_gaskell a :Woman ;
+    :name "Sonia Gaskell" ;
+    :gender "female" .
+
+:nm_stanley_donen a :Man ;
+    :name "Stanley Donen" ;
+    :gender "male" .
+
+:nm_steven_spielberg a :Man ;
+    :name "Steven Spielberg" ;
+    :gender "male" .
+
+:nm_william_holden a :Man ;
+    :name "William Holden" ;
+    :gender "male" .
+
+:nm_william_wyler a :Man ;
+    :name "William Wyler" ;
+    :gender "male" .
+
+# Places
+:place_amsterdam_netherlands a :Place ;
+    :name "Amsterdam, Netherlands" ;
+    :city "Amsterdam" ;
+    :country "NL" .
+
+:place_arnhem_netherlands a :Place ;
+    :name "Arnhem, Netherlands" ;
+    :city "Arnhem" ;
+    :country "NL" .
+
+:place_auschitz_bohemia a :Place ;
+    :name "Auschitz, Bohemia" ;
+    :city "Auschitz" ;
+    :country "CZ" .
+
+:place_batavia_dutch_east_indies a :Place ;
+    :name "Batavia, Dutch East Indies (now Jakarta)" ;
+    :city "Batavia" ;
+    :country "ID" .
+
+:place_elham_kent_uk a :Place ;
+    :name "Elham, Kent, UK" ;
+    :city "Elham" ;
+    :country "GB" .
+
+:place_geneva_switzerland a :Place ;
+    :name "Geneva, Switzerland" ;
+    :city "Geneva" ;
+    :country "CH" .
+
+:place_ixelles_belgium a :Place ;
+    :name "Ixelles, Belgium" ;
+    :city "Ixelles" ;
+    :country "BE" .
+
+:place_la_paisible_tolochenaz a :Place ;
+    :name "La Paisible (villa), Tolochenaz" ;
+    :city "Tolochenaz" ;
+    :country "CH" .
+
+:place_lausanne_switzerland a :Place ;
+    :name "Lausanne, Switzerland" ;
+    :city "Lausanne" ;
+    :country "CH" .
+
+:place_linkebeek_belgium a :Place ;
+    :name "Linkebeek, Belgium" ;
+    :city "Linkebeek" ;
+    :country "BE" .
+
+:place_london_uk a :Place ;
+    :name "London, UK" ;
+    :city "London" ;
+    :country "GB" .
+
+:place_lucerne_switzerland a :Place ;
+    :name "Lucerne, Switzerland" ;
+    :city "Lucerne" ;
+    :country "CH" .
+
+:place_paris_france a :Place ;
+    :name "Paris, France" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:place_rome_italy a :Place ;
+    :name "Rome, Italy" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:place_tolochenaz_switzerland a :Place ;
+    :name "Tolochenaz, Switzerland" ;
+    :city "Tolochenaz" ;
+    :country "CH" .
+
+:place_un_headquarters_new_york a :Place ;
+    :name "UN Headquarters, New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:place_zijpendaal_castle_arnhem a :Place ;
+    :name "Zijpendaal Castle, Arnhem" ;
+    :city "Arnhem" ;
+    :country "NL" .
+
+# Organizations
+:org_british_union_of_fascists a :Organization ;
+    :name "British Union of Fascists" .
+
+:org_conservatoire_arnhem a :Organization ;
+    :name "Conservatoire d'Arnhem" ;
+    :location :place_arnhem_netherlands .
+
+:org_marie_rambert_ballet_school a :Organization ;
+    :name "Marie Rambert Ballet School" ;
+    :location :place_london_uk .
+
+:org_pensionnat_elham a :Organization ;
+    :name "Pensionnat in Elham" ;
+    :location :place_elham_kent_uk .
+
+:org_sonia_gaskell_dance_school a :Organization ;
+    :name "Sonia Gaskell Dance School" ;
+    :location :place_amsterdam_netherlands .
+
+:org_unicef a :Organization ;
+    :name "Fonds des Nations unies pour l'enfance" ;
+    :location :place_un_headquarters_new_york .

@@ -1,0 +1,81 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000073> a :Woman ;
+    :name "Shirley Temple" ;
+    :gender "female" ;
+    :birthPlace :santa_monica_california ;
+    :deathYear "2014"^^xsd:gYear ;
+    :deathPlace :woodside_california ;
+    :hasParent :george_temple_sr, :gertrude_temple ;
+    :hasSibling :john_temple, :george_temple_jr ;
+    :hadSpouse :john_agar, :charlie_black_sr ;
+    :hasChild :linda_susan_agar, :lori_black, :charlie_black_jr ;
+    :educatedAt :meglins_dance_school .
+
+# Persons
+:george_temple_sr a :Man ;
+    :name "George Temple" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000073> .
+
+:gertrude_temple a :Woman ;
+    :name "Gertrude Temple" ;
+    :gender "female" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000073> .
+
+:john_temple a :Man ;
+    :name "John Temple" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000073> .
+
+:george_temple_jr a :Man ;
+    :name "George Temple" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000073> .
+
+:john_agar a :Man ;
+    :name "John Agar" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000073> ;
+    :hasChild :linda_susan_agar .
+
+:linda_susan_agar a :Woman ;
+    :name "Linda Susan Agar" ;
+    :gender "female" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000073>, :john_agar .
+
+:charlie_black_sr a :Man ;
+    :name "Charlie Black" ;
+    :gender "male" ;
+    :deathYear "2005"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000073> ;
+    :hasChild :lori_black, :charlie_black_jr .
+
+:lori_black a :Woman ;
+    :name "Lori Black" ;
+    :gender "female" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000073>, :charlie_black_sr .
+
+:charlie_black_jr a :Man ;
+    :name "Charlie Black" ;
+    :gender "male" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000073>, :charlie_black_sr .
+
+# Places
+:santa_monica_california a :Place ;
+    :name "Santa Monica" ;
+    :city "Santa Monica" ;
+    :country "US" .
+
+:woodside_california a :Place ;
+    :name "Woodside" ;
+    :city "Woodside" ;
+    :country "US" .
+
+# Organizations
+:meglins_dance_school a :Organization ;
+    :name "Meglin's Dance School" .

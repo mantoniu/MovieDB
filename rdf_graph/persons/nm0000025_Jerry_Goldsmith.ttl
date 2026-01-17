@@ -1,0 +1,56 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000025 a :Man ;
+    :name "Jerrald « Jerry » King Goldsmith" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :birthPlace :pasadena ;
+    :deathYear "2004"^^xsd:gYear ;
+    :deathPlace :beverly_hills ;
+    :hasParent :tessa_rappaport ;
+    :hasParent :morris_goldsmith ;
+    :hasChild :joel_goldsmith ;
+    :educatedAt :los_angeles_city_college ;
+    :educatedAt :university_of_southern_california ;
+    :gender "male" .
+
+:pasadena a :Place ;
+    :name "Pasadena" ;
+    :city "Pasadena" ;
+    :country "US" .
+
+:beverly_hills a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+:tessa_rappaport a :Woman ;
+    :name "Tessa Rappaport" ;
+    :hasChild :nm0000025 ;
+    :gender "female" .
+
+:morris_goldsmith a :Man ;
+    :name "Morris Goldsmith" ;
+    :hasChild :nm0000025 ;
+    :gender "male" .
+
+:joel_goldsmith a :Man ;
+    :name "Joel Goldsmith" ;
+    :hasParent :nm0000025 ;
+    :gender "male" .
+
+:los_angeles_city_college a :Organization ;
+    :name "Los Angeles City College" ;
+    :location :los_angeles .
+
+:university_of_southern_california a :Organization ;
+    :name "University of Southern California" ;
+    :location :los_angeles .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .

@@ -1,0 +1,78 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000034> a :Man ;
+    :name "William Holden" ;
+    :gender "male" ;
+    :birthYear "1919"^^xsd:gYear ;
+    :birthPlace :illinois_place ;
+    :deathYear "1981"^^xsd:gYear ;
+    :deathPlace :santa_monica_place ;
+    :hasParent :mary_blanche, :william_franklin_beedle_sr ;
+    :hadSpouse :brenda_marshall ;
+    :hasChild :peter_holden, :scott_holden ;
+    :educatedAt :south_pasadena_school, :pasadena_junior_college .
+
+:illinois_place a :Place ;
+    :name "Illinois" ;
+    :country "US" .
+
+:south_pasadena_place a :Place ;
+    :name "South Pasadena" ;
+    :city "South Pasadena" ;
+    :country "US" .
+
+:santa_monica_place a :Place ;
+    :name "Santa Monica" ;
+    :city "Santa Monica" ;
+    :country "US" .
+
+:nanyuki_kenya_place a :Place ;
+    :name "Nanyuki" ;
+    :city "Nanyuki" ;
+    :country "KE" .
+
+:south_pasadena_school a :Organization ;
+    :name "South Pasadena School" ;
+    :location :south_pasadena_place .
+
+:pasadena_junior_college a :Organization ;
+    :name "Pasadena Junior College" ;
+    :location :south_pasadena_place .
+
+:william_holden_wildlife_foundation a :Organization ;
+    :name "William Holden Wildlife Foundation" ;
+    :location :nanyuki_kenya_place .
+
+:mary_blanche a :Woman ;
+    :name "Mary Blanche" ;
+    :gender "female" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000034> ;
+    :hasSpouse :william_franklin_beedle_sr .
+
+:william_franklin_beedle_sr a :Man ;
+    :name "William Franklin Beedle Sr." ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000034> ;
+    :hasSpouse :mary_blanche .
+
+:brenda_marshall a :Woman ;
+    :name "Brenda Marshall" ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000034> ;
+    :hasChild :peter_holden, :scott_holden .
+
+:peter_holden a :Man ;
+    :name "Peter Holden" ;
+    :gender "male" ;
+    :birthYear "1943"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000034>, :brenda_marshall .
+
+:scott_holden a :Man ;
+    :name "Scott Holden" ;
+    :gender "male" ;
+    :birthYear "1946"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000034>, :brenda_marshall .

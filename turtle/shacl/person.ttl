@@ -1,0 +1,251 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:NamePropertyShape
+    a sh:PropertyShape ;
+    sh:path :name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:message "Every resource should have a non-empty :name (xsd:string)."@en .
+
+:PlaceShape
+    a sh:NodeShape ;
+    sh:targetClass :Place ;
+
+    sh:property [
+        sh:path :country ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 2 ;
+        sh:maxLength 2 ;
+        sh:pattern "^[A-Z]{2}$" ;
+        sh:message ":country must be a 2-letter uppercase country code (e.g., FR, US)."@en
+    ] ;
+
+    sh:property [
+        sh:path :city ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message ":city must be a non-empty string."@en
+        ] ;
+
+    sh:property :NamePropertyShape .
+
+:OrganizationShape
+    a sh:NodeShape ;
+    sh:targetClass :Organization ;
+
+    sh:property :NamePropertyShape ;
+
+    sh:property [
+        sh:path :location ;
+        sh:class :Place ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":location values must be :Place IRIs."@en
+    ]
+.
+
+:ManShape
+    a sh:NodeShape ;
+    sh:targetClass :Man ;
+
+    sh:property [
+        sh:path :gender ;
+        sh:hasValue "male" ;
+        sh:message "Individuals of class :Man must have :gender \"male\"."@en
+    ] ;
+    
+    sh:not [ sh:class :Woman ] ;
+    sh:message ":Man and :Woman are disjoint."@en
+.
+
+:WomanShape
+    a sh:NodeShape ;
+    sh:targetClass :Woman ;
+
+    sh:property [
+        sh:path :gender ;
+        sh:hasValue "female" ;
+        sh:message "Individuals of class :Woman must have :gender \"female\"."@en
+    ] ;
+
+    sh:not [ sh:class :Man ] ;
+    sh:message ":Woman and :Man are disjoint."@en
+.
+
+:PersonShape
+    a sh:NodeShape ;
+    sh:targetClass :Person ;
+
+    sh:property :NamePropertyShape ;
+
+    sh:property [
+        sh:path :height ;
+        sh:datatype xsd:float ;
+        sh:minExclusive 0 ;
+        sh:message ":height (in meters) must be a positive xsd:float if present."@en
+    ] ;
+
+    sh:property [
+        sh:path :birthYear ;
+        sh:datatype xsd:gYear ;
+        sh:maxCount 1 ;
+        sh:message ":birthYear must be at most one xsd:gYear."@en
+    ] ;
+
+    sh:property [
+        sh:path :birthPlace ;
+        sh:class :Place ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:message ":birthPlace must be at most one :Place IRI."@en
+    ] ;
+
+    sh:property [
+        sh:path :deathYear ;
+        sh:datatype xsd:gYear ;
+        sh:maxCount 1 ;
+        sh:message ":deathYear must be at most one xsd:gYear."@en
+    ] ;
+
+    sh:property [
+        sh:path :deathPlace ;
+        sh:class :Place ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+        sh:message ":deathPlace must be at most one :Place IRI."@en
+    ] ;
+
+    sh:property [
+        sh:path :gender ;
+        sh:datatype xsd:string ;
+        sh:in ( "male" "female" "other" ) ;
+        sh:maxCount 1 ;
+        sh:message ":gender must be exactly one of: male, female, other (and at most one value)."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasSpouse ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hasSpouse values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :hadSpouse ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hadSpouse values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasSibling ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hasSibling values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasParent ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hasParent values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasChild ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hasChild values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasDescendant ;
+        sh:class :Person ;
+        sh:nodeKind sh:IRI ;
+        sh:disjoint sh:this ;
+        sh:message ":hasDescendant values must be :Person IRIs and cannot point to self."@en
+    ] ;
+
+    sh:property [
+        sh:path :educatedAt ;
+        sh:class :Organization ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":educatedAt values must be :Organization IRIs."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If :deathPlace is provided, :deathYear must also be provided."@en ;
+        sh:select """
+            SELECT $this WHERE {
+            $this :deathPlace ?dp .
+            FILTER NOT EXISTS { $this :deathYear ?dy . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":deathYear cannot be earlier than :birthYear."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :birthYear ?by .
+                $this :deathYear ?dy .
+                FILTER ( ?dy < ?by )
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":hasSpouse must be symmetric (if A hasSpouse B then B hasSpouse A)."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasSpouse ?s .
+                FILTER NOT EXISTS { ?s :hasSpouse $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":hasSibling must be symmetric (if A hasSibling B then B hasSibling A)."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasSibling ?s .
+                FILTER NOT EXISTS { ?s :hasSibling $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":hasChild / :hasParent must be consistent (if A hasChild C then C hasParent A)."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasChild ?c .
+                FILTER NOT EXISTS { ?c :hasParent $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":hasParent / :hasChild must be consistent (if A hasParent P then P hasChild A)."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasParent ?p .
+                FILTER NOT EXISTS { ?p :hasChild $this . }
+            }
+        """ ;
+    ]
+.

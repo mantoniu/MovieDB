@@ -1,0 +1,230 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Richard Burton
+<http://www.moviedb.fr/cinema#nm0000009> a :Man ;
+    :name "Richard Burton"@en^^xsd:string, "Richard Walter Jenkins Jr."@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1925"^^xsd:gYear ;
+    :birthPlace :place_pontrhydyfen_uk ;
+    :deathYear "1984"^^xsd:gYear ;
+    :deathPlace :place_celigny_ch ;
+    :hasParent :person_richard_walter_jenkins_sr, :person_edith_thomas, :person_philip_burton ;
+    :hasSibling :person_cecilia_jenkins, :person_ifor_jenkins, :person_graham_jenkins ;
+    :educatedAt :org_port_talbot_college, :org_air_training_corps, :org_taibach_youth_centre, :org_exeter_college, :org_oxford_university, :org_royal_air_force ;
+    :hadSpouse :person_sybil_williams, :person_elizabeth_taylor, :person_susan_miller_hunt ;
+    :hasSpouse :person_sally_hay ;
+    :hasChild :person_kate_burton, :person_jessica_burton, :person_maria_burton, :person_elizabeth_frances_burton .
+
+# Family Members (Parents)
+:person_richard_walter_jenkins_sr a :Man ;
+    :name "Richard Walter Jenkins"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1876"^^xsd:gYear ;
+    :deathYear "1957"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000009>, :person_cecilia_jenkins, :person_ifor_jenkins, :person_graham_jenkins .
+
+:person_edith_thomas a :Woman ;
+    :name "Edith Thomas"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1883"^^xsd:gYear ;
+    :deathYear "1927"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000009>, :person_cecilia_jenkins, :person_ifor_jenkins, :person_graham_jenkins .
+
+# Family Members (Siblings)
+:person_cecilia_jenkins a :Woman ;
+    :name "Cecilia Jenkins"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1905"^^xsd:gYear ;
+    :deathYear "1993"^^xsd:gYear ;
+    :hasParent :person_richard_walter_jenkins_sr, :person_edith_thomas ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000009>, :person_ifor_jenkins, :person_graham_jenkins ;
+    :hasSpouse :person_elfed_james .
+
+:person_elfed_james a :Man ;
+    :name "Elfed James"@en^^xsd:string ;
+    :gender "male" ;
+    :hasSpouse :person_cecilia_jenkins .
+
+:person_ifor_jenkins a :Man ;
+    :name "Ifor Jenkins"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1906"^^xsd:gYear ;
+    :deathYear "1972"^^xsd:gYear ;
+    :hasParent :person_richard_walter_jenkins_sr, :person_edith_thomas ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000009>, :person_cecilia_jenkins, :person_graham_jenkins .
+
+:person_graham_jenkins a :Man ;
+    :name "Graham Jenkins"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1927"^^xsd:gYear ;
+    :deathYear "2015"^^xsd:gYear ;
+    :hasParent :person_richard_walter_jenkins_sr, :person_edith_thomas ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000009>, :person_cecilia_jenkins, :person_ifor_jenkins .
+
+# Family Members (Adoptive Parent)
+:person_philip_burton a :Man ;
+    :name "Philip Burton"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1904"^^xsd:gYear ;
+    :deathYear "1995"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000009> .
+
+# Family Members (Spouses)
+:person_sybil_williams a :Woman ;
+    :name "Sybil Williams"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :deathYear "2013"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000009> ;
+    :hasChild :person_kate_burton, :person_jessica_burton .
+
+:person_elizabeth_taylor a :Woman ;
+    :name "Elizabeth Taylor"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1932"^^xsd:gYear ;
+    :deathYear "2011"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000009>, :person_eddie_fisher, :person_mike_todd ;
+    :hasChild :person_maria_burton, :person_elizabeth_frances_burton .
+
+:person_eddie_fisher a :Man ;
+    :name "Eddie Fisher"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1928"^^xsd:gYear ;
+    :deathYear "2010"^^xsd:gYear ;
+    :hadSpouse :person_elizabeth_taylor .
+
+:person_mike_todd a :Man ;
+    :name "Mike Todd"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1909"^^xsd:gYear ;
+    :deathYear "1958"^^xsd:gYear ;
+    :hadSpouse :person_elizabeth_taylor ;
+    :hasChild :person_elizabeth_frances_burton .
+
+:person_susan_miller_hunt a :Woman ;
+    :name "Susan Miller Hunt"@en^^xsd:string ;
+    :gender "female" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000009>, :person_james_hunt .
+
+:person_james_hunt a :Man ;
+    :name "James Hunt"@en^^xsd:string ;
+    :gender "male" ;
+    :birthYear "1947"^^xsd:gYear ;
+    :deathYear "1993"^^xsd:gYear ;
+    :hadSpouse :person_susan_miller_hunt .
+
+:person_sally_hay a :Woman ;
+    :name "Sally Hay"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1948"^^xsd:gYear ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000009> .
+
+# Family Members (Children)
+:person_kate_burton a :Woman ;
+    :name "Kate Burton"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1957"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000009>, :person_sybil_williams ;
+    :hasSpouse :person_michael_ritchie ;
+    :hasChild :person_morgan_ritchie, :person_charlotte_ritchie .
+
+:person_michael_ritchie a :Man ;
+    :name "Michael Ritchie"@en^^xsd:string ;
+    :gender "male" ;
+    :hasSpouse :person_kate_burton ;
+    :hasChild :person_morgan_ritchie, :person_charlotte_ritchie .
+
+:person_morgan_ritchie a :Woman ;
+    :name "Morgan Ritchie"@en^^xsd:string ;
+    :gender "female" ;
+    :hasParent :person_kate_burton, :person_michael_ritchie .
+
+:person_charlotte_ritchie a :Woman ;
+    :name "Charlotte Ritchie"@en^^xsd:string ;
+    :gender "female" ;
+    :hasParent :person_kate_burton, :person_michael_ritchie .
+
+:person_jessica_burton a :Woman ;
+    :name "Jessica Burton"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1960"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000009>, :person_sybil_williams .
+
+:person_maria_burton a :Woman ;
+    :name "Maria Burton"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :birthPlace :place_germany ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000009>, :person_elizabeth_taylor .
+
+:person_elizabeth_frances_burton a :Woman ;
+    :name "Elizabeth Frances Burton"@en^^xsd:string ;
+    :gender "female" ;
+    :birthYear "1957"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000009>, :person_elizabeth_taylor, :person_mike_todd .
+
+# Places
+:place_pontrhydyfen_uk a :Place ;
+    :name "Pontrhydyfen"@en^^xsd:string ;
+    :city "Pontrhydyfen"@en^^xsd:string ;
+    :country "UK" .
+
+:place_celigny_ch a :Place ;
+    :name "Céligny"@en^^xsd:string ;
+    :city "Céligny"@en^^xsd:string ;
+    :country "CH" .
+
+:place_port_talbot_uk a :Place ;
+    :name "Port Talbot"@en^^xsd:string ;
+    :city "Port Talbot"@en^^xsd:string ;
+    :country "UK" .
+
+:place_oxford_uk a :Place ;
+    :name "Oxford"@en^^xsd:string ;
+    :city "Oxford"@en^^xsd:string ;
+    :country "UK" .
+
+:place_santa_monica_us a :Place ;
+    :name "Santa Monica"@en^^xsd:string ;
+    :city "Santa Monica"@en^^xsd:string ;
+    :country "US" .
+
+:place_london_uk a :Place ;
+    :name "London"@en^^xsd:string ;
+    :city "London"@en^^xsd:string ;
+    :country "UK" .
+
+:place_berlin_de a :Place ;
+    :name "Berlin"@en^^xsd:string ;
+    :city "Berlin"@en^^xsd:string ;
+    :country "DE" .
+
+:place_germany a :Place ;
+    :name "Germany"@en^^xsd:string ;
+    :country "DE" .
+
+# Organizations
+:org_port_talbot_college a :Organization ;
+    :name "Port Talbot college"@en^^xsd:string ;
+    :location :place_port_talbot_uk .
+
+:org_air_training_corps a :Organization ;
+    :name "Air Training Corps"@en^^xsd:string .
+
+:org_taibach_youth_centre a :Organization ;
+    :name "Taibach Youth Centre"@en^^xsd:string .
+
+:org_exeter_college a :Organization ;
+    :name "Exeter College"@en^^xsd:string ;
+    :location :place_oxford_uk .
+
+:org_oxford_university a :Organization ;
+    :name "Oxford University"@en^^xsd:string ;
+    :location :place_oxford_uk .
+
+:org_royal_air_force a :Organization ;
+    :name "Royal Air Force"@en^^xsd:string, "RAF"@en^^xsd:string .

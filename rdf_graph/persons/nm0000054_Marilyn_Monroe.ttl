@@ -1,0 +1,379 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000054> a :Woman ;
+    :name "Marilyn Monroe" ;
+    :gender "female" ;
+    :birthYear "1926"^^xsd:gYear ;
+    :birthPlace :los_angeles_california ;
+    :deathYear "1962"^^xsd:gYear ;
+    :deathPlace :los_angeles_california ;
+    :educatedAt :van_nuys_high_school,
+        :blue_book_models_school,
+        :university_of_california_los_angeles,
+        :actors_studio ;
+    :hadSpouse :james_dougherty,
+        :joe_dimaggio,
+        :arthur_miller ;
+    :hasSibling :berniece_baker_miracle,
+        :robert_kermit_baker ;
+    :hasParent :gladys_pearl_baker_mortensen_monroe,
+        :charles_stanley_gifford .
+
+:gladys_pearl_baker_mortensen_monroe a :Woman ;
+    :name "Gladys Pearl Baker Mortensen Monroe" ;
+    :gender "female" ;
+    :birthYear "1902"^^xsd:gYear ;
+    :birthPlace :mexico_city_mexico ;
+    :deathYear "1984"^^xsd:gYear ;
+    :hadSpouse :john_newton_baker,
+        :martin_edward_mortensen ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000054>,
+        :robert_kermit_baker,
+        :berniece_baker_miracle ;
+    :hasParent :della_monroe,
+        :otis_elmer_monroe .
+
+:charles_stanley_gifford a :Man ;
+    :name "Charles Stanley Gifford" ;
+    :gender "male" ;
+    :birthYear "1898"^^xsd:gYear ;
+    :deathYear "1965"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000054> .
+
+:martin_edward_mortensen a :Man ;
+    :name "Martin Edward Mortensen" ;
+    :gender "male" ;
+    :birthYear "1897"^^xsd:gYear ;
+    :deathYear "1981"^^xsd:gYear ;
+    :hadSpouse :gladys_pearl_baker_mortensen_monroe .
+
+:james_dougherty a :Man ;
+    :name "James Dougherty" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000054> .
+
+:joe_dimaggio a :Man ;
+    :name "Joe DiMaggio" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000054> .
+
+:arthur_miller a :Man ;
+    :name "Arthur Miller" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000054> .
+
+:berniece_baker_miracle a :Woman ;
+    :name "Berniece Inez Gladys Baker Miracle" ;
+    :gender "female" ;
+    :birthYear "1919"^^xsd:gYear ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000054>,
+        :robert_kermit_baker ;
+    :hasParent :gladys_pearl_baker_mortensen_monroe,
+        :john_newton_baker .
+
+:robert_kermit_baker a :Man ;
+    :name "Robert Kermit Baker" ;
+    :gender "male" ;
+    :birthYear "1918"^^xsd:gYear ;
+    :deathYear "1933"^^xsd:gYear ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000054>,
+        :berniece_baker_miracle ;
+    :hasParent :gladys_pearl_baker_mortensen_monroe,
+        :john_newton_baker .
+
+:john_newton_baker a :Man ;
+    :name "John Newton Baker" ;
+    :gender "male" ;
+    :hadSpouse :gladys_pearl_baker_mortensen_monroe ;
+    :hasChild :robert_kermit_baker,
+        :berniece_baker_miracle .
+
+:della_monroe a :Woman ;
+    :name "Della Monroe" ;
+    :gender "female" ;
+    :birthYear "1876"^^xsd:gYear ;
+    :deathYear "1927"^^xsd:gYear ;
+    :hadSpouse :otis_elmer_monroe ;
+    :hasChild :gladys_pearl_baker_mortensen_monroe,
+        :marion_monroe_aunt ;
+    :hasParent :tilford_marion_hogan,
+        :charlotte_virginia_nance ;
+    :hasSibling :dora_hogan,
+        :myrtle_hogan,
+        :william_marion_hogan .
+
+:otis_elmer_monroe a :Man ;
+    :name "Otis Elmer Monroe" ;
+    :gender "male" ;
+    :deathYear "1909"^^xsd:gYear ;
+    :deathPlace :whittier_california ;
+    :hadSpouse :della_monroe ;
+    :hasChild :gladys_pearl_baker_mortensen_monroe,
+        :marion_monroe_aunt .
+
+:marion_monroe_aunt a :Woman ;
+    :name "Marion Monroe" ;
+    :gender "female" ;
+    :birthYear "1905"^^xsd:gYear ;
+    :hasParent :della_monroe,
+        :otis_elmer_monroe ;
+    :hasSibling :gladys_pearl_baker_mortensen_monroe .
+
+:tilford_marion_hogan a :Man ;
+    :name "Tilford Marion Hogan" ;
+    :gender "male" ;
+    :birthYear "1851"^^xsd:gYear ;
+    :deathYear "1933"^^xsd:gYear ;
+    :hadSpouse :charlotte_virginia_nance ;
+    :hasChild :della_monroe,
+        :dora_hogan,
+        :myrtle_hogan,
+        :william_marion_hogan ;
+    :hasParent :george_willis_hogan,
+        :sarah_ann_owen ;
+    :hasSibling :mary_ann_hogan .
+
+:charlotte_virginia_nance a :Woman ;
+    :name "Charlotte Virginia Nance" ;
+    :gender "female" ;
+    :birthYear "1857"^^xsd:gYear ;
+    :hadSpouse :tilford_marion_hogan ;
+    :hasChild :della_monroe,
+        :dora_hogan,
+        :myrtle_hogan,
+        :william_marion_hogan .
+
+:george_willis_hogan a :Man ;
+    :name "George Willis Hogan" ;
+    :gender "male" ;
+    :birthYear "1823"^^xsd:gYear ;
+    :birthPlace :kentucky_us ;
+    :hasSpouse :sarah_ann_owen ;
+    :hasChild :tilford_marion_hogan,
+        :mary_ann_hogan ;
+    :hasParent :zachariah_hogan,
+        :delilah_marksberry .
+
+:sarah_ann_owen a :Woman ;
+    :name "Sarah Ann Owen" ;
+    :gender "female" ;
+    :birthYear "1823"^^xsd:gYear ;
+    :birthPlace :virginia_us ;
+    :hasSpouse :george_willis_hogan ;
+    :hasChild :tilford_marion_hogan,
+        :mary_ann_hogan ;
+    :hasParent :edward_owen .
+
+:mary_ann_hogan a :Woman ;
+    :name "Mary Ann Hogan" ;
+    :gender "female" ;
+    :birthYear "1844"^^xsd:gYear ;
+    :deathYear "1930"^^xsd:gYear ;
+    :hasParent :george_willis_hogan,
+        :sarah_ann_owen ;
+    :hasSibling :tilford_marion_hogan .
+
+:dora_hogan a :Woman ;
+    :name "Dora Hogan" ;
+    :gender "female" ;
+    :hasParent :tilford_marion_hogan,
+        :charlotte_virginia_nance ;
+    :hasSibling :della_monroe,
+        :myrtle_hogan,
+        :william_marion_hogan .
+
+:myrtle_hogan a :Woman ;
+    :name "Myrtle Hogan" ;
+    :gender "female" ;
+    :hasParent :tilford_marion_hogan,
+        :charlotte_virginia_nance ;
+    :hasSibling :della_monroe,
+        :dora_hogan,
+        :william_marion_hogan .
+
+:william_marion_hogan a :Man ;
+    :name "William Marion Hogan" ;
+    :gender "male" ;
+    :hasParent :tilford_marion_hogan,
+        :charlotte_virginia_nance ;
+    :hasSibling :della_monroe,
+        :dora_hogan,
+        :myrtle_hogan .
+
+:zachariah_hogan a :Man ;
+    :name "Zachariah Hogan" ;
+    :gender "male" ;
+    :hasSpouse :delilah_marksberry ;
+    :hasChild :george_willis_hogan .
+
+:delilah_marksberry a :Woman ;
+    :name "Delilah Marksberry" ;
+    :gender "female" ;
+    :hasSpouse :zachariah_hogan ;
+    :hasChild :george_willis_hogan .
+
+:edward_owen a :Man ;
+    :name "Edward Owen" ;
+    :gender "male" ;
+    :hasChild :sarah_ann_owen .
+
+# Places
+:los_angeles_california a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:kentucky_us a :Place ;
+    :name "Kentucky" ;
+    :country "US" .
+
+:virginia_us a :Place ;
+    :name "Virginia" ;
+    :country "US" .
+
+:missouri_us a :Place ;
+    :name "Missouri" ;
+    :country "US" .
+
+:mexico_city_mexico a :Place ;
+    :name "Mexico City" ;
+    :city "Mexico City" ;
+    :country "MX" .
+
+:whittier_california a :Place ;
+    :name "Whittier" ;
+    :city "Whittier" ;
+    :country "US" .
+
+:tennessee_us a :Place ;
+    :name "Tennessee" ;
+    :country "US" .
+
+:new_york_us a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:long_island_us a :Place ;
+    :name "Long Island" ;
+    :city "Long Island" ;
+    :country "US" .
+
+:hollywood_california a :Place ;
+    :name "Hollywood" ;
+    :city "Hollywood" ;
+    :country "US" .
+
+:hawthorne_california a :Place ;
+    :name "Hawthorne" ;
+    :city "Hawthorne" ;
+    :country "US" .
+
+:beverly_hills_california a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+:palm_springs_california a :Place ;
+    :name "Palm Springs" ;
+    :city "Palm Springs" ;
+    :country "US" .
+
+:castroville_california a :Place ;
+    :name "Castroville" ;
+    :city "Castroville" ;
+    :country "US" .
+
+:westwood_village_memorial_park_cemetery a :Place ;
+    :name "Westwood Village Memorial Park Cemetery" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:agnews_state_hospital a :Place ;
+    :name "Agnews State Hospital" ;
+    :country "US" .
+
+:united_states a :Place ;
+    :name "United States" ;
+    :country "US" .
+
+# Organizations
+:consolidated_film_industries a :Organization ;
+    :name "Consolidated Film Industries" ;
+    :location :los_angeles_california .
+
+:pacific_electric_railway a :Organization ;
+    :name "Pacific Electric Railway" ;
+    :location :los_angeles_california .
+
+:lockheed a :Organization ;
+    :name "Lockheed" ;
+    :location :los_angeles_california .
+
+:radioplane_company a :Organization ;
+    :name "Radioplane Company" ;
+    :location :los_angeles_california .
+
+:us_army a :Organization ;
+    :name "US Army" ;
+    :location :united_states .
+
+:blue_book_modeling_agency a :Organization ;
+    :name "Blue Book Modeling Agency" ;
+    :location :los_angeles_california .
+
+:blue_book_models_school a :Organization ;
+    :name "Blue Book Models School" ;
+    :location :los_angeles_california .
+
+:twentieth_century_fox a :Organization ;
+    :name "20th Century Fox" ;
+    :location :los_angeles_california .
+
+:columbia_pictures a :Organization ;
+    :name "Columbia Pictures" ;
+    :location :los_angeles_california .
+
+:william_morris_agency a :Organization ;
+    :name "William Morris Agency" ;
+    :location :los_angeles_california .
+
+:rko_pictures a :Organization ;
+    :name "RKO Pictures" ;
+    :location :los_angeles_california .
+
+:marilyn_monroe_productions_inc a :Organization ;
+    :name "Marilyn Monroe Productions, Inc." ;
+    :location :new_york_us .
+
+:rca a :Organization ;
+    :name "RCA" ;
+    :location :united_states .
+
+:lapd a :Organization ;
+    :name "LAPD" ;
+    :location :los_angeles_california .
+
+:payne_whitney a :Organization ;
+    :name "Payne Whitney" ;
+    :location :new_york_us .
+
+:presbyterian_hospital_of_new_york a :Organization ;
+    :name "Presbyterian Hospital of New York" ;
+    :location :new_york_us .
+
+:van_nuys_high_school a :Organization ;
+    :name "Van Nuys High School" ;
+    :location :los_angeles_california .
+
+:university_of_california_los_angeles a :Organization ;
+    :name "University of California at Los Angeles" ;
+    :location :los_angeles_california .
+
+:actors_studio a :Organization ;
+    :name "Actors Studio" ;
+    :location :new_york_us .

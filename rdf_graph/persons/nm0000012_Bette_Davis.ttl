@@ -1,0 +1,133 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000012 a :Woman ;
+    :name "Bette Davis" ;
+    :gender "female" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :birthPlace :boston_suburb ;
+    :deathYear "1989"^^xsd:gYear ;
+    :deathPlace :neuilly_sur_seine_fr ;
+    :hasSibling :barbara_davis ;
+    :hasParent :ruth_davis ,
+        :bette_davis_father ;
+    :hadSpouse :harmon_o_nelson ,
+        :arthur_farnsworth ,
+        :william_grant_sherry ,
+        :gary_merrill ;
+    :hasChild :barbara_davis_sherry ,
+        :margot_merrill ,
+        :michael_merrill ;
+    :educatedAt :cushing_academy ,
+        :john_murray_anderson_acting_dramatic_school .
+
+# Other Persons
+:barbara_davis a :Woman ;
+    :name "Barbara Davis" ;
+    :gender "female" ;
+    :hasSibling :nm0000012 ;
+    :hasParent :ruth_davis ,
+        :bette_davis_father .
+
+:ruth_davis a :Woman ;
+    :name "Ruth Davis" ;
+    :gender "female" ;
+    :hasChild :nm0000012 ,
+        :barbara_davis ;
+    :hadSpouse :bette_davis_father .
+
+:bette_davis_father a :Man ;
+    :name "Bette Davis's Father" ;
+    :gender "male" ;
+    :hasChild :nm0000012 ,
+        :barbara_davis ;
+    :hadSpouse :ruth_davis .
+
+:harmon_o_nelson a :Man ;
+    :name "Harmon O. Nelson" ;
+    :gender "male" ;
+    :hadSpouse :nm0000012 .
+
+:arthur_farnsworth a :Man ;
+    :name "Arthur Farnsworth" ;
+    :gender "male" ;
+    :deathYear "1943"^^xsd:gYear ;
+    :hadSpouse :nm0000012 .
+
+:william_grant_sherry a :Man ;
+    :name "William Grant Sherry" ;
+    :gender "male" ;
+    :hasChild :barbara_davis_sherry ;
+    :hadSpouse :nm0000012 .
+
+:barbara_davis_sherry a :Woman ;
+    :name "Barbara Davis Sherry" ;
+    :gender "female" ;
+    :birthYear "1947"^^xsd:gYear ;
+    :hasParent :nm0000012 ,
+        :william_grant_sherry .
+
+:gary_merrill a :Man ;
+    :name "Gary Merrill" ;
+    :gender "male" ;
+    :hasChild :margot_merrill ,
+        :michael_merrill ;
+    :hadSpouse :nm0000012 .
+
+:margot_merrill a :Woman ;
+    :name "Margot Merrill" ;
+    :gender "female" ;
+    :birthYear "1952"^^xsd:gYear ;
+    :hasParent :nm0000012 ,
+        :gary_merrill .
+
+:michael_merrill a :Man ;
+    :name "Michael Merrill" ;
+    :gender "male" ;
+    :birthYear "1953"^^xsd:gYear ;
+    :hasParent :nm0000012 ,
+        :gary_merrill .
+
+# Places
+:boston_suburb a :Place ;
+    :name "Boston Suburb" ;
+    :city "Boston suburb" ;
+    :country "US" .
+
+:ashburnham_ma a :Place ;
+    :name "Ashburnham, Massachusetts" ;
+    :city "Ashburnham" ;
+    :country "US" .
+
+:new_york_city_ny a :Place ;
+    :name "New York City, New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:london_uk a :Place ;
+    :name "London, UK" ;
+    :city "London" ;
+    :country "UK" .
+
+:neuilly_sur_seine_fr a :Place ;
+    :name "Neuilly-sur-Seine, France" ;
+    :city "Neuilly-sur-Seine" ;
+    :country "FR" .
+
+# Organizations
+:cushing_academy a :Organization ;
+    :name "Cushing Academy" ;
+    :location :ashburnham_ma .
+
+:john_murray_anderson_acting_dramatic_school a :Organization ;
+    :name "John Murray Anderson’s Acting Dramatic School" ;
+    :location :new_york_city_ny .
+
+:hollywood_canteen a :Organization ;
+    :name "Hollywood Canteen" .
+
+:bd_incorpored a :Organization ;
+    :name "B.D. Incorpored" .

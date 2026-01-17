@@ -1,0 +1,46 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Henry Mancini
+:nm0000049 a :Man ;
+    :name "Henry Mancini" ;
+    :gender "male" ;
+    :birthPlace :cleveland ;
+    :deathYear "1994"^^xsd:gYear ;
+    :educatedAt :carnegie_institute_of_technology,
+                :juilliard_school ;
+    :hasChild :monica_mancini .
+
+# Other Persons
+:monica_mancini a :Woman ;
+    :name "Monica Mancini" ;
+    :gender "female" ;
+    :hasParent :nm0000049 .
+
+# Organizations
+:carnegie_institute_of_technology a :Organization ;
+    :name "Carnegie Institute of Technology" ;
+    :location :pittsburgh .
+
+:juilliard_school a :Organization ;
+    :name "Juilliard School" ;
+    :location :new_york_city .
+
+# Places
+:cleveland a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "US" .
+
+:pittsburgh a :Place ;
+    :name "Pittsburgh" ;
+    :city "Pittsburgh" ;
+    :country "US" .
+
+:new_york_city a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .

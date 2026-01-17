@@ -1,0 +1,33 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000055> a :Man ;
+    :name "Alfred Newman" ;
+    :gender "male" ;
+    :hasSibling :nm_lionel_newman ;
+    :hasChild :nm_david_newman,
+        :nm_thomas_newman .
+
+:nm_lionel_newman a :Man ;
+    :name "Lionel Newman" ;
+    :gender "male" ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000055> .
+
+:nm_david_newman a :Man ;
+    :name "David Newman" ;
+    :gender "male" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000055> .
+
+:nm_thomas_newman a :Man ;
+    :name "Thomas Newman" ;
+    :gender "male" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000055> .
+
+:org_united_artists_studios a :Organization ;
+    :name "United Artists Studios" .
+
+:org_twentieth_century_fox_studios a :Organization ;
+    :name "Twentieth Century Fox Studios" .

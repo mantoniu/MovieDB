@@ -1,0 +1,134 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000081> a :Woman ;
+    :name "Natalie Wood" ;
+    :gender "female" ;
+    :birthYear "1938"^^xsd:gYear ;
+    :birthPlace :san_francisco ;
+    :deathYear "1981"^^xsd:gYear ;
+    :deathPlace :santa_catalina_island ;
+    :hasParent :maria_zoudilova ;
+    :hasParent :nicholas_zacharenko ;
+    :hasSibling :olga_tatouloff ;
+    :hasSibling :svetlana ;
+    :hadSpouse :robert_wagner ;
+    :hadSpouse :richard_gregson ;
+    :hasSpouse :robert_wagner ;
+    :hasChild :natasha_gregson ;
+    :hasChild :courtney_wagner .
+
+# Definitions for new URIs
+
+# Places
+:san_francisco a :Place ;
+    :name "San Francisco" ;
+    :city "San Francisco" ;
+    :country "US" .
+
+:kharkov a :Place ;
+    :name "Kharkov" ;
+    :city "Kharkov" ;
+    :country "UA" .
+
+:barnaoul a :Place ;
+    :name "Barnaoul" ;
+    :city "Barnaoul" ;
+    :country "RU" .
+
+:harbin a :Place ;
+    :name "Harbin" ;
+    :city "Harbin" ;
+    :country "CN" .
+
+:montreal a :Place ;
+    :name "Montréal" ;
+    :city "Montréal" ;
+    :country "CA" .
+
+:scottsdale a :Place ;
+    :name "Scottsdale" ;
+    :city "Scottsdale" ;
+    :country "US" .
+
+:santa_catalina_island a :Place ;
+    :name "Santa Catalina Island" ;
+    :city "Santa Catalina Island" ;
+    :country "US" .
+
+# People
+:maria_zoudilova a :Woman ;
+    :name "Maria Zoudilova" ;
+    :gender "female" ;
+    :birthYear "1908"^^xsd:gYear ;
+    :deathYear "1998"^^xsd:gYear ;
+    :birthPlace :barnaoul ;
+    :hadSpouse :alexandre_tatouloff ;
+    :hasSpouse :nicholas_zacharenko ;
+    :hasChild :olga_tatouloff ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasChild :svetlana .
+
+:nicholas_zacharenko a :Man ;
+    :name "Nicholas Zacharenko" ;
+    :gender "male" ;
+    :birthYear "1912"^^xsd:gYear ;
+    :deathYear "1980"^^xsd:gYear ;
+    :birthPlace :kharkov ;
+    :hasSpouse :maria_zoudilova ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasChild :svetlana .
+
+:olga_tatouloff a :Woman ;
+    :name "Olga Tatouloff" ;
+    :gender "female" ;
+    :birthYear "1928"^^xsd:gYear ;
+    :deathYear "2015"^^xsd:gYear ;
+    :hasParent :maria_zoudilova ;
+    :hasParent :alexandre_tatouloff ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasSibling :svetlana .
+
+:svetlana a :Woman ;
+    :name "Svetlana" ;
+    :gender "female" ;
+    :hasParent :maria_zoudilova ;
+    :hasParent :nicholas_zacharenko ;
+    :hasSibling <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasSibling :olga_tatouloff .
+
+:robert_wagner a :Man ;
+    :name "Robert Wagner" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasChild :courtney_wagner .
+
+:richard_gregson a :Man ;
+    :name "Richard Gregson" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasChild :natasha_gregson .
+
+:natasha_gregson a :Woman ;
+    :name "Natasha Gregson" ;
+    :gender "female" ;
+    :birthYear "1970"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasParent :richard_gregson .
+
+:courtney_wagner a :Woman ;
+    :name "Courtney Wagner" ;
+    :gender "female" ;
+    :birthYear "1974"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000081> ;
+    :hasParent :robert_wagner .
+
+:alexandre_tatouloff a :Man ;
+    :name "Alexandre Tatouloff" ;
+    :gender "male" ;
+    :hadSpouse :maria_zoudilova ;
+    :hasChild :olga_tatouloff .

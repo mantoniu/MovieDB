@@ -1,0 +1,448 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+:NamePropertyShape
+    a sh:PropertyShape ;
+    sh:path :name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:message "Every resource should have a non-empty :name (xsd:string)."@en .
+
+:WikiDataURIPropertyShape
+    a sh:PropertyShape ;
+    sh:path :wikiDataURI ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message ":wikiDataURI must be a single xsd:anyURI."@en .
+
+:AgentShape
+    a sh:NodeShape ;
+    sh:targetClass :Agent ;
+
+    sh:property :NamePropertyShape ;
+
+    sh:property [
+        sh:path :contributedTo ;
+        sh:class :CreativeWork ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":contributedTo values must be :CreativeWork IRIs."@en
+    ]
+.
+
+:CreativeWorkShape
+    a sh:NodeShape ;
+    sh:targetClass :CreativeWork ;
+
+    sh:property :WikiDataURIPropertyShape ;
+
+    sh:property [
+        sh:path :originalTitle ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:minCount 1 ;
+        sh:message ":originalTitle must be a non-empty string."@en
+    ] ;
+
+    sh:property [
+        sh:path :primaryTitle ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:minCount 1 ;
+        sh:message ":primaryTitle must be a non-empty string."@en
+    ] ;
+
+    sh:property [
+        sh:path :releaseYear ;
+        sh:datatype xsd:gYear ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message ":releaseYear must be one xsd:gYear."@en
+    ] ;
+
+    sh:property [
+        sh:path :runtimeMinutes ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:maxCount 1 ;
+        sh:message ":runtimeMinutes must be a non-negative integer if present."@en
+    ] ;
+
+    sh:property [
+        sh:path :isAdult ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message ":isAdult must be one xsd:boolean."@en
+    ] ;
+
+    sh:property [
+        sh:path :imdbId ;
+        sh:datatype xsd:string ;
+        sh:minLength 9 ;
+        sh:maxLength 9 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^tt[0-9]+$" ;
+        sh:message ":imdbId must be one string matching the IMDb title id format (e.g., tt1234567)."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasGenre ;
+        sh:class skos:Concept ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasGenre values must be skos:Concept IRIs."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasContributor ;
+        sh:class :Agent ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasContributor values must be :Agent IRIs."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If a work hasContributor A, then A should have contributedTo the work."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasContributor ?a .
+                FILTER NOT EXISTS { ?a :contributedTo $this . }
+            }
+        """ ;
+    ]
+.
+
+:MotionPictureShape
+    a sh:NodeShape ;
+    sh:targetClass :MotionPicture ;
+
+    sh:property [
+        sh:path :hasDirector ;
+        sh:class :Director ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasDirector values must be :Director IRIs."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasProducer ;
+        sh:class :Producer ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasProducer values must be :Producer IRIs."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasWriter ;
+        sh:class :Writer ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasWriter values must be :Writer IRIs."@en
+    ] ;
+
+    sh:property [
+        sh:path :hasActor ;
+        sh:class :Performer ;
+        sh:nodeKind sh:IRI ;
+        sh:message ":hasActor values must be :Performer IRIs."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If a motion picture hasDirector D, then D should have :directed this motion picture."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasDirector ?d .
+                FILTER NOT EXISTS { ?d :directed $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If a motion picture hasProducer P, then P should have :produced this motion picture."@en ;
+        sh:select """
+            SELECT $this WHERE {
+            $this :hasProducer ?p .
+            FILTER NOT EXISTS { ?p :produced $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If a motion picture hasWriter W, then W should have :wrote this motion picture."@en ;
+        sh:select """
+            SELECT $this WHERE {
+            $this :hasWriter ?w .
+            FILTER NOT EXISTS { ?w :wrote $this . }
+            }
+        """ ;
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If a motion picture hasActor A, then A should be linked via roles to this motion picture (actedIn/hasRole->inMotionPicture)."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasActor ?a .
+                FILTER NOT EXISTS {
+                    ?a :actedIn $this .
+                }
+                FILTER NOT EXISTS {
+                    ?a :hasRole ?r .
+                    ?r :inMotionPicture $this .
+                }
+            }
+        """ ;
+    ]
+.
+
+:MovieShape
+    a sh:NodeShape ;
+    sh:targetClass :Movie ;
+
+    sh:not [ sh:class :TvSeries ] ;
+    sh:not [ sh:class :TvMovie ] ;
+    sh:not [ sh:class :TvSpecial ] ;
+    sh:message ":Movie is disjoint with :TvSeries, :TvMovie, :TvSpecial."@en
+.
+
+:TvSeriesShape
+    a sh:NodeShape ;
+    sh:targetClass :TvSeries ;
+
+    sh:not [ sh:class :Movie ] ;
+    sh:not [ sh:class :TvMovie ] ;
+    sh:not [ sh:class :TvSpecial ] ;
+
+    sh:property [
+        sh:path :endYear ;
+        sh:datatype xsd:gYear ;
+        sh:maxCount 1 ;
+        sh:message ":endYear must be at most one xsd:gYear."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message ":endYear cannot be earlier than :releaseYear for a TV series."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :releaseYear ?ry .
+                $this :endYear ?ey .
+                FILTER ( ?ey < ?ry )
+            }
+        """ ;
+    ]
+.
+
+:TvMovieShape
+    a sh:NodeShape ;
+    sh:targetClass :TvMovie ;
+
+    sh:not [ sh:class :Movie ] ;
+    sh:not [ sh:class :TvSeries ] ;
+    sh:not [ sh:class :TvSpecial ] ;
+    sh:message ":TvMovie is disjoint with :Movie, :TvSeries, :TvSpecial."@en
+.
+
+:TvSpecialShape
+    a sh:NodeShape ;
+    sh:targetClass :TvSpecial ;
+
+    sh:not [ sh:class :Movie ] ;
+    sh:not [ sh:class :TvSeries ] ;
+    sh:not [ sh:class :TvMovie ] ;
+    sh:message ":TvSpecial is disjoint with :Movie, :TvSeries, :TvMovie."@en
+.
+
+:RoleShape
+    a sh:NodeShape ;
+    sh:targetClass :Role ;
+
+    sh:property [
+        sh:path :playedBy ;
+        sh:class :Performer ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A :Role must have exactly one :playedBy (a :Performer)."@en
+    ] ;
+
+    sh:property [
+        sh:path :inMotionPicture ;
+        sh:class :MotionPicture ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A :Role must be in exactly one :MotionPicture."@en
+    ] ;
+
+    sh:property [
+        sh:path :characterName ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message ":characterName must be a non-empty string if present."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Inverse consistency: if role :playedBy P then P must haveRole this role."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :playedBy ?p .
+                FILTER NOT EXISTS { ?p :hasRole $this . }
+            }
+        """ ;
+    ]
+.
+
+:PerformerShape
+    a sh:NodeShape ;
+    sh:targetClass :Performer ;
+
+    sh:property [
+        sh:path :hasRole ;
+        sh:class :Role ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "A :Performer should have at least one :hasRole."@en
+    ] ;
+
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "For every hasRole R, R must have playedBy = this performer."@en ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :hasRole ?r .
+                FILTER NOT EXISTS { ?r :playedBy $this . }
+            }
+        """ ;
+    ]
+.
+
+:ActorShape
+    a sh:NodeShape ;
+    sh:targetClass :Actor ;
+
+    sh:property [
+        sh:path :gender ;
+        sh:hasValue "male" ;
+        sh:message "Individuals of class :Actor must have :gender \"male\"."@en
+    ]
+.
+
+:ActressShape
+    a sh:NodeShape ;
+    sh:targetClass :Actress ;
+
+    sh:property [
+        sh:path :gender ;
+        sh:hasValue "female" ;
+        sh:message "Individuals of class :Actress must have :gender \"female\"."@en
+    ]
+.
+
+:DirectorShape
+    a sh:NodeShape ;
+    sh:targetClass :Director ;
+
+    sh:property [
+        sh:path :directed ;
+        sh:class :MotionPicture ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "A :Director must have directed at least one :MotionPicture."@en
+    ]
+.
+
+:WriterShape
+    a sh:NodeShape ;
+    sh:targetClass :Writer ;
+
+    sh:property [
+        sh:path :wrote ;
+        sh:class :MotionPicture ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "A :Writer must have written at least one :MotionPicture."@en
+    ]
+.
+
+:ProducerShape
+    a sh:NodeShape ;
+    sh:targetClass :Producer ;
+
+    sh:property [
+        sh:path :produced ;
+        sh:class :MotionPicture ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "A :Producer must have produced at least one :MotionPicture."@en
+    ]
+.
+
+:UserShape
+    a sh:NodeShape ;
+    sh:targetClass :User ;
+
+    sh:property :NamePropertyShape
+.
+
+:ReviewShape
+    a sh:NodeShape ;
+    sh:targetClass :Review ;
+
+    sh:property [
+        sh:path :ratingValue ;
+        sh:datatype xsd:float ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 10 ;
+        sh:minCount 1 ;
+        sh:message ":ratingValue must be a float between 0 and 10."@en
+    ] ;
+
+    sh:property [
+        sh:path :reviewBody ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message ":reviewBody must be a non-empty string."@en
+    ] ;
+
+    sh:property [
+        sh:path :isSpoiler ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message ":isSpoiler must be at most one xsd:boolean."@en
+    ] ;
+
+    sh:property [
+        sh:path :helpfulnessVote ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message ":helpfulnessVote must be a non-negative integer."@en
+    ] ;
+
+    sh:property [
+        sh:path :isReviewOf ;
+        sh:class :CreativeWork ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A :Review must be about exactly one :CreativeWork (:isReviewOf)."@en
+    ] ;
+
+    sh:property [
+        sh:path :writtenBy ;
+        sh:class :User ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A :Review must be written by exactly one :User (:writtenBy)."@en
+    ]
+.

@@ -1,0 +1,47 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000090> a :Man ;
+    :name "Armin Mueller-Stahl" ;
+    :gender "male" ;
+    :birthPlace :tilsit ;
+    :hasParent :editta_mueller_stahl ;
+    :hasParent :alfred_mueller_stahl ;
+    :educatedAt :east_berlin_drama_school .
+
+:tilsit a :Place ;
+    :name "Tilsit" ;
+    :city "Tilsit" ;
+    :country "DE" .
+
+:editta_mueller_stahl a :Woman ;
+    :name "Editta Mueller-Stahl" ;
+    :gender "female" ;
+    :educatedAt :university_of_leipzig ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000090> .
+
+:alfred_mueller_stahl a :Man ;
+    :name "Alfred Mueller-Stahl" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000090> .
+
+:university_of_leipzig a :Organization ;
+    :name "Université de Leipzig" ;
+    :location :leipzig .
+
+:leipzig a :Place ;
+    :name "Leipzig" ;
+    :city "Leipzig" ;
+    :country "DE" .
+
+:east_berlin_drama_school a :Organization ;
+    :name "École de théâtre de Berlin-Est" ;
+    :location :east_berlin .
+
+:east_berlin a :Place ;
+    :name "Berlin-Est" ;
+    :city "Berlin" ;
+    :country "DE" .

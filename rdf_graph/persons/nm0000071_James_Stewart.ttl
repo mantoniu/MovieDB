@@ -1,0 +1,170 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: James Stewart
+<http://www.moviedb.fr/cinema#nm0000071> a :Man ;
+    :name "James Maitland Stewart" ;
+    :gender "male" ;
+    :birthYear "1908"^^xsd:gYear ; # Inferred from "75e anniversaire" in 1983 (1983 - 75 = 1908)
+    :birthPlace :place_indiana_pa ;
+    :deathYear "1997"^^xsd:gYear ;
+    :deathPlace :place_forest_lawn_memorial_park ;
+    :educatedAt :org_princeton_university,
+                :org_university_players ;
+    :hadSpouse :person_gloria_hatrick_mclean ;
+    :hasChild :person_judy_stewart,
+              :person_kelly_stewart,
+              :person_ronald_stewart,
+              :person_michael_stewart .
+
+# Other Persons
+:person_joshua_logan a :Man ;
+    :name "Joshua Logan" ;
+    :gender "male" .
+
+:person_henry_fonda a :Man ;
+    :name "Henry Fonda" ;
+    :gender "male" .
+
+:person_margaret_sullavan a :Woman ;
+    :name "Margaret Sullavan" ;
+    :gender "female" .
+
+:person_cary_grant a :Man ;
+    :name "Cary Grant" ;
+    :gender "male" .
+
+:person_katharine_hepburn a :Woman ;
+    :name "Katharine Hepburn" ;
+    :gender "female" .
+
+:person_frank_capra a :Man ;
+    :name "Frank Capra" ;
+    :gender "male" .
+
+:person_alfred_hitchcock a :Man ;
+    :name "Alfred Hitchcock" ;
+    :gender "male" .
+
+:person_charles_lindbergh a :Man ;
+    :name "Charles Lindbergh" ;
+    :gender "male" .
+
+:person_robert_mitchum a :Man ;
+    :name "Robert Mitchum" ;
+    :gender "male" .
+
+:person_gloria_hatrick_mclean a :Woman ;
+    :name "Gloria Hatrick McLean" ;
+    :gender "female" ;
+    :deathYear "1994"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000071> ; # Symmetric property
+    :hasChild :person_judy_stewart,
+              :person_kelly_stewart,
+              :person_ronald_stewart,
+              :person_michael_stewart .
+
+:person_judy_stewart a :Woman ;
+    :name "Judy Stewart" ;
+    :gender "female" ;
+    :birthYear "1951"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000071>,
+               :person_gloria_hatrick_mclean ;
+    :hasSibling :person_kelly_stewart,
+                :person_ronald_stewart,
+                :person_michael_stewart .
+
+:person_kelly_stewart a :Woman ;
+    :name "Kelly Stewart" ;
+    :gender "female" ;
+    :birthYear "1951"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000071>,
+               :person_gloria_hatrick_mclean ;
+    :hasSibling :person_judy_stewart,
+                :person_ronald_stewart,
+                :person_michael_stewart .
+
+:person_ronald_stewart a :Man ;
+    :name "Ronald Stewart" ;
+    :gender "male" ;
+    :birthYear "1945"^^xsd:gYear ; # Inferred from "meurt à l'âge de 24 ans le 8 juin 1969" (1969 - 24 = 1945)
+    :deathYear "1969"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000071>,
+               :person_gloria_hatrick_mclean ;
+    :hasSibling :person_judy_stewart,
+                :person_kelly_stewart,
+                :person_michael_stewart .
+
+:person_michael_stewart a :Man ;
+    :name "Michael Stewart" ;
+    :gender "male" ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000071>,
+               :person_gloria_hatrick_mclean ;
+    :hasSibling :person_judy_stewart,
+                :person_kelly_stewart,
+                :person_ronald_stewart .
+
+:person_brigitte_bardot a :Woman ;
+    :name "Brigitte Bardot" ;
+    :gender "female" .
+
+# Places
+:place_indiana_pa a :Place ;
+    :name "Indiana, Pennsylvania" ;
+    :city "Indiana" ;
+    :country "US" .
+
+:place_forest_lawn_memorial_park a :Place ;
+    :name "Forest Lawn Memorial Park" ;
+    :city "Glendale" ;
+    :country "US" .
+
+:place_massachusetts_us a :Place ;
+    :name "Massachusetts" ;
+    :country "US" .
+
+:place_sioux_city_ia a :Place ;
+    :name "Sioux City, Iowa" ;
+    :city "Sioux City" ;
+    :country "US" .
+
+:place_tibenham_norfolk_uk a :Place ;
+    :name "Tibenham, Norfolk" ;
+    :city "Tibenham" ;
+    :country "UK" .
+
+# Organizations
+:org_princeton_university a :Organization ;
+    :name "Princeton University" .
+
+:org_university_players a :Organization ;
+    :name "University Players" ;
+    :location :place_massachusetts_us .
+
+:org_united_states_army_air_forces a :Organization ;
+    :name "United States Army Air Forces" .
+
+:org_445th_bombardment_group a :Organization ;
+    :name "445th Bombardment Group" ;
+    :location :place_sioux_city_ia,
+              :place_tibenham_norfolk_uk .
+
+:org_703rd_squadron a :Organization ;
+    :name "703rd Squadron" ;
+    :location :place_sioux_city_ia .
+
+:org_453rd_bombardiers a :Organization ;
+    :name "453rd Bombardiers" .
+
+:org_2nd_bombardment_group_8th_air_force a :Organization ;
+    :name "2nd Bombardment Group, 8th Air Force" .
+
+:org_american_film_institute a :Organization ;
+    :name "American Film Institute" .
+
+:org_the_jimmy_stewart_museum a :Organization ;
+    :name "The Jimmy Stewart Museum" ;
+    :location :place_indiana_pa .

@@ -1,0 +1,56 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000032>
+    a :Man ;
+    :name "Charlton Heston" ;
+    :gender "male" ;
+    :height "1.89"^^xsd:float ;
+    :birthYear "1924"^^xsd:gYear ;
+    :birthPlace :place_evanston_il_us ;
+    :deathYear "2008"^^xsd:gYear ;
+    :deathPlace :place_beverly_hills_us ;
+    :hasSpouse :nm_lydia_clarke ;
+    :hasChild :nm_fraser_heston, :nm_holly_ann_heston ;
+    :educatedAt :organization_northwestern_university .
+
+:nm_lydia_clarke
+    a :Woman ;
+    :name "Lydia Clarke" ;
+    :gender "female" ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000032> ;
+    :hasChild :nm_fraser_heston, :nm_holly_ann_heston .
+
+:nm_fraser_heston
+    a :Man ;
+    :name "Fraser Heston" ;
+    :gender "male" ;
+    :birthYear "1955"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000032>, :nm_lydia_clarke .
+
+:nm_holly_ann_heston
+    a :Woman ;
+    :name "Holly Ann Heston" ;
+    :gender "female" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000032>, :nm_lydia_clarke .
+
+:place_evanston_il_us
+    a :Place ;
+    :name "Evanston" ;
+    :city "Evanston" ;
+    :country "US" .
+
+:place_beverly_hills_us
+    a :Place ;
+    :name "Beverly Hills" ;
+    :city "Beverly Hills" ;
+    :country "US" .
+
+:organization_northwestern_university
+    a :Organization ;
+    :name "Northwestern University" ;
+    :location :place_evanston_il_us .

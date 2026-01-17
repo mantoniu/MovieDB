@@ -1,0 +1,116 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Lauren Bacall
+:nm0000002 a :Woman, :Person ;
+    :name "Lauren Bacall" ;
+    :gender "female" ;
+    :birthYear "1924"^^xsd:gYear ;
+    :birthPlace :place_New_York_US ;
+    :height "1.74"^^xsd:float ;
+    :deathYear "2014"^^xsd:gYear ;
+    :deathPlace :place_New_York_US ;
+    :hasParent :person_Natalie_Bacal,
+               :person_William_Perske ;
+    :hadSpouse :person_Humphrey_Bogart,
+               :person_Jason_Robards ;
+    :hasChild :person_Stephen_Humphrey_Bogart,
+              :person_Leslie_Bogart,
+              :person_Sam_Robards ;
+    :educatedAt :org_New_York_School_of_Theatre,
+                :org_Julia_Richman_High_School,
+                :org_American_Academy_of_Dramatic_Arts
+    .
+
+# Other Persons
+:person_Natalie_Bacal a :Woman, :Person ;
+    :name "Natalie Bacal" ;
+    :gender "female" ;
+    :birthYear "1901"^^xsd:gYear ;
+    :deathYear "1977"^^xsd:gYear ;
+    :birthPlace :place_Ellis_Island_US ;
+    :hadSpouse :person_William_Perske ;
+    :hasChild :nm0000002
+    .
+
+:person_William_Perske a :Man, :Person ;
+    :name "William Perske" ;
+    :gender "male" ;
+    :birthYear "1889"^^xsd:gYear ;
+    :deathYear "1982"^^xsd:gYear ;
+    # Birth place omitted as only "New Jersey" (state) is mentioned, not a specific city required by :Place
+    :hadSpouse :person_Natalie_Bacal ;
+    :hasChild :nm0000002
+    .
+
+:person_Humphrey_Bogart a :Man, :Person ;
+    :name "Humphrey Bogart" ;
+    :gender "male" ;
+    :deathYear "1957"^^xsd:gYear ;
+    :hadSpouse :nm0000002 ;
+    :hasChild :person_Stephen_Humphrey_Bogart,
+              :person_Leslie_Bogart
+    .
+
+:person_Jason_Robards a :Man, :Person ;
+    :name "Jason Robards" ;
+    :gender "male" ;
+    :hadSpouse :nm0000002 ;
+    :hasChild :person_Sam_Robards
+    .
+
+:person_Stephen_Humphrey_Bogart a :Man, :Person ;
+    :name "Stephen Humphrey Bogart" ;
+    :gender "male" ;
+    :birthYear "1949"^^xsd:gYear ;
+    :hasParent :nm0000002,
+               :person_Humphrey_Bogart
+    .
+
+:person_Leslie_Bogart a :Woman, :Person ;
+    :name "Leslie Bogart" ;
+    :gender "female" ;
+    :birthYear "1952"^^xsd:gYear ;
+    :hasParent :nm0000002,
+               :person_Humphrey_Bogart
+    .
+
+:person_Sam_Robards a :Man, :Person ;
+    :name "Sam Robards" ;
+    :gender "male" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :hasParent :nm0000002,
+               :person_Jason_Robards
+    .
+
+# Places
+:place_New_York_US a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US"
+    .
+
+:place_Ellis_Island_US a :Place ;
+    :name "Ellis Island" ;
+    :city "New York" ; # Ellis Island is in New York Harbor, part of New York City
+    :country "US"
+    .
+
+# Organizations
+:org_New_York_School_of_Theatre a :Organization ;
+    :name "New York School of Theatre" ;
+    :location :place_New_York_US
+    .
+
+:org_Julia_Richman_High_School a :Organization ;
+    :name "Julia Richman High School" ;
+    :location :place_New_York_US
+    .
+
+:org_American_Academy_of_Dramatic_Arts a :Organization ;
+    :name "American Academy of Dramatic Arts" ;
+    :location :place_New_York_US # Assuming New York campus based on context
+    .

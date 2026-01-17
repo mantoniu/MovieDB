@@ -1,0 +1,268 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Person: Ingmar Bergman
+:nm0000005 a :Man ;
+    :name "Ernst Ingmar Bergman" ;
+    :gender "male" ;
+    :birthYear "1918"^^xsd:gYear ;
+    :deathYear "2007"^^xsd:gYear ;
+    :deathPlace :faro ;
+    :educatedAt :university_of_stockholm ;
+    :hadSpouse :else_fisher, :ellen_lundstrom, :gunvor_hagberg, :kabi_laretei ;
+    :hasSpouse :ingrid_von_rosen ;
+    :hasChild :lena_bergman, :eva_bergman, :jan_bergman, :anna_bergman, :mats_bergman, :ingmar_bergman_jr, :daniel_bergman, :maria_von_rosen, :linn_ullmann ;
+    :hasSibling :dag_bergman, :margareta_bergman .
+
+# Other Persons
+:dag_bergman a :Man ;
+    :name "Dag Bergman" ;
+    :gender "male" ;
+    :hasSibling :nm0000005, :margareta_bergman .
+
+:margareta_bergman a :Woman ;
+    :name "Margareta Bergman" ;
+    :gender "female" ;
+    :birthYear "1922"^^xsd:gYear ;
+    :hasSibling :nm0000005, :dag_bergman .
+
+:else_fisher a :Woman ;
+    :name "Else Fisher" ;
+    :gender "female" ;
+    :birthYear "1918"^^xsd:gYear ;
+    :deathYear "2006"^^xsd:gYear ;
+    :hadSpouse :nm0000005 ;
+    :hasChild :lena_bergman .
+
+:ellen_lundstrom a :Woman ;
+    :name "Ellen Lundstrom" ;
+    :gender "female" ;
+    :birthYear "1919"^^xsd:gYear ;
+    :deathYear "2007"^^xsd:gYear ;
+    :hadSpouse :nm0000005 ;
+    :hasChild :eva_bergman, :jan_bergman, :anna_bergman, :mats_bergman .
+
+:gunvor_hagberg a :Woman ;
+    :name "Gunvor Hagberg" ;
+    :gender "female" ;
+    :birthYear "1916"^^xsd:gYear ;
+    :deathYear "1971"^^xsd:gYear ;
+    :hadSpouse :nm0000005 ;
+    :hasChild :ingmar_bergman_jr .
+
+:kabi_laretei a :Woman ;
+    :name "Kabi Laretei" ;
+    :gender "female" ;
+    :birthYear "1922"^^xsd:gYear ;
+    :deathYear "2014"^^xsd:gYear ;
+    :hadSpouse :nm0000005 ;
+    :hasChild :daniel_bergman .
+
+:ingrid_von_rosen a :Woman ;
+    :name "Ingrid von Rosen" ;
+    :gender "female" ;
+    :birthYear "1930"^^xsd:gYear ;
+    :deathYear "1995"^^xsd:gYear ;
+    :hasSpouse :nm0000005 ;
+    :hasChild :maria_von_rosen .
+
+:lena_bergman a :Woman ;
+    :name "Lena Bergman" ;
+    :gender "female" ;
+    :birthYear "1943"^^xsd:gYear ;
+    :hasParent :nm0000005, :else_fisher .
+
+:eva_bergman a :Woman ;
+    :name "Eva Bergman" ;
+    :gender "female" ;
+    :birthYear "1945"^^xsd:gYear ;
+    :hasParent :nm0000005, :ellen_lundstrom .
+
+:jan_bergman a :Man ;
+    :name "Jan Bergman" ;
+    :gender "male" ;
+    :birthYear "1946"^^xsd:gYear ;
+    :deathYear "2000"^^xsd:gYear ;
+    :hasParent :nm0000005, :ellen_lundstrom .
+
+:anna_bergman a :Woman ;
+    :name "Anna Bergman" ;
+    :gender "female" ;
+    :birthYear "1948"^^xsd:gYear ;
+    :hasParent :nm0000005, :ellen_lundstrom ;
+    :hasSibling :mats_bergman .
+
+:mats_bergman a :Man ;
+    :name "Mats Bergman" ;
+    :gender "male" ;
+    :birthYear "1948"^^xsd:gYear ;
+    :hasParent :nm0000005, :ellen_lundstrom ;
+    :hasSibling :anna_bergman .
+
+:ingmar_bergman_jr a :Man ;
+    :name "Ingmar Bergman" ;
+    :gender "male" ;
+    :birthYear "1951"^^xsd:gYear ;
+    :hasParent :nm0000005, :gunvor_hagberg .
+
+:daniel_bergman a :Man ;
+    :name "Daniel Bergman" ;
+    :gender "male" ;
+    :birthYear "1962"^^xsd:gYear ;
+    :hasParent :nm0000005, :kabi_laretei .
+
+:maria_von_rosen a :Woman ;
+    :name "Maria von Rosen" ;
+    :gender "female" ;
+    :birthYear "1959"^^xsd:gYear ;
+    :hasParent :nm0000005, :ingrid_von_rosen .
+
+:linn_ullmann a :Woman ;
+    :name "Linn Ullmann" ;
+    :gender "female" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :hasParent :nm0000005, :liv_ullmann .
+
+:liv_ullmann a :Woman ;
+    :name "Liv Ullmann" ;
+    :gender "female" ;
+    :hasChild :linn_ullmann .
+
+# Places
+:uppsala a :Place ;
+    :name "Uppsala" ;
+    :city "Uppsala" ;
+    :country "SE" .
+
+:rasunda a :Place ;
+    :name "Råsunda" ;
+    :city "Råsunda" ;
+    :country "SE" .
+
+:stockholm a :Place ;
+    :name "Stockholm" ;
+    :city "Stockholm" ;
+    :country "SE" .
+
+:thuringia a :Place ;
+    :name "Thuringia" ;
+    :country "DE" .
+
+:weimar a :Place ;
+    :name "Weimar" ;
+    :city "Weimar" ;
+    :country "DE" .
+
+:helsingborg a :Place ;
+    :name "Helsingborg" ;
+    :city "Helsingborg" ;
+    :country "SE" .
+
+:goteborg a :Place ;
+    :name "Göteborg" ;
+    :city "Göteborg" ;
+    :country "SE" .
+
+:cagnes_sur_mer a :Place ;
+    :name "Cagnes-sur-Mer" ;
+    :city "Cagnes-sur-Mer" ;
+    :country "FR" .
+
+:paris a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:malmo a :Place ;
+    :name "Malmö" ;
+    :city "Malmö" ;
+    :country "SE" .
+
+:faro a :Place ;
+    :name "Fårö" ;
+    :city "Fårö" ;
+    :country "SE" .
+
+:oslo a :Place ;
+    :name "Oslo" ;
+    :city "Oslo" ;
+    :country "NO" .
+
+:london a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "GB" .
+
+:munich a :Place ;
+    :name "Munich" ;
+    :city "Munich" ;
+    :country "DE" .
+
+:mariefred a :Place ;
+    :name "Mariefred" ;
+    :city "Mariefred" ;
+    :country "SE" .
+
+:new_york a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:djursholm a :Place ;
+    :name "Djursholm" ;
+    :city "Djursholm" ;
+    :country "SE" .
+
+# Organizations
+:cinematograph a :Organization ;
+    :name "Cinematograph" .
+
+:master_olofsgarden a :Organization ;
+    :name "Mäster Olofsgården" .
+
+:studio_dramatique a :Organization ;
+    :name "Studio dramatique" .
+
+:theatre_dramatique_royal_de_stockholm a :Organization ;
+    :name "Théâtre dramatique royal de Stockholm" ;
+    :location :stockholm .
+
+:opera_royal_de_stockholm a :Organization ;
+    :name "Opéra royal de Stockholm" ;
+    :location :stockholm .
+
+:svensk_filmindustri a :Organization ;
+    :name "Svensk Filmindustri" ;
+    :location :rasunda .
+
+:theatre_municipal_de_helsingborg a :Organization ;
+    :name "Théâtre municipal de Helsingborg" ;
+    :location :helsingborg .
+
+:theatre_municipal_de_goteborg a :Organization ;
+    :name "Théâtre municipal de Göteborg" ;
+    :location :goteborg .
+
+:university_of_stockholm a :Organization ;
+    :name "Université de Stockholm" ;
+    :location :stockholm .
+
+:institut_suedois_du_film a :Organization ;
+    :name "Institut Suédois du Film" ;
+    :location :stockholm .
+
+:theatre_municipal_de_malmo a :Organization ;
+    :name "Théâtre municipal de Malmö" ;
+    :location :malmo .
+
+:residenztheater a :Organization ;
+    :name "Residenztheater" ;
+    :location :munich .

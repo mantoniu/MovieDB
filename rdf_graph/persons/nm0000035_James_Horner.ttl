@@ -1,0 +1,68 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000035> a :Man ;
+    :name "James Horner" ;
+    :gender "male" ;
+    :deathYear "2015"^^xsd:gYear ;
+    :deathPlace :los_angeles_suburb ;
+    :hasParent :harry_horner,
+        :joan_fraenkel ;
+    :educatedAt :royal_college_of_music,
+        :verde_valley_high_school,
+        :university_of_southern_california,
+        :university_of_california_los_angeles,
+        :american_film_institute .
+
+:harry_horner a :Man ;
+    :name "Harry Horner" ;
+    :gender "male" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000035> .
+
+:joan_fraenkel a :Woman ;
+    :name "Joan Fraenkel" ;
+    :gender "female" ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000035> .
+
+:royal_college_of_music a :Organization ;
+    :name "Royal College of Music" ;
+    :location :london_uk .
+
+:verde_valley_high_school a :Organization ;
+    :name "Verde Valley High School" ;
+    :location :sedona_arizona_us .
+
+:university_of_southern_california a :Organization ;
+    :name "University of Southern California" ;
+    :location :los_angeles_us .
+
+:university_of_california_los_angeles a :Organization ;
+    :name "University of California, Los Angeles" ;
+    :location :los_angeles_us .
+
+:american_film_institute a :Organization ;
+    :name "American Film Institute" ;
+    :location :los_angeles_us .
+
+:los_angeles_suburb a :Place ;
+    :name "Los Angeles suburb, US" ;
+    :city "Los Angeles suburb" ;
+    :country "US" .
+
+:london_uk a :Place ;
+    :name "London, UK" ;
+    :city "London" ;
+    :country "UK" .
+
+:sedona_arizona_us a :Place ;
+    :name "Sedona, US" ;
+    :city "Sedona" ;
+    :country "US" .
+
+:los_angeles_us a :Place ;
+    :name "Los Angeles, US" ;
+    :city "Los Angeles" ;
+    :country "US" .

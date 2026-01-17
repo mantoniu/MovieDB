@@ -1,0 +1,63 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000067> a :Man ;
+    :name "Miklós Rózsa" ;
+    :gender "male" ;
+    :educatedAt :leipzig_conservatory .
+
+:leipzig_conservatory a :Organization ;
+    :name "Leipzig Conservatory" .
+
+:arthur_honegger a :Man ;
+    :name "Arthur Honegger" ;
+    :gender "male" .
+
+:alexander_korda a :Man ;
+    :name "Alexander Korda" ;
+    :gender "male" .
+
+:zoltan_korda a :Man ;
+    :name "Zoltan Korda" ;
+    :gender "male" .
+
+:billy_wilder a :Man ;
+    :name "Billy Wilder" ;
+    :gender "male" .
+
+:fritz_lang a :Man ;
+    :name "Fritz Lang" ;
+    :gender "male" .
+
+:george_cukor a :Man ;
+    :name "George Cukor" ;
+    :gender "male" .
+
+:vincente_minnelli a :Man ;
+    :name "Vincente Minnelli" ;
+    :gender "male" .
+
+:alfred_hitchcock a :Man ;
+    :name "Alfred Hitchcock" ;
+    :gender "male" .
+
+:jascha_heifetz a :Man ;
+    :name "Jascha Heifetz" ;
+    :gender "male" .
+
+:alain_resnais a :Man ;
+    :name "Alain Resnais" ;
+    :gender "male" .
+
+:paris a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:dallas a :Place ;
+    :name "Dallas" ;
+    :city "Dallas" ;
+    :country "US" .

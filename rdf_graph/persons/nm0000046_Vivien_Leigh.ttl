@@ -1,0 +1,72 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000046> a :Woman ;
+    :name "Vivien Leigh" ;
+    :gender "female" ;
+    :birthYear "1913"^^xsd:gYear ;
+    :birthPlace :darjeeling ;
+    :deathYear "1967"^^xsd:gYear ;
+    :deathPlace :london ;
+    :hasParent :ernest_hartley, :gertrude_robinson_yackje ;
+    :hadSpouse :herbert_leigh_holman, :laurence_olivier ;
+    :hasChild :suzanne_holman ;
+    :educatedAt :convent_of_the_sacred_heart_roehampton,
+                :royal_academy_of_dramatic_art .
+
+:ernest_hartley a :Man ;
+    :name "Ernest Hartley" ;
+    :gender "male" ;
+    :birthYear "1892"^^xsd:gYear ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000046> .
+
+:gertrude_robinson_yackje a :Woman ;
+    :name "Gertrude Robinson Yackje" ;
+    :gender "female" ;
+    :birthYear "1888"^^xsd:gYear ;
+    :deathYear "1972"^^xsd:gYear ;
+    :birthPlace :darjeeling ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000046> .
+
+:herbert_leigh_holman a :Man ;
+    :name "Herbert Leigh Holman" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000046> ;
+    :hasChild :suzanne_holman .
+
+:laurence_olivier a :Man ;
+    :name "Laurence Olivier" ;
+    :gender "male" ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000046> .
+
+:suzanne_holman a :Woman ;
+    :name "Suzanne Holman" ;
+    :gender "female" ;
+    :birthYear "1933"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000046>, :herbert_leigh_holman .
+
+:darjeeling a :Place ;
+    :name "Darjeeling" ;
+    :city "Darjeeling" ;
+    :country "IN" .
+
+:convent_of_the_sacred_heart_roehampton a :Organization ;
+    :name "Convent of the Sacred Heart" ;
+    :location :roehampton .
+
+:roehampton a :Place ;
+    :name "Roehampton" ;
+    :city "Roehampton" ;
+    :country "GB" .
+
+:royal_academy_of_dramatic_art a :Organization ;
+    :name "Royal Academy of Dramatic Art" ;
+    :location :london .
+
+:london a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "GB" .

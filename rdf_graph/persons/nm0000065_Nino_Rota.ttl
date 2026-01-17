@@ -1,0 +1,48 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000065> a :Man ;
+    :name "Nino Rota" ;
+    :gender "male" ;
+    :birthYear "1911"^^xsd:gYear ;
+    :birthPlace :place_milan ;
+    :deathYear "1979"^^xsd:gYear ;
+    :deathPlace :place_rome ;
+    :educatedAt :org_conservatoire_milan,
+        :org_conservatoire_sainte_cecile,
+        :org_curtis_institute,
+        :org_universite_milan .
+
+:place_milan a :Place ;
+    :name "Milan" ;
+    :city "Milan" ;
+    :country "IT" .
+
+:org_conservatoire_milan a :Organization ;
+    :name "Conservatoire de Milan" ;
+    :location :place_milan .
+
+:place_rome a :Place ;
+    :name "Rome" ;
+    :city "Rome" ;
+    :country "IT" .
+
+:org_conservatoire_sainte_cecile a :Organization ;
+    :name "Conservatoire Sainte-Cécile" ;
+    :location :place_rome .
+
+:place_philadelphia a :Place ;
+    :name "Philadelphia" ;
+    :city "Philadelphia" ;
+    :country "US" .
+
+:org_curtis_institute a :Organization ;
+    :name "Curtis Institute" ;
+    :location :place_philadelphia .
+
+:org_universite_milan a :Organization ;
+    :name "Université de Milan" ;
+    :location :place_milan .

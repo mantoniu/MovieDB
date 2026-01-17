@@ -1,0 +1,284 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000056 a :Man ;
+    :name "Paul Newman" ;
+    :gender "male" ;
+    :birthYear "1925"^^xsd:gYear ;
+    :birthPlace :shaker_heights_ohio ;
+    :deathYear "2008"^^xsd:gYear ;
+    :deathPlace :westport_connecticut ;
+    :hasParent :arthur_samuel_newman,
+               :theresa_garth ;
+    :hasSibling :arthur_newman_brother ;
+    :hadSpouse :jacqueline_emily_witte ;
+    :hasSpouse :joanne_woodward ;
+    :hasChild :scott_newman,
+              :susan_kendall_newman,
+              :stephanie_newman,
+              :nell_newman,
+              :melissa_newman,
+              :claire_olivia_newman ;
+    :educatedAt :shaker_heights_high_school,
+                :ohio_university,
+                :yale_university,
+                :kenyon_college,
+                :yale_school_of_drama,
+                :actors_studio,
+                :cleveland_play_house .
+
+# Places
+:shaker_heights_ohio a :Place ;
+    :name "Shaker Heights" ;
+    :city "Shaker Heights" ;
+    :country "US" .
+
+:westport_connecticut a :Place ;
+    :name "Westport" ;
+    :city "Westport" ;
+    :country "US" .
+
+:athens_ohio a :Place ;
+    :name "Athens" ;
+    :city "Athens" ;
+    :country "US" .
+
+:new_haven_connecticut a :Place ;
+    :name "New Haven" ;
+    :city "New Haven" ;
+    :country "US" .
+
+:gambier_ohio a :Place ;
+    :name "Gambier" ;
+    :city "Gambier" ;
+    :country "US" .
+
+:new_york_new_york a :Place ;
+    :name "New York" ;
+    :city "New York" ;
+    :country "US" .
+
+:pti_cie_slovakia a :Place ;
+    :name "Ptičie" ;
+    :city "Ptičie" ;
+    :country "SK" .
+
+:cleveland_ohio a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "US" .
+
+:ashford_connecticut a :Place ;
+    :name "Ashford" ;
+    :city "Ashford" ;
+    :country "US" .
+
+# Organizations
+:shaker_heights_high_school a :Organization ;
+    :name "Shaker Heights High School" ;
+    :location :shaker_heights_ohio .
+
+:ohio_university a :Organization ;
+    :name "Ohio University" ;
+    :location :athens_ohio .
+
+:yale_university a :Organization ;
+    :name "Yale University" ;
+    :location :new_haven_connecticut .
+
+:kenyon_college a :Organization ;
+    :name "Kenyon College" ;
+    :location :gambier_ohio .
+
+:yale_school_of_drama a :Organization ;
+    :name "Yale School of Drama" ;
+    :location :new_haven_connecticut .
+
+:actors_studio a :Organization ;
+    :name "Actors Studio" ;
+    :location :new_york_new_york .
+
+:cleveland_play_house a :Organization ;
+    :name "Cleveland Play House" ;
+    :location :cleveland_ohio .
+
+:us_navy a :Organization ;
+    :name "US Navy" .
+
+:belfry_players a :Organization ;
+    :name "Belfry Players" .
+
+:woodstock_players a :Organization ;
+    :name "Woodstock Players" .
+
+:scott_newman_center a :Organization ;
+    :name "Scott Newman Center" .
+
+:newmans_own a :Organization ;
+    :name "Newman's Own" .
+
+:hole_in_the_wall_gang_camp a :Organization ;
+    :name "Hole in the Wall Gang Camp" ;
+    :location :ashford_connecticut .
+
+:seriousfun_childrens_network a :Organization ;
+    :name "SeriousFun Children's Network" .
+
+:safe_water_network a :Organization ;
+    :name "Safe Water Network" .
+
+:dick_barbour_racing a :Organization ;
+    :name "Dick Barbour Racing" .
+
+:newman_haas_racing a :Organization ;
+    :name "Newman/Haas Racing" .
+
+# People
+:arthur_samuel_newman a :Man ;
+    :name "Arthur Samuel Newman" ;
+    :gender "male" ;
+    :birthYear "1893"^^xsd:gYear ;
+    :deathYear "1950"^^xsd:gYear ;
+    :hasSpouse :theresa_garth ;
+    :hasChild :nm0000056,
+              :arthur_newman_brother ;
+    :hasParent :simon_newman,
+               :hannah_cohn .
+
+:theresa_garth a :Woman ;
+    :name "Theresa Garth" ;
+    :gender "female" ;
+    :birthYear "1894"^^xsd:gYear ;
+    :deathYear "1982"^^xsd:gYear ;
+    :birthPlace :pti_cie_slovakia ;
+    :hasSpouse :arthur_samuel_newman ;
+    :hasChild :nm0000056,
+              :arthur_newman_brother .
+
+:simon_newman a :Man ;
+    :name "Simon Newman" ;
+    :gender "male" ;
+    :hasChild :arthur_samuel_newman .
+
+:hannah_cohn a :Woman ;
+    :name "Hannah Cohn" ;
+    :gender "female" ;
+    :hasChild :arthur_samuel_newman .
+
+:arthur_newman_brother a :Man ;
+    :name "Arthur Newman" ;
+    :gender "male" ;
+    :hasSibling :nm0000056 ;
+    :hasParent :arthur_samuel_newman,
+               :theresa_garth .
+
+:jacqueline_emily_witte a :Woman ;
+    :name "Jacqueline Emily Witte" ;
+    :gender "female" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :hadSpouse :nm0000056 ;
+    :hasChild :scott_newman,
+              :susan_kendall_newman,
+              :stephanie_newman .
+
+:joanne_woodward a :Woman ;
+    :name "Joanne Woodward" ;
+    :gender "female" ;
+    :hasSpouse :nm0000056 ;
+    :hasChild :nell_newman,
+              :melissa_newman,
+              :claire_olivia_newman .
+
+:scott_newman a :Man ;
+    :name "Scott Newman" ;
+    :gender "male" ;
+    :birthYear "1950"^^xsd:gYear ;
+    :deathYear "1978"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :jacqueline_emily_witte .
+
+:susan_kendall_newman a :Woman ;
+    :name "Susan Kendall Newman" ;
+    :gender "female" ;
+    :birthYear "1953"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :jacqueline_emily_witte .
+
+:stephanie_newman a :Woman ;
+    :name "Stephanie Newman" ;
+    :gender "female" ;
+    :birthYear "1954"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :jacqueline_emily_witte .
+
+:nell_newman a :Woman ;
+    :name "Nell Newman" ;
+    :gender "female" ;
+    :birthYear "1959"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :joanne_woodward .
+
+:melissa_newman a :Woman ;
+    :name "Melissa Newman" ;
+    :gender "female" ;
+    :birthYear "1961"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :joanne_woodward .
+
+:claire_olivia_newman a :Woman ;
+    :name "Claire Olivia Newman" ;
+    :gender "female" ;
+    :birthYear "1965"^^xsd:gYear ;
+    :hasParent :nm0000056,
+               :joanne_woodward .
+
+:lee_strasberg a :Man ;
+    :name "Lee Strasberg" ;
+    :gender "male" .
+
+:jake_gyllenhaal a :Man ;
+    :name "Jake Gyllenhaal" ;
+    :gender "male" .
+
+:john_c_whitehead a :Man ;
+    :name "John C. Whitehead" ;
+    :gender "male" .
+
+:josh_weston a :Man ;
+    :name "Josh Weston" ;
+    :gender "male" .
+
+:rolf_stommelen a :Man ;
+    :name "Rolf Stommelen" ;
+    :gender "male" .
+
+:dick_barbour a :Man ;
+    :name "Dick Barbour" ;
+    :gender "male" .
+
+:mario_andretti a :Man ;
+    :name "Mario Andretti" ;
+    :gender "male" .
+
+:michael_andretti a :Man ;
+    :name "Michael Andretti" ;
+    :gender "male" .
+
+:nigel_mansell a :Man ;
+    :name "Nigel Mansell" ;
+    :gender "male" .
+
+:cristiano_da_matta a :Man ;
+    :name "Cristiano da Matta" ;
+    :gender "male" .
+
+:sebastien_bourdais a :Man ;
+    :name "Sébastien Bourdais" ;
+    :gender "male" .
+
+:bruno_junqueira a :Man ;
+    :name "Bruno Junqueira" ;
+    :gender "male" .

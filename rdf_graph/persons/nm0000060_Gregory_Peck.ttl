@@ -1,0 +1,168 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.moviedb.fr/cinema#nm0000060> a :Man, :Person ;
+    :name "Gregory Peck" ;
+    :gender "male" ;
+    :birthYear "1916"^^xsd:gYear ;
+    :birthPlace :place_la_jolla ;
+    :deathYear "2003"^^xsd:gYear ;
+    :deathPlace :place_los_angeles ;
+    :hasParent :person_gregory_peck_sr, :person_bernice_mae_ayres ;
+    :hadSpouse :person_greta_kukkonen_rice ;
+    :hasSpouse :person_veronique_passani ;
+    :hasChild :person_jonathan_peck, :person_stephen_peck, :person_carey_peck, :person_anthony_peck, :person_cecilia_peck ;
+    :educatedAt :org_san_diego_high_school, :org_san_diego_state_university, :org_uc_berkeley, :org_neighborhood_playhouse .
+
+# Definitions for new URIs
+
+# Persons
+:person_gregory_peck_sr a :Man, :Person ;
+    :name "Gregory Peck Sr." ;
+    :gender "male" ;
+    :birthPlace :place_england ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000060> ;
+    :hasParent :person_catherine_ashe .
+
+:person_bernice_mae_ayres a :Woman, :Person ;
+    :name "Bernice Mae Ayres" ;
+    :gender "female" ;
+    :birthPlace :place_missouri ;
+    :hasChild <http://www.moviedb.fr/cinema#nm0000060> .
+
+:person_catherine_ashe a :Woman, :Person ;
+    :name "Catherine Ashe" ;
+    :gender "female" ;
+    :hasChild :person_gregory_peck_sr .
+
+:person_greta_kukkonen_rice a :Woman, :Person ;
+    :name "Greta Kukkonen Rice" ;
+    :gender "female" ;
+    :birthYear "1911"^^xsd:gYear ;
+    :deathYear "2008"^^xsd:gYear ;
+    :hadSpouse <http://www.moviedb.fr/cinema#nm0000060> ;
+    :hasChild :person_jonathan_peck, :person_stephen_peck, :person_carey_peck .
+
+:person_veronique_passani a :Woman, :Person ;
+    :name "Véronique Passani" ;
+    :gender "female" ;
+    :deathYear "2012"^^xsd:gYear ;
+    :hasSpouse <http://www.moviedb.fr/cinema#nm0000060> ;
+    :hasChild :person_anthony_peck, :person_cecilia_peck .
+
+:person_jonathan_peck a :Man, :Person ;
+    :name "Jonathan Peck" ;
+    :gender "male" ;
+    :birthYear "1944"^^xsd:gYear ;
+    :deathYear "1975"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000060>, :person_greta_kukkonen_rice .
+
+:person_stephen_peck a :Man, :Person ;
+    :name "Stephen Peck" ;
+    :gender "male" ;
+    :birthYear "1945"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000060>, :person_greta_kukkonen_rice ;
+    :hasChild :person_ethan_peck .
+
+:person_carey_peck a :Man, :Person ;
+    :name "Carey Peck" ;
+    :gender "male" ;
+    :birthYear "1949"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000060>, :person_greta_kukkonen_rice .
+
+:person_anthony_peck a :Man, :Person ;
+    :name "Anthony Peck" ;
+    :gender "male" ;
+    :birthYear "1956"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000060>, :person_veronique_passani .
+
+:person_cecilia_peck a :Woman, :Person ;
+    :name "Cecilia Peck" ;
+    :gender "female" ;
+    :birthYear "1958"^^xsd:gYear ;
+    :hasParent <http://www.moviedb.fr/cinema#nm0000060>, :person_veronique_passani .
+
+:person_ethan_peck a :Man, :Person ;
+    :name "Ethan Peck" ;
+    :gender "male" ;
+    :hasParent :person_stephen_peck .
+
+:person_dorothy_mcguire a :Woman, :Person ;
+    :name "Dorothy McGuire" ;
+    :gender "female" .
+
+:person_mel_ferrer a :Man, :Person ;
+    :name "Mel Ferrer" ;
+    :gender "male" .
+
+:person_audrey_hepburn a :Woman, :Person ;
+    :name "Audrey Hepburn" ;
+    :gender "female" .
+
+:person_line_renaud a :Woman, :Person ;
+    :name "Line Renaud" ;
+    :gender "female" .
+
+# Places
+:place_la_jolla a :Place ;
+    :name "La Jolla" ;
+    :city "La Jolla" ;
+    :country "US" .
+
+:place_san_diego a :Place ;
+    :name "San Diego" ;
+    :city "San Diego" ;
+    :country "US" .
+
+:place_missouri a :Place ;
+    :name "Missouri" ;
+    :city "Missouri" ;
+    :country "US" .
+
+:place_england a :Place ;
+    :name "England" ;
+    :city "England" ;
+    :country "GB" .
+
+:place_berkeley a :Place ;
+    :name "Berkeley" ;
+    :city "Berkeley" ;
+    :country "US" .
+
+:place_new_york_city a :Place ;
+    :name "New York City" ;
+    :city "New York City" ;
+    :country "US" .
+
+:place_los_angeles a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+# Organizations
+:org_san_diego_high_school a :Organization ;
+    :name "San Diego High School" ;
+    :location :place_san_diego .
+
+:org_san_diego_state_university a :Organization ;
+    :name "San Diego State University" ;
+    :location :place_san_diego .
+
+:org_uc_berkeley a :Organization ;
+    :name "University of California, Berkeley" ;
+    :location :place_berkeley .
+
+:org_neighborhood_playhouse a :Organization ;
+    :name "Neighborhood Playhouse" ;
+    :location :place_new_york_city .
+
+:org_la_jolla_playhouse a :Organization ;
+    :name "La Jolla Playhouse" ;
+    :location :place_san_diego .
+
+:org_uc_san_diego a :Organization ;
+    :name "University of California, San Diego" ;
+    :location :place_san_diego .

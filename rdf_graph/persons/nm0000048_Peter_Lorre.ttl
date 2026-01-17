@@ -1,0 +1,357 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000048 a :Man, :Person ;
+    :name "Peter Lorre" ;
+    :gender "male" ;
+    :birthYear "1904"^^xsd:gYear ;
+    :birthPlace :ruzomberok_slovakia ;
+    :deathYear "1964"^^xsd:gYear ;
+    :deathPlace :los_angeles_us ;
+    :hasParent :alois_lajos_lowenstein,
+        :elvira_freischberger ;
+    :hadSpouse :celia_lovsky,
+        :peter_lorre_wife_2 ;
+    :hasSibling :peter_lorre_brother_1,
+        :peter_lorre_brother_2,
+        :peter_lorre_half_sibling_1,
+        :peter_lorre_half_sibling_2 .
+
+:ruzomberok_slovakia a :Place ;
+    :name "Ružomberok" ;
+    :city "Ružomberok" ;
+    :country "SK" .
+
+:los_angeles_us a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:alois_lajos_lowenstein a :Man, :Person ;
+    :name "Alois Lajos Löwenstein" ;
+    :gender "male" ;
+    :hasChild :nm0000048,
+        :peter_lorre_brother_1,
+        :peter_lorre_brother_2,
+        :peter_lorre_half_sibling_1,
+        :peter_lorre_half_sibling_2 ;
+    :hadSpouse :elvira_freischberger,
+        :melanie_klein .
+
+:elvira_freischberger a :Woman, :Person ;
+    :name "Elvira Freischberger" ;
+    :gender "female" ;
+    :deathYear "1908"^^xsd:gYear ;
+    :hasChild :nm0000048,
+        :peter_lorre_brother_1,
+        :peter_lorre_brother_2 ;
+    :hadSpouse :alois_lajos_lowenstein .
+
+:peter_lorre_brother_1 a :Man, :Person ;
+    :name "Peter Lorre's Brother 1" ;
+    :gender "male" ;
+    :hasParent :alois_lajos_lowenstein,
+        :elvira_freischberger ;
+    :hasSibling :nm0000048,
+        :peter_lorre_brother_2,
+        :peter_lorre_half_sibling_1,
+        :peter_lorre_half_sibling_2 .
+
+:peter_lorre_brother_2 a :Man, :Person ;
+    :name "Peter Lorre's Brother 2" ;
+    :gender "male" ;
+    :hasParent :alois_lajos_lowenstein,
+        :elvira_freischberger ;
+    :hasSibling :nm0000048,
+        :peter_lorre_brother_1,
+        :peter_lorre_half_sibling_1,
+        :peter_lorre_half_sibling_2 .
+
+:melanie_klein a :Woman, :Person ;
+    :name "Melanie Klein" ;
+    :gender "female" ;
+    :hasChild :peter_lorre_half_sibling_1,
+        :peter_lorre_half_sibling_2 ;
+    :hadSpouse :alois_lajos_lowenstein .
+
+:peter_lorre_half_sibling_1 a :Person ;
+    :name "Peter Lorre's Half-Sibling 1" ;
+    :hasParent :alois_lajos_lowenstein,
+        :melanie_klein ;
+    :hasSibling :nm0000048,
+        :peter_lorre_brother_1,
+        :peter_lorre_brother_2,
+        :peter_lorre_half_sibling_2 .
+
+:peter_lorre_half_sibling_2 a :Person ;
+    :name "Peter Lorre's Half-Sibling 2" ;
+    :hasParent :alois_lajos_lowenstein,
+        :melanie_klein ;
+    :hasSibling :nm0000048,
+        :peter_lorre_brother_1,
+        :peter_lorre_brother_2,
+        :peter_lorre_half_sibling_1 .
+
+:celia_lovsky a :Woman, :Person ;
+    :name "Celia Lovsky" ;
+    :gender "female" ;
+    :hadSpouse :nm0000048 .
+
+:peter_lorre_wife_2 a :Woman, :Person ;
+    :name "Peter Lorre's Second Wife" ;
+    :gender "female" ;
+    :hadSpouse :nm0000048 .
+
+:vienna_austria a :Place ;
+    :name "Vienna" ;
+    :city "Vienna" ;
+    :country "AT" .
+
+:breslau_poland a :Place ;
+    :name "Breslau" ;
+    :city "Wrocław" ;
+    :country "PL" .
+
+:zurich_switzerland a :Place ;
+    :name "Zurich" ;
+    :city "Zurich" ;
+    :country "CH" .
+
+:berlin_germany a :Place ;
+    :name "Berlin" ;
+    :city "Berlin" ;
+    :country "DE" .
+
+:paris_france a :Place ;
+    :name "Paris" ;
+    :city "Paris" ;
+    :country "FR" .
+
+:london_uk a :Place ;
+    :name "London" ;
+    :city "London" ;
+    :country "GB" .
+
+:new_york_city_us a :Place ;
+    :name "New York City" ;
+    :city "New York City" ;
+    :country "US" .
+
+:hollywood_us a :Place ;
+    :name "Hollywood" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:theater_schiffbauerdamm a :Organization ;
+    :name "Theater am Schiffbauerdamm" ;
+    :location :berlin_germany .
+
+:circus_renz a :Organization ;
+    :name "Circus Renz" .
+
+:columbia_pictures a :Organization ;
+    :name "Columbia Pictures" ;
+    :location :hollywood_us .
+
+:20th_century_fox a :Organization ;
+    :name "20th Century Fox" ;
+    :location :hollywood_us .
+
+:universum_film_ag a :Organization ;
+    :name "Universum Film AG" ;
+    :location :berlin_germany .
+
+:rko_pictures a :Organization ;
+    :name "RKO Pictures" ;
+    :location :hollywood_us .
+
+:warner_bros a :Organization ;
+    :name "Warner Bros." ;
+    :location :hollywood_us .
+
+:disney_studios a :Organization ;
+    :name "Disney Studios" ;
+    :location :hollywood_us .
+
+:richard_teschner a :Man, :Person ;
+    :name "Richard Teschner" ;
+    :gender "male" .
+
+:bertolt_brecht a :Man, :Person ;
+    :name "Bertolt Brecht" ;
+    :gender "male" .
+
+:kurt_weil a :Man, :Person ;
+    :name "Kurt Weil" ;
+    :gender "male" .
+
+:helene_weigel a :Woman, :Person ;
+    :name "Helene Weigel" ;
+    :gender "female" .
+
+:carola_neher a :Woman, :Person ;
+    :name "Carola Neher" ;
+    :gender "female" .
+
+:oskar_homolka a :Man, :Person ;
+    :name "Oskar Homolka" ;
+    :gender "male" .
+
+:kurt_gerron a :Man, :Person ;
+    :name "Kurt Gerron" ;
+    :gender "male" .
+
+:fritz_lang a :Man, :Person ;
+    :name "Fritz Lang" ;
+    :gender "male" .
+
+:ivor_montagu a :Man, :Person ;
+    :name "Ivor Montagu" ;
+    :gender "male" .
+
+:alfred_hitchcock a :Man, :Person ;
+    :name "Alfred Hitchcock" ;
+    :gender "male" .
+
+:karl_freund a :Man, :Person ;
+    :name "Karl Freund" ;
+    :gender "male" .
+
+:graham_greene a :Man, :Person ;
+    :name "Graham Greene" ;
+    :gender "male" .
+
+:john_p_marquand a :Man, :Person ;
+    :name "John P. Marquand" ;
+    :gender "male" .
+
+:josef_von_sternberg a :Man, :Person ;
+    :name "Josef von Sternberg" ;
+    :gender "male" .
+
+:adolf_hitler a :Man, :Person ;
+    :name "Adolf Hitler" ;
+    :gender "male" .
+
+:stephen_d_youngkin a :Man, :Person ;
+    :name "Stephen D. Youngkin" ;
+    :gender "male" .
+
+:joseph_goebbels a :Man, :Person ;
+    :name "Joseph Goebbels" ;
+    :gender "male" .
+
+:bela_lugosi a :Man, :Person ;
+    :name "Béla Lugosi" ;
+    :gender "male" .
+
+:boris_karloff a :Man, :Person ;
+    :name "Boris Karloff" ;
+    :gender "male" .
+
+:david_butler a :Man, :Person ;
+    :name "David Butler" ;
+    :gender "male" .
+
+:john_huston a :Man, :Person ;
+    :name "John Huston" ;
+    :gender "male" .
+
+:humphrey_bogart a :Man, :Person ;
+    :name "Humphrey Bogart" ;
+    :gender "male" .
+
+:dashiell_hammett a :Man, :Person ;
+    :name "Dashiell Hammett" ;
+    :gender "male" .
+
+:lauren_bacall a :Woman, :Person ;
+    :name "Lauren Bacall" ;
+    :gender "female" .
+
+:michael_curtiz a :Man, :Person ;
+    :name "Michael Curtiz" ;
+    :gender "male" .
+
+:cary_grant a :Man, :Person ;
+    :name "Cary Grant" ;
+    :gender "male" .
+
+:frank_capra a :Man, :Person ;
+    :name "Frank Capra" ;
+    :gender "male" .
+
+:jean_negulesco a :Man, :Person ;
+    :name "Jean Negulesco" ;
+    :gender "male" .
+
+:geraldine_fitzgerald a :Woman, :Person ;
+    :name "Geraldine Fitzgerald" ;
+    :gender "female" .
+
+:sydney_greenstreet a :Man, :Person ;
+    :name "Sydney Greenstreet" ;
+    :gender "male" .
+
+:andrea_king a :Woman, :Person ;
+    :name "Andrea King" ;
+    :gender "female" .
+
+:jack_warner a :Man, :Person ;
+    :name "Jack Warner" ;
+    :gender "male" .
+
+:arnold_pressburger a :Man, :Person ;
+    :name "Arnold Pressburger" ;
+    :gender "male" .
+
+:robert_morley a :Man, :Person ;
+    :name "Robert Morley" ;
+    :gender "male" .
+
+:barry_nelson a :Man, :Person ;
+    :name "Barry Nelson" ;
+    :gender "male" .
+
+:james_mason a :Man, :Person ;
+    :name "James Mason" ;
+    :gender "male" .
+
+:kirk_douglas a :Man, :Person ;
+    :name "Kirk Douglas" ;
+    :gender "male" .
+
+:jules_verne a :Man, :Person ;
+    :name "Jules Verne" ;
+    :gender "male" .
+
+:roger_corman a :Man, :Person ;
+    :name "Roger Corman" ;
+    :gender "male" .
+
+:edgar_allan_poe a :Man, :Person ;
+    :name "Edgar Allan Poe" ;
+    :gender "male" .
+
+:vincent_price a :Man, :Person ;
+    :name "Vincent Price" ;
+    :gender "male" .
+
+:basil_rathbone a :Man, :Person ;
+    :name "Basil Rathbone" ;
+    :gender "male" .
+
+:jack_nicholson a :Man, :Person ;
+    :name "Jack Nicholson" ;
+    :gender "male" .
+
+:jacques_tourneur a :Man, :Person ;
+    :name "Jacques Tourneur" ;
+    :gender "male" .
+
+:jerry_lewis a :Man, :Person ;
+    :name "Jerry Lewis" ;
+    :gender "male" .

@@ -1,0 +1,181 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000093 a :Man ;
+    :name "William Bradley Pitt" ;
+    :gender "male" ;
+    :birthYear "1963"^^xsd:gYear ;
+    :birthPlace :shawnee_oklahoma ;
+    :hasParent :william_alvin_pitt ;
+    :hasParent :jane_pitt ;
+    :hasSibling :doug_pitt ;
+    :hasSibling :julie_pitt ;
+    :hadSpouse :jill_schoelen ;
+    :hadSpouse :juliette_lewis ;
+    :hadSpouse :gwyneth_paltrow ;
+    :hadSpouse :jennifer_aniston ;
+    :hadSpouse :angelina_jolie ;
+    :hasChild :maddox_chivan_pitt_jolie ;
+    :hasChild :pax_thien_pitt_jolie ;
+    :hasChild :zahara_marley_pitt_jolie ;
+    :hasChild :shiloh_nouvel_pitt_jolie ;
+    :hasChild :vivienne_marcheline_jolie_pitt ;
+    :hasChild :knox_leon_jolie_pitt ;
+    :educatedAt :kickapoo_high_school ;
+    :educatedAt :university_of_missouri .
+
+# Inverse and Symmetric properties for family members to satisfy SHACL constraints
+:william_alvin_pitt :hasChild :nm0000093 .
+:jane_pitt :hasChild :nm0000093 .
+
+:doug_pitt :hasSibling :nm0000093 .
+:julie_pitt :hasSibling :nm0000093 .
+
+:jill_schoelen :hadSpouse :nm0000093 .
+:juliette_lewis :hadSpouse :nm0000093 .
+:gwyneth_paltrow :hadSpouse :nm0000093 .
+:jennifer_aniston :hadSpouse :nm0000093 .
+:angelina_jolie :hadSpouse :nm0000093 .
+
+:maddox_chivan_pitt_jolie :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+:pax_thien_pitt_jolie :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+:zahara_marley_pitt_jolie :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+:shiloh_nouvel_pitt_jolie :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+:vivienne_marcheline_jolie_pitt :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+:knox_leon_jolie_pitt :hasParent :nm0000093 ;
+    :hasParent :angelina_jolie .
+
+# Definitions of new URIs
+
+# Places
+:shawnee_oklahoma a :Place ;
+    :name "Shawnee" ;
+    :city "Shawnee" ;
+    :country "US" .
+
+:springfield_missouri a :Place ;
+    :name "Springfield, Missouri" ;
+    :city "Springfield" ;
+    :country "US" .
+
+:columbia_missouri a :Place ;
+    :name "Columbia, Missouri" ;
+    :city "Columbia" ;
+    :country "US" .
+
+:cambodia a :Place ;
+    :name "Cambodia" ;
+    :city "Unknown" ;
+    :country "KH" .
+
+:vietnam a :Place ;
+    :name "Vietnam" ;
+    :city "Unknown" ;
+    :country "VN" .
+
+:ethiopia a :Place ;
+    :name "Ethiopia" ;
+    :city "Unknown" ;
+    :country "ET" .
+
+:namibia a :Place ;
+    :name "Namibia" ;
+    :city "Unknown" ;
+    :country "NA" .
+
+:nice_france a :Place ;
+    :name "Nice" ;
+    :city "Nice" ;
+    :country "FR" .
+
+# Organizations
+:kickapoo_high_school a :Organization ;
+    :name "Kickapoo High School" ;
+    :location :springfield_missouri .
+
+:university_of_missouri a :Organization ;
+    :name "University of Missouri" ;
+    :location :columbia_missouri .
+
+# Persons
+:william_alvin_pitt a :Man ;
+    :name "William Alvin Pitt" ;
+    :gender "male" .
+
+:jane_pitt a :Woman ;
+    :name "Jane Pitt" ;
+    :gender "female" .
+
+:doug_pitt a :Man ;
+    :name "Doug Pitt" ;
+    :gender "male" ;
+    :birthYear "1966"^^xsd:gYear .
+
+:julie_pitt a :Woman ;
+    :name "Julie Pitt" ;
+    :gender "female" ;
+    :birthYear "1969"^^xsd:gYear .
+
+:jill_schoelen a :Woman ;
+    :name "Jill Schoelen" ;
+    :gender "female" .
+
+:juliette_lewis a :Woman ;
+    :name "Juliette Lewis" ;
+    :gender "female" .
+
+:gwyneth_paltrow a :Woman ;
+    :name "Gwyneth Paltrow" ;
+    :gender "female" .
+
+:jennifer_aniston a :Woman ;
+    :name "Jennifer Aniston" ;
+    :gender "female" .
+
+:angelina_jolie a :Woman ;
+    :name "Angelina Jolie" ;
+    :gender "female" .
+
+:maddox_chivan_pitt_jolie a :Man ;
+    :name "Maddox Chivan Pitt-Jolie" ;
+    :gender "male" ;
+    :birthYear "2001"^^xsd:gYear ;
+    :birthPlace :cambodia .
+
+:pax_thien_pitt_jolie a :Man ;
+    :name "Pax Thien Pitt-Jolie" ;
+    :gender "male" ;
+    :birthYear "2003"^^xsd:gYear ;
+    :birthPlace :vietnam .
+
+:zahara_marley_pitt_jolie a :Woman ;
+    :name "Zahara Marley Pitt-Jolie" ;
+    :gender "female" ;
+    :birthYear "2005"^^xsd:gYear ;
+    :birthPlace :ethiopia .
+
+:shiloh_nouvel_pitt_jolie a :Woman ;
+    :name "Shiloh Nouvel Pitt-Jolie" ;
+    :gender "female" ;
+    :birthYear "2006"^^xsd:gYear ;
+    :birthPlace :namibia .
+
+:vivienne_marcheline_jolie_pitt a :Woman ;
+    :name "Vivienne Marcheline Jolie-Pitt" ;
+    :gender "female" ;
+    :birthYear "2008"^^xsd:gYear ;
+    :birthPlace :nice_france .
+
+:knox_leon_jolie_pitt a :Man ;
+    :name "Knox Léon Jolie-Pitt" ;
+    :gender "male" ;
+    :birthYear "2008"^^xsd:gYear ;
+    :birthPlace :nice_france .

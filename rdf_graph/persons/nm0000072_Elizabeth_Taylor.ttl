@@ -1,0 +1,123 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000072 a :Woman ;
+    :name "Elizabeth Taylor" ;
+    :gender "female" ;
+    :birthYear "1932"^^xsd:gYear ;
+    :birthPlace :hampstead_garden_suburb ;
+    :deathYear "2011"^^xsd:gYear ;
+    :deathPlace :los_angeles_ca ;
+    :hasParent :sara_viola_warmbrodt ;
+    :hasParent :francis_lenn_taylor ;
+    :hasSibling :howard_taylor ;
+    :hadSpouse :conrad_nicky_hilton_jr ;
+    :hadSpouse :michael_wilding ;
+    :hadSpouse :mike_todd ;
+    :hadSpouse :eddie_fisher ;
+    :hadSpouse :richard_burton ;
+    :hadSpouse :larry_fortensky ;
+    :hasChild :michael_howard_wilding ;
+    :hasChild :christopher_edward_wilding ;
+    :hasChild :liza_todd ;
+    :educatedAt :little_red_school .
+
+:sara_viola_warmbrodt a :Woman ;
+    :name "Sara Viola Warmbrodt" ;
+    :gender "female" ;
+    :birthYear "1895"^^xsd:gYear ;
+    :deathYear "1994"^^xsd:gYear ;
+    :hasChild :nm0000072 ;
+    :hasChild :howard_taylor .
+
+:francis_lenn_taylor a :Man ;
+    :name "Francis Lenn Taylor" ;
+    :gender "male" ;
+    :birthYear "1897"^^xsd:gYear ;
+    :deathYear "1968"^^xsd:gYear ;
+    :hasChild :nm0000072 ;
+    :hasChild :howard_taylor .
+
+:howard_taylor a :Man ;
+    :name "Howard Taylor" ;
+    :gender "male" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :hasSibling :nm0000072 ;
+    :hasParent :sara_viola_warmbrodt ;
+    :hasParent :francis_lenn_taylor .
+
+:conrad_nicky_hilton_jr a :Man ;
+    :name "Conrad \"Nicky\" Hilton Jr" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 .
+
+:michael_wilding a :Man ;
+    :name "Michael Wilding" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 ;
+    :hasChild :michael_howard_wilding ;
+    :hasChild :christopher_edward_wilding .
+
+:mike_todd a :Man ;
+    :name "Mike Todd" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 ;
+    :hasChild :liza_todd .
+
+:eddie_fisher a :Man ;
+    :name "Eddie Fisher" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 .
+
+:richard_burton a :Man ;
+    :name "Richard Burton" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 .
+
+:larry_fortensky a :Man ;
+    :name "Larry Fortensky" ;
+    :gender "male" ;
+    :hadSpouse :nm0000072 .
+
+:michael_howard_wilding a :Man ;
+    :name "Michael Howard Wilding" ;
+    :gender "male" ;
+    :birthYear "1953"^^xsd:gYear ;
+    :hasParent :nm0000072 ;
+    :hasParent :michael_wilding .
+
+:christopher_edward_wilding a :Man ;
+    :name "Christopher Edward Wilding" ;
+    :gender "male" ;
+    :birthYear "1955"^^xsd:gYear ;
+    :hasParent :nm0000072 ;
+    :hasParent :michael_wilding .
+
+:liza_todd a :Woman ;
+    :name "Liza Todd" ;
+    :gender "female" ;
+    :hasParent :nm0000072 ;
+    :hasParent :mike_todd .
+
+:victor_cazalet a :Man ;
+    :name "Victor Cazalet" ;
+    :gender "male" .
+
+:hampstead_garden_suburb a :Place ;
+    :name "Hampstead Garden Suburb" ;
+    :city "London" ;
+    :country "GB" .
+
+:los_angeles_ca a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:little_red_school a :Organization ;
+    :name "Little Red School" .
+
+:the_elizabeth_taylor_aids_foundation a :Organization ;
+    :name "The Elizabeth Taylor AIDS Foundation" .

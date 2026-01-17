@@ -1,0 +1,139 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Humphrey Bogart
+:nm0000007 a :Man ;
+    :name "Humphrey DeForest Bogart" ;
+    :gender "male" ;
+    :birthYear "1899"^^xsd:gYear ;
+    :birthPlace :place_new_york_city_us ;
+    :deathYear "1957"^^xsd:gYear ;
+    :deathPlace :place_hollywood_us ;
+    :educatedAt :org_trinity_school,
+                :org_phillips_academy ;
+    :hasParent :person_belmont_deforest_bogart,
+               :person_maud_humphrey ;
+    :hasSibling :person_france_bogart,
+                :person_catherine_elizabeth_bogart ;
+    :hadSpouse :person_helen_menken,
+               :person_mary_philips,
+               :person_mayo_methot ;
+    :hasSpouse :person_lauren_bacall ;
+    :hasChild :person_stephen_humphrey_bogart,
+              :person_leslie_howard_bogart .
+
+# Places
+:place_new_york_city_us a :Place ;
+    :name "New York City" ;
+    :city "New York City" ;
+    :country "US" .
+
+:place_hollywood_us a :Place ;
+    :name "Hollywood" ;
+    :city "Hollywood" ;
+    :country "US" .
+
+:place_hartford_us a :Place ;
+    :name "Hartford" ;
+    :city "Hartford" ;
+    :country "US" .
+
+:place_los_angeles_us a :Place ;
+    :name "Los Angeles" ;
+    :city "Los Angeles" ;
+    :country "US" .
+
+:place_cleveland_us a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "US" .
+
+:place_andover_us a :Place ;
+    :name "Andover" ;
+    :city "Andover" ;
+    :country "US" .
+
+# Organizations
+:org_trinity_school a :Organization ;
+    :name "Trinity School" ;
+    :location :place_new_york_city_us .
+
+:org_phillips_academy a :Organization ;
+    :name "Phillips Academy" ;
+    :location :place_andover_us .
+
+# Other Persons (Family Members)
+
+# Parents of Humphrey Bogart
+:person_belmont_deforest_bogart a :Man ;
+    :name "Belmont DeForest Bogart" ;
+    :gender "male" ;
+    :hasChild :nm0000007,
+              :person_france_bogart,
+              :person_catherine_elizabeth_bogart .
+
+:person_maud_humphrey a :Woman ;
+    :name "Maud Humphrey" ;
+    :gender "female" ;
+    :hasChild :nm0000007,
+              :person_france_bogart,
+              :person_catherine_elizabeth_bogart .
+
+# Siblings of Humphrey Bogart
+:person_france_bogart a :Woman ;
+    :name "France Bogart" ;
+    :gender "female" ;
+    :birthYear "1901"^^xsd:gYear ;
+    :hasSibling :nm0000007 ;
+    :hasParent :person_belmont_deforest_bogart,
+               :person_maud_humphrey .
+
+:person_catherine_elizabeth_bogart a :Woman ;
+    :name "Catherine Elizabeth Bogart" ;
+    :gender "female" ;
+    :birthYear "1903"^^xsd:gYear ;
+    :hasSibling :nm0000007 ;
+    :hasParent :person_belmont_deforest_bogart,
+               :person_maud_humphrey .
+
+# Former Spouses of Humphrey Bogart (and inverse relationships)
+:person_helen_menken a :Woman ;
+    :name "Helen Menken" ;
+    :gender "female" ;
+    :hadSpouse :nm0000007 .
+
+:person_mary_philips a :Woman ;
+    :name "Mary Philips" ;
+    :gender "female" ;
+    :hadSpouse :nm0000007 .
+
+:person_mayo_methot a :Woman ;
+    :name "Mayo Methot" ;
+    :gender "female" ;
+    :hadSpouse :nm0000007 .
+
+# Current Spouse of Humphrey Bogart (and inverse relationships)
+:person_lauren_bacall a :Woman ;
+    :name "Lauren Bacall" ;
+    :gender "female" ;
+    :hasSpouse :nm0000007 ;
+    :hasChild :person_stephen_humphrey_bogart,
+              :person_leslie_howard_bogart .
+
+# Children of Humphrey Bogart (and inverse relationships)
+:person_stephen_humphrey_bogart a :Man ;
+    :name "Stephen Humphrey Bogart" ;
+    :gender "male" ;
+    :birthYear "1949"^^xsd:gYear ;
+    :hasParent :nm0000007,
+               :person_lauren_bacall .
+
+:person_leslie_howard_bogart a :Woman ;
+    :name "Leslie Howard Bogart" ;
+    :gender "female" ;
+    :birthYear "1952"^^xsd:gYear ;
+    :hasParent :nm0000007,
+               :person_lauren_bacall .

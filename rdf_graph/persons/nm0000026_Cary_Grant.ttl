@@ -1,0 +1,433 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000026 a :Man ;
+    :name "Cary Grant" ;
+    :gender "male" ;
+    :height 1.87 ;
+    :birthYear "1904"^^xsd:gYear ;
+    :birthPlace :place_horfield_bristol_uk ;
+    :deathYear "1986"^^xsd:gYear ;
+    :deathPlace :place_davenport_iowa_us ;
+    :hasParent :person_elias_james_leach,
+               :person_elsie_maria_leach ;
+    :hasSibling :person_john_william_elias_leach ;
+    :hasChild :person_jennifer_grant ;
+    :hadSpouse :person_virginia_cherrill,
+               :person_barbara_hutton,
+               :person_betsy_drake,
+               :person_dyan_cannon ;
+    :hasSpouse :person_barbara_harris ;
+    :educatedAt :org_bishop_road_primary_school,
+                :org_fairfield_grammar_school,
+                :org_bob_pender_stage_troupe ;
+    .
+
+:person_elias_james_leach a :Man ;
+    :name "Elias James Leach" ;
+    :gender "male" ;
+    :birthYear "1873"^^xsd:gYear ;
+    :deathYear "1935"^^xsd:gYear ;
+    :hasChild :nm0000026,
+              :person_john_william_elias_leach ;
+    :hasSpouse :person_elsie_maria_leach ;
+    .
+
+:person_elsie_maria_leach a :Woman ;
+    :name "Elsie Maria Leach" ;
+    :gender "female" ;
+    :birthYear "1877"^^xsd:gYear ;
+    :deathYear "1973"^^xsd:gYear ;
+    :hasChild :nm0000026,
+              :person_john_william_elias_leach ;
+    :hasSpouse :person_elias_james_leach ;
+    .
+
+:person_john_william_elias_leach a :Man ;
+    :name "John William Elias Leach" ;
+    :gender "male" ;
+    :birthYear "1899"^^xsd:gYear ;
+    :deathYear "1900"^^xsd:gYear ;
+    :hasParent :person_elias_james_leach,
+               :person_elsie_maria_leach ;
+    :hasSibling :nm0000026 ;
+    .
+
+:person_virginia_cherrill a :Woman ;
+    :name "Virginia Cherrill" ;
+    :gender "female" ;
+    :hadSpouse :nm0000026 ;
+    .
+
+:person_barbara_hutton a :Woman ;
+    :name "Barbara Hutton" ;
+    :gender "female" ;
+    :hadSpouse :nm0000026 ;
+    .
+
+:person_betsy_drake a :Woman ;
+    :name "Betsy Drake" ;
+    :gender "female" ;
+    :hadSpouse :nm0000026 ;
+    .
+
+:person_dyan_cannon a :Woman ;
+    :name "Dyan Cannon" ;
+    :gender "female" ;
+    :hadSpouse :nm0000026 ;
+    :hasChild :person_jennifer_grant ;
+    .
+
+:person_barbara_harris a :Woman ;
+    :name "Barbara Harris" ;
+    :gender "female" ;
+    :hasSpouse :nm0000026 ;
+    .
+
+:person_jennifer_grant a :Woman ;
+    :name "Jennifer Grant" ;
+    :gender "female" ;
+    :birthYear "1966"^^xsd:gYear ;
+    :hasParent :nm0000026,
+               :person_dyan_cannon ;
+    .
+
+:person_randolph_scott a :Man ;
+    :name "Randolph Scott" ;
+    :gender "male" ;
+    .
+
+:person_orry_kelly a :Man ;
+    :name "Orry-Kelly" ;
+    :gender "male" ;
+    .
+
+:person_katharine_hepburn a :Woman ;
+    :name "Katharine Hepburn" ;
+    :gender "female" ;
+    .
+
+:person_rosalind_russell a :Woman ;
+    :name "Rosalind Russell" ;
+    :gender "female" ;
+    .
+
+:person_priscilla_lane a :Woman ;
+    :name "Priscilla Lane" ;
+    :gender "female" ;
+    .
+
+:person_ginger_rogers a :Woman ;
+    :name "Ginger Rogers" ;
+    :gender "female" ;
+    .
+
+:person_marilyn_monroe a :Woman ;
+    :name "Marilyn Monroe" ;
+    :gender "female" ;
+    .
+
+:person_audrey_hepburn a :Woman ;
+    :name "Audrey Hepburn" ;
+    :gender "female" ;
+    .
+
+:person_james_stewart a :Man ;
+    :name "James Stewart" ;
+    :gender "male" ;
+    .
+
+:person_marlene_dietrich a :Woman ;
+    :name "Marlene Dietrich" ;
+    :gender "female" ;
+    .
+
+:person_mae_west a :Woman ;
+    :name "Mae West" ;
+    :gender "female" ;
+    .
+
+:person_ingrid_bergman a :Woman ;
+    :name "Ingrid Bergman" ;
+    :gender "female" ;
+    .
+
+:person_julie_andrews a :Woman ;
+    :name "Julie Andrews" ;
+    :gender "female" ;
+    .
+
+:person_paul_newman a :Man ;
+    :name "Paul Newman" ;
+    :gender "male" ;
+    .
+
+:person_douglas_fairbanks a :Man ;
+    :name "Douglas Fairbanks" ;
+    :gender "male" ;
+    .
+
+:person_mary_pickford a :Woman ;
+    :name "Mary Pickford" ;
+    :gender "female" ;
+    .
+
+:person_charlie_chaplin a :Man ;
+    :name "Charlie Chaplin" ;
+    :gender "male" ;
+    .
+
+:person_chester_conklin a :Man ;
+    :name "Chester Conklin" ;
+    :gender "male" ;
+    .
+
+:person_fatty_arbuckle a :Man ;
+    :name "Fatty Arbuckle" ;
+    :gender "male" ;
+    .
+
+:person_ford_sterling a :Man ;
+    :name "Ford Sterling" ;
+    :gender "male" ;
+    .
+
+:person_mack_swain a :Man ;
+    :name "Mack Swain" ;
+    :gender "male" ;
+    .
+
+:person_broncho_billy_anderson a :Man ;
+    :name "Broncho Billy Anderson" ;
+    :gender "male" ;
+    .
+
+:person_david_devant a :Man ;
+    :name "David Devant" ;
+    :gender "male" ;
+    .
+
+:person_george_c_tilyou a :Man ;
+    :name "George C. Tilyou" ;
+    :gender "male" ;
+    .
+
+:person_ian_fleming a :Man ;
+    :name "Ian Fleming" ;
+    :gender "male" ;
+    .
+
+:person_albert_r_broccoli a :Man ;
+    :name "Albert R. Broccoli" ;
+    :gender "male" ;
+    .
+
+:person_alfred_hitchcock a :Man ;
+    :name "Alfred Hitchcock" ;
+    :gender "male" ;
+    .
+
+:person_howard_hawks a :Man ;
+    :name "Howard Hawks" ;
+    :gender "male" ;
+    .
+
+:person_mortimer_hartman a :Man ;
+    :name "Mortimer Hartman" ;
+    :gender "male" ;
+    .
+
+:person_richard_blackwell a :Man ;
+    :name "Richard Blackwell" ;
+    :gender "male" ;
+    .
+
+:person_christopher_scott a :Man ;
+    :name "Christopher Scott" ;
+    :gender "male" ;
+    .
+
+:person_budd_boetticher a :Man ;
+    :name "Budd Boetticher" ;
+    :gender "male" ;
+    .
+
+:person_robert_nott a :Man ;
+    :name "Robert Nott" ;
+    :gender "male" ;
+    .
+
+:person_chevy_chase a :Man ;
+    :name "Chevy Chase" ;
+    :gender "male" ;
+    .
+
+:place_horfield_bristol_uk a :Place ;
+    :name "Horfield" ;
+    :city "Horfield" ;
+    :country "GB" ;
+    .
+
+:place_bristol_uk a :Place ;
+    :name "Bristol" ;
+    :city "Bristol" ;
+    :country "GB" ;
+    .
+
+:place_southampton_uk a :Place ;
+    :name "Southampton" ;
+    :city "Southampton" ;
+    :country "GB" ;
+    .
+
+:place_norwich_uk a :Place ;
+    :name "Norwich" ;
+    :city "Norwich" ;
+    :country "GB" ;
+    .
+
+:place_new_york_city_us a :Place ;
+    :name "New York City" ;
+    :city "New York City" ;
+    :country "US" ;
+    .
+
+:place_greenwich_village_manhattan_new_york_us a :Place ;
+    :name "Greenwich Village" ;
+    :city "New York City" ;
+    :country "US" ;
+    .
+
+:place_st_louis_missouri_us a :Place ;
+    :name "St. Louis" ;
+    :city "St. Louis" ;
+    :country "US" ;
+    .
+
+:place_cleveland_us a :Place ;
+    :name "Cleveland" ;
+    :city "Cleveland" ;
+    :country "US" ;
+    .
+
+:place_milwaukee_us a :Place ;
+    :name "Milwaukee" ;
+    :city "Milwaukee" ;
+    :country "US" ;
+    .
+
+:place_hollywood_los_angeles_us a :Place ;
+    :name "Hollywood" ;
+    :city "Los Angeles" ;
+    :country "US" ;
+    .
+
+:place_las_vegas_us a :Place ;
+    :name "Las Vegas" ;
+    :city "Las Vegas" ;
+    :country "US" ;
+    .
+
+:place_davenport_iowa_us a :Place ;
+    :name "Davenport" ;
+    :city "Davenport" ;
+    :country "US" ;
+    .
+
+:place_los_feliz_los_angeles_us a :Place ;
+    :name "Los Feliz" ;
+    :city "Los Angeles" ;
+    :country "US" ;
+    .
+
+:place_malibu_los_angeles_us a :Place ;
+    :name "Malibu" ;
+    :city "Malibu" ;
+    :country "US" ;
+    .
+
+:place_almondsbury_uk a :Place ;
+    :name "Almondsbury" ;
+    :city "Almondsbury" ;
+    :country "GB" ;
+    .
+
+:place_berlin_de a :Place ;
+    :name "Berlin" ;
+    :city "Berlin" ;
+    :country "DE" ;
+    .
+
+:org_bishop_road_primary_school a :Organization ;
+    :name "Bishop Road Primary School" ;
+    :location :place_bristol_uk ;
+    .
+
+:org_fairfield_grammar_school a :Organization ;
+    :name "Fairfield Grammar School" ;
+    :location :place_bristol_uk ;
+    .
+
+:org_bob_pender_stage_troupe a :Organization ;
+    :name "Bob Pender Stage Troupe" ;
+    .
+
+:org_national_vaudeville_artists a :Organization ;
+    :name "National Vaudeville Artists" ;
+    :location :place_new_york_city_us ;
+    .
+
+:org_knockabout_comedians a :Organization ;
+    :name "Knockabout Comedians" ;
+    .
+
+:org_the_walking_stanleys a :Organization ;
+    :name "The Walking Stanleys" ;
+    .
+
+:org_the_muny a :Organization ;
+    :name "The Muny" ;
+    :location :place_st_louis_missouri_us ;
+    .
+
+:org_paramount_pictures a :Organization ;
+    :name "Paramount Pictures" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_rko a :Organization ;
+    :name "RKO" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_columbia_pictures a :Organization ;
+    :name "Columbia Pictures" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_hollywood_victory_caravan a :Organization ;
+    :name "Hollywood Victory Caravan" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_royal_navy a :Organization ;
+    :name "Royal Navy" ;
+    :location :place_southampton_uk ;
+    .
+
+:org_grantley_productions a :Organization ;
+    :name "Grantley Productions" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_universal a :Organization ;
+    :name "Universal" ;
+    :location :place_hollywood_los_angeles_us ;
+    .
+
+:org_faberge a :Organization ;
+    :name "Fabergé" ;
+    .

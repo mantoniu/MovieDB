@@ -1,0 +1,111 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000022 a :Man ;
+    :name "Clark Gable" ;
+    :gender "male" ;
+    :birthYear "1901"^^xsd:gYear ;
+    :birthPlace :place_cadiz_us ;
+    :hasParent :person_william_henry_gable ;
+    :hasParent :person_adeline_hershelman ;
+    :educatedAt :org_bf_goodrich ;
+    :educatedAt :org_meier_and_frank ;
+.
+
+:person_william_henry_gable a :Man ;
+    :name "William Henry Gable" ;
+    :gender "male" ;
+    :birthYear "1870"^^xsd:gYear ;
+    :deathYear "1948"^^xsd:gYear ;
+    :hasChild :nm0000022 ;
+    :hadSpouse :person_adeline_hershelman ;
+    :hadSpouse :person_jennie_dunlap ;
+.
+
+:person_adeline_hershelman a :Woman ;
+    :name "Adeline Hershelman" ;
+    :gender "female" ;
+    :birthYear "1869"^^xsd:gYear ;
+    :deathYear "1901"^^xsd:gYear ;
+    :hasChild :nm0000022 ;
+    :hadSpouse :person_william_henry_gable ;
+    :hasSibling :person_charles_hershelman ;
+.
+
+:person_jennie_dunlap a :Woman ;
+    :name "Jennie Dunlap" ;
+    :gender "female" ;
+    :deathYear "1922"^^xsd:gYear ; # Clark was 21 when Jennie died (1901 + 21 = 1922)
+    :hadSpouse :person_william_henry_gable ;
+.
+
+:person_charles_hershelman a :Man ;
+    :name "Charles Hershelman" ;
+    :gender "male" ;
+    :hasSibling :person_adeline_hershelman ;
+.
+
+:person_laura_hope_crews a :Woman ;
+    :name "Laura Hope Crews" ;
+    :gender "female" ;
+.
+
+:person_josephine_dillon a :Woman ;
+    :name "Josephine Dillon" ;
+    :gender "female" ;
+.
+
+:place_cadiz_us a :Place ;
+    :name "Cadiz" ;
+    :city "Cadiz" ;
+    :country "US" ;
+.
+
+:place_vernon_us a :Place ;
+    :name "Vernon" ;
+    :city "Vernon" ;
+    :country "US" ;
+.
+
+:place_hopedale_us a :Place ;
+    :name "Hopedale" ;
+    :city "Hopedale" ;
+    :country "US" ;
+.
+
+:place_ravenna_us a :Place ;
+    :name "Ravenna" ;
+    :city "Ravenna" ;
+    :country "US" ;
+.
+
+:place_akron_us a :Place ;
+    :name "Akron" ;
+    :city "Akron" ;
+    :country "US" ;
+.
+
+:place_portland_us a :Place ;
+    :name "Portland" ;
+    :city "Portland" ;
+    :country "US" ;
+.
+
+:place_tulsa_us a :Place ;
+    :name "Tulsa" ;
+    :city "Tulsa" ;
+    :country "US" ;
+.
+
+:org_bf_goodrich a :Organization ;
+    :name "B.F. Goodrich" ;
+    :location :place_akron_us ;
+.
+
+:org_meier_and_frank a :Organization ;
+    :name "Meier & Frank" ;
+    :location :place_portland_us ;
+.

@@ -1,0 +1,117 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:nm0000040 a :Man ;
+    :name "Stanley Kubrick" ;
+    :gender "male" ;
+    :birthYear "1929"^^xsd:gYear ;
+    :birthPlace :bronx ;
+    :deathYear "1999"^^xsd:gYear ;
+    :deathPlace :childwickbury ;
+    :educatedAt :william_howard_taft_high_school ;
+    :hadSpouse :toba_metz, :ruth_sobotka ;
+    :hasSpouse :christiane_susanne_harlan ;
+    :hasParent :sadie_gertrude_perveler, :jacob_leonard_kubrick ;
+    :hasSibling :barbara_kubrick .
+
+:sadie_gertrude_perveler a :Woman ;
+    :name "Sadie Gertrude Perveler" ;
+    :gender "female" ;
+    :birthYear "1903"^^xsd:gYear ;
+    :deathYear "1985"^^xsd:gYear ;
+    :hasChild :nm0000040, :barbara_kubrick ;
+    :hasSpouse :jacob_leonard_kubrick .
+
+:jacob_leonard_kubrick a :Man ;
+    :name "Jacob Leonard Kubrick" ;
+    :gender "male" ;
+    :birthYear "1901"^^xsd:gYear ;
+    :deathYear "1985"^^xsd:gYear ;
+    :hasChild :nm0000040, :barbara_kubrick ;
+    :hasSpouse :sadie_gertrude_perveler .
+
+:barbara_kubrick a :Woman ;
+    :name "Barbara Kubrick" ;
+    :gender "female" ;
+    :birthYear "1934"^^xsd:gYear ;
+    :hasParent :sadie_gertrude_perveler, :jacob_leonard_kubrick ;
+    :hasSibling :nm0000040 .
+
+:toba_metz a :Woman ;
+    :name "Toba Metz" ;
+    :gender "female" ;
+    :birthYear "1930"^^xsd:gYear ;
+    :deathYear "2003"^^xsd:gYear ;
+    :hadSpouse :nm0000040 .
+
+:ruth_sobotka a :Woman ;
+    :name "Ruth Sobotka" ;
+    :gender "female" ;
+    :hadSpouse :nm0000040 .
+
+:christiane_susanne_harlan a :Woman ;
+    :name "Christiane Susanne Harlan" ;
+    :gender "female" ;
+    :hasSpouse :nm0000040 ;
+    :hasSibling :jan_harlan .
+
+:jan_harlan a :Man ;
+    :name "Jan Harlan" ;
+    :gender "male" ;
+    :hasSibling :christiane_susanne_harlan .
+
+:umberto_eco a :Man ;
+    :name "Umberto Eco" ;
+    :gender "male" .
+
+:patrick_suskind a :Man ;
+    :name "Patrick Süskind" ;
+    :gender "male" .
+
+:terry_southern a :Man ;
+    :name "Terry Southern" ;
+    :gender "male" .
+
+:bronx a :Place ;
+    :name "Bronx" ;
+    :city "Bronx" ;
+    :country "US" .
+
+:new_york_city a :Place ;
+    :name "New York City" ;
+    :city "New York" ;
+    :country "US" .
+
+:childwickbury a :Place ;
+    :name "Childwickbury" ;
+    :city "Childwickbury" ;
+    :country "UK" .
+
+:shepperton a :Place ;
+    :name "Shepperton" ;
+    :city "Shepperton" ;
+    :country "UK" .
+
+:elstree a :Place ;
+    :name "Elstree" ;
+    :city "Elstree" ;
+    :country "UK" .
+
+:william_howard_taft_high_school a :Organization ;
+    :name "William Howard Taft High School" ;
+    :location :new_york_city .
+
+:look_magazine a :Organization ;
+    :name "Look magazine" .
+
+:mgm a :Organization ;
+    :name "MGM" .
+
+:cinerama a :Organization ;
+    :name "Cinerama" .
+
+:warner_bros_pictures a :Organization ;
+    :name "Warner Bros. Pictures" .

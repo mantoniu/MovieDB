@@ -1,0 +1,37 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Main Subject: Alec Guinness
+:nm0000027 a :Man ;
+    :name "Alec Guinness" ;
+    :gender "male" ;
+    :educatedAt :fay_compton_studio_of_dramatic_art ;
+    :hasSpouse :merula_salaman ;
+    :hasChild :matthew_guinness ;
+    :deathYear "2000"^^xsd:gYear ;
+    :deathPlace :midhurst_sussex .
+
+# Other Persons
+:merula_salaman a :Woman ;
+    :name "Merula Salaman" ;
+    :gender "female" ;
+    :hasSpouse :nm0000027 ;
+    :hasChild :matthew_guinness .
+
+:matthew_guinness a :Man ;
+    :name "Matthew Guinness" ;
+    :gender "male" ;
+    :hasParent :nm0000027, :merula_salaman .
+
+# Organizations
+:fay_compton_studio_of_dramatic_art a :Organization ;
+    :name "Fay Compton Studio of Dramatic Art" .
+
+# Places
+:midhurst_sussex a :Place ;
+    :name "Midhurst, Sussex" ;
+    :city "Midhurst" ;
+    :country "GB" .

@@ -5,7 +5,7 @@ import re
 
 # Configuration
 csv.field_size_limit(10**9)
-N_MOVIES = 50
+N_MOVIES = 1000
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

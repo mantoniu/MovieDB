@@ -428,7 +428,7 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate :knownFor ;
+        rr:predicate :characterName ;
         rr:objectMap [
             fnml:functionValue [
                 rr:predicateObjectMap [
@@ -449,10 +449,6 @@
         ]
     ] ;
 
-    rr:predicateObjectMap [
-        rr:predicate :characterName ;
-        rr:objectMap [ rml:reference "characters" ]
-    ] ;
     rr:predicateObjectMap [
         rr:predicate :inMotionPicture ;
         rr:objectMap [

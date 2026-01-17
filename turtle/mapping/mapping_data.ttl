@@ -15,7 +15,7 @@
 @base <http://www.moviedb.fr/mapping/data> .
 
 <#MovieSource> a csvw:Table ;
-    csvw:url "datasets/reduced/title.basics.tsv" ;
+    csvw:url "datasets/reduced/title.basics.with_synopsis.tsv" ;
     csvw:dialect [
         a csvw:Dialect ;
         csvw:delimiter "\t" ;
@@ -129,6 +129,10 @@
         ]
     ] ;
 
+    rr:predicateObjectMap [
+        rr:predicate :synopsis ;
+        rr:objectMap [ rml:reference "synopsis" ; rr:datatype xsd:string ]
+    ];
     rr:predicateObjectMap [
         rr:predicate :imdbId ;
         rr:objectMap [ rml:reference "tconst" ]

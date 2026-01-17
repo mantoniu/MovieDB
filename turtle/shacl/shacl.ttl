@@ -203,6 +203,14 @@
     a sh:NodeShape ;
     sh:targetClass :Movie ;
 
+    sh:property [
+        sh:path :synopsis ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:maxCount 1 ;
+        sh:message ":synopsis must be a non-empty string if present."@en
+    ] ;
+
     sh:not [ sh:class :TvSeries ] ;
     sh:not [ sh:class :TvMovie ] ;
     sh:not [ sh:class :TvSpecial ] ;

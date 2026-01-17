@@ -216,7 +216,7 @@
     rdfs:comment "The name of the character played in the role."@en,
         "Le nom du personnage joué dans le rôle."@fr .
 
-# Movie Properties
+# Creative Work Properties
 :originalTitle a owl:DatatypeProperty ;
     rdfs:label "original title"@en, "titre original"@fr ;
     rdfs:domain :CreativeWork ;
@@ -265,6 +265,13 @@
     rdfs:range xsd:string ;
     rdfs:comment "The unique IMDb identifier for the creative work."@en,
         "L'identifiant IMDb unique pour l'œuvre créative."@fr .
+
+:synopsis a owl:DatatypeProperty ;
+    rdfs:label "synopsis"@en, "synopsis"@fr ;
+    rdfs:domain :Movie ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A brief summary of the movie's plot."@en,
+        "Un bref résumé de l'intrigue du film."@fr .
 
 :hasGenre a owl:ObjectProperty ;
     rdfs:label "has genre"@en, "a pour genre"@fr ;

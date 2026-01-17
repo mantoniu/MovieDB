@@ -1,0 +1,21 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix moviedb: <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+
+moviedb:Actor owl:equivalentClass <http://dbpedia.org/ontology/Actor>,
+        <http://semantics.id/ns/example/film#Actor> .
+
+moviedb:Composer owl:equivalentClass <http://semantics.id/ns/example/film#Composer> .
+
+moviedb:Director owl:equivalentClass <http://semantics.id/ns/example/film#Director> .
+
+moviedb:Person owl:equivalentClass <http://dbpedia.org/ontology/Person>,
+        foaf:Person,
+        schema:Person .
+
+moviedb:Producer owl:equivalentClass <http://dbpedia.org/ontology/Producer>,
+        <http://schema.org/Producer> .
+
+moviedb:Writer owl:equivalentClass <http://dbpedia.org/ontology/Writer> .
+

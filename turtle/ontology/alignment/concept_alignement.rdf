@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Alignment rdf:nodeID="node1jf4g6kvix71950">
+	<xml rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</xml>
+	<level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</level>
+	<type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">**</type>
+	<onto1>
+		<Ontology rdf:about="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#file:/D:/Documents/Etudes/Polytech/2025-2026/SI5/Linked%20of%20web%20data/RDF-Movie-Graph/turtle/thesaurus/concept.ttl">
+			<location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file:/D:/Documents/Etudes/Polytech/2025-2026/SI5/Linked%20of%20web%20data/RDF-Movie-Graph/turtle/thesaurus/concept.ttl</location>
+			<formalism rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RDF</formalism>
+		</Ontology>
+	</onto1>
+	<onto2>
+		<Ontology rdf:about="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#file:/D:/Documents/Etudes/Polytech/2025-2026/SI5/Linked%20of%20web%20data/RDF-Movie-Graph/turtle/ontology/owl/ebu_ContentGenreCS.rdf">
+			<location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file:/D:/Documents/Etudes/Polytech/2025-2026/SI5/Linked%20of%20web%20data/RDF-Movie-Graph/turtle/ontology/owl/ebu_ContentGenreCS.rdf</location>
+			<formalism rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skos</formalism>
+		</Ontology>
+	</onto2>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71951">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Action"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71952">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71953">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.7.1.1"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Action"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71954">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71955">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.9"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Adult"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71956">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adult</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADULT</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adult</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADULT</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71957">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.1"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Adventure"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71958">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71959">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.7.1.2"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Adventure"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71960">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71961">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.7.3"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Biography"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:58:00+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71962">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.5.7"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Comedy"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71963">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71964">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.6.3.18"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Comedy"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71965">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71966">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.4"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Crime"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:01:54+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71967">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.3.13"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Documentary"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71968">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentary</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentary</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentary</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentary</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71969">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Drama"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:02:40+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71970">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.7"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Fantasy"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:03:18+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71971">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.14"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Film-Noir"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71972">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film-Noir</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film-Noir</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film-Noir</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film-Noir</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71973">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.5.3"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/History"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71974">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71975">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.6"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Horror"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71976">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71977">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.1.10.4"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Music"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71978">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71979">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.4.1"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Music"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71980">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71981">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.6"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Music"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71982">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MUSIC</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MUSIC</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71983">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.8.5.5"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Music"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71984">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71985">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.9.4"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Musical"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71986">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71987">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.10"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Musical"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71988">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71989">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.3"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Mystery"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71990">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71991">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.1.1"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/News"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:05:15+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71992">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.7.1"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Reality-TV"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:05:53+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71993">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.5.7.2"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Romance"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:06:46+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71994">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.5.7.12"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Sci-Fi"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:06:41+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71995">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.1.1.9"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Sport"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:07:17+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71996">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.10"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Thriller"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-17T00:07:47+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manual</method>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71997">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.8"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/War"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:45+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix71998">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+	<map>
+		<Cell rdf:nodeID="node1jf4g6kvix71999">
+			<validity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALID</validity>
+			<relation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EQUIV</relation>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<entity2 rdf:resource="http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS#_3.4.6.9"/>
+			<entity1 rdf:resource="http://www.moviedb.fr/ontology/cinema#Genre/Western"/>
+			<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-16T23:54:44+01</dcterms:date>
+			<method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alignement exact</method>
+			<metamethod>
+				<rdf:Description rdf:nodeID="node1jf4g6kvix72000">
+					<prefLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</prefLabel1>
+					<prefLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</prefLabel2>
+					<typeOfUsedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel1>
+					<typeOfUsedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[pref]</typeOfUsedLabel2>
+					<usedLabel1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</usedLabel1>
+					<usedLabel2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western</usedLabel2>
+				</rdf:Description>
+			</metamethod>
+		</Cell>
+	</map>
+</Alignment>
+
+</rdf:RDF>

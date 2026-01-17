@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>C:\Users\jilia\AppData\Local\Temp\tmp6f5j1e_t.owl</onto1>
+	<onto2>http://dbpedia.org/ontology/</onto2>
+	<uri1>C:\Users\jilia\AppData\Local\Temp\tmp6f5j1e_t.owl</uri1>
+	<uri2>http://dbpedia.org/ontology/</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#deathYear"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/deathYear"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/????_????_????_????_??_?????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Escalator/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Engine/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/MeanOfTransportation/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/MovingWalkway/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/??????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Person/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Weapon/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/ConveyorSystem/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/???_?_???_??_????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/???_?_???_??_?????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/On-SiteTransportation/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/???/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/????_????_????_??_???_?_???/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/????_????/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#height"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/height"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#name"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/name"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#birthYear"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/birthYear"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#deathPlace"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/deathPlace"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#location"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#birthPlace"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/birthPlace"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Agent"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Agent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Woman"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Woman"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9876</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Man"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Man"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9876</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Organization"/>
+			<entity2 rdf:resource="http://schema.org/Organization"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9876</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Person"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Person"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Place"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/Place"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Place"/>
+			<entity2 rdf:resource="http://schema.org/Place"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#country"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/countryCode"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8668</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#city"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/cityType"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8308</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#city"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/cityLink"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8308</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasParent"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8147</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasChild"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/child"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8125</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasSibling"/>
+			<entity2 rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7675</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasDescendant"/>
+			<entity2 rdf:resource="http://dbpedia.org/ontology/hasVariant"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6324</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>http://www.moviedb.fr/ontology/cinema</onto1>
+	<onto2>https://schema.org/</onto2>
+	<uri1>http://www.moviedb.fr/ontology/cinema</uri1>
+	<uri2>https://schema.org/</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Movie"/>
+			<entity2 rdf:resource="https://schema.org/Movie"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Person"/>
+			<entity2 rdf:resource="https://schema.org/Person"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#CreativeWork"/>
+			<entity2 rdf:resource="https://schema.org/CreativeWork"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9819</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Role"/>
+			<entity2 rdf:resource="https://schema.org/Role"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#TvSeries"/>
+			<entity2 rdf:resource="https://schema.org/TVSeries"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Review"/>
+			<entity2 rdf:resource="https://schema.org/Review"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasContributor"/>
+			<entity2 rdf:resource="https://schema.org/contributor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8688</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasProducer"/>
+			<entity2 rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/hasProduct"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.867</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#isReviewOf"/>
+			<entity2 rdf:resource="https://schema.org/review"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasDirector"/>
+			<entity2 rdf:resource="https://schema.org/director"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.846</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#produced"/>
+			<entity2 rdf:resource="https://schema.org/producer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8122</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#produced"/>
+			<entity2 rdf:resource="https://schema.org/produces"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8122</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasActor"/>
+			<entity2 rdf:resource="https://schema.org/hasStore"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.805</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasGenre"/>
+			<entity2 rdf:resource="https://schema.org/genre"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8036</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#knownFor"/>
+			<entity2 rdf:resource="https://schema.org/knowsAbout"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7436</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#knownFor"/>
+			<entity2 rdf:resource="https://schema.org/knows"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7436</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#contributedTo"/>
+			<entity2 rdf:resource="https://schema.org/connectedTo"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7246</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#releaseYear"/>
+			<entity2 rdf:resource="https://schema.org/releaseDate"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7189</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasRole"/>
+			<entity2 rdf:resource="https://schema.org/educationalRole"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6923</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#reviewBody"/>
+			<entity2 rdf:resource="https://schema.org/reviewCount"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.67</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#directed"/>
+			<entity2 rdf:resource="https://schema.org/directors"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6474</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#ratingValue"/>
+			<entity2 rdf:resource="https://schema.org/ratingCount"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6459</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasWriter"/>
+			<entity2 rdf:resource="https://schema.org/hasMenuItem"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.645</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

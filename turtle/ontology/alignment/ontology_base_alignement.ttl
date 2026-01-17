@@ -1,0 +1,54 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix moviedb: <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+
+moviedb:Actor owl:equivalentClass <http://dbpedia.org/ontology/Actor>,
+        <http://semantics.id/ns/example/film#Actor> .
+
+moviedb:Agent owl:equivalentClass <http://dbpedia.org/ontology/Agent> .
+
+moviedb:CreativeWork owl:equivalentClass schema:CreativeWork .
+
+moviedb:Director owl:equivalentClass <http://semantics.id/ns/example/film#Director> .
+
+moviedb:Man owl:equivalentClass <http://dbpedia.org/ontology/Man> .
+
+moviedb:Movie owl:equivalentClass schema:Movie .
+
+moviedb:Performer owl:equivalentClass <http://semantics.id/ns/example/film#Performer> .
+
+moviedb:Person owl:equivalentClass <http://dbpedia.org/ontology/Person>,
+        foaf:Person,
+        schema:Person .
+
+moviedb:Producer owl:equivalentClass <http://dbpedia.org/ontology/Producer>,
+        <http://schema.org/Producer> .
+
+moviedb:Review owl:equivalentClass schema:Review .
+
+moviedb:Role owl:equivalentClass schema:Role .
+
+moviedb:TvSeries owl:equivalentClass schema:TVSeries .
+
+moviedb:Woman owl:equivalentClass <http://dbpedia.org/ontology/Woman> .
+
+moviedb:Writer owl:equivalentClass <http://dbpedia.org/ontology/Writer> .
+
+moviedb:hasActor owl:equivalentProperty <http://semantics.id/ns/example/film#hasActor> .
+
+moviedb:hasContributor owl:equivalentProperty schema:contributor .
+
+moviedb:hasDirector owl:equivalentProperty <http://semantics.id/ns/example/film#hasDirector>,
+        schema:director .
+
+moviedb:hasGenre owl:equivalentProperty <http://semantics.id/ns/example/film#hasGenre>,
+        schema:genre .
+
+moviedb:hasWriter owl:equivalentProperty <http://semantics.id/ns/example/film#hasScriptWriter> .
+
+moviedb:produced owl:equivalentProperty <http://dbpedia.org/ontology/producedBy> .
+
+moviedb:ratingValue owl:equivalentProperty <http://dbpedia.org/ontology/rating> .
+
+moviedb:releaseYear owl:equivalentProperty <http://semantics.id/ns/example/film#releaseYear> .

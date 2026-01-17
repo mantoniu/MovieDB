@@ -1,0 +1,3 @@
+Pour l'alignement des ontologie -> utiliser le script python
+Pour l'alignement des concept skos -> utiliser OnaGui
+Pour l'alignement des données -> utiliser Ontotext

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>C:\Users\jilia\AppData\Local\Temp\tmpugyc6x3b.owl</onto1>
+	<onto2>http://semantics.id/ns/example/film</onto2>
+	<uri1>C:\Users\jilia\AppData\Local\Temp\tmpugyc6x3b.owl</uri1>
+	<uri2>http://semantics.id/ns/example/film</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Actor"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#Actor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Composer"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#Composer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Person"/>
+			<entity2 rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Director"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#Director"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasDirectorContribution"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#hasDirector"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8841</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasComposerContribution"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#hasComposer"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8841</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasActorContribution"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#hasActor"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8694</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasWriterContribution"/>
+			<entity2 rdf:resource="http://semantics.id/ns/example/film#hasScriptWriter"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7073</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

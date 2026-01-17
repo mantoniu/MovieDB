@@ -1,0 +1,49 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix moviedb: <http://www.moviedb.fr/cinema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+
+moviedb:Agent owl:equivalentClass <http://dbpedia.org/ontology/Agent> .
+
+moviedb:Man owl:equivalentClass <http://dbpedia.org/ontology/Man> .
+
+moviedb:Organization owl:equivalentClass <http://schema.org/Organization>,
+        schema:Organization .
+
+moviedb:Person owl:equivalentClass <http://dbpedia.org/ontology/Person>,
+        foaf:Person,
+        schema:Person .
+
+moviedb:Place owl:equivalentClass <http://dbpedia.org/ontology/Place>,
+        <http://schema.org/Place>,
+        schema:Place .
+
+moviedb:Woman owl:equivalentClass <http://dbpedia.org/ontology/Woman> .
+
+moviedb:birthPlace owl:equivalentProperty <http://dbpedia.org/ontology/birthPlace>,
+        schema:birthPlace .
+
+moviedb:birthYear owl:equivalentProperty <http://dbpedia.org/ontology/birthYear> .
+
+moviedb:country owl:equivalentProperty <http://dbpedia.org/ontology/countryCode> .
+
+moviedb:deathPlace owl:equivalentProperty <http://dbpedia.org/ontology/deathPlace>,
+        schema:deathPlace .
+
+moviedb:deathYear owl:equivalentProperty <http://dbpedia.org/ontology/deathYear> .
+
+moviedb:hasChild owl:equivalentProperty <http://dbpedia.org/ontology/child> .
+
+moviedb:hasParent owl:equivalentProperty schema:parent .
+
+moviedb:hasSibling owl:equivalentProperty schema:sibling .
+
+moviedb:hasSpouse owl:equivalentProperty schema:spouse .
+
+moviedb:height owl:equivalentProperty 
+        <http://dbpedia.org/ontology/Person/height> .
+
+moviedb:location owl:equivalentProperty <http://dbpedia.org/ontology/location>,
+        schema:location .
+
+moviedb:name owl:equivalentProperty <http://dbpedia.org/ontology/name> .

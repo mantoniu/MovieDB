@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#' 
+	 alignmentSource='AgreementMakerLight'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>??</type>
+	<onto1>C:\Users\jilia\AppData\Local\Temp\tmp6f5j1e_t.owl</onto1>
+	<onto2>https://schema.org/</onto2>
+	<uri1>C:\Users\jilia\AppData\Local\Temp\tmp6f5j1e_t.owl</uri1>
+	<uri2>https://schema.org/</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#deathPlace"/>
+			<entity2 rdf:resource="https://schema.org/deathPlace"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#location"/>
+			<entity2 rdf:resource="https://schema.org/toLocation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#location"/>
+			<entity2 rdf:resource="https://schema.org/fromLocation"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#location"/>
+			<entity2 rdf:resource="https://schema.org/location"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#birthPlace"/>
+			<entity2 rdf:resource="https://schema.org/birthPlace"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Person"/>
+			<entity2 rdf:resource="https://schema.org/Person"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Place"/>
+			<entity2 rdf:resource="https://schema.org/Place"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9877</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#Organization"/>
+			<entity2 rdf:resource="https://schema.org/Organization"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9801</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasSibling"/>
+			<entity2 rdf:resource="https://schema.org/sibling"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.835</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasSpouse"/>
+			<entity2 rdf:resource="https://schema.org/spouse"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8213</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasParent"/>
+			<entity2 rdf:resource="https://schema.org/parent"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8213</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasChild"/>
+			<entity2 rdf:resource="https://schema.org/children"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7647</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#deathYear"/>
+			<entity2 rdf:resource="https://schema.org/deathDate"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.661</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#birthYear"/>
+			<entity2 rdf:resource="https://schema.org/birthDate"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.661</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="http://www.moviedb.fr/cinema#hasDescendant"/>
+			<entity2 rdf:resource="https://schema.org/hasVariant"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.6324</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>

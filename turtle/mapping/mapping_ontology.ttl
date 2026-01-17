@@ -1,0 +1,189 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@base <http://www.moviedb.fr/mapping/ontology> .
+
+<#RoleSource> a csvw:Table ;
+    csvw:url "datasets/reduced/title.principals.tsv" ;
+    csvw:dialect [
+        a csvw:Dialect ;
+        csvw:delimiter "\t" ;
+    ] .
+
+<#JobMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        fnml:functionValue [
+            rr:predicateObjectMap [
+                rr:predicate fno:executes ;
+                rr:object grel:array_join 
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:object "http://www.moviedb.fr/cinema#"
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:objectMap [
+                    fnml:functionValue [
+                        rr:predicateObjectMap [
+                            rr:predicate fno:executes ;
+                            rr:object grel:string_replace 
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:valueParameter ;
+                            rr:objectMap [
+                                fnml:functionValue [
+                                    rr:predicateObjectMap [
+                                        rr:predicate fno:executes ;
+                                        rr:object grel:string_toTitlecase 
+                                    ] ;
+                                    rr:predicateObjectMap [
+                                        rr:predicate grel:valueParameter ;
+                                        rr:objectMap [ rml:reference "category" ]
+                                    ]
+                                ]
+                            ]
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:p_string_find ;
+                            rr:object " "
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:p_string_replace ;
+                            rr:object ""
+                        ]
+                    ]
+                ]
+            ]
+        ] ;
+        rr:termType rr:IRI ;
+        rr:class owl:Class
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:subClassOf ;
+        rr:object :Person
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [ rml:reference "category" ; rr:language "en" ]
+    ] .
+
+<#hasContributionPropertyMap>  a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source <#RoleSource> ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        fnml:functionValue [
+            rr:predicateObjectMap [
+                rr:predicate fno:executes ;
+                rr:object grel:array_join 
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:object "http://www.moviedb.fr/cinema#has"
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:objectMap [
+                    fnml:functionValue [
+                        rr:predicateObjectMap [
+                            rr:predicate fno:executes ;
+                            rr:object grel:string_replace
+                        ] ;
+                        rr:predicateObjectMap [
+                            rr:predicate grel:valueParameter ;
+                            rr:objectMap [
+                                fnml:functionValue [
+                                    rr:predicateObjectMap [
+                                        rr:predicate fno:executes ;
+                                        rr:object grel:string_toTitlecase 
+                                    ] ;
+                                    rr:predicateObjectMap [
+                                        rr:predicate grel:valueParameter ;
+                                        rr:objectMap [ rml:reference "category" ]
+                                    ]
+                                ]
+                            ]
+                        ] ;
+                        rr:predicateObjectMap [ rr:predicate grel:p_string_find ; rr:object " " ] ;
+                        rr:predicateObjectMap [ rr:predicate grel:p_string_replace ; rr:object "" ]
+                    ]
+                ]
+            ] ;
+            rr:predicateObjectMap [
+                rr:predicate grel:p_array_a ;
+                rr:object "Contribution"
+            ]
+        ] ;
+        rr:class owl:ObjectProperty ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:domain ;
+        rr:objectMap [
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:object grel:array_join 
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:object "http://www.moviedb.fr/cinema#"
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:p_array_a ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object grel:string_replace
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object grel:string_toTitlecase 
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:valueParameter ;
+                                            rr:objectMap [ rml:reference "category" ]
+                                        ]
+                                    ]
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [ rr:predicate grel:p_string_find ; rr:object " " ] ;
+                            rr:predicateObjectMap [ rr:predicate grel:p_string_replace ; rr:object "" ]
+                        ]
+                    ]
+                ]
+            ] ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:range ;
+        rr:object :MotionPicture ; 
+    ] .

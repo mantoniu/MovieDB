@@ -51,7 +51,7 @@ class Preprocessing:
         try:
             json_string = raw_val.replace('""', '"')
             char_list = json.loads(json_string)
-            return ",".join(c.strip() for c in char_list)
+            return "§".join(c.strip() for c in char_list)
         except:
             return raw_val.replace('"', '')
 

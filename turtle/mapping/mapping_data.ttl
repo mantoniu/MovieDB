@@ -10,6 +10,7 @@
 @prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix idlab: <https://w3id.org/imec/idlab/function#> .
 
 @base <http://www.moviedb.fr/mapping/data> .
 
@@ -157,7 +158,7 @@
         rr:objectMap [ rml:reference "isAdult" ; rr:datatype xsd:boolean ]
     ] ;
 
-    rr:predicateObjectMap [
+        rr:predicateObjectMap [
         rr:predicate :hasGenre ;
         rr:objectMap [
             fnml:functionValue [
@@ -336,45 +337,107 @@
         rr:predicate :deathYear ;
         rr:objectMap [ rml:reference "deathYear" ; rr:datatype xsd:gYear ]
     ] ;
+
     rr:predicateObjectMap [
         rr:predicate :knownFor ;
         rr:objectMap [
             fnml:functionValue [
                 rr:predicateObjectMap [
                     rr:predicate fno:executes ;
-                    rr:object grel:string_split ;
+                    rr:object idlab:trueCondition ;
                 ] ;
                 rr:predicateObjectMap [
-                    rr:predicate grel:valueParameter ; 
+                    rr:predicate idlab:strBoolean ;
                     rr:objectMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate fno:executes ;
-                                rr:object grel:string_replace ;
+                                rr:object idlab:notEqual ;
                             ] ;
                             rr:predicateObjectMap [
                                 rr:predicate grel:valueParameter ;
-                                rr:objectMap [ rml:reference "knownForTitles" ] ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object idlab:isNull ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate idlab:str ;
+                                            rr:objectMap [ rml:reference "knownForTitles" ] ;
+                                        ]
+                                    ]
+                                ]
                             ] ;
                             rr:predicateObjectMap [
-                                rr:predicate grel:p_string_find ;
-                                rr:object "tt" ;
-                            ] ;
-                            rr:predicateObjectMap [
-                                rr:predicate grel:p_string_replace ;
-                                rr:object "http://www.moviedb.fr/cinema#MotionPicture/tt" ;
+                                rr:predicate grel:valueParameter2 ;
+                                rr:object "true" ;
                             ]
                         ]
                     ]
                 ] ;
                 rr:predicateObjectMap [
-                    rr:predicate grel:p_string_sep ;
-                    rr:object "," ;
+                    rr:predicate idlab:str ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object grel:string_split ;
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object grel:string_replace ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:valueParameter ;
+                                            rr:objectMap [
+                                                fnml:functionValue [
+                                                    rr:predicateObjectMap [
+                                                        rr:predicate fno:executes ;
+                                                        rr:object idlab:concat ;
+                                                    ] ;
+                                                    rr:predicateObjectMap [
+                                                        rr:predicate idlab:str ;
+                                                        rr:objectMap [ rml:reference "knownForTitles" ] ;
+                                                    ] ;
+                                                    rr:predicateObjectMap [
+                                                        rr:predicate idlab:otherStr ;
+                                                        rr:object "" ;
+                                                    ] ;
+                                                    rr:predicateObjectMap [
+                                                        rr:predicate idlab:delimiter ;
+                                                        rr:object "" ;
+                                                    ]
+                                                ]
+                                            ] ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:p_string_find ;
+                                            rr:object "tt" ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate grel:p_string_replace ;
+                                            rr:object "http://www.moviedb.fr/cinema#MotionPicture/tt" ;
+                                        ]
+                                    ]
+                                ] ;
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_sep ;
+                                rr:object "," ;
+                            ]
+                        ]
+                    ]
                 ]
             ] ;
             rr:termType rr:IRI
         ]
     ] .
+    
 
 <#RoleMap> a rr:TriplesMap ;
     rml:logicalSource [
@@ -433,15 +496,75 @@
             fnml:functionValue [
                 rr:predicateObjectMap [
                     rr:predicate fno:executes ;
-                    rr:object grel:string_split ;
+                    rr:object idlab:trueCondition ; 
                 ] ;
                 rr:predicateObjectMap [
-                    rr:predicate grel:valueParameter ;
-                    rr:objectMap [ rml:reference "characters" ] ;
+                    rr:predicate idlab:strBoolean ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object idlab:notEqual ; 
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object idlab:isNull ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate idlab:str ;
+                                            rr:objectMap [ rml:reference "characters" ] ;
+                                        ]
+                                    ]
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter2 ;
+                                rr:object "true" ; 
+                            ]
+                        ]
+                    ]
                 ] ;
                 rr:predicateObjectMap [
-                    rr:predicate grel:p_string_sep ;
-                    rr:object "," ;
+                    rr:predicate idlab:str ;
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate fno:executes ;
+                                rr:object grel:string_split ;
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [
+                                    fnml:functionValue [
+                                        rr:predicateObjectMap [
+                                            rr:predicate fno:executes ;
+                                            rr:object idlab:concat ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate idlab:str ;
+                                            rr:objectMap [ rml:reference "characters" ] ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate idlab:otherStr ;
+                                            rr:object "" ;
+                                        ] ;
+                                        rr:predicateObjectMap [
+                                            rr:predicate idlab:delimiter ;
+                                            rr:object "" ;
+                                        ]
+                                    ]
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:p_string_sep ;
+                                rr:object "," ;
+                            ]
+                        ]
+                    ]
                 ]
             ] ;
             rr:termType rr:Literal ; 

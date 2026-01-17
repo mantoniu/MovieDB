@@ -1,0 +1,151 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Action> a skos:Concept;
+  skos:definition "Films featuring intense physical feats, extended fight scenes, violence, and daring stunts."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Action"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Adult> a skos:Concept;
+  skos:definition "Films featuring explicit sexual content, intended for mature audiences."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Adult"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Adventure> a skos:Concept;
+  skos:definition "Films involving journeys, quests, or expeditions to exotic or dangerous locations."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Adventure"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Animation> a skos:Concept;
+  skos:definition "Films created using methods where figures are manipulated to appear as moving images."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Animation"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Biography> a skos:Concept;
+  skos:definition "Films based on the lives of real people, often dramatizing key events and relationships."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Biography"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Comedy> a skos:Concept;
+  skos:definition "Films designed to elicit laughter, focusing on humor, satire, and lighthearted situations."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Comedy"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Crime> a skos:Concept;
+  skos:definition "Films centered on illegal activities, such as theft, murder, and organized crime."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Crime"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Documentary> a skos:Concept;
+  skos:definition "Non-fiction films presenting factual information about a subject, person, or event."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Documentary"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Drama> a skos:Concept;
+  skos:definition "Films focusing on character development and emotional themes, often exploring serious subjects."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Drama"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Family> a skos:Concept;
+  skos:definition "Films suitable for viewing by children and adults, often with wholesome themes."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Family"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Fantasy> a skos:Concept;
+  skos:definition "Films featuring magical elements, mythical creatures, and unreal worlds."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Fantasy"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Film-Noir> a skos:Concept;
+  skos:definition "Stylized crime dramas characterized by dark themes, cynicism, and moral ambiguity."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Film-Noir"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Game-Show> a skos:Concept;
+  skos:definition "Television programs where contestants compete for prizes by answering questions or completing challenges."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Game-Show"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/History> a skos:Concept;
+  skos:definition "Films that depict historical events or periods, often with a focus on accuracy."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "History"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Horror> a skos:Concept;
+  skos:definition "Films designed to frighten, scare, or disgust, often featuring supernatural elements."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Horror"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Music> a skos:Concept;
+  skos:definition "Films centered on musical performances, artists, or the music industry."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Music"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Musical> a skos:Concept;
+  skos:definition "Films where characters express themselves through song and dance, integrated into the narrative."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Musical"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Mystery> a skos:Concept;
+  skos:definition "Films centered on solving a puzzle or crime, often involving suspense and investigation."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Mystery"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/News> a skos:Concept;
+  skos:definition "Films presenting current events and factual reports, typically for informational purposes."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "News"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Reality-TV> a skos:Concept;
+  skos:definition "Television programs featuring unscripted situations and real people, often in competitive scenarios."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Reality-TV"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Romance> a skos:Concept;
+  skos:definition "Films focusing on romantic love and relationships between characters."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Romance"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Sci-Fi> a skos:Concept;
+  skos:definition "Films exploring imaginative and futuristic concepts, such as advanced technology and space exploration."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Sci-Fi"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Short> a skos:Concept;
+  skos:definition "Films with a running time significantly shorter than a standard feature film."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Short"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Sport> a skos:Concept;
+  skos:definition "Films centered on athletic competitions, athletes, or the world of sports."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Sport"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Talk-Show> a skos:Concept;
+  skos:definition "Television programs where a host interviews guests, typically celebrities or experts."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Talk-Show"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Thriller> a skos:Concept;
+  skos:definition "Films designed to create suspense, excitement, and anxiety in the viewer."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Thriller"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/War> a skos:Concept;
+  skos:definition "Films depicting armed conflicts, battles, and the experiences of soldiers."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "War"@en .
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Western> a skos:Concept;
+  skos:definition "Films set in the American West, typically featuring cowboys, outlaws, and frontier life."@en;
+  skos:inScheme :GenreThesaurus;
+  skos:prefLabel "Western"@en .

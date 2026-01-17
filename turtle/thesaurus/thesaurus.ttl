@@ -1,0 +1,6 @@
+@prefix : <http://www.moviedb.fr/cinema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# SKOS Thesaurus
+:GenreThesaurus a skos:ConceptScheme ;
+    skos:prefLabel "Movie Genre Thesaurus"@en .

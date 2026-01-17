@@ -1,12 +1,13 @@
 import os
 import re
 import time
-import wikipediaapi
 import pandas as pd
 from rdflib import Graph
 from pyshacl import validate
 from google import genai
 from google.genai import types
+
+from utils import get_wikipedia_section
 
 NAME_BASICS_FILE = "./datasets/reduced/name.basics.tsv"
 ONTOLOGY_PATH = "./turtle/ontology/person.ttl"
@@ -16,36 +17,11 @@ OUTPUT_DIR = "./rdf_graph/persons"
 START_INDEX = 1
 PERSON_NUMBER = 500
 
-API_KEY = "AIzaSyBZDXJnE3IUzYsE_z_AdHGl6IUX_GUlRmw"
+API_KEY = ""
 client = genai.Client(api_key=API_KEY)
 
 MAX_FIX_ATTEMPTS = 3
 MODEL_NAME = "gemini-2.5-flash"
-
-wiki_wiki = wikipediaapi.Wikipedia(
-    user_agent='MovieDB (antoine-marie.michelozzi@etu.unice.fr)',
-    language='fr',
-    extract_format=wikipediaapi.ExtractFormat.WIKI
-)
-
-def extract_section_text(section):
-    text = section.text or ""
-    for subsection in section.sections:
-        text += "\n" + extract_section_text(subsection)
-    return text
-
-def get_biography(page_title):
-    page = wiki_wiki.page(page_title)
-    if not page.exists():
-        return None
-
-    bio_section = page.section_by_title("Biographie")
-    if bio_section:
-        return extract_section_text(bio_section).strip()
-
-    # fallback utile
-    summary = (page.summary or "").strip()
-    return summary or None
 
 def strip_markdown_fences(text: str) -> str:
     if not text:
@@ -180,7 +156,7 @@ if __name__ == "__main__":
         nconst = row["nconst"]
 
         print(f"\nProcessing: {name} ({nconst})")
-        biography = get_biography(name)
+        biography = get_wikipedia_section("Biographie", name)
         if not biography:
             print("Biography not found. Skipping.")
             continue

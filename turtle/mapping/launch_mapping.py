@@ -6,7 +6,7 @@ def run_rml_mappings():
 
     mapping_config = {
         "mapping_concept": "./turtle/ontology",
-        "mapping_data": "./rdf_graph/triplets",
+        "mapping_data": "./rdf_graph/",
         "mapping_ontology": "./turtle/ontology"
     }
     

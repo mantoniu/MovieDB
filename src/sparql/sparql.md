@@ -144,3 +144,55 @@ where {
 order by desc(?positiveRatio) desc(?negativeRatio)
 limit 30
 ```
+
+# Query 5 : Federate Query
+
+Quels sont les Acteurs/Actrices qui ont reçu le plus grand nombre de récompenses (distinctions) répertoriées sur Wikidata, en utilisant une requête SPARQL fédérée qui permet de faire la correspondance via leur identifiant IMDb ?
+
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.moviedb.fr/cinema#> 
+
+SELECT ?name (COUNT(?award) AS ?nbAwards)
+WHERE {
+  ?performer a :Performer ;
+	:name ?name
+  BIND(REPLACE(STR(?performer), ".*/", "") AS ?imdbId)
+
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidataActor wdt:P345 ?imdbId .
+    ?wikidataActor wdt:P166 ?award .
+  }
+}
+GROUP BY ?performer
+ORDER BY DESC(?nbAwards)
+```
+
+# Query 6 : Federate Query
+
+Quels sont les films, séries, etc... qui ont reçu le plus grand nombre de récompenses (distinctions) répertoriées sur Wikidata, en utilisant une requête SPARQL fédérée qui permet de faire la correspondance via leur identifiant IMDb ?
+
+```sparql
+PREFIX ex: <http://example.org/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://www.moviedb.fr/cinema#> 
+
+SELECT ?name (COUNT(?award) AS ?nbAwards)
+WHERE {
+  ?motionPicture a :MotionPicture ;
+	:originalTitle ?name
+  BIND(REPLACE(STR(?motionPicture), ".*/", "") AS ?imdbId)
+
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidataMotionPicture wdt:P345 ?imdbId .
+    ?wikidataMotionPicture wdt:P166 ?award .
+  }
+}
+GROUP BY ?motionPicture
+ORDER BY DESC(?nbAwards)
+```

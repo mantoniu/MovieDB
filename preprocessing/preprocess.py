@@ -24,17 +24,22 @@ NAME_BASICS_OUTPUT = os.path.join(OUTPUT_DIR, 'name.basics.tsv')
 
 
 class Preprocessing:
+
+    @staticmethod
+    def clean_null_values(row):
+        for key, value in row.items():
+            if value == r'\N':
+                row[key] = ""
+        return row
     
     @staticmethod
     def normalize_title(title):
-
         if not title:
             return ""
         return re.sub(r'\s*\(\d{4}.*?\)', '', title).strip()
     
     @staticmethod
     def normalize_title_date(title):
-
         if not title:
             return ""
         return re.sub(r'^(\s*.*?\(\d{4}).*$', r'\1', title).strip() + ")"
@@ -110,10 +115,10 @@ class Reduction:
                     title_lookup.add(full_title)
         
         if not os.path.exists(input_path):
-            print(f"Erreur : Le fichier {input_path} n'existe pas.")
+            print(f"Error: The file {input_path} does not exist.")
             return
         
-        print(f"Chargement du fichier JSON...")
+        print(f"Loading JSON file...")
         with open(input_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
@@ -128,7 +133,7 @@ class Reduction:
         with open(input_path, 'w', encoding='utf-8') as f:
             json.dump(filtered_data, f, indent=4)
         
-        print(f"Commentaires supprimés : {initial_count - len(filtered_data)}")
+        print(f"Deleted reviews : {initial_count - len(filtered_data)}")
     
     @staticmethod
     def filter_imdb_datasets(titles_to_keep):
@@ -158,6 +163,9 @@ class Reduction:
                     if title_with_year in titles_to_keep or original_with_year in titles_to_keep:
                         different_names.add(row['primaryTitle'])
                         valid_tconsts.add(row['tconst'])
+
+                        Preprocessing.clean_null_values(row)
+
                         writer.writerow(row)
             
             print(f"Kept {len(different_names)} titles from title.basics.tsv")
@@ -180,6 +188,9 @@ class Reduction:
                     if row['tconst'] in valid_tconsts:
                         valid_nconsts.add(row['nconst'])
                         row["characters"] = Preprocessing.clean_characters(row["characters"])
+                        
+                        Preprocessing.clean_null_values(row)
+
                         writer.writerow(row)
             
             print(f"Kept principals associated with reduced titles.")
@@ -198,6 +209,8 @@ class Reduction:
                 
                 for row in reader:
                     if row['nconst'] in valid_nconsts:
+                        Preprocessing.clean_null_values(row)
+
                         writer.writerow(row)
             
             print("Filtered name.basics.tsv.")

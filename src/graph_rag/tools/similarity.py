@@ -1,45 +1,6 @@
-import numpy as np
-import pandas as pd
-import faiss
-from google import genai
 from langchain.tools import tool
 
-from ..config import EMBED_MODEL, INDEX_PATH, META_PATH
-
-def load_faiss_safe(path: str):
-    """
-    Load a FAISS index safely, handling potential issues with file paths containing accents.
-
-    Args:
-        path (str): The file path to the FAISS index.
-    Returns:
-        faiss.Index: The loaded FAISS index.
-    """
-    try:
-        return faiss.read_index(path)
-    except RuntimeError:
-        vector = np.fromfile(path, dtype='uint8')
-        return faiss.deserialize_index(vector)
-
-client = genai.Client()
-index = load_faiss_safe(INDEX_PATH)
-meta = pd.read_parquet(META_PATH)
-
-def embed_one(text: str) -> np.ndarray:
-    """
-    Embed a single text using Google Gemini embeddings.
-
-    Args:
-        text (str): The text to embed.
-    Returns:
-        np.ndarray: The normalized embedding vector.
-    """
-    res = client.models.embed_content(model=EMBED_MODEL, contents=[text])
-    emb = res.embeddings[0]
-    vec = getattr(emb, "values", emb)
-    v = np.array(vec, dtype="float32")
-    n = np.linalg.norm(v)
-    return v / (n if n else 1.0)
+from .common import index, meta, embed_one
 
 def similarity_search(query: str, k: int = 5) -> str:
     """

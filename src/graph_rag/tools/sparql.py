@@ -1,11 +1,6 @@
-from rdflib import Graph
 from langchain.tools import tool
 
-from ..config import RDF_GRAPH_PATH
-
-rdf_graph = Graph()
-rdf_graph.parse(RDF_GRAPH_PATH, format="turtle")
-print(f"[INIT] RDF Graph loaded: {len(rdf_graph)} triples")
+from .common import rdf_graph
 
 def sparql_query(query: str) -> str:
     """
@@ -80,7 +75,7 @@ def sparql_query_tool(sparql_query_str: str) -> str:
 def graph_statistics_tool() -> str:
     """
     Get basic statistics about the RDF graph.
-    
+
     Returns:
         str: Formatted statistics about the RDF graph.
     """

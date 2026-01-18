@@ -1,6 +1,6 @@
 from langchain.tools import tool
 
-from .sparql import rdf_graph
+from .common import rdf_graph
 
 def _generate_prefix_block() -> str:
     """
@@ -70,7 +70,7 @@ def ontology_schema_tool() -> str:
 def property_details_tool(property_name: str) -> str:
     """
     Get details about a specific property in the ontology.
-    
+
     Args:
         property_name (str): The full URI or prefixed name of the property.
     Returns:

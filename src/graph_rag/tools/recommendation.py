@@ -25,7 +25,6 @@ def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List
 
     SELECT ?movieTitle ?rating ?synopsis
     WHERE {{
-        # 1. Partie obligatoire : On récupère l'utilisateur et TOUTES ses reviews
         {user_uri} a :User .
         ?review a :Review ;
                 :writtenBy {user_uri} ;
@@ -46,7 +45,6 @@ def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List
 
     try:
         results = list(rdf_graph.query(query))
-        print(results)
 
         for row in results:
             movie_title = str(row[0])

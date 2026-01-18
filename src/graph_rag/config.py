@@ -12,4 +12,4 @@ META_PATH = str(OUT_DIR / "synopsis.meta.parquet")
 RDF_GRAPH_PATH = str(PROJECT_ROOT / "export_with_inference.ttl")
 
 EMBED_MODEL = "gemini-embedding-001"
-CHAT_MODEL = "gemini-2.5-flash"
+CHAT_MODEL = "gemini-3-flash-preview"

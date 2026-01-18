@@ -11,11 +11,18 @@
 <body class="page">
   <header class="topbar">
     <div class="brand">MovieDB</div>
+    <div class="menu">
+      <label for="panel-select">Menu</label>
+      <select id="panel-select">
+        <option value="recommendations" selected>Recommendation</option>
+        <option value="review">Ecrire un avis</option>
+      </select>
+    </div>
     <div class="user">Utilisateur: <span id="user-name">-</span></div>
   </header>
 
   <div class="layout">
-      <section class="panel chat-panel reveal">
+    <section class="panel chat-panel reveal">
       <h2 class="headline">Dialogue Graph-RAG</h2>
       <div class="tagline">Pose une question sur le graphe, recois une reponse.</div>
       <div id="chat-log" class="chat-log">
@@ -29,19 +36,45 @@
       </form>
     </section>
 
-      <section class="panel rec-panel reveal delay-1">
+    <section class="panel rec-panel reveal delay-1 is-hidden">
       <h2 class="headline">Recommandations</h2>
       <div class="rec-badge">Basees sur tes avis IMDB</div>
       <div id="rec-text" class="rec-status">Chargement des recommandations...</div>
-        <div id="ref-block" class="ref-block">
-          <div id="ref-title" class="rec-subtitle">Films de reference utilises</div>
-          <div id="ref-list" class="ref-list"></div>
-          <button id="ref-toggle" class="ref-toggle" type="button">Voir plus</button>
-        </div>
-        <div id="rec-list" class="rec-list"></div>
+      <div id="ref-block" class="ref-block">
+        <div id="ref-title" class="rec-subtitle">Films de reference utilises</div>
+        <div id="ref-list" class="ref-list"></div>
+        <button id="ref-toggle" class="ref-toggle" type="button">Voir plus</button>
+      </div>
+      <div id="rec-list" class="rec-list"></div>
       <div class="rec-actions">
         <button id="refresh-rec" class="ghost" type="button">Actualiser</button>
       </div>
+    </section>
+
+    <section id="review-panel" class="panel review-panel reveal delay-1 is-hidden">
+      <h2 class="headline">Ecrire un avis</h2>
+      <div class="rec-badge">Partage ton opinion</div>
+      <form id="review-form" class="review-form">
+        <label for="review-title">
+          <span>Film</span>
+          <input id="review-title" type="text" list="movie-suggestions" placeholder="Titre du film" />
+          <datalist id="movie-suggestions"></datalist>
+        </label>
+        <label for="review-score">
+          <span>Note: <strong id="review-score-value">5</strong>/10</span>
+          <input id="review-score" type="range" min="1" max="10" step="0.1" value="5" />
+        </label>
+        <label class="review-check">
+          <input id="review-spoiler" type="checkbox" />
+          <span>Contient un spoiler</span>
+        </label>
+        <label for="review-text">
+          <span>Avis</span>
+          <textarea id="review-text" rows="5" placeholder="Ecris ta review..."></textarea>
+        </label>
+        <div id="review-error" class="form-error" role="alert"></div>
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
   </div>
 

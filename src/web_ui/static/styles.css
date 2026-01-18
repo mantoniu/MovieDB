@@ -191,6 +191,22 @@ input[type="text"] {
   color: var(--ink);
 }
 
+textarea,
+select {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  font-size: 16px;
+  background: white;
+  color: var(--ink);
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
 button {
   appearance: none;
   border: none;
@@ -224,6 +240,23 @@ button:hover {
   margin-bottom: 24px;
 }
 
+.menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.menu select {
+  min-width: 190px;
+}
+
 .topbar .user {
   color: var(--muted);
   font-size: 15px;
@@ -235,6 +268,14 @@ button:hover {
   gap: 22px;
   height: calc(100% - 80px);
   min-height: 0;
+}
+
+.layout.single {
+  grid-template-columns: 1fr;
+}
+
+.is-hidden {
+  display: none;
 }
 
 .chat-log {
@@ -385,9 +426,13 @@ button:hover {
 .ref-block.expanded .ref-toggle {
   position: absolute;
   right: 12px;
-  top: 226px;
+  bottom: 12px;
   z-index: 6;
   background: rgba(252, 248, 242, 0.98);
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ref-pill {
@@ -553,6 +598,11 @@ button:hover {
   margin: 0 0 8px;
 }
 
+.review-panel .headline {
+  font-size: clamp(28px, 3.2vw, 38px);
+  margin: 0 0 8px;
+}
+
 .rec-panel .rec-badge {
   margin-top: 2px;
   margin-bottom: 8px;
@@ -615,6 +665,73 @@ button:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.review-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 0 6px;
+}
+
+.review-panel {
+  overflow: hidden;
+}
+
+.review-panel .review-form {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.form-error {
+  display: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(176, 80, 60, 0.4);
+  background: rgba(176, 80, 60, 0.08);
+  color: #7a2d23;
+  font-size: 13px;
+}
+
+.form-error.success {
+  border-color: rgba(59, 111, 109, 0.5);
+  background: rgba(59, 111, 109, 0.12);
+  color: #1f3b3b;
+}
+
+.review-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.review-form .review-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 251, 246, 0.8);
+}
+
+.review-check input {
+  width: 16px;
+  height: 16px;
+}
+
+.review-check span {
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+  font-size: 14px;
+  display: inline-block;
+}
+
+input[type="range"] {
+  width: 100%;
 }
 
 .reveal {

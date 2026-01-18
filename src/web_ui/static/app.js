@@ -8,9 +8,24 @@ const refList = document.getElementById("ref-list");
 const refTitle = document.getElementById("ref-title");
 const refToggle = document.getElementById("ref-toggle");
 const refBlock = document.getElementById("ref-block");
+const panelSelect = document.getElementById("panel-select");
+const layout = document.querySelector(".layout");
+const recPanel = document.querySelector(".rec-panel");
+const reviewPanel = document.getElementById("review-panel");
+const reviewForm = document.getElementById("review-form");
+const reviewScore = document.getElementById("review-score");
+const reviewScoreValue = document.getElementById("review-score-value");
+const reviewTitle = document.getElementById("review-title");
+const movieSuggestions = document.getElementById("movie-suggestions");
+const reviewText = document.getElementById("review-text");
+const reviewSpoiler = document.getElementById("review-spoiler");
+const reviewError = document.getElementById("review-error");
 
 const MAX_REF_VISIBLE = 6;
 let refCollapsed = true;
+let recLoaded = false;
+let movieTitles = [];
+let movieTitleToId = new Map();
 const refreshBtn = document.getElementById("refresh-rec");
 const modal = document.getElementById("synopsis-modal");
 const modalTitle = document.getElementById("modal-title");
@@ -264,4 +279,192 @@ async function loadRecommendations() {
 }
 
 refreshBtn.addEventListener("click", loadRecommendations);
-loadRecommendations();
+
+function setRightPanel(value) {
+  const selected = value || "recommendations";
+  const showRec = selected === "recommendations";
+  const showReview = selected === "review";
+  recPanel.classList.toggle("is-hidden", !showRec);
+  reviewPanel.classList.toggle("is-hidden", !showReview);
+  layout.classList.toggle("single", false);
+  clearReviewForm();
+  if (showRec) {
+    recLoaded = true;
+    loadRecommendations();
+  }
+}
+
+panelSelect.addEventListener("change", (event) => {
+  setRightPanel(event.target.value);
+});
+
+function updateMovieSuggestions(query) {
+  if (!movieSuggestions) {
+    return;
+  }
+  movieSuggestions.innerHTML = "";
+  const value = query.trim().toLowerCase();
+  if (!value) {
+    return;
+  }
+  const matches = movieTitles
+    .filter((title) => title.toLowerCase().includes(value))
+    .slice(0, 12);
+  matches.forEach((title) => {
+    const option = document.createElement("option");
+    option.value = title;
+    movieSuggestions.appendChild(option);
+  });
+}
+
+async function loadMovieTitles() {
+  if (!reviewTitle) {
+    return;
+  }
+  try {
+    const response = await fetch("/api/movies");
+    const data = await response.json();
+    if (!response.ok) {
+      return;
+    }
+    if (data && typeof data.movies === "object" && data.movies !== null) {
+      movieTitles = Object.values(data.movies);
+      movieTitleToId = new Map(
+        Object.entries(data.movies).map(([id, title]) => [String(title).toLowerCase(), id])
+      );
+    } else if (Array.isArray(data.titles)) {
+      movieTitles = data.titles;
+      movieTitleToId = new Map(
+        movieTitles.map((title) => [String(title).toLowerCase(), title])
+      );
+    } else {
+      movieTitles = [];
+      movieTitleToId = new Map();
+    }
+  } catch (error) {
+    movieTitles = [];
+    movieTitleToId = new Map();
+  }
+}
+
+if (reviewTitle) {
+  reviewTitle.addEventListener("input", (event) => {
+    updateMovieSuggestions(event.target.value);
+  });
+}
+
+function setReviewError(message) {
+  if (!reviewError) {
+    return;
+  }
+  reviewError.textContent = message || "";
+  reviewError.style.display = message ? "block" : "none";
+  reviewError.classList.remove("success");
+}
+
+function setReviewSuccess(message) {
+  if (!reviewError) {
+    return;
+  }
+  reviewError.textContent = message || "";
+  reviewError.style.display = message ? "block" : "none";
+  if (message) {
+    reviewError.classList.add("success");
+  } else {
+    reviewError.classList.remove("success");
+  }
+}
+
+function clearReviewInputs() {
+  if (reviewTitle) {
+    reviewTitle.value = "";
+  }
+  if (reviewText) {
+    reviewText.value = "";
+  }
+  if (reviewSpoiler) {
+    reviewSpoiler.checked = false;
+  }
+  if (reviewScore) {
+    reviewScore.value = "5";
+  }
+  if (reviewScoreValue) {
+    reviewScoreValue.textContent = Number(reviewScore.value).toFixed(1);
+  }
+  if (movieSuggestions) {
+    movieSuggestions.innerHTML = "";
+  }
+}
+
+function clearReviewForm() {
+  clearReviewInputs();
+  setReviewError("");
+  setReviewSuccess("");
+}
+
+async function submitReview() {
+  if (!reviewTitle || !reviewScore) {
+    return;
+  }
+  const title = reviewTitle.value.trim();
+  const rating = reviewScore.value;
+  const spoiler = reviewSpoiler ? reviewSpoiler.checked : false;
+  const text = reviewText ? reviewText.value.trim() : "";
+
+  if (!title) {
+    setReviewError("Le titre du film est obligatoire.");
+    return;
+  }
+  if (!rating) {
+    setReviewError("La note est obligatoire.");
+    return;
+  }
+  const movieId = movieTitleToId.get(title.toLowerCase());
+  if (!movieId) {
+    setReviewError(`Le film ${title} n'existe pas dans la base de donnees.`);
+    return;
+  }
+
+  setReviewError("");
+  try {
+    const response = await fetch("/api/reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        movie_id: movieId,
+        title,
+        rating: Number(rating),
+        spoiler,
+        text,
+        username,
+      }),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      setReviewError(data.error || "Erreur lors de l'envoi.");
+      return;
+    }
+    setReviewSuccess("Avis envoye avec succes.");
+    clearReviewInputs();
+  } catch (error) {
+    setReviewError("Erreur lors de l'envoi.");
+  }
+}
+
+if (reviewForm) {
+  reviewForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    submitReview();
+  });
+}
+
+if (reviewScore && reviewScoreValue) {
+  const updateScore = () => {
+    reviewScoreValue.textContent = Number(reviewScore.value).toFixed(1);
+  };
+  reviewScore.addEventListener("input", updateScore);
+  updateScore();
+}
+
+loadMovieTitles();
+setRightPanel(panelSelect.value);

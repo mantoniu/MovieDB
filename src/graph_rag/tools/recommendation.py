@@ -23,7 +23,7 @@ def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List
     PREFIX : <http://www.moviedb.fr/cinema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?movieTitle ?rating ?synopsis
+    SELECT DISTINCT ?movieTitle ?rating ?synopsis
     WHERE {{
         {user_uri} a :User .
         ?review a :Review ;
@@ -40,7 +40,7 @@ def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List
     }}
     """
     
-    liked_movies = []
+    liked_movies = {}
     watched_titles = set()
 
     try:
@@ -59,14 +59,14 @@ def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List
 
             watched_titles.add(movie_title.lower())
 
-            if rating >= min_rating:
-                liked_movies.append((movie_title, synopsis, rating))
+            if rating >= min_rating and movie_title not in liked_movies:
+                liked_movies[movie_title] = (movie_title, synopsis, rating)
 
     except Exception as e:
         print(f"Error fetching liked movies for '{username}': {e}")
         return [], set()
     
-    return liked_movies, watched_titles
+    return list(liked_movies.values()), watched_titles
 
 def recommend_movies(
     username: str,
@@ -90,13 +90,15 @@ def recommend_movies(
         exclude_watched (bool): Whether to exclude movies already watched by the user.
 
     Returns:
-        str: Formatted string with movie recommendations.
+        Tuple[List[dict], List[Tuple[str, float]]]:
+            - A list of recommendation dictionaries.
+            - A list of tuples of valid movies (title, rating).
     """
     liked_movies, watched_titles = get_user_movie_history(username, min_rating)
     
     if not liked_movies:
-        return f"No movie found for user '{username}' with a rating > {min_rating}."
-    
+        return [], []
+
     embeddings = []
     valid_movies = []
     
@@ -111,7 +113,7 @@ def recommend_movies(
                 continue
     
     if not embeddings:
-        return f"Impossible to create embeddings for movies liked by '{username}'."
+        return [], []
     
     avg_embedding = np.mean(embeddings, axis=0).astype('float32')
     
@@ -121,19 +123,6 @@ def recommend_movies(
     
     search_k = k * 3 if exclude_watched else k
     scores, ids = index.search(avg_embedding.reshape(1, -1), search_k)
-    
-    # Format results
-    results = []
-    results.append(f"🎬 Recommendations for {username} (based on {len(valid_movies)} liked movies)")
-    results.append(f"📊 Minimum rating: {min_rating}/10")
-    results.append(f"\nReference movies ({len(valid_movies)}):")
-    for movie_title, rating in valid_movies[:5]:
-        results.append(f"  • {movie_title} ({rating}/10)")
-    if len(valid_movies) > 5:
-        results.append(f"  ... and {len(valid_movies) - 5} more liked movies.")
-    
-    results.append(f"\n{'='*60}")
-    results.append(f"🎯 Top {k} recommendations:\n")
     
     recommendations = []
     for i, s in zip(ids[0], scores[0]):
@@ -165,6 +154,37 @@ def recommend_movies(
         if len(recommendations) >= k:
             break
     
+    return recommendations, valid_movies
+
+def format_recommendations(recommendations: List[dict], username: str, valid_movies: List[tuple], min_rating: float, k: int) -> str:
+    """
+    Format a list of recommendation dictionaries into a readable string.
+
+    Args:
+        recommendations (List[dict]): List of recommendation dictionaries.
+        username (str): The username for whom recommendations are made.
+        valid_movies (List[tuple]): List of tuples of valid movies (title, rating).
+        min_rating (float): Minimum rating threshold.
+        k (int): Number of recommendations.
+
+    Returns:
+        str: Formatted string of recommendations.
+    """
+    if len(recommendations) == 0:
+        return f"No recommendations could be made for user '{username}'."
+
+    results = []
+    results.append(f"🎬 Recommendations for {username} (based on {len(valid_movies)} liked movies)")
+    results.append(f"📊 Minimum rating: {min_rating}/10")
+    results.append(f"\nReference movies ({len(valid_movies)}):")
+    for movie_title, rating in valid_movies[:5]:
+        results.append(f"  • {movie_title} ({rating}/10)")
+    if len(valid_movies) > 5:
+        results.append(f"  ... and {len(valid_movies) - 5} more liked movies.")
+    
+    results.append(f"\n{'='*60}")
+    results.append(f"🎯 Top {k} recommendations:\n")
+
     for rank, rec in enumerate(recommendations, 1):
         results.append(f"{rank}. {rec['title']} ({rec['year']}) — score={rec['score']:.3f}")
         results.append(f"   ID: {rec['tconst']} | Genres: {rec['genres']}")
@@ -172,10 +192,6 @@ def recommend_movies(
             synopsis_preview = rec['synopsis'][:200].replace('\n', ' ')
             results.append(f"   📝 {synopsis_preview}{'...' if len(rec['synopsis']) > 200 else ''}")
         results.append("")
-    
-    if not recommendations:
-        results.append("No recommendations found.")
-    
     return "\n".join(results)
 
 @tool
@@ -199,4 +215,6 @@ def user_recommendation_tool(username: str, min_rating: float = 7.0, k: int = 10
         - user_recommendation_tool("OriginalMovieBuff21", 8.0, 5)
         - user_recommendation_tool("sentra14", 7.0)
     """
-    return recommend_movies(username, min_rating, k, exclude_watched=True)
+
+    recommendations, valid_movies = recommend_movies(username, min_rating, k, exclude_watched=True)
+    return format_recommendations(recommendations, username, valid_movies, min_rating=min_rating, k=k)

@@ -14,6 +14,7 @@ let refCollapsed = true;
 const refreshBtn = document.getElementById("refresh-rec");
 const modal = document.getElementById("synopsis-modal");
 const modalTitle = document.getElementById("modal-title");
+const modalMeta = document.getElementById("modal-meta");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
 
@@ -57,9 +58,23 @@ function appendMessage(role, text) {
   chatLog.scrollTop = chatLog.scrollHeight;
 }
 
-function openModal(title, text) {
-  modalTitle.textContent = title;
-  modalBody.textContent = text;
+function openModal(rec) {
+  modalTitle.textContent = rec.title || "Synopsis";
+  const parts = [];
+  if (rec.year && rec.year !== "N/A") {
+    parts.push(rec.year);
+  }
+  if (rec.genres && rec.genres !== "N/A") {
+    parts.push(rec.genres);
+  }
+  if (rec.tconst && rec.tconst !== "N/A") {
+    parts.push(rec.tconst);
+  }
+  if (typeof rec.score === "number") {
+    parts.push(`Score ${rec.score.toFixed(3)}`);
+  }
+  modalMeta.textContent = parts.join(" · ");
+  modalBody.textContent = rec.synopsis || "";
   modal.classList.remove("hidden");
 }
 
@@ -147,7 +162,7 @@ function renderRecommendations(list) {
         moreBtn.className = "rec-more";
         moreBtn.textContent = "Voir plus";
         moreBtn.addEventListener("click", () => {
-          openModal(rec.title, rec.synopsis);
+          openModal(rec);
         });
         card.appendChild(moreBtn);
       }

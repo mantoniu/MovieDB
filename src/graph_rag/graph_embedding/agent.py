@@ -1,19 +1,21 @@
 from datetime import datetime
 import os
+
 from langchain.agents import create_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
-from .config import CHAT_MODEL
-from .tools import ALL_TOOLS
-from .prompts.agent_prompt import SYSTEM_PROMPT
+
+from ..config import CHAT_MODEL
+from ..tools.hybrid_recommendation import hybrid_movie_recommendation_tool
+from ..prompts.hybrid_graph_prompt import SYSTEM_PROMPT
 
 agent = create_agent(
     model=ChatGoogleGenerativeAI(
         model=CHAT_MODEL,
         google_api_key=os.getenv("GEMINI_API_KEY"),
-        temperature=0
+        temperature=0,
     ),
-    tools=ALL_TOOLS,
-    system_prompt=SYSTEM_PROMPT
+    tools=[hybrid_movie_recommendation_tool],
+    system_prompt=SYSTEM_PROMPT,
 )
 
 message_history = []
@@ -40,7 +42,7 @@ def chat(user_query: str) -> dict:
                 "query": user_query,
                 "response": ERROR_FALLBACK,
                 "timestamp": datetime.now().isoformat(),
-                "signature": "MovieDB Graph-RAG Agent v1.0",
+                "signature": "MovieDB Hybrid Graph Agent v1.0",
             }
 
         last_msg = message_history[-1] if message_history else None
@@ -65,18 +67,18 @@ def chat(user_query: str) -> dict:
             "query": user_query,
             "response": ERROR_FALLBACK,
             "timestamp": datetime.now().isoformat(),
-            "signature": "MovieDB Graph-RAG Agent v1.0",
+            "signature": "MovieDB Hybrid Graph Agent v1.0",
         }
 
     return {
         "query": user_query,
         "response": final_message,
         "timestamp": datetime.now().isoformat(),
-        "signature": "MovieDB Graph-RAG Agent v1.0"
+        "signature": "MovieDB Hybrid Graph Agent v1.0",
     }
 
 if __name__ == "__main__":
-    print("🎬 MovieDB Graph-RAG Agent")
+    print("MovieDB Hybrid Graph Agent")
     print("Commands: 'quit' to exit, 'reset' to clear memory\n")
 
     while True:

@@ -1,6 +1,6 @@
 from langchain.tools import tool
 
-from .common import index, meta, embed_one
+from .common import index, meta, embed_one, log_tool_use
 
 def similarity_search(query: str, k: int = 5) -> str:
     """
@@ -46,4 +46,5 @@ def similarity_search_tool(query: str) -> str:
     Returns:
         str: Formatted string of top-k similar movies.
     """
+    log_tool_use("similarity_search_tool", query=query, k=5)
     return similarity_search(query, k=5)

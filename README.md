@@ -24,6 +24,8 @@ Projet de Web Sémantique visant à construire et exploiter un **graphe de conna
 - [Graph RAG](#graph-rag)
 - [Interface](#interface)
 - [Structure](#structure)
+- [Installation](#installation)
+- [Lancement de la UI](#lancement-de-la-ui)
 ---
 
 ## Aperçu
@@ -192,7 +194,7 @@ L’interface propose :
 pip install -r requirements.txt
 ```
 
-## Lancer l'UI
+## Lancement de la UI
 
 La variable d'environnement GEMINI_API_KEY est necessaire pour authentifier l'acces a l'API Gemini utilisee par l'agent.
 

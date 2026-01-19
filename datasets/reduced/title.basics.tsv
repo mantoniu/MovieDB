@@ -1,0 +1,890 @@
+tconst	titleType	primaryTitle	originalTitle	isAdult	startYear	endYear	runtimeMinutes	genres
+tt0004707	movie	Tillie's Punctured Romance	Tillie's Punctured Romance	0	1914		82	Comedy
+tt0004972	movie	The Birth of a Nation	The Birth of a Nation	0	1915		195	Drama,War
+tt0006864	movie	Intolerance	Intolerance: Love's Struggle Throughout the Ages	0	1916		163	Drama,History
+tt0006997	movie	The Warrior	Maciste alpino	0	1916		95	Action,Drama,War
+tt0019813	movie	The Desert Song	The Desert Song	0	1929		123	Action,Musical,Romance
+tt0021786	movie	Daybreak	Daybreak	0	1931		85	Drama
+tt0022117	movie	The Man in Possession	The Man in Possession	0	1931		84	Comedy,Romance
+tt0022675	movie	The Big Broadcast	The Big Broadcast	0	1932		88	Comedy,Musical,Romance
+tt0022873	movie	Faithless	Faithless	0	1932		77	Drama
+tt0023158	movie	Love Me Tonight	Love Me Tonight	0	1932		104	Comedy,Musical,Romance
+tt0023245	movie	The Mummy	The Mummy	0	1932		73	Fantasy,Horror
+tt0023293	movie	The Old Dark House	The Old Dark House	0	1932		72	Adventure,Comedy,Drama
+tt0024554	movie	A Shriek in the Night	A Shriek in the Night	0	1933		66	Crime,Mystery,Romance
+tt0024727	movie	The Vampire Bat	The Vampire Bat	0	1933		65	Drama,Horror,Mystery
+tt0024906	movie	Born to Be Bad	Born to Be Bad	0	1934		62	Drama,Romance
+tt0025301	movie	Imitation of Life	Imitation of Life	0	1934		111	Comedy,Drama,Romance
+tt0025333	movie	Journal of a Crime	Journal of a Crime	0	1934		65	Drama,Film-Noir
+tt0025499	movie	Midnight	Midnight	0	1934		76	Crime,Drama,Film-Noir
+tt0025586	movie	Of Human Bondage	Of Human Bondage	0	1934		83	Drama,Film-Noir,Romance
+tt0025907	movie	Treasure Island	Treasure Island	0	1934		110	Adventure,Drama,Family
+tt0027286	movie	The Amazing Adventure	The Amazing Quest of Ernest Bliss	0	1936		61	Comedy,Drama,Romance
+tt0028092	movie	Pennies from Heaven	Pennies from Heaven	0	1936		81	Comedy,Drama,Music
+tt0028174	movie	Revolt of the Zombies	Revolt of the Zombies	0	1936		65	Adventure,Horror
+tt0028249	movie	Show Boat	Show Boat	0	1936		113	Comedy,Drama,Musical
+tt0028367	movie	Three Godfathers	Three Godfathers	0	1936		81	Drama,Western
+tt0028806	movie	Double or Nothing	Double or Nothing	0	1937		90	Comedy,Music,Romance
+tt0029761	movie	When You're in Love	When You're in Love	0	1937		110	Comedy,Musical,Romance
+tt0031477	movie	In Name Only	In Name Only	0	1939		94	Drama,Romance
+tt0031885	movie	The Rules of the Game	La règle du jeu	0	1939		110	Comedy,Drama
+tt0032138	movie	The Wizard of Oz	The Wizard of Oz	0	1939		102	Adventure,Family,Fantasy
+tt0032145	movie	Wuthering Heights	Wuthering Heights	0	1939		104	Drama,Romance
+tt0033286	movie	Young Bill Hickok	Young Bill Hickok	0	1940		59	Drama,Music,Western
+tt0033723	movie	Hold That Ghost	Hold That Ghost	0	1941		86	Comedy,Crime,Horror
+tt0034398	movie	The Wolf Man	The Wolf Man	0	1941		70	Horror,Mystery,Romance
+tt0034465	movie	Arabian Nights	Arabian Nights	0	1942		86	Action,Adventure,Comedy
+tt0034707	movie	Escape from Crime	Escape from Crime	0	1942		51	Crime,Drama
+tt0034742	movie	Flying Tigers	Flying Tigers	0	1942		102	Action,Drama,Romance
+tt0036022	movie	The Human Comedy	The Human Comedy	0	1943		117	Comedy,Drama,Family
+tt0036692	movie	Can't Help Singing	Can't Help Singing	0	1944		90	Comedy,Musical,Romance
+tt0036706	movie	Charlie Chan in the Secret Service	Charlie Chan in the Secret Service	0	1944		63	Mystery
+tt0036730	movie	Crime by Night	Crime by Night	0	1944		72	Comedy,Drama,Mystery
+tt0037059	movie	Meet Me in St. Louis	Meet Me in St. Louis	0	1944		113	Comedy,Drama,Family
+tt0037280	movie	Since You Went Away	Since You Went Away	0	1944		177	Drama,Romance,War
+tt0037638	movie	Detour	Detour	0	1945		66	Crime,Drama,Film-Noir
+tt0037651	movie	The Dolly Sisters	The Dolly Sisters	0	1945		114	Biography,Drama,Musical
+tt0037767	movie	Having Wonderful Crime	Having Wonderful Crime	0	1945		70	Mystery
+tt0038026	movie	Rhapsody in Blue	Rhapsody in Blue	0	1945		135	Biography,Drama,Music
+tt0038071	movie	Sensation Hunters	Sensation Hunters	0	1945		62	Action,Crime,Drama
+tt0038213	movie	The Valley of Decision	The Valley of Decision	0	1945		119	Drama,Romance
+tt0038235	movie	A Walk in the Sun	A Walk in the Sun	0	1945		117	Drama,War
+tt0038390	movie	Caesar and Cleopatra	Caesar and Cleopatra	0	1945		123	Biography,Comedy,Drama
+tt0038975	movie	The Spiral Staircase	The Spiral Staircase	0	1946		83	Drama,Horror,Mystery
+tt0039192	movie	Black Narcissus	Black Narcissus	0	1947		101	Drama
+tt0039317	movie	The Devil Thumbs a Ride	The Devil Thumbs a Ride	0	1947		62	Crime,Drama,Film-Noir
+tt0039634	movie	Mother Wore Tights	Mother Wore Tights	0	1947		107	Drama,Musical,Romance
+tt0039668	movie	Nosotros los pobres	Nosotros los pobres	0	1948		128	Comedy,Crime,Drama
+tt0039677	movie	Odd Man Out	Odd Man Out	0	1947		116	Crime,Drama,Film-Noir
+tt0040064	movie	3 Godfathers	3 Godfathers	0	1948		106	Drama,Western
+tt0040270	movie	The Dark Past	The Dark Past	0	1948		73	Crime,Film-Noir,Thriller
+tt0040806	movie	The Snake Pit	The Snake Pit	0	1948		108	Drama,Mystery
+tt0040919	movie	Unfaithfully Yours	Unfaithfully Yours	0	1948		105	Comedy,Music,Romance
+tt0041090	movie	Adam's Rib	Adam's Rib	0	1949		101	Comedy,Romance
+tt0041162	movie	Batman and Robin	Batman and Robin	0	1949		263	Action,Adventure,Family
+tt0041452	movie	The Heiress	The Heiress	0	1949		115	Drama,Romance
+tt0041786	movie	The Reckless Moment	The Reckless Moment	0	1949		82	Crime,Drama,Film-Noir
+tt0041967	movie	Tokyo Joe	Tokyo Joe	0	1949		88	Crime,Drama,Film-Noir
+tt0042539	movie	Halls of Montezuma	Halls of Montezuma	0	1951		113	Action,Adventure,Drama
+tt0042644	movie	Kim	Kim	0	1950		113	Adventure,Drama,Family
+tt0044083	movie	The Strip	The Strip	0	1951		85	Crime,Drama,Film-Noir
+tt0044121	movie	The Thing from Another World	The Thing from Another World	0	1951		87	Horror,Sci-Fi
+tt0044941	movie	My Son John	My Son John	0	1952		122	Drama
+tt0045152	movie	Singin' in the Rain	Singin' in the Rain	0	1952		103	Comedy,Musical,Romance
+tt0045439	tvSeries	Space Command	Space Command	0	1953	1954	30	Sci-Fi
+tt0045877	movie	The Hitch-Hiker	The Hitch-Hiker	0	1953		71	Crime,Drama,Film-Noir
+tt0045920	movie	It Came from Outer Space	It Came from Outer Space	0	1953		81	Horror,Sci-Fi
+tt0046303	movie	Shane	Shane	0	1953		118	Drama,Western
+tt0046658	tvSeries	Victory at Sea	Victory at Sea	0	1952	1953	30	Action,Documentary,War
+tt0046889	movie	The Dam Busters	The Dam Busters	0	1955		105	Drama,History,War
+tt0046906	movie	Destry	Destry	0	1954		95	Drama,Western
+tt0046969	movie	The Fast and the Furious	The Fast and the Furious	0	1954		73	Crime,Drama,Film-Noir
+tt0047086	movie	The High and the Mighty	The High and the Mighty	0	1954		147	Action,Adventure,Drama
+tt0047136	movie	Johnny Guitar	Johnny Guitar	0	1954		110	Drama,Western
+tt0047203	movie	Magnificent Obsession	Magnificent Obsession	0	1954		108	Drama,Romance
+tt0047574	movie	There's No Business Like Show Business	There's No Business Like Show Business	0	1954		117	Comedy,Drama,Musical
+tt0048261	movie	Kiss Me Deadly	Kiss Me Deadly	0	1955		106	Crime,Drama,Film-Noir
+tt0048281	movie	The Ladykillers	The Ladykillers	0	1955		91	Comedy,Crime
+tt0048336	movie	A Man Alone	A Man Alone	0	1955		96	Western
+tt0048652	movie	The Spoilers	The Spoilers	0	1955		84	Adventure,Drama,Western
+tt0048682	movie	Swamp Women	Swamp Women	0	1956		67	Adventure,Crime,Drama
+tt0048847	tvSeries	Bold Journey	Bold Journey	0	1956	1959	30	Adventure
+tt0049268	movie	Glory	Glory	0	1956		100	Drama,Romance
+tt0049414	movie	A Kiss Before Dying	A Kiss Before Dying	0	1956		94	Crime,Drama,Film-Noir
+tt0049487	movie	The Maverick Queen	The Maverick Queen	0	1956		92	Drama,Western
+tt0049513	movie	Moby Dick	Moby Dick	0	1956		116	Adventure,Drama
+tt0049516	movie	The Mole People	The Mole People	0	1956		77	Adventure,Fantasy,Horror
+tt0050105	movie	An Affair to Remember	An Affair to Remember	0	1957		115	Drama,Romance
+tt0050280	movie	The Curse of Frankenstein	The Curse of Frankenstein	0	1957		83	Horror,Sci-Fi,Thriller
+tt0050419	movie	Funny Face	Funny Face	0	1957		103	Comedy,Musical,Romance
+tt0050556	movie	Jailhouse Rock	Jailhouse Rock	0	1957		96	Drama,Music,Musical
+tt0051757	movie	I Married a Woman	I Married a Woman	0	1958		85	Comedy,Drama
+tt0051786	movie	It! The Terror from Beyond Space	It! The Terror from Beyond Space	0	1958		69	Horror,Sci-Fi,Thriller
+tt0051845	movie	The Last Hurrah	The Last Hurrah	0	1958		121	Drama
+tt0052414	movie	Night Drum	Yoru no tsuzumi	0	1958		95	Drama
+tt0052969	movie	The Killer Shrews	The Killer Shrews	0	1959		69	Horror,Sci-Fi
+tt0053084	movie	The Mouse That Roared	The Mouse That Roared	0	1959		83	Comedy
+tt0053125	movie	North by Northwest	North by Northwest	0	1959		136	Adventure,Drama,Mystery
+tt0053604	movie	The Apartment	The Apartment	0	1960		125	Comedy,Drama,Romance
+tt0053772	movie	The Devil's Eye	Djävulens öga	0	1960		87	Comedy,Drama,Fantasy
+tt0053957	movie	It Started in Naples	It Started in Naples	0	1960		100	Comedy,Drama
+tt0054033	movie	The Little Shop of Horrors	The Little Shop of Horrors	0	1960		73	Comedy,Horror
+tt0054574	tvSeries	'Way Out	'Way Out	0	1961	1961	25	Drama,Fantasy,Horror
+tt0055198	movie	Mothra	Mosura	0	1961		101	Adventure,Fantasy,Sci-Fi
+tt0057449	movie	The Raven	The Raven	0	1963		86	Comedy,Drama,Fantasy
+tt0057507	movie	The Skydivers	The Skydivers	0	1963		75	Drama,Sport
+tt0057765	tvSeries	The Man from U.N.C.L.E.	The Man from U.N.C.L.E.	0	1964	1968	50	Action,Adventure,Crime
+tt0057774	tvSeries	My Living Doll	My Living Doll	0	1964	1965	30	Comedy,Sci-Fi
+tt0058379	movie	Mothra vs. Godzilla	Mosura tai Gojira	0	1964		89	Adventure,Fantasy,Sci-Fi
+tt0058385	movie	My Fair Lady	My Fair Lady	0	1964		170	Drama,Family,Musical
+tt0058700	movie	The Last Man on Earth	The Last Man on Earth	0	1964		86	Drama,Horror,Sci-Fi
+tt0058898	movie	Alphaville	Alphaville: Une étrange aventure de Lemmy Caution	0	1965		99	Comedy,Drama,Mystery
+tt0059113	movie	Doctor Zhivago	Doctor Zhivago	0	1965		197	Drama,Romance,War
+tt0059221	movie	The Ghost and Mr. Chicken	The Ghost and Mr. Chicken	0	1966		90	Comedy,Family,Mystery
+tt0059646	movie	Repulsion	Repulsion	0	1965		105	Drama,Horror,Thriller
+tt0059742	movie	The Sound of Music	The Sound of Music	0	1965		174	Biography,Drama,Family
+tt0059775	movie	Eric Soya's '17'	Sytten	0	1965		87	Comedy
+tt0059982	tvSeries	Family Affair	Family Affair	0	1966	1971	30	Comedy,Family
+tt0060196	movie	The Good, the Bad and the Ugly	Il buono, il brutto, il cattivo	0	1966		178	Adventure,Drama,Western
+tt0060277	movie	The Sword of Doom	Dai-bosatsu tôge	0	1966		120	Action,Drama,Thriller
+tt0060802	movie	Closely Watched Trains	Ostre sledované vlaky	0	1966		92	Comedy,Drama,Romance
+tt0060827	movie	Persona	Persona	0	1966		83	Drama,Thriller
+tt0060865	movie	Psycho-Circus	Circus of Fear	0	1966		91	Crime,Drama,Mystery
+tt0061080	movie	Texas Across the River	Texas Across the River	0	1966		101	Comedy,Western
+tt0061489	movie	Clambake	Clambake	0	1967		99	Comedy,Musical
+tt0061882	movie	Branded to Kill	Koroshi no rakuin	0	1967		91	Action,Crime,Drama
+tt0062138	movie	Point Blank	Point Blank	0	1967		92	Crime,Drama,Thriller
+tt0062282	movie	Snow Treasure	Snow Treasure	0	1968		95	Action,Adventure,Drama
+tt0062364	movie	Three Bites of the Apple	Three Bites of the Apple	0	1967		105	Comedy
+tt0062574	tvSeries	Journey to the Unknown	Journey to the Unknown	0	1968	1969	60	Drama,Horror,Mystery
+tt0062622	movie	2001: A Space Odyssey	2001: A Space Odyssey	0	1968		149	Adventure,Sci-Fi
+tt0062943	movie	The Strange World of Coffin Joe	O Estranho Mundo de Zé do Caixão	0	1968		80	Horror
+tt0063049	movie	Head	Head	0	1968		86	Comedy,Fantasy,Musical
+tt0063060	movie	Hellfighters	Hellfighters	0	1968		121	Action,Adventure,Drama
+tt0063306	movie	The Mini-Skirt Mob	The Mini-Skirt Mob	0	1968		82	Action,Drama
+tt0063611	movie	Shame	Skammen	0	1968		103	Drama
+tt0063661	movie	Sweet November	Sweet November	0	1968		114	Comedy,Drama,Romance
+tt0063759	movie	Hour of the Wolf	Vargtimmen	0	1968		88	Drama,Horror,Mystery
+tt0064072	movie	Battle of Britain	Battle of Britain	0	1969		132	Action,Drama,History
+tt0065051	movie	Support Your Local Sheriff!	Support Your Local Sheriff!	0	1969		92	Comedy,Western
+tt0065184	movie	Viva Max	Viva Max	0	1969		93	Comedy
+tt0065436	movie	Even Dwarfs Started Small	Auch Zwerge haben klein angefangen	0	1970		96	Comedy,Drama
+tt0065636	movie	Diary of a Mad Housewife	Diary of a Mad Housewife	0	1970		95	Comedy,Drama
+tt0065782	movie	Sunflower	I girasoli	0	1970		107	Drama,War
+tt0066454	movie	Three Sisters	Three Sisters	0	1970		165	Drama,Romance
+tt0066487	movie	Triangle	Triangle	0	1970		87	Drama
+tt0066848	movie	Blood and Lace	Blood and Lace	0	1971		87	Drama,Horror,Thriller
+tt0067148	movie	Godzilla vs. Hedorah	Gojira tai Hedora	0	1971		85	Animation,Drama,Family
+tt0067445	movie	Death in Venice	Morte a Venezia	0	1971		130	Drama,Romance
+tt0067992	movie	Willy Wonka & the Chocolate Factory	Willy Wonka & the Chocolate Factory	0	1971		100	Adventure,Comedy,Family
+tt0068327	movie	Cabaret	Cabaret	0	1972		124	Drama,Music,Musical
+tt0068559	movie	The Erotic Rites of Frankenstein	La maldición de Frankenstein	0	1973		94	Horror,Sci-Fi
+tt0068621	movie	Garden of the Dead	Garden of the Dead	0	1972		59	Horror,Sci-Fi
+tt0068629	movie	Street Mobster	Gendai yakuza: Hito-kiri yota	0	1972		88	Action,Crime
+tt0068646	movie	The Godfather	The Godfather	0	1972		175	Crime,Drama
+tt0068767	movie	Fist of Fury	Jing wu men	0	1972		107	Action,Drama,Romance
+tt0069103	movie	Pocket Money	Pocket Money	0	1972		102	Comedy,Drama,Western
+tt0069638	tvSeries	The Starlost	The Starlost	0	1973	1974	60	Sci-Fi
+tt0069697	movie	Watch Out, We're Mad	...altrimenti ci arrabbiamo!	0	1974		102	Action,Comedy
+tt0069824	movie	Brother Sun, Sister Moon	Fratello sole, sorella luna	0	1972		121	Biography,Drama,History
+tt0069979	movie	Mean Frank and Crazy Tony	Dio, sei proprio un padreterno!	0	1973		85	Comedy,Crime
+tt0069995	movie	Don't Look Now	Don't Look Now	0	1973		110	Drama,Horror,Mystery
+tt0070328	movie	Live and Let Die	Live and Let Die	0	1973		121	Action,Adventure,Thriller
+tt0070379	movie	Mean Streets	Mean Streets	0	1973		112	Crime,Drama,Thriller
+tt0070643	movie	Scarecrow	Scarecrow	0	1973		112	Drama
+tt0070735	movie	The Sting	The Sting	0	1973		129	Comedy,Crime,Drama
+tt0070991	tvSeries	Good Times	Good Times	0	1974	1979	30	Comedy
+tt0071487	movie	The Phantom of Liberty	Le fantôme de la liberté	0	1974		104	Comedy
+tt0071598	movie	Harry and Tonto	Harry and Tonto	0	1974		115	Adventure,Comedy,Drama
+tt0071675	movie	It's Alive	It's Alive	0	1974		91	Horror,Sci-Fi
+tt0071737	movie	Lancelot of the Lake	Lancelot du Lac	0	1974		85	Drama,Fantasy,Romance
+tt0071771	movie	The Longest Yard	The Longest Yard	0	1974		121	Comedy,Crime,Drama
+tt0071772	movie	The Lords of Flatbush	The Lords of Flatbush	0	1974		86	Comedy,Drama,Romance
+tt0071935	movie	The Odessa File	The ODESSA File	0	1974		130	Drama,Thriller
+tt0071960	movie	The Outfit	The Outfit	0	1973		103	Crime,Drama,Thriller
+tt0071994	movie	Phantom of the Paradise	Phantom of the Paradise	0	1974		91	Comedy,Drama,Fantasy
+tt0072034	movie	The Prisoner of Second Avenue	The Prisoner of Second Avenue	0	1975		98	Comedy
+tt0072148	movie	Seytan	Seytan	0	1974		101	Horror
+tt0072730	movie	A Boy and His Dog	A Boy and His Dog	0	1975		91	Comedy,Drama,Sci-Fi
+tt0072913	movie	Master of the Flying Guillotine	Du bi quan wang da po xue di zi	0	1976		81	Action,Drama,Fantasy
+tt0073341	movie	The Man Who Would Be King	The Man Who Would Be King	0	1975		129	Adventure,Drama,War
+tt0073458	movie	Nishant	Nishant	0	1975		140	Crime,Drama
+tt0073870	movie	The Family Vice	Il vizio di famiglia	0	1975		90	Comedy
+tt0073985	tvSeries	Donny and Marie	Donny and Marie	0	1975	1979	60	Music
+tt0074102	movie	In the Realm of the Senses	Ai no korîda	0	1976		109	Drama,Romance
+tt0074225	movie	The Blue Bird	The Blue Bird	0	1976		99	Adventure,Drama,Family
+tt0074285	movie	Carrie	Carrie	0	1976		98	Horror
+tt0074588	movie	The Great Scout & Cathouse Thursday	The Great Scout & Cathouse Thursday	0	1976		102	Comedy,Western
+tt0074812	movie	Logan's Run	Logan's Run	0	1976		119	Action,Adventure,Sci-Fi
+tt0074817	movie	Loose Ends	Loose Ends	0	1975		103	Drama
+tt0075015	tvMovie	One of My Wives Is Missing	One of My Wives Is Missing	0	1976		93	Mystery,Thriller
+tt0075029	movie	The Outlaw Josey Wales	The Outlaw Josey Wales	0	1976		135	Drama,Western
+tt0075213	movie	The Shootist	The Shootist	0	1976		100	Drama,Romance,Western
+tt0075314	movie	Taxi Driver	Taxi Driver	0	1976		114	Crime,Drama
+tt0075359	movie	Two-Minute Warning	Two-Minute Warning	0	1976		115	Action,Crime,Drama
+tt0075406	movie	Voyage of the Damned	Voyage of the Damned	0	1976		155	Drama,War
+tt0075985	movie	Emily	Emily	0	1976		87	Drama,Romance
+tt0075995	movie	Equus	Equus	0	1977		137	Drama,Mystery
+tt0076451	movie	New York, New York	New York, New York	0	1977		155	Drama,Music,Musical
+tt0076686	movie	The Serpent's Egg	The Serpent's Egg	0	1977		119	Drama,Mystery,Thriller
+tt0077016	tvSeries	Going Straight	Going Straight	0	1978	1978	30	Comedy
+tt0077404	movie	Days of Fury	Days of Fury	0	1980		91	Documentary
+tt0077651	movie	Halloween	Halloween	0	1978		91	Horror,Thriller
+tt0077713	movie	I Spit on Your Grave	Day of the Woman	0	1978		101	Horror,Thriller
+tt0077869	movie	The Lord of the Rings	The Lord of the Rings	0	1978		132	Adventure,Animation,Fantasy
+tt0078243	movie	The 36th Chamber of Shaolin	Shao Lin san shi liu fang	0	1978		116	Action,Adventure,Drama
+tt0078504	movie	The Wiz	The Wiz	0	1978		134	Adventure,Family,Fantasy
+tt0078723	movie	1941	1941	0	1979		118	Action,Comedy,War
+tt0079270	tvMovie	The Hard Way	The Hard Way	0	1980		89	Crime,Thriller
+tt0079522	movie	Manhattan	Manhattan	0	1979		96	Comedy,Drama,Romance
+tt0079550	movie	Meteor	Meteor	0	1979		108	Action,Drama,Sci-Fi
+tt0079641	movie	Nosferatu the Vampyre	Nosferatu: Phantom der Nacht	0	1979		107	Drama,Horror
+tt0080379	movie	Cannibals in the Streets	Apocalypse domani	0	1980		96	Drama,Fantasy,Horror
+tt0080684	movie	Star Wars: Episode V - The Empire Strikes Back	Star Wars: Episode V - The Empire Strikes Back	0	1980		124	Action,Adventure,Fantasy
+tt0081398	movie	Raging Bull	Raging Bull	0	1980		129	Biography,Drama,Sport
+tt0081547	movie	Spetters	Spetters	0	1980		120	Drama,Romance,Sport
+tt0081552	movie	Squeeze Play	Squeeze Play	0	1979		96	Comedy,Sport
+tt0081556	tvMovie	The Starlost: Deception	The Starlost: Deception	0	1980		94	Sci-Fi
+tt0081568	movie	The Stunt Man	The Stunt Man	0	1980		131	Action,Comedy,Drama
+tt0081698	movie	Used Cars	Used Cars	0	1980		113	Comedy
+tt0082467	movie	Graduation Day	Graduation Day	0	1981		96	Horror,Mystery,Thriller
+tt0083067	movie	Shock Treatment	Shock Treatment	0	1981		94	Comedy,Musical
+tt0083416	tvSeries	A Fine Romance	A Fine Romance	0	1981	1984	30	Comedy,Romance
+tt0083455	tvSeries	Newhart	Newhart	0	1982	1990	30	Comedy
+tt0083767	movie	Creepshow	Creepshow	0	1982		120	Comedy,Fantasy,Horror
+tt0084048	movie	Hank Williams: The Show He Never Gave	Hank Williams: The Show He Never Gave	0	1980		86	Drama,Music
+tt0084058	movie	Heat and Dust	Heat and Dust	0	1983		130	Drama,Romance
+tt0084318	movie	Melanie	Melanie	0	1982		104	Drama
+tt0084503	movie	Pink Floyd: The Wall	Pink Floyd: The Wall	0	1982		95	Drama,Fantasy,Music
+tt0084695	movie	The Slumber Party Massacre	The Slumber Party Massacre	0	1982		77	Horror
+tt0084725	movie	The State of Things	Der Stand der Dinge	0	1982		121	Drama
+tt0084726	movie	Star Trek II: The Wrath of Khan	Star Trek II: The Wrath of Khan	0	1982		113	Action,Adventure,Sci-Fi
+tt0084787	movie	The Thing	The Thing	0	1982		109	Horror,Mystery,Sci-Fi
+tt0085000	tvSeries	Condo	Condo	0	1983	1983	30	Comedy
+tt0085218	movie	Barefoot Gen	Hadashi no Gen	0	1983		83	Animation,Biography,Drama
+tt0085236	movie	Beyond the Limit	The Honorary Consul	0	1983		104	Drama,Romance,Thriller
+tt0085333	movie	Christine	Christine	0	1983		110	Horror,Thriller
+tt0085636	movie	Halloween III: Season of the Witch	Halloween III: Season of the Witch	0	1982		98	Horror,Mystery,Sci-Fi
+tt0085794	movie	The King of Comedy	The King of Comedy	0	1982		109	Comedy,Crime,Drama
+tt0085802	movie	Kneel Before Me	Kneel Before Me	1	1983		71	Adult,Horror
+tt0085852	movie	Liquid Sky	Liquid Sky	0	1982		112	Sci-Fi,Thriller
+tt0085995	movie	National Lampoon's Vacation	National Lampoon's Vacation	0	1983		98	Adventure,Comedy
+tt0086006	movie	Never Say Never Again	Never Say Never Again	0	1983		134	Action,Adventure,Thriller
+tt0086102	movie	Phar Lap	Phar Lap	0	1983		107	Biography,Drama,Family
+tt0086308	movie	Zu: Warriors from the Magic Mountain	Suk saan: San suk saan gim hap	0	1983		98	Action,Adventure,Fantasy
+tt0086873	movie	All of Me	All of Me	0	1984		93	Comedy,Fantasy,Romance
+tt0087032	movie	Cannonball Run II	Cannonball Run II	0	1984		108	Action,Comedy
+tt0087039	movie	Cento giorni a Palermo	Cento giorni a Palermo	0	1984		107	Biography,Crime,Drama
+tt0087175	movie	Dreamscape	Dreamscape	0	1984		99	Action,Adventure,Horror
+tt0087344	movie	Godzilla 1985	Godzilla 1985	0	1985		87	Action,Drama,Sci-Fi
+tt0087622	movie	The Lift	De lift	0	1983		95	Horror,Mystery,Sci-Fi
+tt0087727	movie	Missing in Action	Missing in Action	0	1984		101	Action,Adventure,Drama
+tt0087799	movie	Night of the Comet	Night of the Comet	0	1984		95	Comedy,Horror,Sci-Fi
+tt0087914	movie	Pigs	Pigs	0	1984		78	Drama
+tt0088865	tvMovie	A Bunny's Tale	A Bunny's Tale	0	1985		104	Biography,Comedy,Drama
+tt0088944	movie	Commando	Commando	0	1985		90	Action,Adventure,Thriller
+tt0089218	movie	The Goonies	The Goonies	0	1985		114	Adventure,Comedy,Family
+tt0089276	movie	The Official Story	La historia oficial	0	1985		112	Drama,History
+tt0089310	movie	Huey Long	Huey Long	0	1985		88	Biography,Documentary
+tt0089371	movie	Mr. Vampire	Geung see sin sang	0	1985		96	Action,Comedy,Fantasy
+tt0089469	movie	Legend	Legend	0	1985		94	Adventure,Fantasy,Romance
+tt0089560	movie	Mask	Mask	0	1985		120	Biography,Drama
+tt0089927	movie	Rocky IV	Rocky IV	0	1985		91	Drama,Sport
+tt0089960	movie	Vagabond	Sans toit ni loi	0	1985		105	Drama
+tt0089963	movie	Savage Dawn	Savage Dawn	0	1985		102	Action,Drama
+tt0090081	movie	Stoogemania	Stoogemania	0	1985		83	Comedy
+tt0090098	movie	Summer Rental	Summer Rental	0	1985		87	Comedy
+tt0090329	movie	Witness	Witness	0	1985		112	Crime,Drama,Romance
+tt0090663	tvMovie	As Summers Die	As Summers Die	0	1986		87	Drama
+tt0091080	movie	Friday the 13th Part VI: Jason Lives	Jason Lives: Friday the 13th Part VI	0	1986		86	Horror,Thriller
+tt0091165	movie	Hamburger: The Motion Picture	Hamburger: The Motion Picture	0	1986		90	Comedy
+tt0091178	movie	Haunted Honeymoon	Haunted Honeymoon	0	1986		82	Comedy
+tt0091474	movie	Manhunter	Manhunter	0	1986		120	Crime,Mystery,Thriller
+tt0091530	movie	The Mission	The Mission	0	1986		125	Adventure,Drama,History
+tt0091653	movie	Nothing in Common	Nothing in Common	0	1986		118	Comedy,Drama,Romance
+tt0091949	movie	Short Circuit	Short Circuit	0	1986		98	Comedy,Family,Sci-Fi
+tt0092007	movie	Star Trek IV: The Voyage Home	Star Trek IV: The Voyage Home	0	1986		119	Adventure,Comedy,Sci-Fi
+tt0092042	movie	Tai-Pan	Tai-Pan	0	1986		127	Adventure
+tt0092339	tvSeries	A Different World	A Different World	0	1987	1993	60	Comedy
+tt0092359	tvSeries	Full House	Full House	0	1987	1995	22	Comedy,Drama,Family
+tt0092513	movie	Adventures in Babysitting	Adventures in Babysitting	0	1987		102	Adventure,Comedy,Crime
+tt0092796	movie	Creepshow 2	Creepshow 2	0	1987		92	Fantasy,Horror
+tt0092991	movie	Evil Dead II	Evil Dead II	0	1987		84	Comedy,Horror
+tt0093285	movie	It Was 20 Years Ago Today	It Was 20 Years Ago Today	0	1987		104	Documentary,Music
+tt0093300	movie	Jaws: The Revenge	Jaws: The Revenge	0	1987		89	Adventure,Horror,Thriller
+tt0093773	movie	Predator	Predator	0	1987		107	Action,Adventure,Horror
+tt0094558	tvSeries	Sunday Night	Sunday Night	0	1988	1990	60	Music
+tt0094715	movie	Beaches	Beaches	0	1988		123	Comedy,Drama,Music
+tt0095179	movie	Friday the 13th: The New Blood	Friday the 13th Part VII: The New Blood	0	1988		88	Horror,Thriller
+tt0095409	movie	Johnny Be Good	Johnny Be Good	0	1988		91	Comedy,Sport
+tt0095488	movie	The Lair of the White Worm	The Lair of the White Worm	0	1988		93	Comedy,Horror
+tt0095765	movie	Cinema Paradiso	Nuovo Cinema Paradiso	0	1988		174	Drama,Romance
+tt0095864	movie	The Philosopher	Der Philosoph	0	1989		83	Comedy,Romance
+tt0096109	movie	Silent Assassins	Silent Assassins	0	1988		91	Action,Adventure,Drama
+tt0096163	movie	The Vanishing	Spoorloos	0	1988		107	Mystery,Thriller
+tt0096256	movie	They Live	They Live	0	1988		94	Action,Horror,Sci-Fi
+tt0096894	movie	Bashu, the Little Stranger	Bashu, gharibeye koochak	0	1989		120	Drama,War
+tt0097152	tvMovie	Danny the Champion of the World	Danny the Champion of the World	0	1989		99	Adventure,Drama,Family
+tt0097165	movie	Dead Poets Society	Dead Poets Society	0	1989		128	Comedy,Drama
+tt0097322	movie	The Fabulous Baker Boys	The Fabulous Baker Boys	0	1989		114	Comedy,Drama,Music
+tt0097428	movie	Ghostbusters II	Ghostbusters II	0	1989		108	Action,Comedy,Fantasy
+tt0097756	movie	Listen to Me	Listen to Me	0	1989		107	Drama,Romance
+tt0098089	movie	Phantom of the Mall: Eric's Revenge	Phantom of the Mall: Eric's Revenge	0	1989		91	Horror,Romance
+tt0098546	movie	UHF	UHF	0	1989		97	Comedy,Sci-Fi
+tt0098577	movie	Vampire's Kiss	Vampire's Kiss	0	1988		103	Comedy,Crime,Fantasy
+tt0099237	tvMovie	Challenger	Challenger	0	1990		160	Drama
+tt0100234	movie	Close-Up	Nema-ye nazdik	0	1990		98	Biography,Crime,Drama
+tt0100301	movie	Opportunity Knocks	Opportunity Knocks	0	1990		103	Action,Comedy,Romance
+tt0100530	movie	The Russia House	The Russia House	0	1990		123	Drama,Romance,Thriller
+tt0100935	movie	Wild at Heart	Wild at Heart	0	1990		125	Crime,Drama,Thriller
+tt0101264	movie	Abraxas, Guardian of the Universe	Abraxas: Guardian of the Universe	0	1990		87	Action,Drama,Sci-Fi
+tt0101492	movie	Body Parts	Body Parts	0	1991		88	Horror,Sci-Fi,Thriller
+tt0101531	movie	Cadence	Cadence	0	1990		97	Drama
+tt0102316	movie	Little Man Tate	Little Man Tate	0	1991		99	Drama
+tt0102744	movie	Quigley Down Under	Quigley Down Under	0	1990		119	Action,Adventure,Drama
+tt0103110	movie	Tous les matins du monde	Tous les matins du monde	0	1991		115	Biography,Drama,History
+tt0103263	tvMovie	Wild Texas Wind	Wild Texas Wind	0	1991		94	Drama,Music,Thriller
+tt0103442	tvSeries	Highlander	Highlander	0	1992	1998	60	Action,Adventure,Fantasy
+tt0103682	tvMovie	Amy Fisher: My Story	Amy Fisher: My Story	0	1992		93	Drama,Thriller
+tt0103722	tvMovie	Artemisia	Artemisia	0	1997		60	Biography,Documentary,Drama
+tt0103950	movie	City Hunter	Sing si lip yan	0	1993		100	Action,Comedy,Crime
+tt0104454	movie	Howards End	Howards End	0	1992		142	Drama,Romance
+tt0104523	tvSeries	Intruders	Intruders	0	1992	1992	163	Biography,Horror,Mystery
+tt0104684	movie	Hard Boiled	Lat sau san taam	0	1992		128	Action,Crime,Thriller
+tt0104889	movie	Mission of Justice	Jin san jiao qun ying hui	0	1992		85	Action
+tt0104905	movie	Mom and Dad Save the World	Mom and Dad Save the World	0	1992		88	Adventure,Comedy,Family
+tt0104966	tvMovie	Nails	Nails	0	1992		96	Action,Crime,Drama
+tt0105986	tvSeries	Diagnosis Murder	Diagnosis Murder	0	1993	2001	45	Crime,Drama,Mystery
+tt0106100	tvSeries	Phenom	Phenom	0	1993	1994	30	Comedy
+tt0106308	movie	Army of Darkness	Army of Darkness	0	1992		81	Comedy,Horror
+tt0106386	movie	Benefit of the Doubt	Benefit of the Doubt	0	1993		90	Thriller
+tt0106469	movie	Blood In, Blood Out	Bound by Honor	0	1993		180	Biography,Crime,Drama
+tt0106489	movie	A Bronx Tale	A Bronx Tale	0	1993		121	Crime,Drama
+tt0106519	movie	Carlito's Way	Carlito's Way	0	1993		144	Crime,Drama,Thriller
+tt0106784	tvMovie	Dying to Love You	Dying to Love You	0	1993		94	Drama,Thriller
+tt0106951	movie	Fortunes of War	Fortunes of War	0	1994		107	Action,Thriller
+tt0107009	movie	Ghost in the Machine	Ghost in the Machine	0	1993		95	Horror,Sci-Fi,Thriller
+tt0107302	movie	Kalifornia	Kalifornia	0	1993		117	Crime,Drama,Thriller
+tt0107368	tvMovie	The Last Hit	The Last Hit	0	1993		93	Crime,Thriller
+tt0107612	movie	Mr. Nanny	Mr. Nanny	0	1993		84	Action,Comedy,Family
+tt0107688	movie	The Nightmare Before Christmas	Tim Burton's the Nightmare Before Christmas	0	1993		76	Adventure,Animation,Family
+tt0107808	movie	A Perfect World	A Perfect World	0	1993		138	Crime,Drama,Thriller
+tt0107818	movie	Philadelphia	Philadelphia	0	1993		125	Drama
+tt0108037	movie	The Sandlot	The Sandlot	0	1993		101	Comedy,Drama,Family
+tt0108327	movie	The Thing Called Love	The Thing Called Love	0	1993		116	Comedy,Drama,Music
+tt0108358	movie	Tombstone	Tombstone	0	1993		130	Biography,Drama,History
+tt0108405	movie	All Under the Moon	Tsuki wa dotchi ni dete iru	0	1993		109	Comedy,Drama,Romance
+tt0108757	tvSeries	ER	ER	0	1994	2009	44	Drama,Romance
+tt0109086	movie	Almost Dead	Almost Dead	0	1994		92	Horror,Mystery,Thriller
+tt0109361	movie	Cabin Boy	Cabin Boy	0	1994		80	Adventure,Comedy,Romance
+tt0109506	movie	The Crow	The Crow	0	1994		102	Action,Crime,Drama
+tt0109526	movie	Dallas Doll	Dallas Doll	0	1994		104	Comedy
+tt0109686	movie	Dumb and Dumber	Dumb and Dumber	0	1994		107	Comedy
+tt0109770	movie	The Fantastic Four	The Fantastic Four	0	1994		90	Action,Adventure,Family
+tt0109775	movie	Fatal Pursuit	Fatal Pursuit	0	1995		103	Crime,Drama,Thriller
+tt0109809	movie	FleshEater	FleshEater	0	1988		88	Horror
+tt0110005	movie	Heavenly Creatures	Heavenly Creatures	0	1994		99	Biography,Crime,Drama
+tt0110074	movie	The Hudsucker Proxy	The Hudsucker Proxy	0	1994		111	Comedy,Drama,Fantasy
+tt0110438	movie	Main Khiladi Tu Anari	Main Khiladi Tu Anari	0	1994		175	Action,Comedy,Drama
+tt0110725	movie	On Deadly Ground	On Deadly Ground	0	1994		101	Action,Adventure,Thriller
+tt0110823	movie	Phantasm III: Lord of the Dead	Phantasm III: Lord of the Dead	0	1994		91	Action,Fantasy,Horror
+tt0110912	movie	Pulp Fiction	Pulp Fiction	0	1994		154	Crime,Drama
+tt0110955	movie	The Ref	The Ref	0	1994		97	Comedy,Crime,Drama
+tt0110963	movie	Queen Margot	La reine Margot	0	1994		161	Biography,Drama,History
+tt0111161	movie	The Shawshank Redemption	The Shawshank Redemption	0	1994		142	Drama
+tt0111301	movie	Street Fighter	Street Fighter	0	1994		102	Action,Adventure,Comedy
+tt0111395	movie	Il teppista	Il teppista	0	1994			
+tt0111993	tvSeries	Hamish Macbeth	Hamish Macbeth	0	1995	1997	60	Comedy,Crime,Drama
+tt0112142	tvSeries	Riding High	Riding High	0	1995	1996		Drama
+tt0112462	movie	Batman Forever	Batman Forever	0	1995		121	Action,Adventure
+tt0112469	tvMovie	Beastmaster III: The Eye of Braxus	Beastmaster III: The Eye of Braxus	0	1996		92	Action,Adventure,Fantasy
+tt0112508	movie	Billy Madison	Billy Madison	0	1995		89	Comedy
+tt0112573	movie	Braveheart	Braveheart	0	1995		178	Biography,Drama,War
+tt0112896	movie	Dracula: Dead and Loving It	Dracula: Dead and Loving It	0	1995		88	Comedy,Fantasy,Horror
+tt0113096	movie	Foreign Moon	Yue man ying lun	0	1996		90	Drama
+tt0113228	movie	Grumpier Old Men	Grumpier Old Men	0	1995		101	Comedy,Romance
+tt0113481	movie	Johnny Mnemonic	Johnny Mnemonic	0	1995		96	Action,Drama,Sci-Fi
+tt0113627	movie	Leaving Las Vegas	Leaving Las Vegas	0	1995		111	Drama,Romance
+tt0113690	movie	Lord of Illusions	Lord of Illusions	0	1995		109	Horror,Mystery,Thriller
+tt0113972	movie	Nick of Time	Nick of Time	0	1995		89	Action,Crime,Drama
+tt0114214	movie	The Quick and the Dead	The Quick and the Dead	0	1995		108	Action,Drama,Romance
+tt0114746	movie	12 Monkeys	Twelve Monkeys	0	1995		129	Mystery,Sci-Fi,Thriller
+tt0114814	movie	The Usual Suspects	The Usual Suspects	0	1995		106	Crime,Drama,Mystery
+tt0114898	movie	Waterworld	Waterworld	0	1995		135	Action,Adventure,Sci-Fi
+tt0115083	tvSeries	7th Heaven	7th Heaven	0	1996	2007	44	Comedy,Drama,Family
+tt0115147	tvSeries	The Daily Show	The Daily Show	0	1996		22	Comedy,News,Talk-Show
+tt0115600	movie	Bitter Sugar	Azúcar amarga	0	1996		75	Drama,Romance
+tt0115798	movie	The Cable Guy	The Cable Guy	0	1996		96	Comedy,Drama,Thriller
+tt0115847	movie	Caught	Caught	0	1996		110	Drama,Thriller
+tt0115964	movie	Crash	Crash	0	1996		100	Drama
+tt0116141	movie	Dream for an Insomniac	Dream for an Insomniac	0	1996		90	Comedy,Drama,Romance
+tt0116308	movie	Fire	Fire	0	1996		104	Crime,Drama,Romance
+tt0116364	tvMovie	A Friend's Betrayal	A Friend's Betrayal	0	1996		94	Drama
+tt0116601	movie	I'm Not Rappaport	I'm Not Rappaport	0	1996		135	Comedy,Drama
+tt0116629	movie	Independence Day	Independence Day	0	1996		145	Action,Adventure,Sci-Fi
+tt0116908	movie	The Long Kiss Goodnight	The Long Kiss Goodnight	0	1996		121	Action,Crime,Drama
+tt0117201	tvMovie	Norma Jean & Marilyn	Norma Jean & Marilyn	0	1996		135	Biography,Drama
+tt0117509	movie	Romeo + Juliet	Romeo + Juliet	0	1996		120	Drama,Romance
+tt0117589	movie	Secrets & Lies	Secrets & Lies	0	1996		136	Comedy,Drama
+tt0117802	movie	Swingers	Swingers	0	1996		96	Comedy,Drama
+tt0117951	movie	Trainspotting	Trainspotting	0	1996		93	Crime,Drama
+tt0118772	movie	Breaking Up	Breaking Up	0	1997		90	Comedy,Drama,Romance
+tt0118880	movie	Con Air	Con Air	0	1997		115	Action,Crime,Thriller
+tt0118928	movie	Dante's Peak	Dante's Peak	0	1997		108	Action,Adventure,Thriller
+tt0119051	movie	The Edge	The Edge	0	1997		117	Action,Adventure,Drama
+tt0119099	movie	Fallen	Fallen	0	1998		124	Action,Crime,Drama
+tt0119256	movie	Hard Eight	Sydney	0	1996		101	Crime,Drama
+tt0119463	movie	Kini & Adams	Kini & Adams	0	1997		93	Drama
+tt0119528	movie	Liar Liar	Liar Liar	0	1997		86	Comedy,Fantasy
+tt0119532	tvMovie	Lies He Told	Lies He Told	0	1997		96	Drama
+tt0119643	movie	Meet Joe Black	Meet Joe Black	0	1998		178	Drama,Fantasy,Romance
+tt0119771	movie	An Ambiguous Report About the End of the World	Nejasná zpráva o konci sveta	0	1997		154	Fantasy,Mystery
+tt0119822	movie	As Good as It Gets	As Good as It Gets	0	1997		139	Comedy,Drama,Romance
+tt0119848	movie	Out to Sea	Out to Sea	0	1997		106	Comedy,Romance
+tt0120082	movie	Scream 2	Scream 2	0	1997		120	Horror,Mystery
+tt0120188	movie	Three Kings	Three Kings	0	1999		114	Action,Adventure,Comedy
+tt0120202	movie	State and Main	State and Main	0	2000		105	Comedy,Drama
+tt0120265	movie	Taste of Cherry	Ta'm e guilass	0	1997		95	Drama
+tt0120299	tvMovie	The Tattooed Widow	Den tatuerade änkan	0	1998		99	Drama
+tt0120338	movie	Titanic	Titanic	0	1997		194	Drama,Romance
+tt0120524	movie	Wishmaster	Wishmaster	0	1997		90	Fantasy,Horror
+tt0120601	movie	Being John Malkovich	Being John Malkovich	0	1999		113	Comedy,Drama,Fantasy
+tt0120618	movie	Breakfast of Champions	Breakfast of Champions	0	1999		110	Comedy
+tt0120655	movie	Dogma	Dogma	0	1999		130	Adventure,Comedy,Drama
+tt0120703	movie	How Stella Got Her Groove Back	How Stella Got Her Groove Back	0	1998		124	Comedy,Drama,Romance
+tt0120735	movie	Lock, Stock and Two Smoking Barrels	Lock, Stock and Two Smoking Barrels	0	1998		107	Comedy,Crime
+tt0120770	movie	A Night at the Roxbury	A Night at the Roxbury	0	1998		82	Comedy,Music,Romance
+tt0120805	tvMovie	Modern Vampires	Modern Vampires	0	1998		95	Comedy,Horror,Romance
+tt0120879	movie	Velvet Goldmine	Velvet Goldmine	0	1998		123	Drama,Music
+tt0120891	movie	Wild Wild West	Wild Wild West	0	1999		106	Action,Comedy,Sci-Fi
+tt0120907	movie	eXistenZ	eXistenZ	0	1999		97	Horror,Mystery,Sci-Fi
+tt0120915	movie	Star Wars: Episode I - The Phantom Menace	Star Wars: Episode I - The Phantom Menace	0	1999		136	Action,Adventure,Fantasy
+tt0120917	movie	The Emperor's New Groove	The Emperor's New Groove	0	2000		78	Adventure,Animation,Comedy
+tt0121766	movie	Star Wars: Episode III - Revenge of the Sith	Star Wars: Episode III - Revenge of the Sith	0	2005		140	Action,Adventure,Fantasy
+tt0123385	movie	Artemisia	Artemisia	0	1997		98	Biography,Drama,History
+tt0123755	movie	Cube	Cube	0	1997		90	Horror,Mystery,Sci-Fi
+tt0124179	movie	Two Girls and a Guy	Two Girls and a Guy	0	1997		84	Drama,Romance
+tt0124302	movie	Speed Cross	Speed Cross	0	1980		88	Action,Drama
+tt0125894	movie	Madame Zenobia	Madame Zenobia	1	1973		78	Adult,Drama,Horror
+tt0126029	movie	Shrek	Shrek	0	2001		90	Adventure,Animation,Comedy
+tt0126527	movie	A Night to Dismember	A Night to Dismember	0	1983		69	Horror
+tt0126774	tvMovie	The Advocate's Devil	The Advocate's Devil	0	1997		89	Crime,Drama,Horror
+tt0126886	movie	Election	Election	0	1999		103	Comedy,Romance
+tt0127723	movie	Can't Hardly Wait	Can't Hardly Wait	0	1998		100	Comedy,Romance
+tt0128405	movie	Peter en de vliegende autobus	Peter en de vliegende autobus	0	1976		88	Adventure,Family
+tt0131534	movie	Pep Squad	Pep Squad	0	1998		94	Comedy,Crime,Horror
+tt0132477	movie	October Sky	October Sky	0	1999		108	Biography,Drama,Family
+tt0133093	movie	The Matrix	The Matrix	0	1999		136	Action,Sci-Fi
+tt0133303	tvSeries	The Gong Show	The Gong Show	0	1976	1980	30	Comedy,Game-Show
+tt0133385	movie	Asterix and Obelix vs. Caesar	Astérix & Obélix contre César	0	1999		109	Adventure,Comedy,Family
+tt0134246	tvSeries	The Fear	The Fear	0	1988	1988	60	Crime,Drama
+tt0134899	movie	Podzemelye vedm	Podzemelye vedm	0	1990		85	Adventure,Fantasy,Romance
+tt0137523	movie	Fight Club	Fight Club	0	1999		139	Crime,Drama,Thriller
+tt0138097	movie	Shakespeare in Love	Shakespeare in Love	0	1998		123	Comedy,Drama,History
+tt0138464	movie	George and Mildred	George and Mildred	0	1980		93	Comedy
+tt0139134	movie	Cruel Intentions	Cruel Intentions	0	1999		97	Drama,Romance
+tt0139362	movie	High Art	High Art	0	1998		101	Drama,Romance
+tt0139462	movie	Message in a Bottle	Message in a Bottle	0	1999		126	Drama,Romance
+tt0139809	movie	The Thirteenth Floor	The Thirteenth Floor	0	1999		100	Mystery,Sci-Fi,Thriller
+tt0141105	movie	Free Enterprise	Free Enterprise	0	1998		113	Comedy,Romance
+tt0141109	movie	Jack Frost	Jack Frost	0	1998		101	Comedy,Drama,Family
+tt0144117	movie	The Boondock Saints	The Boondock Saints	0	1999		108	Action,Crime,Thriller
+tt0144168	movie	Dick	Dick	0	1999		94	Comedy
+tt0144214	movie	The General's Daughter	The General's Daughter	0	1999		116	Crime,Drama,Mystery
+tt0145531	movie	Stigmata	Stigmata	0	1999		103	Horror,Mystery
+tt0146675	movie	End of Days	End of Days	0	1999		122	Action,Fantasy,Horror
+tt0146838	movie	Any Given Sunday	Any Given Sunday	0	1999		162	Drama,Sport
+tt0146882	movie	High Fidelity	High Fidelity	0	2000		113	Comedy,Drama,Music
+tt0149261	movie	Deep Blue Sea	Deep Blue Sea	0	1999		105	Action,Adventure,Sci-Fi
+tt0149568	movie	Aa Ab Laut Chalen	Aa Ab Laut Chalen	0	1999		177	Drama,Musical,Romance
+tt0149691	movie	Anywhere But Here	Anywhere But Here	0	1999		114	Comedy,Drama
+tt0155975	movie	Psycho	Psycho	0	1998		105	Horror,Mystery,Thriller
+tt0159365	movie	Cold Mountain	Cold Mountain	0	2003		154	Adventure,Drama,Romance
+tt0159548	tvSpecial	The Magic of David Copperfield XIV: Flying - Live the Dream	The Magic of David Copperfield XIV: Flying - Live the Dream	0	1992		49	Comedy,Family,Fantasy
+tt0162211	movie	Deadly Instincts	Breeders	0	1997		90	Horror,Sci-Fi
+tt0162661	movie	Sleepy Hollow	Sleepy Hollow	0	1999		105	Fantasy,Horror,Mystery
+tt0163651	movie	American Pie	American Pie	0	1999		95	Comedy
+tt0166179	movie	Erasable You	Erasable You	0	1998		85	Comedy
+tt0166924	movie	Mulholland Drive	Mulholland Dr.	0	2001		147	Drama,Mystery,Thriller
+tt0167190	movie	Hellboy	Hellboy	0	2004		122	Action,Adventure,Fantasy
+tt0169115	movie	Rakuen	Rakuen	0	1998		90	Drama
+tt0171363	movie	The Haunting	The Haunting	0	1999		113	Fantasy,Horror,Mystery
+tt0173772	movie	My Voyage to Italy	Il mio viaggio in Italia	0	1999		246	Documentary
+tt0174369	tvSeries	30 prípadu majora Zemana	30 prípadu majora Zemana	0	1975	1980		Crime,Drama
+tt0176269	movie	Universal Soldier: The Return	Universal Soldier: The Return	0	1999		83	Action,Sci-Fi
+tt0176579	movie	Bullfighter	Bullfighter	0	2000		90	Action,Adventure,Fantasy
+tt0179042	tvSeries	The Puzzle Place	The Puzzle Place	0	1994	1998	30	Family
+tt0179651	tvSpecial	Around the Beatles	Around the Beatles	0	1964		52	Comedy
+tt0180093	movie	Requiem for a Dream	Requiem for a Dream	0	2000		102	Drama
+tt0180734	movie	Hardball	Hard Ball	0	2001		106	Comedy,Drama,Sport
+tt0182996	movie	Don't Go in the Woods	Don't Go in the Woods	0	1981		82	Horror,Thriller
+tt0184135	tvSeries	The League of Gentlemen	The League of Gentlemen	0	1999	2017	60	Comedy,Horror
+tt0185431	movie	Little Nicky	Little Nicky	0	2000		90	Comedy,Fantasy
+tt0187820	movie	Drowning on Dry Land	Drowning on Dry Land	0	1999		88	Drama,Romance
+tt0187859	movie	Genghis Blues	Genghis Blues	0	1999		88	Documentary,Music
+tt0190590	movie	O Brother, Where Art Thou?	O Brother, Where Art Thou?	0	2000		107	Adventure,Comedy,Crime
+tt0195714	movie	Final Destination	Final Destination	0	2000		98	Horror,Thriller
+tt0197159	tvSeries	Home Movies	Home Movies	0	1999	2004	30	Animation,Comedy,Drama
+tt0197384	movie	Crime + Punishment in Suburbia	Crime + Punishment in Suburbia	0	2000		100	Drama,Thriller
+tt0199481	movie	Druids	Vercingétorix	0	2001		120	Adventure,Biography,Drama
+tt0200276	tvSeries	The West Wing	The West Wing	0	1999	2006	42	Drama
+tt0201394	movie	The Shrink Is In	The Shrink Is In	0	2001		92	Comedy,Romance
+tt0202314	movie	Deep Core	Deep Core	0	2000		80	Action,Sci-Fi,Thriller
+tt0203031	tvMovie	Noriega: God's Favorite	Noriega: God's Favorite	0	2000		120	Biography,Crime,Drama
+tt0203119	movie	Sexy Beast	Sexy Beast	0	2000		89	Crime,Drama,Thriller
+tt0206066	movie	Julie	Julie	0	1972		52	Biography,Documentary
+tt0206512	tvSeries	SpongeBob SquarePants	SpongeBob SquarePants	0	1999		23	Animation,Comedy,Family
+tt0209077	movie	Ken Park	Ken Park	0	2002		93	Drama
+tt0212985	movie	Hannibal	Hannibal	0	2001		131	Crime,Drama,Thriller
+tt0213847	movie	Malena	Malèna	0	2000		108	Drama,Romance,War
+tt0215369	movie	Shower	Xi zao	0	1999		92	Comedy,Drama
+tt0217869	movie	Unbreakable	Unbreakable	0	2000		106	Drama,Mystery,Sci-Fi
+tt0219653	movie	Dracula 2000	Dracula 2000	0	2000		99	Action,Fantasy,Horror
+tt0220513	movie	Heroes Die Young	Heroes Die Young	0	1960		76	Action,War
+tt0220631	movie	El mar	El mar	0	2000		107	Drama,War
+tt0221218	movie	The Glass House	The Glass House	0	2001		106	Crime,Drama,Mystery
+tt0224692	tvMovie	A Tale of Two Bunnies	A Tale of Two Bunnies	0	2000		120	Comedy,Drama
+tt0228301	movie	Finding Home	Finding Home	0	2003		124	Drama,Romance
+tt0234393	movie	One of the Hollywood Ten	One of the Hollywood Ten	0	2000		109	Drama
+tt0235737	movie	The Salton Sea	The Salton Sea	0	2002		103	Crime,Drama,Mystery
+tt0236126	movie	A Crack in the Floor	A Crack in the Floor	0	2001		90	Horror
+tt0237993	movie	101 Reykjavík	101 Reykjavík	0	2000		88	Comedy,Drama,Romance
+tt0238380	movie	Equilibrium	Equilibrium	0	2002		107	Action,Drama,Sci-Fi
+tt0238546	movie	Queen of the Damned	Queen of the Damned	0	2002		101	Drama,Fantasy,Horror
+tt0240515	movie	Freddy Got Fingered	Freddy Got Fingered	0	2001		87	Comedy
+tt0240736	movie	Moonstalker	Moonstalker	0	1989		92	Horror
+tt0241124	tvSeries	Nukkad	Nukkad	0	1986			Comedy,Drama
+tt0241527	movie	Harry Potter and the Sorcerer's Stone	Harry Potter and the Sorcerer's Stone	0	2001		152	Adventure,Family,Fantasy
+tt0242445	movie	Exit Wounds	Exit Wounds	0	2001		101	Action,Crime,Thriller
+tt0242898	tvMovie	South Pacific	South Pacific	0	2001		135	Comedy,Drama,Musical
+tt0243155	movie	Bridget Jones's Diary	Bridget Jones's Diary	0	2001		97	Comedy,Drama,Romance
+tt0243609	movie	To End All Wars	To End All Wars	0	2001		117	Action,Drama,War
+tt0244244	movie	Swordfish	Swordfish	0	2001		99	Action,Crime,Thriller
+tt0244452	movie	Campfire Stories	Campfire Stories	0	2001		95	Crime,Drama,Horror
+tt0245562	movie	Windtalkers	Windtalkers	0	2002		134	Action,Drama,War
+tt0246894	movie	Rollerball	Rollerball	0	2002		98	Action,Sci-Fi,Sport
+tt0250258	movie	The Experiment	Das Experiment	0	2001		120	Drama,Thriller
+tt0250292	movie	Cheaters	Cheats	0	2002		86	Comedy
+tt0250617	movie	Night at the Golden Eagle	Night at the Golden Eagle	0	2001		87	Drama
+tt0251736	movie	House of 1000 Corpses	House of 1000 Corpses	0	2003		89	Horror
+tt0252444	movie	Rabbit-Proof Fence	Rabbit-Proof Fence	0	2002		94	Adventure,Biography,Drama
+tt0253474	movie	The Pianist	The Pianist	0	2002		150	Biography,Drama,Music
+tt0253556	movie	Reign of Fire	Reign of Fire	0	2002		101	Action,Adventure,Fantasy
+tt0256380	movie	Shallow Hal	Shallow Hal	0	2001		114	Comedy,Drama,Fantasy
+tt0257360	movie	About Schmidt	About Schmidt	0	2002		125	Drama
+tt0257516	movie	Cursed	Cursed	0	2005		97	Comedy,Horror,Mystery
+tt0258351	tvMovie	Fidel	Fidel	0	2002		213	Biography,Drama
+tt0259288	movie	Dragonfly	Dragonfly	0	2002		104	Drama,Fantasy,Mystery
+tt0259956	movie	Césio 137 - O Pesadelo de Goiânia	Césio 137 - O Pesadelo de Goiânia	0	1990		115	Drama
+tt0262246	movie	Attack the Gas Station	Juyuso seubgyuksageun	0	1999		113	Comedy,Crime
+tt0263488	movie	Jeepers Creepers	Jeepers Creepers	0	2001		90	Horror,Mystery
+tt0264150	movie	View from the Top	View from the Top	0	2003		87	Comedy,Romance
+tt0264689	movie	Home Room	Home Room	0	2002		133	Crime,Drama
+tt0265208	movie	The Girl Next Door	The Girl Next Door	0	2004		109	Comedy,Drama,Romance
+tt0265633	movie	Reckless Indifference	Reckless Indifference	0	2000		94	Crime,Documentary
+tt0266171	tvSeries	Outlaw Star	Outlaw Star	0	1998	2001		Action,Adventure,Animation
+tt0266308	movie	Battle Royale	Batoru rowaiaru	0	2000		114	Action,Drama,Thriller
+tt0266425	tvMovie	Conspiracy	Conspiracy	0	2001		96	Biography,Drama,History
+tt0268126	movie	Adaptation.	Adaptation.	0	2002		115	Comedy,Drama
+tt0268695	movie	The Time Machine	The Time Machine	0	2002		96	Action,Adventure,Sci-Fi
+tt0270707	movie	The Truth About Charlie	The Truth About Charlie	0	2002		104	Mystery,Thriller
+tt0271027	movie	Kiss of the Dragon	Kiss of the Dragon	0	2001		98	Action,Crime,Thriller
+tt0271259	movie	Welcome to Collinwood	Welcome to Collinwood	0	2002		86	Comedy,Crime
+tt0271286	tvSeries	Frank Leaves for the Orient	Frank Leaves for the Orient	0	1999		30	Comedy
+tt0272196	movie	Monkey Love	Monkey Love	0	2002		96	Comedy,Romance
+tt0273689	movie	It's All About Love	It's All About Love	0	2003		106	Drama,Romance,Sci-Fi
+tt0274189	movie	Vampire Junction	Vampire Junction	0	2001		94	Drama,Horror,Western
+tt0275491	movie	Bad Education	La mala educación	0	2004		106	Crime,Drama
+tt0277412	movie	Unspeakable	Unspeakable	0	2002		108	Horror,Thriller
+tt0278675	movie	Revelation	Revelation	0	2001		111	Adventure,Drama,Fantasy
+tt0278954	movie	B-52	B-52	0	2001		122	Documentary
+tt0280474	tvMovie	Just Ask My Children	Just Ask My Children	0	2001		91	Drama
+tt0280477	movie	Better Luck Tomorrow	Better Luck Tomorrow	0	2002		101	Crime,Drama,Romance
+tt0280760	movie	Igby Goes Down	Igby Goes Down	0	2002		98	Comedy,Drama
+tt0280990	movie	The Nest	Nid de guêpes	0	2002		107	Action,Crime,Thriller
+tt0281358	movie	A Walk to Remember	A Walk to Remember	0	2002		101	Drama,Romance
+tt0281726	movie	The Circle	The Circle	0	2002		100	Thriller
+tt0281820	movie	The Good Thief	The Good Thief	0	2002		109	Action,Crime,Drama
+tt0282209	movie	Darkness Falls	Darkness Falls	0	2003		86	Fantasy,Horror,Mystery
+tt0283084	movie	Tuck Everlasting	Tuck Everlasting	0	2002		90	Drama,Family,Fantasy
+tt0283426	movie	The Jungle Book 2	The Jungle Book 2	0	2003		72	Adventure,Animation,Comedy
+tt0286244	movie	The Triplets of Belleville	Les triplettes de Belleville	0	2003		80	Adventure,Animation,Comedy
+tt0286261	movie	All or Nothing	All or Nothing	0	2002		128	Drama
+tt0286486	tvSeries	The Shield	The Shield	0	2002	2008	45	Crime,Drama,Thriller
+tt0286751	movie	Pulse	Kairo	0	2001		119	Horror,Mystery,Sci-Fi
+tt0287733	movie	Straight Into Darkness	Straight Into Darkness	0	2004		95	Action,Drama,Horror
+tt0288229	movie	Sottovento!	Sottovento!	0	2001		110	Drama
+tt0289635	movie	Young Adam	Young Adam	0	2003		98	Crime,Drama
+tt0290002	movie	Meet the Fockers	Meet the Fockers	0	2004		115	Comedy,Romance
+tt0291172	movie	The Son	Le fils	0	2002		103	Drama,Mystery
+tt0292407	tvSeries	The Glass House	The Glass House	0	2001	2006		Comedy,Talk-Show
+tt0293508	movie	The Phantom of the Opera	The Phantom of the Opera	0	2004		143	Drama,Musical,Romance
+tt0293992	tvSeries	Ah! Eleni	Ah! Eleni	0	1992		30	Comedy
+tt0294280	movie	Red Shadow	Red Shadow: Akakage	0	2001		108	Action,Adventure,Comedy
+tt0295254	movie	Feardotcom	Feardotcom	0	2002		101	Crime,Horror,Thriller
+tt0295257	movie	Turnaround	Final Breakdown	0	2002		83	Drama
+tt0298130	movie	The Ring	The Ring	0	2002		115	Horror,Mystery
+tt0299135	movie	The Civilization of Maxwell Bright	The Civilization of Maxwell Bright	0	2005		107	Drama
+tt0299244	tvSeries	I alepou kai o boufos	I alepou kai o boufos	0	1987	1988	45	Comedy
+tt0299478	tvMovie	Saraband	Saraband	0	2003		107	Drama,Music
+tt0299816	movie	In the Belly of the Beast	In the Belly of the Beast	0	2001		74	Documentary
+tt0300051	movie	Jersey Girl	Jersey Girl	0	2004		102	Comedy,Drama,Romance
+tt0300556	movie	Timeline	Timeline	0	2003		116	Action,Adventure,Sci-Fi
+tt0300722	tvSeries	Anatolikos anemos	Anatolikos anemos	0	1992	1993	30	Drama
+tt0301184	movie	The Ghosts of Edendale	The Ghosts of Edendale	0	2003		90	Drama,Horror,Thriller
+tt0301470	movie	Jeepers Creepers 2	Jeepers Creepers 2	0	2003		104	Horror
+tt0302674	movie	Gerry	Gerry	0	2002		103	Adventure,Drama,Mystery
+tt0303461	tvSeries	Firefly	Firefly	0	2002	2003	45	Adventure,Drama,Sci-Fi
+tt0304141	movie	Harry Potter and the Prisoner of Azkaban	Harry Potter and the Prisoner of Azkaban	0	2004		142	Adventure,Family,Fantasy
+tt0304678	movie	Sex Is Comedy	Sex Is Comedy	0	2002		92	Comedy,Drama,Romance
+tt0306761	movie	Eden's Curve	Eden's Curve	0	2003		93	Drama,Romance
+tt0307987	movie	Bad Santa	Bad Santa	0	2003		92	Comedy,Crime,Drama
+tt0308383	movie	The Human Stain	The Human Stain	0	2003		106	Drama,Romance,Thriller
+tt0308644	movie	Finding Neverland	Finding Neverland	0	2004		106	Biography,Drama,Family
+tt0309820	movie	Luther	Luther	0	2003		123	Biography,Drama,History
+tt0310733	tvMovie	Bertie and Elizabeth	Bertie and Elizabeth	0	2002		99	Biography,Drama,Romance
+tt0310866	tvMovie	La chanson du maçon	La chanson du maçon	0	2002		90	Comedy
+tt0311497	movie	Matchbox Circus Train	Matchbox Circus Train	0	1997		83	Drama
+tt0312127	tvSeries	O Estranho Mundo de Zé do Caixão	O Estranho Mundo de Zé do Caixão	0	1968			
+tt0312603	tvMovie	Deathlands	Deathlands	0	2003		120	Action,Horror,Sci-Fi
+tt0313737	movie	Two Weeks Notice	Two Weeks Notice	0	2002		101	Comedy,Romance
+tt0313792	movie	Anything Else	Anything Else	0	2003		108	Comedy,Romance
+tt0315983	movie	House of Sand and Fog	House of Sand and Fog	0	2003		126	Crime,Drama
+tt0316654	movie	Spider-Man 2	Spider-Man 2	0	2004		127	Action,Adventure,Sci-Fi
+tt0316824	movie	In Enemy Hands	In Enemy Hands	0	2004		94	Action,Drama,Thriller
+tt0316829	movie	The Sea Is Watching	Umi wa miteita	0	2002		119	Drama,Romance
+tt0317248	movie	City of God	Cidade de Deus	0	2002		130	Crime,Drama
+tt0317648	movie	Hidalgo	Hidalgo	0	2004		136	Action,Adventure,Biography
+tt0317676	movie	House of the Dead	House of the Dead	0	2003		90	Action,Adventure,Horror
+tt0317705	movie	The Incredibles	The Incredibles	0	2004		115	Action,Adventure,Animation
+tt0318034	movie	Russian Ark	Russkiy kovcheg	0	2002		99	Drama,Fantasy,History
+tt0318649	movie	Sahara	Sahara	0	2005		124	Action,Adventure,Comedy
+tt0318974	movie	The Alamo	The Alamo	0	2004		137	Drama,History,War
+tt0319061	movie	Big Fish	Big Fish	0	2003		125	Adventure,Drama,Fantasy
+tt0319262	movie	The Day After Tomorrow	The Day After Tomorrow	0	2004		124	Action,Adventure,Sci-Fi
+tt0319524	movie	How to Deal	How to Deal	0	2003		101	Comedy,Drama,Romance
+tt0322330	movie	Freaky Friday	Freaky Friday	0	2003		97	Comedy,Family,Fantasy
+tt0325123	movie	Bright Young Things	Bright Young Things	0	2003		102	Comedy,Drama,War
+tt0325655	movie	The Eye	Gin gwai	0	2002		99	Horror,Mystery,Thriller
+tt0325980	movie	Pirates of the Caribbean: The Curse of the Black Pearl	Pirates of the Caribbean: The Curse of the Black Pearl	0	2003		143	Action,Adventure,Fantasy
+tt0327056	movie	Mystic River	Mystic River	0	2003		138	Crime,Drama,Mystery
+tt0327137	movie	Secondhand Lions	Secondhand Lions	0	2003		109	Comedy,Drama,Family
+tt0327698	tvMovie	The Even Stevens Movie	The Even Stevens Movie	0	2003		93	Comedy,Family
+tt0327753	movie	Funny Ha Ha	Funny Ha Ha	0	2002		89	Comedy,Drama,Romance
+tt0327828	tvMovie	Mike Yokohama: A Forest with No Name	Shiritsu tantei Hama Maiku: Namae no nai mori	0	2002		71	Drama,Mystery
+tt0327850	movie	The Rundown	The Rundown	0	2003		104	Action,Adventure,Comedy
+tt0329691	movie	Torque	Torque	0	2004		84	Action,Comedy,Crime
+tt0331952	movie	The Clearing	The Clearing	0	2004		95	Drama,Mystery,Thriller
+tt0332281	movie	Happy End	Happy End	0	2003		98	Comedy,Drama,Romance
+tt0332379	movie	School of Rock	School of Rock	0	2003		109	Comedy,Music
+tt0332452	movie	Troy	Troy	0	2004		163	Action,Adventure,Drama
+tt0333766	movie	Garden State	Garden State	0	2004		102	Comedy,Drama,Romance
+tt0335013	movie	The Company	The Company	0	2003		112	Drama,Music,Romance
+tt0335266	movie	Lost in Translation	Lost in Translation	0	2003		102	Comedy,Drama
+tt0335345	movie	The Passion of the Christ	The Passion of the Christ	0	2004		127	Drama
+tt0335559	movie	Win a Date with Tad Hamilton!	Win a Date with Tad Hamilton!	0	2004		95	Comedy,Romance
+tt0337656	movie	Keep Your Distance	Keep Your Distance	0	2005		94	Drama,Mystery,Romance
+tt0337876	movie	Birth	Birth	0	2004		100	Drama,Fantasy,Mystery
+tt0337921	movie	Cellular	Cellular	0	2004		94	Action,Crime,Thriller
+tt0338294	movie	Nowhere Man	Nowhere Man	0	2005		78	Action,Comedy,Crime
+tt0338706	movie	Alexandra's Project	Alexandra's Project	0	2003		103	Drama,Mystery,Thriller
+tt0338751	movie	The Aviator	The Aviator	0	2004		170	Biography,Drama
+tt0339291	movie	A Series of Unfortunate Events	A Series of Unfortunate Events	0	2004		108	Adventure,Comedy,Family
+tt0339785	tvMovie	Thoughtcrimes	Thoughtcrimes	0	2003		89	Action,Crime,Drama
+tt0340163	movie	Hostage	Hostage	0	2005		113	Action,Crime,Drama
+tt0342258	movie	Unleashed	Unleashed	0	2005		103	Action,Crime,Thriller
+tt0344510	movie	A Very Long Engagement	Un long dimanche de fiançailles	0	2004		133	Drama,Mystery,Romance
+tt0344537	tvSpecial	WWE Armageddon	WWE Armageddon	0	2002		180	Action,Sport
+tt0346156	movie	Sky Captain and the World of Tomorrow	Sky Captain and the World of Tomorrow	0	2004		106	Action,Adventure,Mystery
+tt0346365	tvSeries	P.I.S. - Politiets indsatsstyrke	P.I.S. - Politiets indsatsstyrke	0	2000	2006	41	Action,Comedy,Crime
+tt0346491	movie	Alexander	Alexander	0	2004		175	Action,Biography,Drama
+tt0346723	movie	Chalte Chalte	Chalte Chalte	0	2003		167	Drama,Romance
+tt0347149	movie	Howl's Moving Castle	Hauru no ugoku shiro	0	2004		119	Adventure,Animation,Family
+tt0348062	movie	So, You've Downloaded a Demon	So, You've Downloaded a Demon	0	2007		90	Comedy,Horror
+tt0348121	movie	Steamboy	Suchîmubôi	0	2004		126	Action,Adventure,Animation
+tt0348893	tvSeries	Ah kai na 'xeres	Ah kai na 'xeres	0	2002		85	Comedy,Crime,Romance
+tt0349903	movie	Ocean's Twelve	Ocean's Twelve	0	2004		125	Crime,Thriller
+tt0351283	movie	Madagascar	Madagascar	0	2005		86	Adventure,Animation,Comedy
+tt0351977	movie	Walking Tall	Walking Tall	0	2004		86	Action,Crime
+tt0352085	tvSeries	Oobi	Oobi	0	2000	2005	13	Comedy,Family
+tt0352175	tvMovie	Antonia - Tränen im Paradies	Antonia - Tränen im Paradies	0	2003			Drama
+tt0352277	movie	De-Lovely	De-Lovely	0	2004		125	Biography,Drama,Music
+tt0352511	movie	Lagan	Lagan	0	1971			Action,Drama
+tt0353324	movie	The Crow: Wicked Prayer	The Crow: Wicked Prayer	0	2005		99	Action,Adventure,Comedy
+tt0355121	tvSeries	Peppi en Kokki	Peppi en Kokki	0	1973	1978		Comedy
+tt0356470	movie	A Cinderella Story	A Cinderella Story	0	2004		95	Comedy,Family,Romance
+tt0356910	movie	Mr. & Mrs. Smith	Mr. & Mrs. Smith	0	2005		120	Action,Comedy,Crime
+tt0357277	movie	Elektra	Elektra	0	2005		97	Action,Adventure,Crime
+tt0357507	movie	Boogeyman	Boogeyman	0	2005		89	Drama,Horror,Mystery
+tt0358082	movie	Robots	Robots	0	2005		91	Adventure,Animation,Comedy
+tt0358294	movie	Into the Sun	Into the Sun	0	2005		97	Action,Thriller
+tt0358314	tvSeries	EX-treme Dating	EX-treme Dating	0	2002			Comedy,Reality-TV
+tt0360139	movie	Chasing Liberty	Chasing Liberty	0	2004		111	Comedy,Romance
+tt0360201	movie	Wimbledon	Wimbledon	0	2004		98	Comedy,Romance,Sport
+tt0360486	movie	Constantine	Constantine	0	2005		121	Action,Fantasy,Horror
+tt0361411	movie	Bride & Prejudice	Bride & Prejudice	0	2004		122	Comedy,Drama,Musical
+tt0361596	movie	Fahrenheit 9/11	Fahrenheit 9/11	0	2004		122	Documentary,Drama,War
+tt0361620	movie	First Daughter	First Daughter	0	2004		106	Comedy,Drama,Romance
+tt0361693	movie	Happy Endings	Happy Endings	0	2005		128	Comedy,Drama,Music
+tt0361862	movie	The Machinist	The Machinist	0	2004		101	Drama,Thriller
+tt0362004	movie	Palindromes	Palindromes	0	2004		100	Comedy,Drama
+tt0362058	movie	The Quest	The Quest	0	2006		80	Comedy,Documentary
+tt0362165	movie	Son of the Mask	Son of the Mask	0	2005		94	Comedy,Family,Fantasy
+tt0362269	movie	Kinsey	Kinsey	0	2004		118	Biography,Drama,Romance
+tt0362270	movie	The Life Aquatic with Steve Zissou	The Life Aquatic with Steve Zissou	0	2004		119	Action,Adventure,Comedy
+tt0362350	tvSeries	Jay Jay the Jet Plane	Jay Jay the Jet Plane	0	1999	2005	11	Animation,Family,Fantasy
+tt0362942	movie	Post Impact	Post Impact	0	2004		95	Action,Adventure,Sci-Fi
+tt0363150	tvMovie	Il turco in Italia	Il turco in Italia	0	2001		137	Comedy,Music,Romance
+tt0363226	movie	The Blind Swordsman: Zatoichi	Zatôichi	0	2003		116	Action,Comedy,Crime
+tt0363328	tvSeries	Drake & Josh	Drake & Josh	0	2004	2007	23	Comedy,Family
+tt0363589	movie	Elephant	Elephant	0	2003		81	Crime,Drama,Thriller
+tt0364193	movie	8:17 p.m. Darling Street	20h17 rue Darling	0	2003		101	Drama
+tt0364343	movie	The Final Cut	The Final Cut	0	2004		95	Drama,Sci-Fi,Thriller
+tt0364616	movie	The Unknown	The Unknown	0	2005		85	Action,Adventure,Drama
+tt0365885	movie	The Upside of Anger	The Upside of Anger	0	2005		118	Comedy,Drama
+tt0365918	movie	Westender	Westender	0	2003		105	Drama,Fantasy
+tt0365957	movie	You Got Served	You Got Served	0	2004		95	Drama,Music
+tt0366450	movie	Five Children and It	Five Children and It	0	2004		89	Adventure,Family,Fantasy
+tt0367594	movie	Charlie and the Chocolate Factory	Charlie and the Chocolate Factory	0	2005		115	Adventure,Comedy,Family
+tt0367608	movie	City Dragon	City Dragon	0	1995		98	Action,Comedy
+tt0367631	movie	D.E.B.S.	D.E.B.S.	0	2004		91	Action,Comedy,Romance
+tt0368268	movie	Shiner	Shiner	0	2004		89	Drama
+tt0368578	movie	Are We There Yet?	Are We There Yet?	0	2005		95	Adventure,Comedy,Family
+tt0368891	movie	National Treasure	National Treasure	0	2004		131	Action,Adventure,Mystery
+tt0369339	movie	Collateral	Collateral	0	2004		120	Action,Crime,Drama
+tt0369672	movie	A Love Song for Bobby Long	A Love Song for Bobby Long	0	2004		119	Drama
+tt0369918	movie	Shallow Ground	Shallow Ground	0	2004		97	Horror,Thriller
+tt0370263	movie	Alien vs. Predator	AVP: Alien vs. Predator	0	2004		101	Action,Adventure,Horror
+tt0370986	movie	Mysterious Skin	Mysterious Skin	0	2004		105	Drama
+tt0371724	movie	The Hitchhiker's Guide to the Galaxy	The Hitchhiker's Guide to the Galaxy	0	2005		109	Adventure,Comedy,Sci-Fi
+tt0371920	movie	Rottweiler	Rottweiler	0	2004		95	Horror,Sci-Fi,Thriller
+tt0372784	movie	Batman Begins	Batman Begins	0	2005		140	Action,Crime,Drama
+tt0372798	movie	Bluegrass Journey	Bluegrass Journey	0	2004		86	Documentary,Music
+tt0372824	movie	The Chorus	Les choristes	0	2004		97	Drama,Music
+tt0373926	movie	The Interpreter	The Interpreter	0	2005		128	Crime,Mystery,Thriller
+tt0374102	movie	Open Water	Open Water	0	2003		79	Adventure,Drama,Horror
+tt0374536	movie	Bewitched	Bewitched	0	2005		102	Comedy,Fantasy,Romance
+tt0375063	movie	Sideways	Sideways	0	2004		127	Comedy,Drama,Romance
+tt0375173	movie	Alfie	Alfie	0	2004		103	Comedy,Drama,Romance
+tt0375594	tvSpecial	Battle of the Network Stars XVII	Battle of the Network Stars XVII	0	1984			Family,Game-Show,Sport
+tt0376108	movie	Rebound	Rebound	0	2005		86	Comedy,Family,Sport
+tt0376127	movie	Anniyan	Anniyan	0	2005		181	Action,Crime,Drama
+tt0377062	movie	Flight of the Phoenix	Flight of the Phoenix	0	2004		113	Action,Adventure,Drama
+tt0377092	movie	Mean Girls	Mean Girls	0	2004		97	Comedy
+tt0377471	movie	Be Cool	Be Cool	0	2005		119	Comedy,Crime,Music
+tt0378194	movie	Kill Bill: Vol. 2	Kill Bill: Vol. 2	0	2004		137	Action,Crime,Thriller
+tt0378306	movie	Shadow of Fear	Shadow of Fear	0	2004		88	Thriller
+tt0380201	movie	Back to You in the Days	Back in the Day	0	2005		103	Action,Crime,Drama
+tt0381681	movie	Before Sunset	Before Sunset	0	2004		80	Drama,Romance
+tt0381707	movie	White Chicks	White Chicks	0	2004		109	Comedy,Crime
+tt0382038	movie	Social Guidance	Formosa	0	2005		86	Comedy
+tt0382077	movie	Hide and Seek	Hide and Seek	0	2005		101	Horror,Mystery
+tt0382628	movie	Dark Water	Dark Water	0	2005		105	Drama,Horror,Mystery
+tt0382992	movie	Stealth	Stealth	0	2005		121	Action,Adventure,Sci-Fi
+tt0383694	movie	Vera Drake	Vera Drake	0	2004		125	Crime,Drama
+tt0384488	movie	Saint Ralph	Saint Ralph	0	2004		98	Comedy,Drama,Sport
+tt0384642	movie	Kicking & Screaming	Kicking & Screaming	0	2005		95	Comedy,Family,Romance
+tt0384806	movie	The Amityville Horror	The Amityville Horror	0	2005		90	Horror
+tt0385004	movie	House of Flying Daggers	Shi mian mai fu	0	2004		119	Action,Adventure,Drama
+tt0386421	movie	Duck	Duck	0	2005		96	Drama
+tt0387541	tvMovie	Curse of the Ring	Ring of the Nibelungs	0	2004		184	Action,Adventure,Drama
+tt0387564	movie	Saw	Saw	0	2004		103	Horror,Mystery,Thriller
+tt0387824	tvMovie	All or Nothing	All or Nothing	0	2002			Documentary
+tt0388139	movie	It's All Gone Pete Tong	It's All Gone Pete Tong	0	2004		90	Biography,Comedy,Drama
+tt0388183	movie	King's Ransom	King's Ransom	0	2005		95	Comedy,Crime
+tt0389701	tvSeries	Wildboyz	Wildboyz	0	2003	2006	30	Adventure,Comedy,Documentary
+tt0390080	movie	Harry + Max	Harry + Max	0	2004		74	Drama,Romance
+tt0390221	movie	Maria Full of Grace	Maria Full of Grace	0	2004		101	Crime,Drama
+tt0390384	movie	Primer	Primer	0	2004		77	Drama,Sci-Fi,Thriller
+tt0390450	movie	Blessed	Blessed	0	2004		98	Drama,Horror,Thriller
+tt0390733	tvSeries	Last Exile	Last Exile	0	2003	2003		Action,Adventure,Animation
+tt0391198	movie	The Grudge	The Grudge	0	2004		91	Horror,Mystery,Thriller
+tt0391658	tvSeries	Love Bytes	Love Bytes	0	2004		30	Drama
+tt0392759	movie	Security, Colorado	Security, Colorado	0	2001		93	Drama
+tt0393162	movie	Coach Carter	Coach Carter	0	2005		136	Biography,Drama,Sport
+tt0393635	movie	Reeker	Reeker	0	2005		90	Horror,Mystery,Thriller
+tt0395584	movie	The Devil's Rejects	The Devil's Rejects	0	2005		107	Crime,Drama,Horror
+tt0396269	movie	Wedding Crashers	Wedding Crashers	0	2005		119	Comedy,Romance
+tt0396652	movie	Ice Princess	Ice Princess	0	2005		98	Comedy,Drama,Family
+tt0397041	movie	Big City Dick: Richard Peterson's First Movie	Big City Dick: Richard Peterson's First Movie	0	2004		129	Documentary
+tt0397065	movie	House of Wax	House of Wax	0	2005		113	Horror,Thriller
+tt0397101	movie	The Skeleton Key	The Skeleton Key	0	2005		104	Drama,Horror,Mystery
+tt0397306	tvSeries	American Dad!	American Dad!	0	2005		22	Animation,Comedy
+tt0398712	movie	Assault on Precinct 13	Assault on Precinct 13	0	2005		109	Action,Crime,Drama
+tt0399201	movie	The Island	The Island	0	2005		136	Action,Sci-Fi,Thriller
+tt0399877	movie	What the #$*! Do We (K)now!?	What the #$*! Do We (K)now!?	0	2004		109	Comedy,Documentary,Drama
+tt0401792	movie	Sin City	Sin City	0	2005		124	Crime,Thriller
+tt0403217	movie	Last Days	Last Days	0	2005		97	Drama,Music
+tt0403358	movie	Night Watch	Nochnoy dozor	0	2004		114	Action,Fantasy,Horror
+tt0403571	tvSpecial	Summerslam	Summerslam	0	2003		170	Action
+tt0405159	movie	Million Dollar Baby	Million Dollar Baby	0	2004		132	Drama,Sport
+tt0405308	movie	Shadows of the Dead	Shadows of the Dead	0	2004		92	Drama,Horror
+tt0405576	tvSeries	Ned's Declassified School Survival Guide	Ned's Declassified School Survival Guide	0	2004	2007	22	Comedy,Family
+tt0406046	tvMovie	The Magic of Ordinary Days	The Magic of Ordinary Days	0	2005		98	Drama
+tt0406650	movie	The Chumscrubber	The Chumscrubber	0	2005		108	Comedy,Drama
+tt0406942	movie	Lost	Lost	0	2004		90	Action,Adventure,Thriller
+tt0407304	movie	War of the Worlds	War of the Worlds	0	2005		117	Action,Adventure,Sci-Fi
+tt0408524	movie	Bad News Bears	Bad News Bears	0	2005		113	Comedy,Sport
+tt0409527	movie	Shabd	Shabd	0	2005		140	Drama,Thriller
+tt0410097	movie	Hustle & Flow	Hustle & Flow	0	2005		116	Crime,Drama,Music
+tt0411008	tvSeries	Lost	Lost	0	2004	2010	45	Adventure,Drama,Fantasy
+tt0411270	movie	The Beat That My Heart Skipped	De battre mon coeur s'est arrêté	0	2005		108	Crime,Drama,Music
+tt0411705	movie	9 Songs	9 Songs	0	2004		71	Drama,Music,Romance
+tt0412221	tvSeries	Life on a Stick	Life on a Stick	0	2005	2005	30	Comedy,Romance
+tt0413358	movie	The Forsaken Land	Sulanga Enu Pinisa	0	2005		108	Drama
+tt0415768	movie	Ten	Dus	0	2005		152	Action,Crime,Drama
+tt0415978	movie	Me and You and Everyone We Know	Me and You and Everyone We Know	0	2005		85	Comedy,Drama
+tt0417001	movie	Must Love Dogs	Must Love Dogs	0	2005		98	Comedy,Romance
+tt0417373	tvSeries	The Venture Bros.	The Venture Bros.	0	2003	2018	22	Action,Adventure,Animation
+tt0417658	movie	Factotum	Factotum	0	2005		94	Comedy,Drama,Romance
+tt0418460	movie	Aitraaz	Aitraaz	0	2004		160	Drama,Romance,Thriller
+tt0418819	movie	Land of the Dead	Land of the Dead	0	2005		93	Horror,Sci-Fi,Thriller
+tt0419280	movie	Premonition	Yogen	0	2004		95	Horror
+tt0420468	tvSeries	Wanda Does It	Wanda Does It	0	2004			Comedy
+tt0420573	tvMovie	The Day I Died	The Day I Died	0	2002		50	Documentary
+tt0422093	movie	Diary of a Mad Black Woman	Diary of a Mad Black Woman	0	2005		116	Comedy,Drama,Romance
+tt0422419	movie	Hide and Creep	Hide and Creep	0	2004		85	Comedy,Horror
+tt0423866	movie	3-Iron	Binjip	0	2004		88	Crime,Drama,Romance
+tt0423969	movie	Casuistry: The Art of Killing a Cat	Casuistry: The Art of Killing a Cat	0	2004		91	Documentary
+tt0424237	movie	Lila dit ça	Lila dit ça	0	2004		89	Crime,Drama,Romance
+tt0424272	movie	Melancholian 3 huonetta	Melancholian 3 huonetta	0	2004		106	Documentary,War
+tt0424410	movie	ScaredSacred	ScaredSacred	0	2004		105	Documentary,History,War
+tt0424441	movie	Shots	Shots	0	2003		100	Drama
+tt0426282	tvMovie	Lost	Verdwaald	0	2004		40	Comedy,Drama
+tt0426573	movie	The Ski Trip	The Ski Trip	0	2004		90	Comedy,Romance
+tt0427557	movie	Monumental: David Brower's Fight for Wild America	Monumental: David Brower's Fight for Wild America	0	2004		88	Documentary
+tt0429032	tvMovie	Sherlock Holmes and the Case of the Silk Stocking	Sherlock Holmes and the Case of the Silk Stocking	0	2004		99	Crime,Drama,Mystery
+tt0430105	movie	Four Brothers	Four Brothers	0	2005		109	Action,Crime,Drama
+tt0430334	tvMovie	Mansquito	Mansquito	0	2005		92	Horror,Sci-Fi
+tt0431983	movie	A Pinch of Salt	A Pinch of Salt	0	2003			Documentary
+tt0432047	movie	Sarkar	Sarkar	0	2005		124	Crime,Drama
+tt0433720	tvSeries	Monalisa	Monalisa	0	2004	2005	90	Documentary
+tt0434762	movie	Ab-normal Beauty	Sei mong se jun	0	2004		101	Drama,Horror
+tt0435331	movie	Rom-Mánia	Rom-Mánia	0	2004		82	Comedy,Drama
+tt0435625	movie	The Descent	The Descent	0	2005		99	Adventure,Horror,Thriller
+tt0435636	tvSpecial	Eddie Griffin: Voodoo Child	Eddie Griffin: Voodoo Child	0	1997		57	Comedy,Documentary
+tt0436613	movie	Murderball	Murderball	0	2005		88	Documentary,Sport
+tt0436754	movie	Searching for Angela Shelton	Searching for Angela Shelton	0	2004		93	Documentary
+tt0436811	movie	Symbiopsychotaxiplasm: Take 2 1/2	Symbiopsychotaxiplasm: Take 2 1/2	0	2005		99	Documentary
+tt0437005	tvSeries	Hell's Kitchen	Hell's Kitchen	0	2005		42	Game-Show,Reality-TV
+tt0438241	movie	Milionari de weekend	Milionari de weekend	0	2004		90	Comedy
+tt0438327	movie	Plagues and Pleasures on the Salton Sea	Plagues and Pleasures on the Salton Sea	0	2004		74	Documentary,History
+tt0439434	movie	All That I Need	All That I Need	0	2005		80	Comedy,Drama
+tt0439504	movie	Brothers in Arms	Brothers in Arms	0	2005		85	Drama,Western
+tt0439630	movie	Initial D	Tau man ji D	0	2005		107	Action,Comedy,Drama
+tt0442722	tvSeries	The Doodlebops	The Doodlebops	0	2004	2007	21	Family,Music
+tt0443334	tvMovie	Attack of the Sabertooth	Attack of the Sabretooth	0	2005		90	Action,Adventure,Comedy
+tt0444704	tvSpecial	WWE Backlash	WWE Backlash	0	2005		180	Action,Sport
+tt0445114	tvSeries	Extras	Extras	0	2005	2007	30	Comedy,Drama
+tt0446016	tvMovie	Pizza My Heart	Pizza My Heart	0	2005		85	Comedy,Family,Romance
+tt0446071	movie	We Jam Econo: The Story of the Minutemen	We Jam Econo: The Story of the Minutemen	0	2005		91	Biography,Documentary,Music
+tt0448179	movie	Wild Things: Diamonds in the Rough	Wild Things: Diamonds in the Rough	0	2005		87	Crime,Drama,Mystery
+tt0448206	movie	Bunty Aur Babli	Bunty Aur Babli	0	2005		170	Comedy,Drama,Romance
+tt0448303	tvSeries	Stacked	Stacked	0	2005	2006	30	Comedy
+tt0449565	tvMovie	I Do, They Don't	I Do, They Don't	0	2005		86	Family
+tt0450128	movie	The Message	Sandesaya	0	1960		120	Drama
+tt0452130	movie	Amon Saga	Amon Saga	0	1986		80	Action,Adventure,Animation
+tt0453326	movie	Last Love First Love	Zui hou de ai, zui chu de ai	0	2003		94	Romance
+tt0453440	tvSeries	The Two Ronnies Sketchbook	The Two Ronnies Sketchbook	0	2005	2005	60	Comedy
+tt0456396	movie	The Child	L'enfant	0	2005		95	Crime,Drama,Romance
+tt0457194	tvSpecial	WWE the Great American Bash	The Great American Bash	0	2005		180	Sport
+tt0457278	movie	Anytown, USA	Anytown, USA	0	2005		93	Documentary
+tt0457496	movie	Street Fight	Street Fight	0	2005		83	Documentary
+tt0459443	movie	Lies Inc.	Lies Inc.	0	2004		67	Sci-Fi
+tt0460621	tvSeries	The Andy Milonakis Show	The Andy Milonakis Show	0	2005	2007	30	Comedy
+tt0462080	tvSeries	Back in the Day	Back in the Day	0	2005		24	Comedy,Game-Show
+tt0464767	tvSeries	The Princes of Malibu	The Princes of Malibu	0	2005			Comedy,Reality-TV
+tt0464996	movie	Kibris: La ley del equilibrio	Kibris: La ley del equilibrio	0	2005		80	Action,Adventure
+tt0465552	movie	Hostage	Omiros	0	2005		105	Crime,Drama,Thriller
+tt0467488	movie	Shaolin vs. Evil Dead	Shao Lin jiang shi	0	2004		94	Action,Comedy,Horror
+tt0469003	tvSeries	Nigella	Nigella	0	2005	2005	31	Talk-Show
+tt0469008	tvSeries	Tokyo Mew Mew	Tokyo Mew Mew	0	2002	2003	24	Action,Adventure,Animation
+tt0470198	movie	Angli: The Movie	Angli: The Movie	0	2005		114	Action,Crime,Thriller
+tt0470274	movie	DeGenere	DeGenere	0	2003		75	Comedy
+tt0471027	tvMovie	Pretty Things	Pretty Things	0	2005		90	Documentary,History
+tt0475308	tvMovie	Murderball	Murderball	0	2005		30	Comedy
+tt0500100	tvSpecial	Saturday Night Live: The Best of Chris Farley	Saturday Night Live: The Best of Chris Farley	0	2000		50	Comedy,Documentary
+tt1051815	movie	Hostage	Girov	0	2005		92	Drama
+tt1579812	movie	Monalisa	Monalisa	0	2004		145	Romance
+tt2304480	tvSeries	National Treasure	Guo bao	0	2004			Drama
+tt3615434	tvMovie	Brothers in Arms	Brothers in Arms	0	2005		59	Documentary,Music

@@ -4,3 +4,24 @@
 # SKOS Thesaurus
 :GenreThesaurus a skos:ConceptScheme ;
     skos:prefLabel "Movie Genre Thesaurus"@en .
+
+
+<http://www.moviedb.fr/ontology/cinema#Genre/Adult>      skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Drama> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Biography>  skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/History> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Family>     skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Drama> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Film-Noir>  skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Crime> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Game-Show>  skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Talk-Show> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Horror>     skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Thriller> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Musical>    skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Music> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Mystery>    skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Crime> .
+<http://www.moviedb.fr/ontology/cinema#Genre/News>       skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Documentary> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Reality-TV> skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Talk-Show> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Romance>    skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/Drama> .
+<http://www.moviedb.fr/ontology/cinema#Genre/War>        skos:broader <http://www.moviedb.fr/ontology/cinema#Genre/History> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Crime>       skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Film-Noir>, <http://www.moviedb.fr/ontology/cinema#Genre/Mystery> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Documentary> skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/News> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Drama>       skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Romance>, <http://www.moviedb.fr/ontology/cinema#Genre/Family>, <http://www.moviedb.fr/ontology/cinema#Genre/Adult> .
+<http://www.moviedb.fr/ontology/cinema#Genre/History>     skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Biography>, <http://www.moviedb.fr/ontology/cinema#Genre/War> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Music>       skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Musical> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Talk-Show>   skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Game-Show>, <http://www.moviedb.fr/ontology/cinema#Genre/Reality-TV> .
+<http://www.moviedb.fr/ontology/cinema#Genre/Thriller>    skos:narrower <http://www.moviedb.fr/ontology/cinema#Genre/Horror> .

@@ -1,4 +1,5 @@
 from langchain.tools import tool
+from functools import lru_cache
 
 from .common import rdf_graph
 
@@ -57,6 +58,28 @@ def _generate_ontology_summary() -> str:
 
 CACHED_SUMMARY = _generate_ontology_summary()
 
+@lru_cache(maxsize=256)
+def _cached_property_details(property_name: str) -> str:
+    """
+    Cache property details to avoid repeated graph queries.
+    """
+    query = f"""
+    {PREFIX_BLOCK}
+    SELECT ?domain ?range WHERE {{
+        {property_name} rdfs:domain ?domain .
+        OPTIONAL {{ {property_name} rdfs:range ?range }}
+    }}
+    """
+    rows = list(rdf_graph.query(query))
+    if not rows:
+        return "No information found."
+
+    res = [f"Details of {property_name}:"]
+    for d, r in rows:
+        res.append(f"- Domain: {d.n3(rdf_graph.namespace_manager) if d else 'N/A'}")
+        res.append(f"- Range: {r.n3(rdf_graph.namespace_manager) if r else 'N/A'}")
+    return "\n".join(res)
+
 @tool
 def ontology_schema_tool() -> str:
     """
@@ -76,24 +99,9 @@ def property_details_tool(property_name: str) -> str:
     Returns:
         str: Formatted details about the property's domain and range.
     """
-    prefix_block = "\n".join([f"PREFIX {p}: <{u}>" for p, u in rdf_graph.namespaces()])
-    query = f"""
-    {prefix_block}
-    SELECT ?domain ?range WHERE {{
-        {property_name} rdfs:domain ?domain .
-        OPTIONAL {{ {property_name} rdfs:range ?range }}
-    }}
-    """
+    print("Property requested:", property_name)
     try:
-        rows = list(rdf_graph.query(query))
-        if not rows: 
-            return "No information found."
-
-        res = [f"Details of {property_name}:"]
-        for d, r in rows:
-            res.append(f"- Domain: {d.n3(rdf_graph.namespace_manager) if d else 'N/A'}")
-            res.append(f"- Range: {r.n3(rdf_graph.namespace_manager) if r else 'N/A'}")
-        return "\n".join(res)
+        return _cached_property_details(property_name)
     except Exception as e:
         return str(e)
 

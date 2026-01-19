@@ -1,9 +1,12 @@
 from langchain.tools import tool
+import concurrent.futures
 from rdflib import Literal, URIRef
 from rdflib.namespace import RDF, XSD
 
 from .common import rdf_graph
 from ..config import MOVIE_NS, REVIEW_NS
+
+SPARQL_TIMEOUT_SEC = 20
 
 def get_movies() -> list:
     """
@@ -67,7 +70,9 @@ def sparql_query(query: str) -> str:
         str: Formatted results of the SPARQL query.
     """
     try:
-        rows = list(rdf_graph.query(query))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            future = executor.submit(lambda: list(rdf_graph.query(query)))
+            rows = future.result(timeout=SPARQL_TIMEOUT_SEC)
         if not rows:
             return "The query returned no results."
 
@@ -80,6 +85,12 @@ def sparql_query(query: str) -> str:
             output.append(f"... ({len(rows) - max_lines} additional results)")
 
         return "\n".join(output)
+    except concurrent.futures.TimeoutError:
+        return (
+            "SPARQL request too slow (timeout). "
+            "Please simplify the query (fewer joins, "
+            "stricter filters, add a LIMIT)."
+        )
     except Exception as e:
         return f"SPARQL Error: {e}"
 
@@ -124,7 +135,9 @@ def sparql_query_tool(sparql_query_str: str) -> str:
     Returns:
         str: Formatted results of the SPARQL query.
     """
-    return sparql_query(sparql_query_str)
+    res = sparql_query(sparql_query_str)
+    print(res, sparql_query_str)
+    return res
 
 @tool
 def graph_statistics_tool() -> str:
@@ -135,104 +148,3 @@ def graph_statistics_tool() -> str:
         str: Formatted statistics about the RDF graph.
     """
     return get_graph_statistics()
-
-if __name__ == "__main__":
-    # Choisis un movie_id existant dans ton graphe
-    movies = get_movies()
-    if not movies:
-        raise SystemExit("No movies found in graph. Cannot run insert_review test.")
-
-    # Prend le premier film par ordre alphabétique (vu que get_movies() ORDER BY ?title)
-    movie_id, movie_title = next(iter(movies.items()))
-
-    username = "dbgeorge"
-    text = "Test review from __main__."
-    rating = 8.7
-    spoiler = False
-
-    # Compte avant
-    count_before = int(list(rdf_graph.query("""
-        PREFIX : <http://www.moviedb.fr/cinema#>
-        SELECT (COUNT(?r) AS ?c) WHERE { ?r a :Review . }
-    """))[0][0])
-
-    # Insère
-    insert_review(
-        movie_id=movie_id,
-        rating=rating,
-        spoiler=spoiler,
-        text=text,
-        username=username,
-    )
-
-    # Recalcule les URIs pour vérifier exactement la review qu'on vient d'ajouter
-    review_id = f"review_{hash((movie_id, username, text)) & 0xFFFFFFFF}"
-    review_uri = REVIEW_NS[review_id]
-    user_uri = URIRef(f"http://www.moviedb.fr/cinema#User/{username}")
-    movie_uri = URIRef(f"http://www.moviedb.fr/cinema#MotionPicture/{movie_id}")
-
-    # Compte après
-    count_after = int(list(rdf_graph.query("""
-        PREFIX : <http://www.moviedb.fr/cinema#>
-        SELECT (COUNT(?r) AS ?c) WHERE { ?r a :Review . }
-    """))[0][0])
-
-    print(f"Reviews before: {count_before} | after: {count_after} | delta: {count_after - count_before}")
-
-    # Test booléen "ça existe vraiment ?"
-    ask_query = f"""
-        PREFIX : <http://www.moviedb.fr/cinema#>
-
-        ASK {{
-            <{review_uri}> a :Review ;
-                :isReviewOf <{movie_uri}> ;
-                :writtenBy <{user_uri}> ;
-                :ratingValue "{float(rating)}"^^xsd:float ;
-                :isSpoiler "{str(spoiler).lower()}"^^xsd:boolean ;
-                :reviewBody {Literal(text).n3()} .
-        }}
-    """
-    # Note: on doit déclarer xsd sinon ASK peut échouer selon le parser
-    ask_query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" + ask_query
-
-    exists = bool(rdf_graph.query(ask_query))
-    print(f"Inserted review exists (ASK): {exists}")
-
-    if not exists:
-        raise AssertionError("Insert review test failed: expected triples not found.")
-
-    # Affiche la review insérée (preuve humaine)
-    select_query = f"""
-        PREFIX : <http://www.moviedb.fr/cinema#>
-
-        SELECT ?review ?movie ?rating ?spoiler ?text ?user WHERE {{
-            BIND(<{review_uri}> AS ?review)
-            ?review a :Review ;
-                    :isReviewOf ?movie ;
-                    :ratingValue ?rating ;
-                    :isSpoiler ?spoiler ;
-                    :reviewBody ?text ;
-                    :writtenBy ?user .
-        }}
-    """
-    print("Inserted review (SELECT):")
-    print(sparql_query(select_query))
-
-    # Bonus: affiche 5 dernières reviews
-    last_query = """
-        PREFIX : <http://www.moviedb.fr/cinema#>
-
-        SELECT ?review ?movie ?rating ?spoiler ?text ?user WHERE {
-            ?review a :Review ;
-                    :isReviewOf ?movie ;
-                    :ratingValue ?rating ;
-                    :isSpoiler ?spoiler ;
-                    :reviewBody ?text ;
-                    :writtenBy ?user .
-        }
-        ORDER BY DESC(STR(?review))
-        LIMIT 5
-    """
-    print("Last 5 reviews:")
-    print(sparql_query(last_query))
-

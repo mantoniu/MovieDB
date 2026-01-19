@@ -3,10 +3,10 @@ import concurrent.futures
 from rdflib import Literal, URIRef
 from rdflib.namespace import RDF, XSD
 
-from .common import rdf_graph
+from .common import rdf_graph, log_tool_use
 from ..config import MOVIE_NS, REVIEW_NS
 
-SPARQL_TIMEOUT_SEC = 20
+SPARQL_TIMEOUT_SEC = 30
 
 def get_movies() -> list:
     """
@@ -42,16 +42,11 @@ def insert_review(movie_id: str, rating: float, spoiler: bool, text: str, userna
         text (str): The review text.
         username (str): The username of the reviewer.
     """
-    print(f"Inserting review for '{movie_id}' by user '{username}'")
-    print(f"Rating: {rating}, Spoiler: {spoiler} Text: {text}")
-
     user_uri = URIRef(f"http://www.moviedb.fr/cinema#User/{username}")
     movie_uri = URIRef(f"http://www.moviedb.fr/cinema#MotionPicture/{movie_id}")
 
     review_id = f"review_{hash((movie_id, username, text)) & 0xFFFFFFFF}"
     review_uri = REVIEW_NS[review_id]
-
-    print(review_uri, user_uri, movie_uri)
 
     rdf_graph.add((review_uri, RDF.type, MOVIE_NS.Review))
     rdf_graph.add((review_uri, MOVIE_NS.isReviewOf, movie_uri))
@@ -135,8 +130,8 @@ def sparql_query_tool(sparql_query_str: str) -> str:
     Returns:
         str: Formatted results of the SPARQL query.
     """
+    log_tool_use("sparql_query_tool", query=sparql_query_str)
     res = sparql_query(sparql_query_str)
-    print(res, sparql_query_str)
     return res
 
 @tool
@@ -147,4 +142,5 @@ def graph_statistics_tool() -> str:
     Returns:
         str: Formatted statistics about the RDF graph.
     """
+    log_tool_use("graph_statistics_tool")
     return get_graph_statistics()

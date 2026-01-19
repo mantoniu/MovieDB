@@ -2,7 +2,7 @@ import numpy as np
 from langchain.tools import tool
 from typing import List, Set, Tuple
 
-from .common import index, meta, embed_one, rdf_graph
+from .common import index, meta, embed_one, rdf_graph, log_tool_use
 
 def get_user_movie_history(username: str, min_rating: float = 7.0) -> Tuple[List[Tuple[str, str, float]], Set[str]]:
     """
@@ -216,5 +216,11 @@ def user_recommendation_tool(username: str, min_rating: float = 7.0, k: int = 10
         - user_recommendation_tool("sentra14", 7.0)
     """
 
+    log_tool_use(
+        "user_recommendation_tool",
+        username=username,
+        min_rating=min_rating,
+        k=k,
+    )
     recommendations, valid_movies = recommend_movies(username, min_rating, k, exclude_watched=True)
     return format_recommendations(recommendations, username, valid_movies, min_rating=min_rating, k=k)

@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from langchain.tools import tool
 
-from .common import rdf_graph, load_faiss_safe
+from .common import rdf_graph, load_faiss_safe, log_tool_use
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 GRAPH_OUT_DIR = BASE_DIR / "graph_embedding" / "graph_embedding_out"
@@ -183,4 +183,5 @@ def hybrid_movie_recommendation_tool(movie_title: str, k: int = 10) -> str:
     """
     Recommend movies similar to a given movie title using fused graph+synopsis embeddings.
     """
+    log_tool_use("hybrid_movie_recommendation_tool", movie_title=movie_title, k=k)
     return hybrid_movie_recommendations(movie_title=movie_title, k=k)

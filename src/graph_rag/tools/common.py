@@ -46,3 +46,16 @@ def embed_one(text: str) -> np.ndarray:
     v = np.array(vec, dtype="float32")
     n = np.linalg.norm(v)
     return v / (n if n else 1.0)
+
+def _format_log_value(value, max_len: int = 160) -> str:
+    text = str(value).replace("\n", " ")
+    if len(text) > max_len:
+        return text[: max_len - 3] + "..."
+    return text
+
+def log_tool_use(tool_name: str, **kwargs) -> None:
+    if kwargs:
+        args = ", ".join(f"{k}={_format_log_value(v)}" for k, v in kwargs.items())
+        print(f"[TOOL] {tool_name}({args})")
+    else:
+        print(f"[TOOL] {tool_name}()")

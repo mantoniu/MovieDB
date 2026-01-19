@@ -1,0 +1,17 @@
+﻿flask
+rdflib
+owlrl
+pyshacl
+requests
+pandas
+numpy
+tqdm
+faiss-cpu
+scikit-learn
+networkx
+node2vec
+langchain
+langchain-google-genai
+google-genai
+wikipedia-api
+pyarrow

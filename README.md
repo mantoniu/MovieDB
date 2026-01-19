@@ -1,4 +1,4 @@
-# Web Sémantique – Projet MovieDB (Graphe de connaissances cinéma)
+﻿# Web Sémantique – Projet MovieDB (Graphe de connaissances cinéma)
 
 Projet de Web Sémantique visant à construire et exploiter un **graphe de connaissances centré sur le cinéma** (films, séries, téléfilms, personnes) enrichi par des **reviews utilisateurs**, avec :
 - une **ontologie OWL** + un **thésaurus SKOS** (genres),
@@ -181,5 +181,35 @@ L’interface propose :
 |   |-- ontology/             ontologies TTL + alignments + OWL
 |   |-- shacl/                contraintes SHACL
 |   `-- thesaurus/            thesaurus de genres/concepts
+|-- requirements.txt         dependances Python
+|-- report.pdf                rapport du projet
 `-- README.md                 ce fichier
+```
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Lancer l'UI
+
+La variable d'environnement GEMINI_API_KEY est necessaire pour authentifier l'acces a l'API Gemini utilisee par l'agent.
+
+Windows (PowerShell):
+
+```powershell
+$env:GEMINI_API_KEY=""; python3.12 -m src.web_ui.server
+```
+
+Windows (Command Prompt):
+
+```bat
+set GEMINI_API_KEY= && python3.12 -m src.web_ui.server
+```
+
+Linux:
+
+```bash
+export GEMINI_API_KEY=""; python3.12 -m src.web_ui.server
 ```
